@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "properties": {
+        "RECORDNO": {
+            "type": ["null", "string"]
+        },
+        "BATCHNO": {
+            "type": ["null", "string"]
+        },
+        "BATCH_TITLE": {
+            "type": ["null", "string"]
+        },
+        "BALANCE": {
+            "type": ["null", "string"]
+        },
+        "JOURNAL": {
+            "type": ["null", "string"]
+        },
+        "BATCH_DATE": {
+            "type": ["null", "string"],
+            "format": "date"
+        },
+        "MODULE": {
+            "type": ["null", "string"]
+        },
+        "REFERENCENO": {
+            "type": ["null", "string"]
+        },
+        "REVERSED": {
+            "type": ["null", "string"]
+        },
+        "SCHOPKEY": {
+            "type": ["null", "string"]
+        },
+        "USERINFO.LOGINID": {
+            "type": ["null", "string"]
+        },
+        "WHENCREATED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENMODIFIED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "CREATEDBY": {
+            "type": ["null", "string"]
+        },
+        "MODIFIEDBY": {
+            "type": ["null", "string"]
+        },
+        "STATE": {
+            "type": ["null", "string"]
+        },
+        "JOURNALSEQNO": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYKEY": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYID": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYNAME": {
+            "type": ["null", "string"]
+        }
+    }
+}
