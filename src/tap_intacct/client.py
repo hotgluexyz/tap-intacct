@@ -231,7 +231,7 @@ class SageIntacctSDK:
 
         return errormessages
 
-    def format_and_send_request(self, data: Dict) -> Dict:
+    def format_and_send_request(self, data: Dict) -> Union[List, Dict]:
         """
         Format data accordingly to convert them to xml.
 
@@ -317,7 +317,12 @@ class SageIntacctSDK:
             intacct_objects = self.format_and_send_request(data)['data'][
                 intacct_object_type
             ]
-            total_intacct_objects = total_intacct_objects + intacct_objects
+            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
+            if isinstance(intacct_objects, list):
+                total_intacct_objects = total_intacct_objects + intacct_objects
+            else:
+                total_intacct_objects = [intacct_objects]
+
             offset = offset + pagesize
         return total_intacct_objects
 
