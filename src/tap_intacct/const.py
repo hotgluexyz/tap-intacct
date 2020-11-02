@@ -7,12 +7,12 @@ REQUIRED_CONFIG_KEYS = [
 ]
 
 KEY_PROPERTIES = {
-    'accounts_payable_bills': ["RECORDNO", "RECORDID", "WHENMODIFIED"],
-    'accounts_payable_vendors': ["RECORDNO", "VENDORID", "WHENMODIFIED"],
-    'general_ledger_accounts': ['RECORDNO', 'ACCOUNTNO', "WHENMODIFIED"],
-    'general_ledger_details': ["RECORDNO", "WHENMODIFIED"],
-    'general_ledger_journal_entries': ["RECORDNO", "WHENMODIFIED"],
-    'projects': ["RECORDNO", "PROJECTID", "WHENMODIFIED"],
+    'accounts_payable_bills': ["RECORDNO"],
+    'accounts_payable_vendors': ["RECORDNO"],
+    'general_ledger_accounts': ['RECORDNO'],
+    'general_ledger_details': ["RECORDNO"],
+    'general_ledger_journal_entries': ["RECORDNO"],
+    'projects': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
