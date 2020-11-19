@@ -318,10 +318,10 @@ class SageIntacctSDK:
                 intacct_object_type
             ]
             # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
-            if isinstance(intacct_objects, list):
-                total_intacct_objects = total_intacct_objects + intacct_objects
-            else:
-                total_intacct_objects = [intacct_objects]
+            if isinstance(intacct_objects, dict):
+                intacct_objects = [intacct_objects]
+
+            total_intacct_objects = total_intacct_objects + intacct_objects
 
             offset = offset + pagesize
         return total_intacct_objects

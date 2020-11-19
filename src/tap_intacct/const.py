@@ -8,10 +8,11 @@ REQUIRED_CONFIG_KEYS = [
 
 KEY_PROPERTIES = {
     'accounts_payable_bills': ["RECORDNO"],
-    'accounts_payable_vendors': ["RECORDNO"],
+    'accounts_payable_vendors': ["VENDORID"],
     'general_ledger_accounts': ['RECORDNO'],
     'general_ledger_details': ["RECORDNO"],
     'general_ledger_journal_entries': ["RECORDNO"],
+    'general_ledger_journal_entry_lines': ["RECORDNO"],
     'projects': ["RECORDNO"],
 }
 
@@ -22,6 +23,7 @@ INTACCT_OBJECTS = {
     "general_ledger_accounts": "GLACCOUNT",
     "general_ledger_details": "GLDETAIL",
     "general_ledger_journal_entries": "GLBATCH",
+    "general_ledger_journal_entry_lines": "GLENTRY",
     "projects": "PROJECT",
 }
 
