@@ -14,6 +14,10 @@ KEY_PROPERTIES = {
     'general_ledger_journal_entries': ["RECORDNO"],
     'general_ledger_journal_entry_lines': ["RECORDNO"],
     'projects': ["RECORDNO"],
+    'invoices': ["RECORDNO"],
+    'adjustments': ["RECORDNO"],
+    'customers': ["RECORDNO"],
+    'items': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -25,7 +29,16 @@ INTACCT_OBJECTS = {
     "general_ledger_journal_entries": "GLBATCH",
     "general_ledger_journal_entry_lines": "GLENTRY",
     "projects": "PROJECT",
+    "invoices": "ARINVOICE",
+    "adjustments": "ARADJUSTMENT",
+    "customers": "CUSTOMER",
+    "items": "ITEM",
 }
+
+# These are intacct object for with there is child data and there is INTACCT API to query
+# the child data.
+# So our tap will have to fetch these object is GET by "RECORDNO" instead.
+INTACCT_OBJECTS_WITH_CHILD_DATA = ["invoices", "adjustments", "customers", "items"]
 
 GET_BY_DATE_FIELD = "WHENMODIFIED"
 

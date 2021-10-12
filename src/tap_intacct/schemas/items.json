@@ -1,0 +1,436 @@
+{
+    "type": "object",
+    "properties": {
+        "RECORDNO": {
+            "type": ["null", "string"]
+        },
+        "ITEMID": {
+            "type": ["null", "string"]
+        },
+        "STATUS": {
+            "type": ["null", "string"]
+        },
+        "MRR": {
+            "type": ["null", "string"]
+        },
+        "NAME": {
+            "type": ["null", "string"]
+        },
+        "EXTENDED_DESCRIPTION": {
+            "type": ["null", "string"]
+        },
+        "PODESCRIPTION": {
+            "type": ["null", "string"]
+        },
+        "SODESCRIPTION": {
+            "type": ["null", "string"]
+        },
+        "PRODUCTLINEID": {
+            "type": ["null", "string"]
+        },
+        "CYCLE": {
+            "type": ["null", "string"]
+        },
+        "CNBILLINGTEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "CNREVENUETEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "CNREVENUE2TEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "CNEXPENSETEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "CNEXPENSE2TEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "CNBILLINGTEMPLATENAME": {
+            "type": ["null", "string"]
+        },
+        "CNREVENUETEMPLATENAME": {
+            "type": ["null", "string"]
+        },
+        "CNREVENUE2TEMPLATENAME": {
+            "type": ["null", "string"]
+        },
+        "CNEXPENSETEMPLATENAME": {
+            "type": ["null", "string"]
+        },
+        "CNEXPENSE2TEMPLATENAME": {
+            "type": ["null", "string"]
+        },
+        "CNDEFAULTBUNDLE": {
+            "type": ["null", "string"]
+        },
+        "CNMEACATEGORYKEY": {
+            "type": ["null", "string"]
+        },
+        "CNMEACATEGORYNAME": {
+            "type": ["null", "string"]
+        },
+        "PRODUCTTYPE": {
+            "type": ["null", "string"]
+        },
+        "SUBSTITUTEID": {
+            "type": ["null", "string"]
+        },
+        "SHIP_WEIGHT": {
+            "type": ["null", "number"]
+        },
+        "WHENLASTSOLD": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENLASTRECEIVED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "INCOMEACCTKEY": {
+            "type": ["null", "string"]
+        },
+        "EXPENSEACCTKEY": {
+            "type": ["null", "string"]
+        },
+        "INVACCTKEY": {
+            "type": ["null", "string"]
+        },
+        "COGSACCTKEY": {
+            "type": ["null", "string"]
+        },
+        "OFFSETOEGLACCOUNTKEY": {
+            "type": ["null", "string"]
+        },
+        "OFFSETPOGLACCOUNTKEY": {
+            "type": ["null", "string"]
+        },
+        "DEFERREDREVACCTKEY": {
+            "type": ["null", "string"]
+        },
+        "DEFAULTREVRECTEMPLKEY": {
+            "type": ["null", "string"]
+        },
+        "ALLOW_BACKORDER": {
+            "type": ["null", "string"]
+        },
+        "TAXABLE": {
+            "type": ["null", "string"]
+        },
+        "TAXGROUP": {
+            "type": ["null", "string"]
+        },
+        "TAXCODE": {
+            "type": ["null", "string"]
+        },
+        "COST_METHOD": {
+            "type": ["null", "string"]
+        },
+        "STANDARD_COST": {
+            "type": ["null", "string"]
+        },
+        "UOMGRP": {
+            "type": ["null", "string"]
+        },
+        "BASEUOM": {
+            "type": ["null", "string"]
+        },
+        "UOM": {
+            "type": ["null", "string"]
+        },
+        "DEFAULT_WAREHOUSE": {
+            "type": ["null", "string"]
+        },
+        "GLGROUP": {
+            "type": ["null", "string"]
+        },
+        "NOTE": {
+            "type": ["null", "string"]
+        },
+        "INV_PRECISION": {
+            "type": ["null", "string"]
+        },
+        "PO_PRECISION": {
+            "type": ["null", "string"]
+        },
+        "SO_PRECISION": {
+            "type": ["null", "string"]
+        },
+        "ITEMTYPE": {
+            "type": ["null", "string"]
+        },
+        "ENABLE_SERIALNO": {
+            "type": ["null", "string"]
+        },
+        "SERIAL_MASKKEY": {
+            "type": ["null", "string"]
+        },
+        "ENABLE_LOT_CATEGORY": {
+            "type": ["null", "string"]
+        },
+        "LOT_CATEGORYKEY": {
+            "type": ["null", "string"]
+        },
+        "ENABLE_BINS": {
+            "type": ["null", "string"]
+        },
+        "ENABLE_EXPIRATION": {
+            "type": ["null", "string"]
+        },
+        "UPC": {
+            "type": ["null", "string"]
+        },
+        "REVPOSTING": {
+            "type": ["null", "string"]
+        },
+        "REVPRINTING": {
+            "type": ["null", "string"]
+        },
+        "VSOECATEGORY": {
+            "type": ["null", "string"]
+        },
+        "VSOEDLVRSTATUS": {
+            "type": ["null", "string"]
+        },
+        "VSOEREVDEFSTATUS": {
+            "type": ["null", "string"]
+        },
+        "HASSTARTENDDATES": {
+            "type": ["null", "string"]
+        },
+        "TERMPERIOD": {
+            "type": ["null", "string"]
+        },
+        "TOTALPERIODS": {
+            "type": ["null", "number"]
+        },
+        "COMPUTEFORSHORTTERM": {
+            "type": ["null", "string"]
+        },
+        "RENEWALMACROID": {
+            "type": ["null", "string"]
+        },
+        "RENEWALMACROKEY": {
+            "type": ["null", "string"]
+        },
+        "ITEMGLGROUP": {
+            "type": ["null", "string"]
+        },
+        "ENABLELANDEDCOST": {
+            "type": ["null", "string"]
+        },
+        "DEFCONTRACTDELIVERYSTATUS": {
+            "type": ["null", "string"]
+        },
+        "DEFCONTRACTDEFERRALSTATUS": {
+            "type": ["null", "string"]
+        },
+        "WHENCREATED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENMODIFIED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "CREATEDBY": {
+            "type": ["null", "string"]
+        },
+        "MODIFIEDBY": {
+            "type": ["null", "string"]
+        },
+        "IONORDER": {
+            "type": ["null", "number"]
+        },
+        "IONHAND": {
+            "type": ["null", "number"]
+        },
+        "IONHOLD": {
+            "type": ["null", "number"]
+        },
+        "GLGRPKEY": {
+            "type": ["null", "string"]
+        },
+        "UOMGRPKEY": {
+            "type": ["null", "string"]
+        },
+        "TAXGROUPKEY": {
+            "type": ["null", "string"]
+        },
+        "DROPSHIP": {
+            "type": ["null", "string"]
+        },
+        "BUYTOORDER": {
+            "type": ["null", "string"]
+        },
+        "BASEPRICE": {
+            "type": ["null", "number"]
+        },
+        "AUTOPRINTLABEL": {
+            "type": ["null", "string"]
+        },
+        "ALLOWMULTIPLETAXGRPS": {
+            "type": ["null", "string"]
+        },
+        "WEIGHTUOM": {
+            "type": ["null", "string"]
+        },
+        "NETWEIGHT": {
+            "type": ["null", "number"]
+        },
+        "LWHUOM": {
+            "type": ["null", "string"]
+        },
+        "LENGTH": {
+            "type": ["null", "number"]
+        },
+        "WIDTH": {
+            "type": ["null", "number"]
+        },
+        "HEIGHT": {
+            "type": ["null", "number"]
+        },
+        "THICKNESSUOM": {
+            "type": ["null", "string"]
+        },
+        "THICKNESS": {
+            "type": ["null", "number"]
+        },
+        "MINIMUMTHICKNESS": {
+            "type": ["null", "number"]
+        },
+        "MAXIMUMTHICKNESS": {
+            "type": ["null", "number"]
+        },
+        "AREAUOM": {
+            "type": ["null", "string"]
+        },
+        "AREA": {
+            "type": ["null", "number"]
+        },
+        "VOLUMEUOM": {
+            "type": ["null", "string"]
+        },
+        "VOLUME": {
+            "type": ["null", "number"]
+        },
+        "DIAMETERUOM": {
+            "type": ["null", "string"]
+        },
+        "INNERDIAMETER": {
+            "type": ["null", "number"]
+        },
+        "OUTERDIAMETER": {
+            "type": ["null", "number"]
+        },
+        "DUROMETER": {
+            "type": ["null", "string"]
+        },
+        "DENSITYUOM": {
+            "type": ["null", "number"]
+        },
+        "DENSITY": {
+            "type": ["null", "string"]
+        },
+        "UPC12": {
+            "type": ["null", "string"]
+        },
+        "EAN13": {
+            "type": ["null", "string"]
+        },
+        "SAFETYITEM": {
+            "type": ["null", "string"]
+        },
+        "RESTRICTEDITEM": {
+            "type": ["null", "string"]
+        },
+        "COMPLIANTITEM": {
+            "type": ["null", "string"]
+        },
+        "CONDITION": {
+            "type": ["null", "string"]
+        },
+        "ENGINEERINGALERT": {
+            "type": ["null", "string"]
+        },
+        "SPECIFICATION1": {
+            "type": ["null", "string"]
+        },
+        "SPECIFICATION2": {
+            "type": ["null", "string"]
+        },
+        "SPECIFICATION3": {
+            "type": ["null", "string"]
+        },
+        "ENGINEERINGAPPROVAL": {
+            "type": ["null", "string"]
+        },
+        "QUALITYCONTROLAPPROVAL": {
+            "type": ["null", "string"]
+        },
+        "SALESAPPROVAL": {
+            "type": ["null", "string"]
+        },
+        "PRIMARYCOUNTRYOFORIGIN": {
+            "type": ["null", "string"]
+        },
+        "BRAND": {
+            "type": ["null", "string"]
+        },
+        "SUBBRAND": {
+            "type": ["null", "string"]
+        },
+        "CATEGORY": {
+            "type": ["null", "string"]
+        },
+        "SUBCATEGORY": {
+            "type": ["null", "string"]
+        },
+        "CATALOGREF": {
+            "type": ["null", "string"]
+        },
+        "COLOR": {
+            "type": ["null", "string"]
+        },
+        "STYLE": {
+            "type": ["null", "string"]
+        },
+        "SIZE1": {
+            "type": ["null", "string"]
+        },
+        "SIZE2": {
+            "type": ["null", "string"]
+        },
+        "GIFTCARD": {
+            "type": ["null", "string"]
+        },
+        "WEBENABLED": {
+            "type": ["null", "string"]
+        },
+        "WEBNAME": {
+            "type": ["null", "string"]
+        },
+        "WEBSHORTDESC": {
+            "type": ["null", "string"]
+        },
+        "WEBLONGDESC": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYKEY": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYID": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYNAME": {
+            "type": ["null", "string"]
+        },
+        "EXTRA_FIELD": {
+            "type": ["null", "string"]
+        },
+        "LOCATIONKEY": {
+            "type": ["null", "string"]
+        }
+    },
+    "required": ["RECORDNO", "ITEMID"]
+}
