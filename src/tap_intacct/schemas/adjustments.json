@@ -1,0 +1,184 @@
+{
+    "type": "object",
+    "properties": {
+        "RECORDNO": {
+            "type": ["null", "string"]
+        },
+        "RECORDTYPE": {
+            "type": ["null", "string"]
+        },
+        "RECORDID": {
+            "type": ["null", "string"]
+        },
+        "STATE": {
+            "type": ["null", "string"]
+        },
+        "RAWSTATE": {
+            "type": ["null", "string"]
+        },
+        "CUSTOMERID": {
+            "type": ["null", "string"]
+        },
+        "CUSTOMERNAME": {
+            "type": ["null", "string"]
+        },
+        "CUSTEMAILOPTIN": {
+            "type": ["null", "string"]
+        },
+        "TRX_ENTITYDUE": {
+            "type": ["null", "number"]
+        },
+        "DOCNUMBER": {
+            "type": ["null", "string"]
+        },
+        "DESCRIPTION": {
+            "type": ["null", "string"]
+        },
+        "WHENCREATED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENPOSTED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENPAID": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "BASECURR": {
+            "type": ["null", "string"]
+        },
+        "CURRENCY": {
+            "type": ["null", "string"]
+        },
+        "EXCH_RATE_DATE": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "EXCH_RATE_TYPE_ID": {
+            "type": ["null", "string"]
+        },
+        "EXCHANGE_RATE": {
+            "type": ["null", "number"]
+        },
+        "TOTALENTERED": {
+            "type": ["null", "number"]
+        },
+        "TOTALSELECTED": {
+            "type": ["null", "number"]
+        },
+        "TOTALPAID": {
+            "type": ["null", "number"]
+        },
+        "TOTALDUE": {
+            "type": ["null", "number"]
+        },
+        "TRX_TOTALENTERED": {
+            "type": ["null", "number"]
+        },
+        "TRX_TOTALSELECTED": {
+            "type": ["null", "number"]
+        },
+        "TRX_TOTALPAID": {
+            "type": ["null", "number"]
+        },
+        "TRX_TOTALDUE": {
+            "type": ["null", "number"]
+        },
+        "BILLTOPAYTOCONTACTNAME": {
+            "type": ["null", "string"]
+        },
+        "SHIPTORETURNTOCONTACTNAME": {
+            "type": ["null", "string"]
+        },
+        "BILLTOPAYTOKEY": {
+            "type": ["null", "string"]
+        },
+        "SHIPTORETURNTOKEY": {
+            "type": ["null", "number"]
+        },
+        "SHIPTO": {
+            "type": ["null", "string"]
+        },
+        "BILLTO": {
+            "type": ["null", "string"]
+        },
+        "PRBATCH": {
+            "type": ["null", "string"]
+        },
+        "PRBATCHKEY": {
+            "type": ["null", "number"]
+        },
+        "MODULEKEY": {
+            "type": ["null", "string"]
+        },
+        "AUWHENCREATED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "WHENMODIFIED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "CREATEDBY": {
+            "type": ["null", "number"]
+        },
+        "MODIFIEDBY": {
+            "type": ["null", "number"]
+        },
+        "PARENTPAYMENT": {
+            "type": ["null", "number"]
+        },
+        "SUPDOCID": {
+            "type": ["null", "string"]
+        },
+        "CONTACT": {
+            "type": ["null", "string"]
+        },
+        "TAXSOLUTIONKEY": {
+            "type": ["null", "number"]
+        },
+        "TAXSOLUTIONID": {
+            "type": ["null", "string"]
+        },
+        "TAXMETHOD": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYKEY": {
+            "type": ["null", "number"]
+        },
+        "MEGAENTITYID": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYNAME": {
+            "type": ["null", "string"]
+        },
+        "EXTERNALURL": {
+            "type": ["null", "string"]
+        },
+        "EXCHRATEDATE": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "EXCHRATETYPE": {
+            "type": ["null", "string"]
+        },
+        "EXCHRATE": {
+            "type": ["null", "number"]
+        },
+        "BILLTOCONTACTNAME": {
+            "type": ["null", "string"]
+        },
+        "SHIPTOCONTACTNAME": {
+            "type": ["null", "string"]
+        },
+        "ARADJUSTMENTITEMS": {
+            "type": ["null", "string"]
+        },
+        "CUSTOMER": {
+            "type": ["null", "string"]
+        }
+    },
+    "required": ["RECORDNO", "RECORDID"]
+}

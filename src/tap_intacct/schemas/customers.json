@@ -1,0 +1,284 @@
+{
+    "type": "object",
+    "properties": {
+        "RECORDNO": {
+            "type": ["null", "string"]
+        },
+        "CUSTOMERID": {
+            "type": ["null", "string"]
+        },
+        "NAME": {
+            "type": ["null", "string"]
+        },
+        "ENTITY": {
+            "type": ["null", "string"]
+        },
+        "PARENTKEY": {
+            "type": ["null", "string"]
+        },
+        "PARENTID": {
+            "type": ["null", "string"]
+        },
+        "PARENTNAME": {
+            "type": ["null", "string"]
+        },
+        "DISPLAYCONTACT": {
+            "type": ["null", "string"]
+        },
+        "TERMNAME": {
+            "type": ["null", "string"]
+        },
+        "TERMVALUE": {
+            "type": ["null", "string"]
+        },
+        "CUSTREPID": {
+            "type": ["null", "string"]
+        },
+        "CUSTREPNAME": {
+            "type": ["null", "string"]
+        },
+        "RESALENO": {
+            "type": ["null", "string"]
+        },
+        "TAXID": {
+            "type": ["null", "string"]
+        },
+        "CREDITLIMIT": {
+            "type": ["null", "number"]
+        },
+        "TOTALDUE": {
+            "type": ["null", "number"]
+        },
+        "COMMENTS": {
+            "type": ["null", "string"]
+        },
+        "ACCOUNTLABEL": {
+            "type": ["null", "string"]
+        },
+        "ARACCOUNT": {
+            "type": ["null", "string"]
+        },
+        "ARACCOUNTTITLE": {
+            "type": ["null", "string"]
+        },
+        "LAST_INVOICEDATE": {
+            "type": ["null", "string"]
+        },
+        "LAST_STATEMENTDATE": {
+            "type": ["null", "string"]
+        },
+        "DELIVERY_OPTIONS": {
+            "type": ["null", "string"]
+        },
+        "TERRITORYID": {
+            "type": ["null", "string"]
+        },
+        "TERRITORYNAME": {
+            "type": ["null", "string"]
+        },
+        "SHIPPINGMETHOD": {
+            "type": ["null", "string"]
+        },
+        "CUSTTYPE": {
+            "type": ["null", "string"]
+        },
+        "GLGRPKEY": {
+            "type": ["null", "number"]
+        },
+        "GLGROUP": {
+            "type": ["null", "string"]
+        },
+        "PRICESCHEDULE": {
+            "type": ["null", "string"]
+        },
+        "DISCOUNT": {
+            "type": ["null", "number"]
+        },
+        "PRICELIST": {
+            "type": ["null", "string"]
+        },
+        "VSOEPRICELIST": {
+            "type": ["null", "string"]
+        },
+        "CURRENCY": {
+            "type": ["null", "string"]
+        },
+        "CONTACTINFO": {
+            "type": ["null", "string"]
+        },
+        "SHIPTO": {
+            "type": ["null", "string"]
+        },
+        "BILLTO": {
+            "type": ["null", "string"]
+        },
+        "STATUS": {
+            "type": ["null", "string"]
+        },
+        "ONETIME": {
+            "type": ["null", "boolean"]
+        },
+        "CUSTMESSAGEID": {
+            "type": ["null", "string"]
+        },
+        "ONHOLD": {
+            "type": ["null", "boolean"]
+        },
+        "PRCLST_OVERRIDE": {
+            "type": ["null", "string"]
+        },
+        "OEPRCLSTKEY": {
+            "type": ["null", "number"]
+        },
+        "OEPRICESCHEDKEY": {
+            "type": ["null", "number"]
+        },
+        "ENABLEONLINECARDPAYMENT": {
+            "type": ["null", "boolean"]
+        },
+        "ENABLEONLINEACHPAYMENT": {
+            "type": ["null", "boolean"]
+        },
+        "VSOEPRCLSTKEY": {
+            "type": ["null", "number"]
+        },
+        "WHENMODIFIED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "ARINVOICEPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OEQUOTEPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OEORDERPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OELISTPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OEINVOICEPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OEADJPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "OEOTHERPRINTTEMPLATEID": {
+            "type": ["null", "string"]
+        },
+        "WHENCREATED": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "CREATEDBY": {
+            "type": ["null", "number"]
+        },
+        "MODIFIEDBY": {
+            "type": ["null", "number"]
+        },
+        "OBJECTRESTRICTION": {
+            "type": ["null", "string"]
+        },
+        "DISPLAYCONTACTKEY": {
+            "type": ["null", "number"]
+        },
+        "CONTACTKEY": {
+            "type": ["null", "number"]
+        },
+        "SHIPTOKEY": {
+            "type": ["null", "number"]
+        },
+        "BILLTOKEY": {
+            "type": ["null", "number"]
+        },
+        "CUSTREPKEY": {
+            "type": ["null", "number"]
+        },
+        "SHIPVIAKEY": {
+            "type": ["null", "number"]
+        },
+        "TERRITORYKEY": {
+            "type": ["null", "string"]
+        },
+        "TERMSKEY": {
+            "type": ["null", "number"]
+        },
+        "ACCOUNTLABELKEY": {
+            "type": ["null", "number"]
+        },
+        "ACCOUNTKEY": {
+            "type": ["null", "number"]
+        },
+        "CUSTTYPEKEY": {
+            "type": ["null", "number"]
+        },
+        "PRICESCHEDULEKEY": {
+            "type": ["null", "string"]
+        },
+        "OFFSETGLACCOUNTNO": {
+            "type": ["null", "string"]
+        },
+        "OFFSETGLACCOUNTNOTITLE": {
+            "type": ["null", "string"]
+        },
+        "ADVBILLBY": {
+            "type": ["null", "number"]
+        },
+        "ADVBILLBYTYPE": {
+            "type": ["null", "string"]
+        },
+        "SUPDOCID": {
+            "type": ["null", "string"]
+        },
+        "RETAINAGEPERCENTAGE": {
+            "type": ["null", "string"]
+        },
+        "EMAILOPTIN": {
+            "type": ["null", "boolean"]
+        },
+        "MEGAENTITYKEY": {
+            "type": ["null", "number"]
+        },
+        "MEGAENTITYID": {
+            "type": ["null", "string"]
+        },
+        "MEGAENTITYNAME": {
+            "type": ["null", "string"]
+        },
+        "LOCATIONKEY": {
+            "type": ["null", "string"]
+        },
+        "RASSET": {
+            "type": ["null", "string"]
+        },
+        "RASSET_CUSTOMER": {
+            "type": ["null", "string"]
+        },
+        "RCONSTRUCTION_IN_PROGRESS": {
+            "type": ["null", "string"]
+        },
+        "LOG_OLD": {
+            "type": ["null", "string"]
+        },
+        "LOG_NEW": {
+            "type": ["null", "string"]
+        },
+        "RMAPPING": {
+            "type": ["null", "string"]
+        },
+        "RBLACKLINE_SCHEDULES": {
+            "type": ["null", "string"]
+        },
+        "HIDEDISPLAYCONTACT": {
+            "type": ["null", "boolean"]
+        },
+        "SFORCEKEY": {
+            "type": ["null", "string"]
+        },
+        "CUSTOMERCONTACTS": {
+            "type": ["null", "string"]
+        }
+    },
+    "required": ["RECORDNO", "CUSTOMERID"]
+}
