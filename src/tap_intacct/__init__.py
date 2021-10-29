@@ -141,6 +141,17 @@ def _load_schema(stream: str):
 
 
 def _load_schema_from_api(stream: str):
+    Context.intacct_client = get_client(
+        api_url=Context.config['api_url'],
+        company_id=Context.config['company_id'],
+        sender_id=Context.config['sender_id'],
+        sender_password=Context.config['sender_password'],
+        user_id=Context.config['user_id'],
+        user_password=Context.config['user_password'],
+        headers={'User-Agent': Context.config['user_agent']}
+        if 'user_agent' in Context.config
+        else {},
+    )
     schema_json = {}
     schema_json['type'] = 'object'
     schema_json['properties'] = {}
@@ -148,15 +159,16 @@ def _load_schema_from_api(stream: str):
     required_list = []
     format_dict = {}
     format_dict['type'] = ["null", "string"]
-    fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(stream)
-    fields_data_list = fields_data_response['operation']['result']['data']['Type']['Fields']
+    # si = SageIntacctSDK()
+    fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
+    fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
+    # fields_data_list = fields_data_response['operation']['result']['data']['Type']['Fields']
     for rec in fields_data_list:
         format_dict['format'] = rec['DATATYPE']
         schema_json['properties'][rec['ID']] = format_dict
         if rec['REQUIRED'] == "true":
             required_list.append(rec['ID'])
     schema_json['required'] = required_list
-    schema_json['test_field'] = "written from API"
     return schema_json
 #
 

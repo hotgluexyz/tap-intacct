@@ -24,7 +24,7 @@ from tap_intacct.exceptions import (
 )
 
 from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, INTACCT_OBJECTS_WITH_CHILD_DATA
-
+logger = singer.get_logger()
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
@@ -471,8 +471,9 @@ class SageIntacctSDK:
         }
 
         response = self.format_and_send_request(get_fields)
-        print("fields_data")
-        print(response)
+        logger.info("fields_data")
+        logger.info(response)
+        return response
 
 def get_client(
     *,
