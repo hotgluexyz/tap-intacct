@@ -291,7 +291,6 @@ class SageIntacctSDK:
                 from_date=from_date
             )
 
-
     def get_by_date_no_child_data(
         self, *, object_type: str, fields: List[str], from_date: dt.datetime
     ) -> List[Dict]:
@@ -349,7 +348,6 @@ class SageIntacctSDK:
                 yield record
 
             offset = offset + pagesize
-
 
     def get_by_date_and_load_child_data(
         self, *, object_type: str, fields: List[str], from_date: dt.datetime
@@ -440,7 +438,6 @@ class SageIntacctSDK:
             # Set offset for next chunk.
             offset = offset + pagesize
 
-
     def get_sample(self, intacct_object: str):
         """
         Get a sample of data from an endpoint, useful for determining schemas.
@@ -458,6 +455,24 @@ class SageIntacctSDK:
 
         return self.format_and_send_request(data)['data'][intacct_object.lower()]
 
+    def get_fields_data_using_schema_name(self, object_type: str):
+        """
+
+        Returns:
+            List of Dict in object_type schema.
+        """
+        intacct_object_type = INTACCT_OBJECTS[object_type]
+
+        # First get the count of object that will be synchronized.
+        get_fields = {
+            'lookup': {
+                'object': intacct_object_type
+            }
+        }
+
+        response = self.format_and_send_request(get_fields)
+        print("fields_data")
+        print(response)
 
 def get_client(
     *,

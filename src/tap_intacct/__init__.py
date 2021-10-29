@@ -9,7 +9,7 @@ import singer
 from singer import metadata
 
 from .client import SageIntacctSDK, get_client
-from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS
+from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS
 
 logger = singer.get_logger()
 
@@ -140,6 +140,33 @@ def _load_schema(stream: str):
     return singer.utils.load_json(_get_abs_path(f'schemas/{stream}.json'))
 
 
+def _load_schema_from_api(stream: str):
+    schema_json = {}
+    schema_json['type'] = 'object'
+    schema_json['properties'] = {}
+
+    required_list = []
+    format_dict = {}
+    format_dict['type'] = ["null", "string"]
+    fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(stream)
+    fields_data_list = fields_data_response['operation']['result']['data']['Type']['Fields']
+    for rec in fields_data_list:
+        format_dict['format'] = rec['DATATYPE']
+        schema_json['properties'][rec['ID']] = format_dict
+        if rec['REQUIRED'] == "true":
+            required_list.append(rec['ID'])
+    schema_json['required'] = required_list
+    schema_json['test_field'] = "written from API"
+    return schema_json
+#
+
+
+def _load_schemas_from_intact():
+    schemas = {}
+    for key in INTACCT_OBJECTS:
+        schemas[key] = _load_schema_from_api(key)
+    return schemas
+
 def _load_schemas():
     schemas = {}
     for filename in _get_abs_path('schemas').iterdir():
@@ -194,11 +221,14 @@ def do_discover(*, stdout: bool = True) -> Dict:
     """
     Generates a catalog from schemas and writes to stdout if 'stdout' is True.
     """
-    raw_schemas = _load_schemas()
+    # raw_schemas = _load_schemas()
+    raw_schemas = _load_schemas_from_intact()
     streams = []
-
+    # fields_data_response = []
     for schema_name, schema in raw_schemas.items():
         # Get metadata for each field
+        # Calling Schema API to fetch fields list based on Schema Name
+        # fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(schema_name)
         mdata = _populate_metadata(schema_name, schema)
 
         # Create and add Catalog entry
