@@ -141,6 +141,16 @@ def _load_schema(stream: str):
 
 
 def _load_schema_from_api(stream: str):
+    """
+    Function to load schema data via an api call for each INTACCT Object to get the fields list for each schema name
+    dynamically
+    Args:
+        stream:
+
+    Returns:
+        schema_json
+
+    """
     Context.intacct_client = get_client(
         api_url=Context.config['api_url'],
         company_id=Context.config['company_id'],
@@ -157,23 +167,32 @@ def _load_schema_from_api(stream: str):
     schema_json['properties'] = {}
 
     required_list = []
-    format_dict = {}
-    format_dict['type'] = ["null", "string"]
-    # si = SageIntacctSDK()
     fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
     fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
-    # fields_data_list = fields_data_response['operation']['result']['data']['Type']['Fields']
     for rec in fields_data_list:
-        format_dict['format'] = rec['DATATYPE']
+        if rec['DATATYPE'] in ['PERCENT', 'DECIMAL']:
+            type_data_type = 'number'
+        elif rec['DATATYPE'] == 'BOOLEAN':
+            type_data_type = 'boolean'
+        else:
+            type_data_type = 'string'
+        format_dict = {'type': ["null", type_data_type], 'format': rec['DATATYPE']}
         schema_json['properties'][rec['ID']] = format_dict
         if rec['REQUIRED'] == "true":
             required_list.append(rec['ID'])
+        format_dict
     schema_json['required'] = required_list
     return schema_json
 #
 
 
 def _load_schemas_from_intact():
+    """
+    Function to loop through given INTACCT objects list and pass each object as
+    a key to load_schema_from_api to inturn get the fields list
+    Returns:
+   schemas
+    """
     schemas = {}
     for key in INTACCT_OBJECTS:
         schemas[key] = _load_schema_from_api(key)
@@ -233,14 +252,10 @@ def do_discover(*, stdout: bool = True) -> Dict:
     """
     Generates a catalog from schemas and writes to stdout if 'stdout' is True.
     """
-    # raw_schemas = _load_schemas()
     raw_schemas = _load_schemas_from_intact()
     streams = []
-    # fields_data_response = []
     for schema_name, schema in raw_schemas.items():
         # Get metadata for each field
-        # Calling Schema API to fetch fields list based on Schema Name
-        # fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(schema_name)
         mdata = _populate_metadata(schema_name, schema)
 
         # Create and add Catalog entry

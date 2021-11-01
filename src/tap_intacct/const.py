@@ -43,7 +43,7 @@ INTACCT_OBJECTS = {
 # These are intacct object for with there is child data and there is INTACCT API to query
 # the child data.
 # So our tap will have to fetch these object is GET by "RECORDNO" instead.
-INTACCT_OBJECTS_WITH_CHILD_DATA = ["invoices", "adjustments", "customers", "items"]
+INTACCT_OBJECTS_WITH_CHILD_DATA = []
 
 GET_BY_DATE_FIELD = "WHENMODIFIED"
 

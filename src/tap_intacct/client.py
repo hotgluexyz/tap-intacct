@@ -457,7 +457,8 @@ class SageIntacctSDK:
 
     def get_fields_data_using_schema_name(self, object_type: str):
         """
-
+        Function to fetch fields data for a given object by taking the schema name through
+        the API call.This function helps query via the api for any given schema name
         Returns:
             List of Dict in object_type schema.
         """
@@ -471,8 +472,6 @@ class SageIntacctSDK:
         }
 
         response = self.format_and_send_request(get_fields)
-        logger.info("fields_data")
-        logger.info(response)
         return response
 
 def get_client(
