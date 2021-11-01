@@ -18,6 +18,8 @@ KEY_PROPERTIES = {
     'adjustments': ["RECORDNO"],
     'customers': ["RECORDNO"],
     'items': ["RECORDNO"],
+    'invoice_items': ["RECORDNO"],
+    'accounts_payable_adjustment_items': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -33,6 +35,9 @@ INTACCT_OBJECTS = {
     "adjustments": "ARADJUSTMENT",
     "customers": "CUSTOMER",
     "items": "ITEM",
+    "invoice_items": "ARINVOICEITEM",
+    "accounts_payable_adjustment_items": "APADJUSTMENTITEM",
+
 }
 
 # These are intacct object for with there is child data and there is INTACCT API to query
