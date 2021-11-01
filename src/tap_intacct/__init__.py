@@ -130,7 +130,7 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
             mdata = metadata.write(
                 mdata, ('properties', field_name), 'inclusion', 'available'
             )
-            # mdata = metadata.write(mdata, ('properties', field_name), 'selected', True)
+
             mdata = metadata.write(mdata, ('properties', field_name), 'selected', False)
 
     return mdata
