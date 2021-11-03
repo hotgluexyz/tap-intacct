@@ -254,7 +254,7 @@ def sync_stream(stream: str) -> None:
 
 def do_discover(*, stdout: bool = True) -> Dict:
     """
-    Generates a catalog from schemas and writes to stdout if 'stdout' is True.
+    Generates a catalog from schemas and loads the schemas from Api call dynamically instead of existing schemas.
     """
     raw_schemas = _load_schemas_from_intact()
     streams = []
