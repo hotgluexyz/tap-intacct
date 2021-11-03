@@ -23,8 +23,8 @@ from tap_intacct.exceptions import (
     WrongParamsError,
 )
 
-from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, IGNORE_FIELDS
-logger = singer.get_logger()
+from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS
+
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
