@@ -23,7 +23,7 @@ from tap_intacct.exceptions import (
     WrongParamsError,
 )
 
-from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, INTACCT_OBJECTS_WITH_CHILD_DATA
+from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, IGNORE_FIELDS
 logger = singer.get_logger()
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
@@ -268,30 +268,9 @@ class SageIntacctSDK:
             response = self._post_request(dict_body, self.__api_url)
         return response['result']
 
+
+
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime
-    ) -> List[Dict]:
-        """
-        Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
-
-        Returns:
-            List of Dict in object_type schema.
-        """
-
-        if object_type in INTACCT_OBJECTS_WITH_CHILD_DATA:
-            return self.get_by_date_and_load_child_data(
-                object_type=object_type,
-                fields=fields,
-                from_date=from_date
-            )
-        else:
-            return self.get_by_date_no_child_data(
-                object_type=object_type,
-                fields=fields,
-                from_date=from_date
-            )
-
-    def get_by_date_no_child_data(
         self, *, object_type: str, fields: List[str], from_date: dt.datetime
     ) -> List[Dict]:
         """
@@ -349,94 +328,7 @@ class SageIntacctSDK:
 
             offset = offset + pagesize
 
-    def get_by_date_and_load_child_data(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime
-    ) -> List[Dict]:
-        """
-        Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
-        Also load the data using GET API instead of list. GET API will bring all the relations along with the basic objects.
 
-        Returns:
-            List of Dict in object_type schema.
-        """
-        intacct_object_type = INTACCT_OBJECTS[object_type]
-
-        # First get the count of object that will be synchronized.
-        get_count = {
-            'query': {
-                'object': intacct_object_type,
-                'select': {'field': 'RECORDNO'},
-                'filter': {
-                    'greaterthanorequalto': {
-                        'field': GET_BY_DATE_FIELD,
-                        'value': _format_date_for_intacct(from_date),
-                    }
-                },
-                'pagesize': '1',
-                'options': {'showprivate': 'true'},
-            }
-        }
-
-        response = self.format_and_send_request(get_count)
-        count = int(response['data']['@totalcount'])
-        pagesize = 1000
-        offset = 0
-
-        # Now that we have count of object, lets query the data in chunks
-        for _i in range(0, count, pagesize):
-
-            # First lets ket the RECORDNO for all object is current chunks.
-            data = {
-                'query': {
-                    'object': intacct_object_type,
-                    'select': {'field': 'RECORDNO'},
-                    'options': {'showprivate': 'true'},
-                    'filter': {
-                        'greaterthanorequalto': {
-                            'field': GET_BY_DATE_FIELD,
-                            'value': _format_date_for_intacct(from_date),
-                        }
-                    },
-                    'pagesize': pagesize,
-                    'offset': offset,
-                }
-            }
-
-            # Make the API call and convert each object to python Dict
-            intacct_objects = self.format_and_send_request(data)['data'][
-                intacct_object_type
-            ]
-
-            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
-            if isinstance(intacct_objects, dict):
-                intacct_objects = [intacct_objects]
-
-            # Create comma separated list of keys.
-            keys = ""
-            for record in intacct_objects:
-                keys = keys + record['RECORDNO'] + ","
-            keys = keys[:-1] if len(keys) > 0 else keys
-
-            # Now let's get full object data in current chuck using read by key API.
-            data = {
-                'read': {
-                    'object': intacct_object_type,
-                    'keys': keys,
-                    'fields': ','.join(fields)
-                }
-            }
-
-            # Make the API call and convert each object to python Dict
-            intacct_objects = self.format_and_send_request(data)['data'][
-                intacct_object_type
-            ]
-
-            # Yield each object for processing.
-            for record in intacct_objects:
-                yield record
-
-            # Set offset for next chunk.
-            offset = offset + pagesize
 
     def get_sample(self, intacct_object: str):
         """

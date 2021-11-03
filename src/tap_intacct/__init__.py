@@ -9,7 +9,7 @@ import singer
 from singer import metadata
 
 from .client import SageIntacctSDK, get_client
-from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS
+from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
 
 logger = singer.get_logger()
 
@@ -118,7 +118,6 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     mdata = metadata.write(
         mdata, (), 'table-key-properties', KEY_PROPERTIES[schema_name]
     )
-    # mdata = metadata.write(mdata, (), 'selected', True)
     mdata = metadata.write(mdata, (), 'selected', False)
 
     for field_name in schema['properties']:
@@ -148,7 +147,7 @@ def _load_schema_from_api(stream: str):
         stream:
 
     Returns:
-        schema_json
+        schema_dict
 
     """
     Context.intacct_client = get_client(
@@ -162,28 +161,33 @@ def _load_schema_from_api(stream: str):
         if 'user_agent' in Context.config
         else {},
     )
-    schema_json = {}
-    schema_json['type'] = 'object'
-    schema_json['properties'] = {}
+    schema_dict = {}
+    schema_dict['type'] = 'object'
+    schema_dict['properties'] = {}
 
-    required_list = []
+    required_list = ["RECORDNO", "WHENMODIFIED"]
     fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
     fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
     for rec in fields_data_list:
+        if rec['ID'] in IGNORE_FIELDS:
+            continue
         if rec['DATATYPE'] in ['PERCENT', 'DECIMAL']:
             type_data_type = 'number'
         elif rec['DATATYPE'] == 'BOOLEAN':
             type_data_type = 'boolean'
+        elif rec['DATATYPE'] in ['DATE', 'TIMESTAMP']:
+            type_data_type = 'date-time'
         else:
             type_data_type = 'string'
-        format_dict = {'type': ["null", type_data_type], 'format': rec['DATATYPE']}
-        schema_json['properties'][rec['ID']] = format_dict
-        if rec['REQUIRED'] == "true":
-            required_list.append(rec['ID'])
-        format_dict
-    schema_json['required'] = required_list
-    return schema_json
-#
+        if type_data_type in ['string', 'boolean', 'number']:
+            format_dict = {'type': ["null", type_data_type]}
+        else:
+            if type_data_type in ['date', 'date-time']:
+                format_dict = {'type': ["null", 'string'], 'format': type_data_type}
+
+        schema_dict['properties'][rec['ID']] = format_dict
+    schema_dict['required'] = required_list
+    return schema_dict
 
 
 def _load_schemas_from_intact():

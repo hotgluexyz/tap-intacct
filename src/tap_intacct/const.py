@@ -19,7 +19,7 @@ KEY_PROPERTIES = {
     'customers': ["RECORDNO"],
     'items': ["RECORDNO"],
     'invoice_items': ["RECORDNO"],
-    'accounts_payable_adjustment_items': ["RECORDNO"],
+    'adjustment_items': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -36,14 +36,13 @@ INTACCT_OBJECTS = {
     "customers": "CUSTOMER",
     "items": "ITEM",
     "invoice_items": "ARINVOICEITEM",
-    "accounts_payable_adjustment_items": "APADJUSTMENTITEM",
+    "adjustment_items": "ARADJUSTMENTITEM",
 
 }
 
-# These are intacct object for with there is child data and there is INTACCT API to query
-# the child data.
-# So our tap will have to fetch these object is GET by "RECORDNO" instead.
-INTACCT_OBJECTS_WITH_CHILD_DATA = []
+IGNORE_FIELDS =["PASSWORD"]
+
+
 
 GET_BY_DATE_FIELD = "WHENMODIFIED"
 
