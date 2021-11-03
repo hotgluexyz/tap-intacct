@@ -135,8 +135,7 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     return mdata
 
 
-def _load_schema(stream: str):
-    return singer.utils.load_json(_get_abs_path(f'schemas/{stream}.json'))
+
 
 
 def _load_schema_from_api(stream: str):
