@@ -9,7 +9,7 @@ import singer
 from singer import metadata
 
 from .client import SageIntacctSDK, get_client
-from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS
+from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
 
 logger = singer.get_logger()
 
@@ -118,7 +118,6 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     mdata = metadata.write(
         mdata, (), 'table-key-properties', KEY_PROPERTIES[schema_name]
     )
-    # mdata = metadata.write(mdata, (), 'selected', True)
     mdata = metadata.write(mdata, (), 'selected', False)
 
     for field_name in schema['properties']:
@@ -130,15 +129,77 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
             mdata = metadata.write(
                 mdata, ('properties', field_name), 'inclusion', 'available'
             )
-            # mdata = metadata.write(mdata, ('properties', field_name), 'selected', True)
+
             mdata = metadata.write(mdata, ('properties', field_name), 'selected', False)
 
     return mdata
 
 
-def _load_schema(stream: str):
-    return singer.utils.load_json(_get_abs_path(f'schemas/{stream}.json'))
 
+
+
+def _load_schema_from_api(stream: str):
+    """
+    Function to load schema data via an api call for each INTACCT Object to get the fields list for each schema name
+    dynamically
+    Args:
+        stream:
+
+    Returns:
+        schema_dict
+
+    """
+    Context.intacct_client = get_client(
+        api_url=Context.config['api_url'],
+        company_id=Context.config['company_id'],
+        sender_id=Context.config['sender_id'],
+        sender_password=Context.config['sender_password'],
+        user_id=Context.config['user_id'],
+        user_password=Context.config['user_password'],
+        headers={'User-Agent': Context.config['user_agent']}
+        if 'user_agent' in Context.config
+        else {},
+    )
+    schema_dict = {}
+    schema_dict['type'] = 'object'
+    schema_dict['properties'] = {}
+
+    required_list = ["RECORDNO", "WHENMODIFIED"]
+    fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
+    fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
+    for rec in fields_data_list:
+        if rec['ID'] in IGNORE_FIELDS:
+            continue
+        if rec['DATATYPE'] in ['PERCENT', 'DECIMAL']:
+            type_data_type = 'number'
+        elif rec['DATATYPE'] == 'BOOLEAN':
+            type_data_type = 'boolean'
+        elif rec['DATATYPE'] in ['DATE', 'TIMESTAMP']:
+            type_data_type = 'date-time'
+        else:
+            type_data_type = 'string'
+        if type_data_type in ['string', 'boolean', 'number']:
+            format_dict = {'type': ["null", type_data_type]}
+        else:
+            if type_data_type in ['date', 'date-time']:
+                format_dict = {'type': ["null", 'string'], 'format': type_data_type}
+
+        schema_dict['properties'][rec['ID']] = format_dict
+    schema_dict['required'] = required_list
+    return schema_dict
+
+
+def _load_schemas_from_intact():
+    """
+    Function to loop through given INTACCT objects list and pass each object as
+    a key to load_schema_from_api to inturn get the fields list
+    Returns:
+   schemas
+    """
+    schemas = {}
+    for key in INTACCT_OBJECTS:
+        schemas[key] = _load_schema_from_api(key)
+    return schemas
 
 def _load_schemas():
     schemas = {}
@@ -192,11 +253,10 @@ def sync_stream(stream: str) -> None:
 
 def do_discover(*, stdout: bool = True) -> Dict:
     """
-    Generates a catalog from schemas and writes to stdout if 'stdout' is True.
+    Generates a catalog from schemas and loads the schemas from Api call dynamically instead of existing schemas.
     """
-    raw_schemas = _load_schemas()
+    raw_schemas = _load_schemas_from_intact()
     streams = []
-
     for schema_name, schema in raw_schemas.items():
         # Get metadata for each field
         mdata = _populate_metadata(schema_name, schema)
