@@ -25,6 +25,7 @@ from tap_intacct.exceptions import (
 
 from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS
 
+logger = singer.get_logger()
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
