@@ -8,8 +8,8 @@ from typing import Dict, FrozenSet, Optional
 import singer
 from singer import metadata
 
-from .client import SageIntacctSDK, get_client
-from .const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
+from tap_intacct.client import SageIntacctSDK, get_client
+from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
 
 logger = singer.get_logger()
 
