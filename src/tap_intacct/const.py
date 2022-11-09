@@ -25,8 +25,8 @@ KEY_PROPERTIES = {
     'items': ["RECORDNO"],
     'invoice_items': ["RECORDNO"],
     'adjustment_items': ["RECORDNO"],
-    # 'tax_records': ["RECORDNO"],
-    # 'tax_details': ["RECORDNO"],
+    # 'tax_records': ["RECORDNO"], # not working
+    'tax_details': ["RECORDNO"],
     'departments': ["DEPARTMENTID"],
 }
 
@@ -50,14 +50,16 @@ INTACCT_OBJECTS = {
     "items": "ITEM",
     "invoice_items": "ARINVOICEITEM",
     "adjustment_items": "ARADJUSTMENTITEM",
-    # "tax_records": "TAXRECORD",
-    # "tax_details": "TAXDETAIL",
+    # "tax_records": "TAXRECORD", # not working
+    "tax_details": "TAXDETAIL",
     "departments": "DEPARTMENT",
 }
 
 IGNORE_FIELDS =["PASSWORD"]
 
-
+NO_DATE_FILTER = [ 
+    "tax_details"
+]
 
 GET_BY_DATE_FIELD = "WHENMODIFIED"
 

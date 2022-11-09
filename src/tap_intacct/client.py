@@ -23,7 +23,7 @@ from tap_intacct.exceptions import (
     WrongParamsError,
 )
 
-from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS
+from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS,NO_DATE_FILTER
 
 logger = singer.get_logger()
 
@@ -297,6 +297,9 @@ class SageIntacctSDK:
             }
         }
 
+        if object_type in NO_DATE_FILTER:
+            del get_count['query']['filter']
+
         response = self.format_and_send_request(get_count)
         count = int(response['data']['@totalcount'])
         pagesize = 1000
@@ -317,6 +320,10 @@ class SageIntacctSDK:
                     'offset': offset,
                 }
             }
+
+            if object_type in NO_DATE_FILTER:
+                del data['query']['filter']
+
             intacct_objects = self.format_and_send_request(data)['data'][
                 intacct_object_type
             ]

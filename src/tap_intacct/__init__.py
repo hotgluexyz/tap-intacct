@@ -240,9 +240,10 @@ def sync_stream(stream: str) -> None:
         fields=Context.get_selected_fields(stream),
         from_date=from_datetime,
     ):
-        row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
-        if row_timestamp > bookmark:
-            bookmark = row_timestamp
+        if 'WHENMODIFIED' in intacct_object:
+            row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
+            if row_timestamp > bookmark:
+                bookmark = row_timestamp
 
         _transform_and_write_record(intacct_object, schema, stream, time_extracted)
         Context.counts[stream] += 1
