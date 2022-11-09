@@ -25,6 +25,9 @@ KEY_PROPERTIES = {
     'items': ["RECORDNO"],
     'invoice_items': ["RECORDNO"],
     'adjustment_items': ["RECORDNO"],
+    # 'tax_records': ["RECORDNO"],
+    # 'tax_details': ["RECORDNO"],
+    'departments': ["DEPARTMENTID"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -47,7 +50,9 @@ INTACCT_OBJECTS = {
     "items": "ITEM",
     "invoice_items": "ARINVOICEITEM",
     "adjustment_items": "ARADJUSTMENTITEM",
-
+    # "tax_records": "TAXRECORD",
+    # "tax_details": "TAXDETAIL",
+    "departments": "DEPARTMENT",
 }
 
 IGNORE_FIELDS =["PASSWORD"]
