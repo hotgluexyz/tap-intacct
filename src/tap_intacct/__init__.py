@@ -275,7 +275,7 @@ def do_discover(*, stdout: bool = True) -> Dict:
 
     if stdout:
         # Dump catalog to stdout
-        sys.stdout.write(json.dumps(catalog))
+        json.dump(catalog, sys.stdout, indent=4)
 
     return catalog
 
