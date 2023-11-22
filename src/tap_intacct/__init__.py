@@ -237,6 +237,7 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
+
     try:
         # Attempt to get data with all fields
         data = Context.intacct_client.get_by_date(
@@ -245,41 +246,34 @@ def sync_stream(stream: str) -> None:
             from_date=from_datetime,
         )
 
-
-        for intacct_object in data:
-            row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
-            if row_timestamp > bookmark:
-                bookmark = row_timestamp
-
-
-            _transform_and_write_record(intacct_object, schema, stream, time_extracted)
-            Context.counts[stream] += 1
-
-    except Exception as e:
-        # TODO: handle the error
+        # Test getting a record
+        next(data, None)
+    except SageIntacctSDKError as e:
+        # Get the error description
         error = ast.literal_eval(e.message[7:])
         result = error['response']['operation']['result']['errormessage']['error']['description2']
-        #trim out the start and end of string message and then convert the neccessary elements into a list
+        # Trim out the start and end of string message and then convert the neccessary elements into a list
         result = result[70:(result.rfind("[")-1)].replace(" ", "").split(",")
 
+        # Remove any bad fields automatically
         for field in result:
             fields.remove(field)
 
-        data = Context.intacct_client.get_by_date(
-            object_type=stream,
-            fields=fields,
-            from_date=from_datetime,
-        )
+    # Make the request with the final fiedls
+    data = Context.intacct_client.get_by_date(
+        object_type=stream,
+        fields=fields,
+        from_date=from_datetime,
+    )
 
+    for intacct_object in data:
+        row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
+        if row_timestamp > bookmark:
+            bookmark = row_timestamp
 
-        for intacct_object in data:
-            row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
-            if row_timestamp > bookmark:
-                bookmark = row_timestamp
+        _transform_and_write_record(intacct_object, schema, stream, time_extracted)
+        Context.counts[stream] += 1
 
-
-            _transform_and_write_record(intacct_object, schema, stream, time_extracted)
-            Context.counts[stream] += 1
     # Update state
     singer.utils.update_state(Context.state, stream, bookmark)
 
