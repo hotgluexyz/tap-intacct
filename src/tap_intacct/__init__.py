@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import datetime as dt
 import json
+import ast
 import sys
 from pathlib import Path
 from typing import Dict, FrozenSet, Optional
@@ -8,6 +9,7 @@ from typing import Dict, FrozenSet, Optional
 import singer
 from singer import metadata
 
+from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
 from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
 
@@ -234,12 +236,37 @@ def sync_stream(stream: str) -> None:
 
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
+    fields = Context.get_selected_fields(stream)
 
-    for intacct_object in Context.intacct_client.get_by_date(
+    try:
+        # Attempt to get data with all fields
+        data = Context.intacct_client.get_by_date(
+            object_type=stream,
+            fields=fields,
+            from_date=from_datetime,
+        )
+
+        # Test getting a record
+        next(data, None)
+    except SageIntacctSDKError as e:
+        # Get the error description
+        error = ast.literal_eval(e.message[7:])
+        result = error['response']['operation']['result']['errormessage']['error']['description2']
+        # Trim out the start and end of string message and then convert the neccessary elements into a list
+        result = result[70:(result.rfind("[")-1)].replace(" ", "").split(",")
+
+        # Remove any bad fields automatically
+        for field in result:
+            fields.remove(field)
+
+    # Make the request with the final fiedls
+    data = Context.intacct_client.get_by_date(
         object_type=stream,
-        fields=Context.get_selected_fields(stream),
+        fields=fields,
         from_date=from_datetime,
-    ):
+    )
+
+    for intacct_object in data:
         row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
         if row_timestamp > bookmark:
             bookmark = row_timestamp
