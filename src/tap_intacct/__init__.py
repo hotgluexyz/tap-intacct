@@ -11,7 +11,7 @@ from singer import metadata
 
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
-from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS
+from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS, REP_KEYS, GET_BY_DATE_FIELD
 
 logger = singer.get_logger()
 
@@ -267,7 +267,8 @@ def sync_stream(stream: str) -> None:
     )
 
     for intacct_object in data:
-        row_timestamp = singer.utils.strptime_to_utc(intacct_object['WHENMODIFIED'])
+        rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
+        row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])
         if row_timestamp > bookmark:
             bookmark = row_timestamp
 
