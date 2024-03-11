@@ -28,7 +28,8 @@ KEY_PROPERTIES = {
     'items': ["RECORDNO"],
     'invoice_items': ["RECORDNO"],
     'adjustment_items': ["RECORDNO"],
-    'departments': ["DEPARTMENTID"]
+    'departments': ["DEPARTMENTID"],
+    "audit_history": ["ID"]
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -54,7 +55,12 @@ INTACCT_OBJECTS = {
     "items": "ITEM",
     "invoice_items": "ARINVOICEITEM",
     "adjustment_items": "ARADJUSTMENTITEM",
-    "departments": "DEPARTMENT"
+    "departments": "DEPARTMENT",
+    "audit_history": "AUDITHISTORY"
+}
+
+REP_KEYS = {
+    "audit_history" : "ACCESSTIME"
 }
 
 IGNORE_FIELDS =["PASSWORD"]

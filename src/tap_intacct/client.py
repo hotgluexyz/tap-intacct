@@ -23,7 +23,7 @@ from tap_intacct.exceptions import (
     WrongParamsError,
 )
 
-from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS
+from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 logger = singer.get_logger()
 
@@ -282,13 +282,15 @@ class SageIntacctSDK:
         """
         intacct_object_type = INTACCT_OBJECTS[object_type]
         total_intacct_objects = []
+        pk = KEY_PROPERTIES[object_type][0]
+        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
         get_count = {
             'query': {
                 'object': intacct_object_type,
-                'select': {'field': 'RECORDNO'},
+                'select': {'field': pk},
                 'filter': {
                     'greaterthanorequalto': {
-                        'field': GET_BY_DATE_FIELD,
+                        'field': rep_key,
                         'value': _format_date_for_intacct(from_date),
                     }
                 },
@@ -296,7 +298,6 @@ class SageIntacctSDK:
                 'options': {'showprivate': 'true'},
             }
         }
-
         response = self.format_and_send_request(get_count)
         count = int(response['data']['@totalcount'])
         pagesize = 1000
@@ -309,7 +310,7 @@ class SageIntacctSDK:
                     'options': {'showprivate': 'true'},
                     'filter': {
                         'greaterthanorequalto': {
-                            'field': GET_BY_DATE_FIELD,
+                            'field': rep_key,
                             'value': _format_date_for_intacct(from_date),
                         }
                     },
