@@ -271,8 +271,66 @@ class SageIntacctSDK:
         return response['result']
 
 
-
     def get_by_date(
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime
+    ) -> List[Dict]:
+        """
+        Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
+
+        Returns:
+            List of Dict in object_type schema.
+        """
+        intacct_object_type = INTACCT_OBJECTS[object_type]
+        total_intacct_objects = []
+        pk = KEY_PROPERTIES[object_type][0]
+        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+        get_count = {
+            'query': {
+                'object': intacct_object_type,
+                'select': {'field': pk},
+                'filter': {
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date),
+                    }
+                },
+                'pagesize': '1',
+                'options': {'showprivate': 'true'},
+            }
+        }
+        response = self.format_and_send_request(get_count)
+        count = int(response['data']['@totalcount'])
+        pagesize = 1000
+        offset = 0
+        for _i in range(0, count, pagesize):
+            data = {
+                'query': {
+                    'object': intacct_object_type,
+                    'select': {'field': fields},
+                    'options': {'showprivate': 'true'},
+                    'filter': {
+                        'greaterthanorequalto': {
+                            'field': rep_key,
+                            'value': _format_date_for_intacct(from_date),
+                        }
+                    },
+                    'pagesize': pagesize,
+                    'offset': offset,
+                }
+            }
+            intacct_objects = self.format_and_send_request(data)['data'][
+                intacct_object_type
+            ]
+            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
+            if isinstance(intacct_objects, dict):
+                intacct_objects = [intacct_objects]
+
+            for record in intacct_objects:
+                yield record
+
+            offset = offset + pagesize
+
+    def get_by_chunks(
         self, *, object_type: str, fields: List[str], from_date: dt.datetime
     ) -> List[Dict]:
         """
