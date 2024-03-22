@@ -10,6 +10,7 @@ from urllib.parse import unquote
 
 import requests
 import xmltodict
+from calendar import monthrange
 
 import singer
 
@@ -302,25 +303,38 @@ class SageIntacctSDK:
         count = int(response['data']['@totalcount'])
         pagesize = 1000
         offset = 0
-        for _i in range(0, count, pagesize):
+        now = dt.datetime.utcnow()
+        from_date = from_date.replace(tzinfo=None)
+
+        while from_date < now:
+            # get data by chunks (monthly)
+            day1, period_days = monthrange(from_date.year, from_date.month)
+            end_date = from_date + dt.timedelta(period_days)
+
+            # prepare payload
             data = {
                 'query': {
                     'object': intacct_object_type,
                     'select': {'field': fields},
                     'options': {'showprivate': 'true'},
                     'filter': {
-                        'greaterthanorequalto': {
-                            'field': rep_key,
-                            'value': _format_date_for_intacct(from_date),
+                        'and':{
+                            'greaterthanorequalto': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(from_date),
+                            },
+                            'lessthan': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(end_date),
+                            }
                         }
                     },
                     'pagesize': pagesize,
                     'offset': offset,
                 }
             }
-            intacct_objects = self.format_and_send_request(data)['data'][
-                intacct_object_type
-            ]
+            intacct_objects = self.format_and_send_request(data)['data'].get(intacct_object_type) or []
+
             # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
             if isinstance(intacct_objects, dict):
                 intacct_objects = [intacct_objects]
@@ -328,7 +342,11 @@ class SageIntacctSDK:
             for record in intacct_objects:
                 yield record
 
-            offset = offset + pagesize
+            if len(intacct_objects) < 1000:
+                from_date = end_date
+                offset = 0
+            else:
+                offset = offset + pagesize
 
 
 
