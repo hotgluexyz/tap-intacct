@@ -10,6 +10,7 @@ from urllib.parse import unquote
 
 import requests
 import xmltodict
+from calendar import monthrange
 
 import singer
 
@@ -270,7 +271,6 @@ class SageIntacctSDK:
         return response['result']
 
 
-
     def get_by_date(
         self, *, object_type: str, fields: List[str], from_date: dt.datetime
     ) -> List[Dict]:
@@ -329,6 +329,82 @@ class SageIntacctSDK:
                 yield record
 
             offset = offset + pagesize
+
+    def get_by_chunks(
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime
+    ) -> List[Dict]:
+        """
+        Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
+
+        Returns:
+            List of Dict in object_type schema.
+        """
+        intacct_object_type = INTACCT_OBJECTS[object_type]
+        total_intacct_objects = []
+        pk = KEY_PROPERTIES[object_type][0]
+        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+        get_count = {
+            'query': {
+                'object': intacct_object_type,
+                'select': {'field': pk},
+                'filter': {
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date),
+                    }
+                },
+                'pagesize': '1',
+                'options': {'showprivate': 'true'},
+            }
+        }
+        response = self.format_and_send_request(get_count)
+        count = int(response['data']['@totalcount'])
+        pagesize = 1000
+        offset = 0
+        now = dt.datetime.utcnow()
+        from_date = from_date.replace(tzinfo=None)
+
+        while from_date < now:
+            # get data by chunks (monthly)
+            day1, period_days = monthrange(from_date.year, from_date.month)
+            end_date = from_date + dt.timedelta(period_days)
+
+            # prepare payload
+            data = {
+                'query': {
+                    'object': intacct_object_type,
+                    'select': {'field': fields},
+                    'options': {'showprivate': 'true'},
+                    'filter': {
+                        'and':{
+                            'greaterthanorequalto': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(from_date),
+                            },
+                            'lessthan': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(end_date),
+                            }
+                        }
+                    },
+                    'pagesize': pagesize,
+                    'offset': offset,
+                }
+            }
+            intacct_objects = self.format_and_send_request(data)['data'].get(intacct_object_type) or []
+
+            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
+            if isinstance(intacct_objects, dict):
+                intacct_objects = [intacct_objects]
+
+            for record in intacct_objects:
+                yield record
+
+            if len(intacct_objects) < 1000:
+                from_date = end_date
+                offset = 0
+            else:
+                offset = offset + pagesize
 
 
 
