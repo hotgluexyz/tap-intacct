@@ -161,6 +161,9 @@ class SageIntacctSDK:
 
             if api_response['result']['status'] == 'success':
                 return api_response
+            
+            if api_response['result']['status'] == 'failure' and "There was an error processing the request" in api_response['result']['errormessage']['error']['description2']:
+                return {"result": "skip_and_paginate"}
 
         if response.status_code == 400:
             raise WrongParamsError('Some of the parameters are wrong', parsed_response)
@@ -302,7 +305,7 @@ class SageIntacctSDK:
         count = int(response['data']['@totalcount'])
         pagesize = 1000
         offset = 0
-        for _i in range(0, count, pagesize):
+        while offset < count:
             data = {
                 'query': {
                     'object': intacct_object_type,
@@ -318,7 +321,13 @@ class SageIntacctSDK:
                     'offset': offset,
                 }
             }
-            intacct_objects = self.format_and_send_request(data)['data'][
+            intacct_objects = self.format_and_send_request(data)
+
+            if intacct_objects == "skip_and_paginate":
+                offset = offset + 99
+                continue
+
+            intacct_objects = intacct_objects['data'][
                 intacct_object_type
             ]
             # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
@@ -329,84 +338,6 @@ class SageIntacctSDK:
                 yield record
 
             offset = offset + pagesize
-
-    def get_by_chunks(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime
-    ) -> List[Dict]:
-        """
-        Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
-
-        Returns:
-            List of Dict in object_type schema.
-        """
-        intacct_object_type = INTACCT_OBJECTS[object_type]
-        total_intacct_objects = []
-        pk = KEY_PROPERTIES[object_type][0]
-        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
-        get_count = {
-            'query': {
-                'object': intacct_object_type,
-                'select': {'field': pk},
-                'filter': {
-                    'greaterthanorequalto': {
-                        'field': rep_key,
-                        'value': _format_date_for_intacct(from_date),
-                    }
-                },
-                'pagesize': '1',
-                'options': {'showprivate': 'true'},
-            }
-        }
-        response = self.format_and_send_request(get_count)
-        count = int(response['data']['@totalcount'])
-        pagesize = 1000
-        offset = 0
-        now = dt.datetime.utcnow()
-        from_date = from_date.replace(tzinfo=None)
-
-        while from_date < now:
-            # get data by chunks (monthly)
-            day1, period_days = monthrange(from_date.year, from_date.month)
-            end_date = from_date + dt.timedelta(period_days)
-
-            # prepare payload
-            data = {
-                'query': {
-                    'object': intacct_object_type,
-                    'select': {'field': fields},
-                    'options': {'showprivate': 'true'},
-                    'filter': {
-                        'and':{
-                            'greaterthanorequalto': {
-                                'field': rep_key,
-                                'value': _format_date_for_intacct(from_date),
-                            },
-                            'lessthan': {
-                                'field': rep_key,
-                                'value': _format_date_for_intacct(end_date),
-                            }
-                        }
-                    },
-                    'pagesize': pagesize,
-                    'offset': offset,
-                }
-            }
-            intacct_objects = self.format_and_send_request(data)['data'].get(intacct_object_type) or []
-
-            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
-            if isinstance(intacct_objects, dict):
-                intacct_objects = [intacct_objects]
-
-            for record in intacct_objects:
-                yield record
-
-            if len(intacct_objects) < 1000:
-                from_date = end_date
-                offset = 0
-            else:
-                offset = offset + pagesize
-
-
 
     def get_sample(self, intacct_object: str):
         """

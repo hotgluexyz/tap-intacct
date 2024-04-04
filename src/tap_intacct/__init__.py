@@ -239,19 +239,12 @@ def sync_stream(stream: str) -> None:
     fields = Context.get_selected_fields(stream)
 
     try:
-        if stream == "audit_history":
-            data = Context.intacct_client.get_by_chunks(
-                object_type=stream,
-                fields=fields,
-                from_date=from_datetime,
-            )
-        else:
-            # Attempt to get data with all fields
-            data = Context.intacct_client.get_by_date(
-                object_type=stream,
-                fields=fields,
-                from_date=from_datetime,
-            )
+        # Attempt to get data with all fields
+        data = Context.intacct_client.get_by_date(
+            object_type=stream,
+            fields=fields,
+            from_date=from_datetime,
+        )
 
         # Test getting a record
         next(data, None)
