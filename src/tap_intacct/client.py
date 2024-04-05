@@ -323,7 +323,7 @@ class SageIntacctSDK:
             }
             intacct_objects = self.format_and_send_request(data)
 
-            if intacct_objects == "skip_and_paginate":
+            if intacct_objects == "skip_and_paginate" and object_type == "audit_history":
                 offset = offset + 99
                 continue
 
