@@ -162,7 +162,15 @@ class SageIntacctSDK:
             if api_response['result']['status'] == 'success':
                 return api_response
             
-            if api_response['result']['status'] == 'failure' and "There was an error processing the request" in api_response['result']['errormessage']['error']['description2']:
+            if (
+                api_response['result']['status'] == 'failure'
+                and "There was an error processing the request"
+                in api_response['result']['errormessage']['error']['description2']
+                and dict_body["request"]["operation"]["content"]["function"]["query"][
+                    "object"
+                ]
+                == "AUDITHISTORY"
+            ):
                 return {"result": "skip_and_paginate"}
 
         if response.status_code == 400:
