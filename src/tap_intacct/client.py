@@ -295,6 +295,10 @@ class SageIntacctSDK:
         total_intacct_objects = []
         pk = KEY_PROPERTIES[object_type][0]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+
+        # add 1 second to date
+        from_date = from_date + dt.timedelta(seconds=1)
+
         get_count = {
             'query': {
                 'object': intacct_object_type,
