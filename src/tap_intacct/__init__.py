@@ -88,10 +88,13 @@ def _get_abs_path(path: str) -> Path:
 
 def _get_start(key: str) -> dt.datetime:
     if key in Context.state:
-        # Subtract look-back from Config (default 1 hour) from State, in case of late arriving records.
-        start = singer.utils.strptime_to_utc(Context.state[key]) - dt.timedelta(
-            hours=Context.config['event_lookback']
-        )
+        start = singer.utils.strptime_to_utc(Context.state[key])
+
+        # commenting logic below due to HGI-5749 
+        # # Subtract look-back from Config (default 1 hour) from State, in case of late arriving records.
+        # start = start - dt.timedelta(
+        #     hours=Context.config['event_lookback']
+        # )
     else:
         start = singer.utils.strptime_to_utc(Context.config['start_date'])
 
