@@ -270,7 +270,10 @@ def sync_stream(stream: str) -> None:
     )
 
     for intacct_object in data:
-        rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
+        if stream.startswith("audit_history"):
+            rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)
+        else:
+            rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
         row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])
         if row_timestamp > bookmark:
             bookmark = row_timestamp
@@ -300,7 +303,20 @@ def do_discover(*, stdout: bool = True) -> Dict:
             'metadata': metadata.to_list(mdata),
             'key_properties': KEY_PROPERTIES[schema_name],
         }
-        streams.append(catalog_entry)
+
+        # create a separate stream for each endpoint audit history
+        if schema_name == "audit_history":
+            tables = list(raw_schemas.keys())
+            tables.remove("audit_history")
+            for table in tables:
+                new_stream = catalog_entry.copy()
+                stream_name = f"audit_history_{table}"
+                new_stream["stream"] = stream_name
+                new_stream["tap_stream_id"] = stream_name
+                streams.append(new_stream)
+        
+        else:
+            streams.append(catalog_entry)
 
     catalog = {'streams': streams}
 
@@ -323,7 +339,10 @@ def do_sync() -> None:
         '\n'.join(selected_stream_ids),
     )
     for stream in selected_stream_ids:
-        singer.write_schema(stream, Context.get_schema(stream), KEY_PROPERTIES[stream])
+        if stream.startswith("audit_history"):
+            singer.write_schema(stream, Context.get_schema(stream), KEY_PROPERTIES["audit_history"])
+        else:
+            singer.write_schema(stream, Context.get_schema(stream), KEY_PROPERTIES[stream])
         Context.counts[stream] = 0
         sync_stream(stream)
 

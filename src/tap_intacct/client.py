@@ -291,10 +291,43 @@ class SageIntacctSDK:
         Returns:
             List of Dict in object_type schema.
         """
+        # if stream is an audit_history stream filter by object type
+        if object_type.startswith("audit_history"):
+            filter_table = object_type.split("audit_history_")[-1]
+            filter_table_value = INTACCT_OBJECTS[filter_table].lower()
+            object_type = "audit_history"   
+
         intacct_object_type = INTACCT_OBJECTS[object_type]
         total_intacct_objects = []
         pk = KEY_PROPERTIES[object_type][0]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+
+
+        # if it's an audit_history stream filter only created (C) and deleted (D) records
+        if object_type == "audit_history":
+            filter = {
+                "and":{
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date),
+                    },
+                    "equalto":{
+                        'field': "OBJECTTYPE",
+                        'value': filter_table_value,
+                    },
+                    "in":{
+                        'field': "ACCESSMODE",
+                        'value': ["C", "D"],
+                    }
+                }
+            }
+        else:
+            filter = {
+                'greaterthanorequalto': {
+                    'field': rep_key,
+                    'value': _format_date_for_intacct(from_date),
+                }
+            }
 
         # add 1 second to date
         from_date = from_date + dt.timedelta(seconds=1)
@@ -303,12 +336,7 @@ class SageIntacctSDK:
             'query': {
                 'object': intacct_object_type,
                 'select': {'field': pk},
-                'filter': {
-                    'greaterthanorequalto': {
-                        'field': rep_key,
-                        'value': _format_date_for_intacct(from_date),
-                    }
-                },
+                'filter': filter,
                 'pagesize': '1',
                 'options': {'showprivate': 'true'},
             }
@@ -323,12 +351,7 @@ class SageIntacctSDK:
                     'object': intacct_object_type,
                     'select': {'field': fields},
                     'options': {'showprivate': 'true'},
-                    'filter': {
-                        'greaterthanorequalto': {
-                            'field': rep_key,
-                            'value': _format_date_for_intacct(from_date),
-                        }
-                    },
+                    'filter': filter,
                     'pagesize': pagesize,
                     'offset': offset,
                 }
