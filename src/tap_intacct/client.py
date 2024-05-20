@@ -303,6 +303,7 @@ class SageIntacctSDK:
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
 
 
+        from_date = from_date + dt.timedelta(seconds=1)
         # if it's an audit_history stream filter only created (C) and deleted (D) records
         if object_type == "audit_history":
             filter = {
@@ -328,9 +329,6 @@ class SageIntacctSDK:
                     'value': _format_date_for_intacct(from_date),
                 }
             }
-
-        # add 1 second to date
-        from_date = from_date + dt.timedelta(seconds=1)
 
         get_count = {
             'query': {
