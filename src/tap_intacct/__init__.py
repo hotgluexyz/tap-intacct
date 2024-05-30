@@ -254,15 +254,22 @@ def sync_stream(stream: str) -> None:
     except SageIntacctSDKError as e:
         # Get the error description
         error = ast.literal_eval(e.message[7:])
+        logger.warn(f"Hit error when querying {stream}. Error: {error}")
         result = error['response']['operation']['result']['errormessage']['error']['description2']
-        # Trim out the start and end of string message and then convert the neccessary elements into a list
-        result = result[70:(result.rfind("[")-1)].replace(" ", "").split(",")
+        start = result.find(";")
+        if start == -1:
+            start = result.rfind(":", 0, result.rfind(":") - 1)
+
+        result = result[(start+1):(result.rfind("[")-1)].replace(" ", "").replace("]", "").replace("[", "").split(",")
+        logger.info(f"Ignoring fields: {result}")
 
         # Remove any bad fields automatically
         for field in result:
-            fields.remove(field)
+            # NOTE: Apparently this was failing because field was not in fields
+            if field in fields:
+                fields.remove(field)
 
-    # Make the request with the final fiedls
+    # Make the request with the final fields
     data = Context.intacct_client.get_by_date(
         object_type=stream,
         fields=fields,
