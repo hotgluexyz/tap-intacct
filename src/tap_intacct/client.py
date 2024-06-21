@@ -390,13 +390,16 @@ class SageIntacctSDK:
                     'orderby':{'order': [{'field':rep_key, 'ascending': 'true'}]}
                 }
             }
-            oldest_date = self.format_and_send_request(get_oldest_date)
-            oldest_date = oldest_date["data"].get(intacct_object_type, {}).get(rep_key)
-            if oldest_date:
-                start_date = dt.datetime.strptime(oldest_date, '%m/%d/%Y %H:%M:%S') - dt.timedelta(seconds=1)
-                start_date = start_date.replace(tzinfo=dt.timezone.utc)
-            else:
-                return []
+            try:
+                # try to get the oldest_date to avoid unneccesary iterations
+                oldest_date = self.format_and_send_request(get_oldest_date)
+                oldest_date = oldest_date["data"].get(intacct_object_type, {}).get(rep_key)
+                if oldest_date:
+                    start_date = dt.datetime.strptime(oldest_date, '%m/%d/%Y %H:%M:%S') - dt.timedelta(seconds=1)
+                    start_date = start_date.replace(tzinfo=dt.timezone.utc)
+            except:
+                # if it fails due to not enough resources -> use from_date
+                start_date = from_date
 
             while start_date <= today:
                 end_date = start_date + dt.timedelta(days=30)
