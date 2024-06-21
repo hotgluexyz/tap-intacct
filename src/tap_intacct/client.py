@@ -138,6 +138,8 @@ class SageIntacctSDK:
         logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
+        logger.info(f"request to {api_url} response {response.text}, statuscode {response.status_code}")
+
         parsed_xml = xmltodict.parse(response.text)
         parsed_response = json.loads(json.dumps(parsed_xml))
 
