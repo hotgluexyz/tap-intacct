@@ -135,6 +135,7 @@ class SageIntacctSDK:
         api_headers = {'content-type': 'application/xml'}
         api_headers.update(self.__headers)
         body = xmltodict.unparse(dict_body)
+        logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
         parsed_xml = xmltodict.parse(response.text)
