@@ -27,6 +27,9 @@ from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 logger = singer.get_logger()
 
+class InvalidXmlResponse(Exception):
+    pass
+
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
     Intacct expects datetimes in a 'MM/DD/YY HH:MM:SS' string format.
@@ -140,8 +143,11 @@ class SageIntacctSDK:
 
         logger.info(f"request to {api_url} response {response.text}, statuscode {response.status_code}")
 
-        parsed_xml = xmltodict.parse(response.text)
-        parsed_response = json.loads(json.dumps(parsed_xml))
+        try:
+            parsed_xml = xmltodict.parse(response.text)
+            parsed_response = json.loads(json.dumps(parsed_xml))
+        except:
+            raise InvalidXmlResponse(f"Response status code: {response.status_code}, response: {response.text}")
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
