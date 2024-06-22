@@ -330,7 +330,7 @@ class SageIntacctSDK:
             offset = offset + pagesize
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime, iterate_by_date=False
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime, iterate_by_date=False, days=30
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -408,7 +408,7 @@ class SageIntacctSDK:
                 start_date = from_date
 
             while start_date <= today:
-                end_date = start_date + dt.timedelta(days=30)
+                end_date = start_date + dt.timedelta(days=days)
                 logger.info('Syncing %s data from %s to %s', object_type, start_date, end_date)
 
                 if object_type == "audit_history":
