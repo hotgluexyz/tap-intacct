@@ -408,7 +408,8 @@ class SageIntacctSDK:
                 start_date = from_date
 
             while start_date <= today:
-                end_date = start_date + dt.timedelta(days=days)
+                #TODO remove days '15' used for testing, and use days (dynamic)
+                end_date = start_date + dt.timedelta(days=15)
                 logger.info('Syncing %s data from %s to %s', object_type, start_date, end_date)
 
                 if object_type == "audit_history":
