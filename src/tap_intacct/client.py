@@ -10,6 +10,7 @@ from urllib.parse import unquote
 import requests
 import xmltodict
 from calendar import monthrange
+import backoff
 
 import singer
 
@@ -28,6 +29,8 @@ from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 logger = singer.get_logger()
 
 class InvalidXmlResponse(Exception):
+    pass
+class BadGatewayError(Exception):
     pass
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
@@ -122,6 +125,13 @@ class SageIntacctSDK:
         else:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
 
+
+    @backoff.on_exception(
+        backoff.expo,
+        (BadGatewayError),
+        max_tries=5,
+        factor=3,
+    )
     @singer.utils.ratelimit(10, 1)
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
         """
@@ -142,11 +152,12 @@ class SageIntacctSDK:
         response = requests.post(api_url, headers=api_headers, data=body)
 
         logger.info(f"request to {api_url} response {response.text}, statuscode {response.status_code}")
-
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
+            if response.status_code == 502:
+                raise BadGatewayError(f"Response status code: {response.status_code}, response: {response.text}")
             raise InvalidXmlResponse(f"Response status code: {response.status_code}, response: {response.text}")
 
         if response.status_code == 200:
