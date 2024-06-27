@@ -241,7 +241,7 @@ def sync_stream(stream: str) -> None:
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
     iterate_by_date = Context.config.get("iterate_by_date") or False
-    days = Context.config.get("days_period")
+    days = Context.config.get("days_period") or 5 # default to 5 is days_period is not in config or is empty
 
     try:
         # Attempt to get data with all fields
