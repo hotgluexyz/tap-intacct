@@ -128,7 +128,7 @@ class SageIntacctSDK:
 
     @backoff.on_exception(
         backoff.expo,
-        (BadGatewayError),
+        (BadGatewayError, ConnectionError, ConnectionResetError, requests.exceptions.ConnectionError),
         max_tries=5,
         factor=3,
     )
