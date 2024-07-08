@@ -32,6 +32,10 @@ class InvalidXmlResponse(Exception):
     pass
 class BadGatewayError(Exception):
     pass
+class OfflineServiceError(Exception):
+    pass
+class RateLimitError(Exception):
+    pass
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
@@ -128,8 +132,16 @@ class SageIntacctSDK:
 
     @backoff.on_exception(
         backoff.expo,
-        (BadGatewayError, ConnectionError, ConnectionResetError, requests.exceptions.ConnectionError),
-        max_tries=5,
+        (
+            BadGatewayError,
+            OfflineServiceError,
+            ConnectionError,
+            ConnectionResetError,
+            requests.exceptions.ConnectionError,
+            InternalServerError,
+            RateLimitError,
+        ),
+        max_tries=8,
         factor=3,
     )
     @singer.utils.ratelimit(10, 1)
@@ -151,14 +163,28 @@ class SageIntacctSDK:
         logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
-        logger.info(f"request to {api_url} response {response.text}, statuscode {response.status_code}")
+        logger.info(
+            f"request to {api_url} response {response.text}, statuscode {response.status_code}"
+        )
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
             if response.status_code == 502:
-                raise BadGatewayError(f"Response status code: {response.status_code}, response: {response.text}")
-            raise InvalidXmlResponse(f"Response status code: {response.status_code}, response: {response.text}")
+                raise BadGatewayError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 503:
+                raise OfflineServiceError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 429:
+                raise RateLimitError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            raise InvalidXmlResponse(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
@@ -180,7 +206,7 @@ class SageIntacctSDK:
 
             if api_response['result']['status'] == 'success':
                 return api_response
-            
+
             if (
                 api_response['result']['status'] == 'failure'
                 and "There was an error processing the request"
@@ -215,6 +241,7 @@ class SageIntacctSDK:
             raise InternalServerError('Internal server error', parsed_response)
 
         raise SageIntacctSDKError('Error: {0}'.format(parsed_response))
+    
 
     def support_id_msg(self, errormessages) -> Union[List, Dict]:
         """
