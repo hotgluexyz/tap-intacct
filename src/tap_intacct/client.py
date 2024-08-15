@@ -127,9 +127,9 @@ class SageIntacctSDK:
 
     @singer.utils.ratelimit(10, 1)
     @backoff.on_exception(backoff.expo,
-                (ExpatError),
-                max_tries=5,
-                factor=2)
+                        (ExpatError),
+                        max_tries=5,
+                        factor=2)   
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
         """
         Create a HTTP post request.
