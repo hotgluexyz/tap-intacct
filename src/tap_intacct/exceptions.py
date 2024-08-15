@@ -42,3 +42,11 @@ class NotFoundItemError(SageIntacctSDKError):
 
 class InternalServerError(SageIntacctSDKError):
     """The rest SageIntacctSDK errors, 500 error."""
+
+
+class InvalidRequest(SageIntacctSDKError):
+    """The rest SageIntacctSDK errors, 500 error."""
+
+
+class AuthFailure(SageIntacctSDKError):
+    """The rest SageIntacctSDK errors, 500 error."""
