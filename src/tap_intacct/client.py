@@ -1,6 +1,7 @@
 """
 API Base class with util functions
 """
+import backoff
 import datetime as dt
 import json
 import re
@@ -10,6 +11,8 @@ from urllib.parse import unquote
 
 import requests
 import xmltodict
+from xml.parsers.expat import ExpatError
+
 from calendar import monthrange
 
 import singer
@@ -123,6 +126,10 @@ class SageIntacctSDK:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
 
     @singer.utils.ratelimit(10, 1)
+    @backoff.on_exception(backoff.expo,
+                    (ExpatError),
+                    max_tries=5,
+                    factor=2)
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
         """
         Create a HTTP post request.
