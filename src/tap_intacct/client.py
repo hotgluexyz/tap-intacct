@@ -8,12 +8,12 @@ import re
 import uuid
 from typing import Dict, List, Union
 from urllib.parse import unquote
-
 import requests
 import xmltodict
 from xml.parsers.expat import ExpatError
 
 from calendar import monthrange
+import backoff
 
 import singer
 
@@ -32,6 +32,15 @@ from tap_intacct.exceptions import (
 from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 logger = singer.get_logger()
+
+class InvalidXmlResponse(Exception):
+    pass
+class BadGatewayError(Exception):
+    pass
+class OfflineServiceError(Exception):
+    pass
+class RateLimitError(Exception):
+    pass
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
@@ -125,6 +134,21 @@ class SageIntacctSDK:
         else:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
 
+
+    @backoff.on_exception(
+        backoff.expo,
+        (
+            BadGatewayError,
+            OfflineServiceError,
+            ConnectionError,
+            ConnectionResetError,
+            requests.exceptions.ConnectionError,
+            InternalServerError,
+            RateLimitError,
+        ),
+        max_tries=8,
+        factor=3,
+    )
     @singer.utils.ratelimit(10, 1)
     @backoff.on_exception(backoff.expo,
         (ExpatError),
@@ -145,10 +169,31 @@ class SageIntacctSDK:
         api_headers = {'content-type': 'application/xml'}
         api_headers.update(self.__headers)
         body = xmltodict.unparse(dict_body)
+        logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
-        parsed_xml = xmltodict.parse(response.text)
-        parsed_response = json.loads(json.dumps(parsed_xml))
+        logger.info(
+            f"request to {api_url} response {response.text}, statuscode {response.status_code}"
+        )
+        try:
+            parsed_xml = xmltodict.parse(response.text)
+            parsed_response = json.loads(json.dumps(parsed_xml))
+        except:
+            if response.status_code == 502:
+                raise BadGatewayError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 503:
+                raise OfflineServiceError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 429:
+                raise RateLimitError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            raise InvalidXmlResponse(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
@@ -170,7 +215,7 @@ class SageIntacctSDK:
 
             if api_response['result']['status'] == 'success':
                 return api_response
-            
+
             if (
                 api_response['result']['status'] == 'failure'
                 and "There was an error processing the request"
@@ -208,6 +253,7 @@ class SageIntacctSDK:
             raise InternalServerError(f'Internal server error. Response: {parsed_response}')
 
         raise SageIntacctSDKError('Error: {0}'.format(parsed_response))
+    
 
     def support_id_msg(self, errormessages) -> Union[List, Dict]:
         """
@@ -292,10 +338,49 @@ class SageIntacctSDK:
         with singer.metrics.http_request_timer(endpoint=object_type):
             response = self._post_request(dict_body, self.__api_url)
         return response['result']
+    
+    def paginated_get(self, intacct_object_type, fields, object_type, filter):
+        pagesize = 1000
+        offset = 0
+        paginate = True
+        while paginate:
+            data = {
+                'query': {
+                    'object': intacct_object_type,
+                    'select': {'field': fields},
+                    'options': {'showprivate': 'true'},
+                    'filter': filter,
+                    'pagesize': pagesize,
+                    'offset': offset,
+                }
+            }
+            intacct_objects = self.format_and_send_request(data)
 
+            if int(intacct_objects["data"]["@numremaining"]) == 0:
+                paginate = False
+            
+            if intacct_objects == "skip_and_paginate" and object_type == "audit_history":
+                offset = offset + 99
+                continue
+            
+            intacct_objects = intacct_objects['data'].get(
+                intacct_object_type
+            )
+
+            if not intacct_objects:
+                continue
+            
+            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
+            if isinstance(intacct_objects, dict):
+                intacct_objects = [intacct_objects]
+
+            for record in intacct_objects:
+                yield record
+
+            offset = offset + pagesize
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime, iterate_by_date=False, days
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -310,79 +395,111 @@ class SageIntacctSDK:
             object_type = "audit_history"   
 
         intacct_object_type = INTACCT_OBJECTS[object_type]
-        total_intacct_objects = []
         pk = KEY_PROPERTIES[object_type][0]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
 
-
-        from_date = from_date + dt.timedelta(seconds=1)
-        # if it's an audit_history stream filter only created (C) and deleted (D) records
-        if object_type == "audit_history":
-            filter = {
-                "and":{
+        if not iterate_by_date:
+            from_date = from_date + dt.timedelta(seconds=1)
+            # if it's an audit_history stream filter only created (C) and deleted (D) records
+            if object_type == "audit_history":
+                filter = {
+                    "and":{
+                        'greaterthanorequalto': {
+                            'field': rep_key,
+                            'value': _format_date_for_intacct(from_date),
+                        },
+                        "equalto":{
+                            'field': "OBJECTTYPE",
+                            'value': filter_table_value,
+                        },
+                        "in":{
+                            'field': "ACCESSMODE",
+                            'value': ["C", "D"],
+                        }
+                    }
+                }
+            else:
+                filter = {
                     'greaterthanorequalto': {
                         'field': rep_key,
                         'value': _format_date_for_intacct(from_date),
-                    },
-                    "equalto":{
-                        'field': "OBJECTTYPE",
-                        'value': filter_table_value,
-                    },
-                    "in":{
-                        'field': "ACCESSMODE",
-                        'value': ["C", "D"],
                     }
                 }
-            }
+
+            yield from self.paginated_get(intacct_object_type, fields, object_type, filter)
         else:
-            filter = {
-                'greaterthanorequalto': {
-                    'field': rep_key,
-                    'value': _format_date_for_intacct(from_date),
-                }
-            }
+            start_date = from_date
+            today = dt.datetime.utcnow().replace(tzinfo=dt.timezone.utc)
 
-        get_count = {
-            'query': {
-                'object': intacct_object_type,
-                'select': {'field': pk},
-                'filter': filter,
-                'pagesize': '1',
-                'options': {'showprivate': 'true'},
-            }
-        }
-        response = self.format_and_send_request(get_count)
-        count = int(response['data']['@totalcount'])
-        pagesize = 1000
-        offset = 0
-        while offset < count:
-            data = {
-                'query': {
+            # get oldest date with data to avoid unnecessary iterations
+            get_oldest_date = {
+                'query':{
                     'object': intacct_object_type,
-                    'select': {'field': fields},
-                    'options': {'showprivate': 'true'},
-                    'filter': filter,
-                    'pagesize': pagesize,
-                    'offset': offset,
+                    'select': {'field': [pk, rep_key]},
+                    'filter': {
+                        'greaterthanorequalto': {
+                            'field': rep_key,
+                            'value': _format_date_for_intacct(start_date),
+                        }
+                    },
+                    'pagesize': '1',
+                    'orderby':{'order': [{'field':rep_key, 'ascending': 'true'}]}
                 }
             }
-            intacct_objects = self.format_and_send_request(data)
+            try:
+                # try to get the oldest_date to avoid unneccesary iterations
+                oldest_date = self.format_and_send_request(get_oldest_date)
+                oldest_date = oldest_date["data"].get(intacct_object_type, {}).get(rep_key)
+                if oldest_date:
+                    start_date = dt.datetime.strptime(oldest_date, '%m/%d/%Y %H:%M:%S') - dt.timedelta(seconds=1)
+                    start_date = start_date.replace(tzinfo=dt.timezone.utc)
+            except:
+                # if it fails due to not enough resources -> use from_date
+                start_date = from_date
 
-            if intacct_objects == "skip_and_paginate" and object_type == "audit_history":
-                offset = offset + 99
-                continue
+            while start_date <= today:
 
-            intacct_objects = intacct_objects['data'][
-                intacct_object_type
-            ]
-            # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
-            if isinstance(intacct_objects, dict):
-                intacct_objects = [intacct_objects]
+                end_date = start_date + dt.timedelta(days=days)
+                logger.info('Syncing %s data from %s to %s', object_type, start_date, end_date)
 
-            for record in intacct_objects:
-                yield record
-
-            offset = offset + pagesize
+                if object_type == "audit_history":
+                    filter = {
+                        "and":{
+                            'greaterthanorequalto': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(from_date),
+                            },
+                            'lessthan': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(end_date),
+                            },
+                            "equalto":{
+                                'field': "OBJECTTYPE",
+                                'value': filter_table_value,
+                            },
+                            "in":{
+                                'field': "ACCESSMODE",
+                                'value': ["C", "D"],
+                            }
+                        }
+                    }
+                else:
+                    filter = {
+                        'and':{
+                            'greaterthanorequalto': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(start_date),
+                            },
+                            'lessthan': {
+                                'field': rep_key,
+                                'value': _format_date_for_intacct(end_date),
+                            },
+                        }
+                    }
+                # get records and iterate by offset
+                yield from self.paginated_get(intacct_object_type, fields, object_type, filter)
+                # set new start date
+                start_date = end_date
 
     def get_sample(self, intacct_object: str):
         """

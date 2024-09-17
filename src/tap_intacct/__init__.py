@@ -240,6 +240,8 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
+    iterate_by_date = Context.config.get("iterate_by_date") or False
+    days = Context.config.get("days_period") or 5 # default to 5 is days_period is not in config or is empty
 
     try:
         # Attempt to get data with all fields
@@ -247,6 +249,8 @@ def sync_stream(stream: str) -> None:
             object_type=stream,
             fields=fields,
             from_date=from_datetime,
+            iterate_by_date=iterate_by_date,
+            days=days
         )
 
         # Test getting a record
@@ -269,12 +273,14 @@ def sync_stream(stream: str) -> None:
             if field in fields:
                 fields.remove(field)
 
-    # Make the request with the final fields
-    data = Context.intacct_client.get_by_date(
-        object_type=stream,
-        fields=fields,
-        from_date=from_datetime,
-    )
+        # Make the request with the final fields
+        data = Context.intacct_client.get_by_date(
+            object_type=stream,
+            fields=fields,
+            from_date=from_datetime,
+            iterate_by_date=iterate_by_date,
+            days=days
+        )
 
     for intacct_object in data:
         if stream.startswith("audit_history"):
