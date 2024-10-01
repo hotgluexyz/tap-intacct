@@ -173,6 +173,7 @@ class SageIntacctSDK:
             
             if (
                 api_response['result']['status'] == 'failure'
+                and api_response.get('result', {}).get('errormessage', {}).get('error', {}).get('description2')
                 and "There was an error processing the request"
                 in api_response['result']['errormessage']['error']['description2']
                 and dict_body["request"]["operation"]["content"]["function"]["query"][
