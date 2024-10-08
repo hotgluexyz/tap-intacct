@@ -29,6 +29,9 @@ from tap_intacct.exceptions import (
     AuthFailure
 )
 
+class PleaseTryAgainLaterError(Exception):
+    pass
+
 from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 logger = singer.get_logger()
@@ -127,7 +130,7 @@ class SageIntacctSDK:
 
     @singer.utils.ratelimit(10, 1)
     @backoff.on_exception(backoff.expo,
-        (ExpatError),
+        (ExpatError, PleaseTryAgainLaterError),
         max_tries=5,
         factor=2)
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
@@ -184,6 +187,8 @@ class SageIntacctSDK:
                 return {"result": "skip_and_paginate"}
 
         exception_msg = parsed_response.get("response", {}).get("errormessage", {}).get("error", {})
+        correction = exception_msg.get("correction", {})
+        
         if response.status_code == 400:
             if exception_msg.get("errorno") == "GW-0011":
                 raise AuthFailure(f'One or more authentication values are incorrect. Response:{parsed_response}')
@@ -207,6 +212,9 @@ class SageIntacctSDK:
 
         if response.status_code == 500:
             raise InternalServerError(f'Internal server error. Response: {parsed_response}')
+
+        if correction and 'Please Try Again Later' in correction:
+            raise PleaseTryAgainLaterError(parsed_response)
 
         raise SageIntacctSDKError('Error: {0}'.format(parsed_response))
 
