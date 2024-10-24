@@ -29,12 +29,23 @@ from tap_intacct.exceptions import (
     AuthFailure
 )
 
+from http.client import RemoteDisconnected
+
 class PleaseTryAgainLaterError(Exception):
     pass
 
 from .const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 logger = singer.get_logger()
+
+class InvalidXmlResponse(Exception):
+    pass
+class BadGatewayError(Exception):
+    pass
+class OfflineServiceError(Exception):
+    pass
+class RateLimitError(Exception):
+    pass
 
 def _format_date_for_intacct(datetime: dt.datetime) -> str:
     """
@@ -128,11 +139,22 @@ class SageIntacctSDK:
         else:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
 
+    @backoff.on_exception(
+        backoff.expo,
+        (
+            BadGatewayError,
+            OfflineServiceError,
+            ConnectionError,
+            ConnectionResetError,
+            requests.exceptions.ConnectionError,
+            InternalServerError,
+            RateLimitError,
+            RemoteDisconnected,
+        ),
+        max_tries=8,
+        factor=3,
+    )
     @singer.utils.ratelimit(10, 1)
-    @backoff.on_exception(backoff.expo,
-        (ExpatError, PleaseTryAgainLaterError),
-        max_tries=5,
-        factor=2)
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
         """
         Create a HTTP post request.
@@ -148,10 +170,31 @@ class SageIntacctSDK:
         api_headers = {'content-type': 'application/xml'}
         api_headers.update(self.__headers)
         body = xmltodict.unparse(dict_body)
+        logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
-        parsed_xml = xmltodict.parse(response.text)
-        parsed_response = json.loads(json.dumps(parsed_xml))
+        logger.info(
+            f"request to {api_url} response {response.text}, statuscode {response.status_code}"
+        )
+        try:
+            parsed_xml = xmltodict.parse(response.text)
+            parsed_response = json.loads(json.dumps(parsed_xml))
+        except:
+            if response.status_code == 502:
+                raise BadGatewayError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 503:
+                raise OfflineServiceError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            if response.status_code == 429:
+                raise RateLimitError(
+                    f"Response status code: {response.status_code}, response: {response.text}"
+                )
+            raise InvalidXmlResponse(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
@@ -453,3 +496,4 @@ def get_client(
     )
 
     return connection
+
