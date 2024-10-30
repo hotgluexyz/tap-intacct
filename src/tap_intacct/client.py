@@ -217,7 +217,7 @@ class SageIntacctSDK:
             if api_response['result']['status'] == 'success':
                 return api_response
             
-            logger.info(f"Intacct error response: {api_response}")
+            logger.error(f"Intacct error response: {api_response}")
             error = api_response.get('result', {}).get('errormessage', {}).get('error', {})
             desc_2 = error.get("description2") if isinstance(error, dict) else error[0].get("description2") if isinstance(error, list) and error else ""
             if (
