@@ -31,6 +31,8 @@ KEY_PROPERTIES = {
     'departments': ["DEPARTMENTID"],
     'audit_history': ["ID"],
     'locations': ["RECORDNO"],
+    'budget_details': ["RECORDNO"],
+    'budget_list': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -58,7 +60,9 @@ INTACCT_OBJECTS = {
     "adjustment_items": "ARADJUSTMENTITEM",
     "departments": "DEPARTMENT",
     "audit_history": "AUDITHISTORY",
-    "locations": "LOCATION"
+    "locations": "LOCATION",
+    "budget_list": "GLBUDGETHEADER",
+    "budget_details": "GLBUDGETITEM",
 }
 
 REP_KEYS = {
