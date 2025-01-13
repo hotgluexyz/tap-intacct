@@ -170,16 +170,13 @@ class SageIntacctSDK:
         api_headers = {'content-type': 'application/xml'}
         api_headers.update(self.__headers)
         body = xmltodict.unparse(dict_body)
-        logger.info(f"request to {api_url} with body {body}")
         response = requests.post(api_url, headers=api_headers, data=body)
 
-        logger.info(
-            f"request to {api_url} response {response.text}, statuscode {response.status_code}"
-        )
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
+            logger.info(f"Request to {api_url} failed with body: {dict_body}")
             if response.status_code == 502:
                 raise BadGatewayError(
                     f"Response status code: {response.status_code}, response: {response.text}"
@@ -201,6 +198,7 @@ class SageIntacctSDK:
                 api_response = parsed_response['response']['operation']
 
             if parsed_response['response']['control']['status'] == 'failure':
+                logger.info(f"Request to {api_url} failed with body: {dict_body}")
                 exception_msg = self.decode_support_id(
                     parsed_response['response']['errormessage']
                 )
@@ -217,7 +215,7 @@ class SageIntacctSDK:
             if api_response['result']['status'] == 'success':
                 return api_response
             
-            logger.error(f"Intacct error response: {api_response}")
+            logger.error(f"Intacct error response: {api_response}, request body: {dict_body}")
             error = api_response.get('result', {}).get('errormessage', {}).get('error', {})
             desc_2 = error.get("description2") if isinstance(error, dict) else error[0].get("description2") if isinstance(error, list) and error else ""
             if (
@@ -235,6 +233,7 @@ class SageIntacctSDK:
         exception_msg = parsed_response.get("response", {}).get("errormessage", {}).get("error", {})
         correction = exception_msg.get("correction", {})
         
+        logger.info(f"Request to {api_url} failed with body {dict_body}")
         if response.status_code == 400:
             if exception_msg.get("errorno") == "GW-0011":
                 raise AuthFailure(f'One or more authentication values are incorrect. Response:{parsed_response}')
