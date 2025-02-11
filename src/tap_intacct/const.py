@@ -8,7 +8,9 @@ REQUIRED_CONFIG_KEYS = [
 
 KEY_PROPERTIES = {
     'accounts_payable_bills': ["RECORDNO"],
+    'accounts_payable_bill_items': ["RECORDNO"],
     'accounts_payable_payments': ["RECORDNO"],
+    'accounts_payable_payment_details': ["RECORDNO"],
     'accounts_payable_vendors': ["VENDORID"],
     "accounts_payable_bank_accounts": ["RECORDNO"],
     "checking_accounts": ["RECORDNO"],
@@ -31,12 +33,15 @@ KEY_PROPERTIES = {
     'departments': ["DEPARTMENTID"],
     'audit_history': ["ID"],
     'locations': ["RECORDNO"],
+    'po_documents': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
 INTACCT_OBJECTS = {
     "accounts_payable_bills": "APBILL",
+    "accounts_payable_bill_items": "APBILLITEM",
     "accounts_payable_payments": "APPYMT",
+    "accounts_payable_payment_details": "APPYMTDETAIL",
     "accounts_payable_vendors": "VENDOR",
     "accounts_payable_bank_accounts": "PROVIDERBANKACCOUNT",
     "checking_accounts": "CHECKINGACCOUNT",
@@ -58,7 +63,8 @@ INTACCT_OBJECTS = {
     "adjustment_items": "ARADJUSTMENTITEM",
     "departments": "DEPARTMENT",
     "audit_history": "AUDITHISTORY",
-    "locations": "LOCATION"
+    "locations": "LOCATION",
+    "po_documents": "PODOCUMENT",
 }
 
 REP_KEYS = {
