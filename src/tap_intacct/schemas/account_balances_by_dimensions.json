@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "glaccountno": {
+            "type": ["string", "null"]
+        },
+        "startbalance": {
+            "type": ["number", "null"]
+        },
+        "periodbalance": {
+            "type": ["number", "null"]
+        },
+        "endbalance": {
+            "type": ["number", "null"]
+        },
+        "currency": {
+            "type": ["string", "null"]
+        },
+        "locationid": {
+            "type": ["string", "null"]
+        },
+        "locationname": {
+            "type": ["string", "null"]
+        },
+        "departmentid": {
+            "type": ["string", "null"]
+        },
+        "departmentname": {
+            "type": ["string", "null"]
+        }
+    }
+}

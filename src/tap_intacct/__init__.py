@@ -11,7 +11,8 @@ from singer import metadata
 
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
-from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS, REP_KEYS, GET_BY_DATE_FIELD
+from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS, REP_KEYS, GET_BY_DATE_FIELD, REPORT_STREAMS
+import os
 
 logger = singer.get_logger()
 
@@ -204,6 +205,17 @@ def _load_schemas_from_intact():
     schemas = {}
     for key in INTACCT_OBJECTS:
         schemas[key] = _load_schema_from_api(key)
+    
+    # add schemas defined in folder schemas
+    SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
+    for filename in os.listdir(SCHEMAS_DIR):
+            if filename.endswith(".json"):
+                file_path = os.path.join(SCHEMAS_DIR, filename)
+                stream = filename.split(".")[0]
+                with open(file_path, "r", encoding="utf-8") as file:
+                    data = json.load(file)
+                    schemas[stream] = data
+    
     return schemas
 
 def _load_schemas():
@@ -226,7 +238,7 @@ def _transform_and_write_record(
     singer.write_record(stream, rec, time_extracted=time_extracted)
 
 
-def sync_stream(stream: str) -> None:
+def sync_stream(stream: str, config:dict) -> None:
     """
     Extracts records for the selected stream.
     Args:
@@ -242,15 +254,16 @@ def sync_stream(stream: str) -> None:
     fields = Context.get_selected_fields(stream)
 
     try:
-        # Attempt to get data with all fields
-        data = Context.intacct_client.get_by_date(
-            object_type=stream,
-            fields=fields,
-            from_date=from_datetime,
-        )
+        if stream not in REPORT_STREAMS:
+            # Attempt to get data with all fields
+            data = Context.intacct_client.get_by_date(
+                object_type=stream,
+                fields=fields,
+                from_date=from_datetime,
+            )
 
-        # Test getting a record
-        next(data, None)
+            # Test getting a record
+            next(data, None)
     except SageIntacctSDKError as e:
         # Get the error description
         error = ast.literal_eval(e.message[7:])
@@ -270,11 +283,16 @@ def sync_stream(stream: str) -> None:
                 fields.remove(field)
 
     # Make the request with the final fields
-    data = Context.intacct_client.get_by_date(
-        object_type=stream,
-        fields=fields,
-        from_date=from_datetime,
-    )
+    if stream not in REPORT_STREAMS:
+        data = Context.intacct_client.get_by_date(
+            object_type=stream,
+            fields=fields,
+            from_date=from_datetime,
+        )
+    else:
+        if stream == "account_balances_by_dimensions":
+            groups = [config.get("account_balance_group_name")]
+            data = Context.intacct_client.get_account_balance_by_dimensions(from_datetime, groups)
 
     for intacct_object in data:
         if stream.startswith("audit_history"):
@@ -334,7 +352,7 @@ def do_discover(*, stdout: bool = True) -> Dict:
     return catalog
 
 
-def do_sync() -> None:
+def do_sync(config) -> None:
     """
     Syncs all streams selected in Context.catalog.
     Writes out state file for events stream once sync completed.
@@ -351,7 +369,7 @@ def do_sync() -> None:
         else:
             singer.write_schema(stream, Context.get_schema(stream), KEY_PROPERTIES[stream])
         Context.counts[stream] = 0
-        sync_stream(stream)
+        sync_stream(stream, config)
 
     singer.write_state(Context.state)
     logger.info('Sync completed')
@@ -384,7 +402,7 @@ def main() -> None:
             else {},
         )
 
-        do_sync()
+        do_sync(args.config)
         Context.print_counts()
 
 
