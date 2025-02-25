@@ -389,6 +389,8 @@ class SageIntacctSDK:
                     }
                 }
             }
+        elif object_type == 'budget_details':
+            filter = None
         else:
             filter = {
                 'greaterthanorequalto': {
@@ -396,31 +398,37 @@ class SageIntacctSDK:
                     'value': _format_date_for_intacct(from_date),
                 }
             }
-
+            
         get_count = {
             'query': {
                 'object': intacct_object_type,
                 'select': {'field': pk},
-                'filter': filter,
                 'pagesize': '1',
                 'options': {'showprivate': 'true'},
             }
         }
+
+        if filter:
+            get_count["query"]["filter"] = filter
+            
         response = self.format_and_send_request(get_count)
         count = int(response['data']['@totalcount'])
         pagesize = 1000
         offset = 0
         while offset < count:
+
             data = {
                 'query': {
                     'object': intacct_object_type,
                     'select': {'field': fields},
                     'options': {'showprivate': 'true'},
-                    'filter': filter,
                     'pagesize': pagesize,
                     'offset': offset,
                 }
             }
+
+            if filter:
+                data["query"]["filter"] = filter
             intacct_objects = self.format_and_send_request(data)
 
             if intacct_objects == "skip_and_paginate" and object_type == "audit_history":
