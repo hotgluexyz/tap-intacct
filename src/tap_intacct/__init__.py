@@ -168,8 +168,11 @@ def _load_schema_from_api(stream: str):
     schema_dict = {}
     schema_dict['type'] = 'object'
     schema_dict['properties'] = {}
-
     required_list = ["RECORDNO", "WHENMODIFIED"]
+
+    if stream == 'budget_details':
+        required_list = ["RECORDNO"]
+        
     fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
     fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
     for rec in fields_data_list:
@@ -281,9 +284,11 @@ def sync_stream(stream: str) -> None:
             rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)
         else:
             rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
-        row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])
-        if row_timestamp > bookmark:
-            bookmark = row_timestamp
+
+        if rep_key:
+            row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])
+            if row_timestamp > bookmark:
+                bookmark = row_timestamp
 
         _transform_and_write_record(intacct_object, schema, stream, time_extracted)
         Context.counts[stream] += 1

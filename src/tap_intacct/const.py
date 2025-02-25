@@ -33,6 +33,8 @@ KEY_PROPERTIES = {
     'departments': ["DEPARTMENTID"],
     'audit_history': ["ID"],
     'locations': ["RECORDNO"],
+    'budget_details': ["RECORDNO"],
+    'budget_list': ["RECORDNO"],
     'po_documents': ["RECORDNO"],
 }
 
@@ -64,11 +66,14 @@ INTACCT_OBJECTS = {
     "departments": "DEPARTMENT",
     "audit_history": "AUDITHISTORY",
     "locations": "LOCATION",
+    "budget_list": "GLBUDGETHEADER",
+    "budget_details": "GLBUDGETITEM",
     "po_documents": "PODOCUMENT",
 }
 
 REP_KEYS = {
-    "audit_history" : "ACCESSTIME"
+    "audit_history" : "ACCESSTIME",
+    "budget_details": None
 }
 
 IGNORE_FIELDS =["PASSWORD"]
