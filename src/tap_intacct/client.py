@@ -301,7 +301,7 @@ class SageIntacctSDK:
         support_id_msg = self.support_id_msg(errormessages)
         data_type = support_id_msg['type']
         error = support_id_msg['error']
-        if error and error['description2']:
+        if error and error.get('description2'):
             message = error['description2']
             support_id = re.search('Support ID: (.*)]', message)
             if support_id and support_id.group(1):
