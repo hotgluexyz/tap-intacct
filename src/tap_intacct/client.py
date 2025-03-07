@@ -218,15 +218,20 @@ class SageIntacctSDK:
             logger.error(f"Intacct error response: {api_response}, request body: {dict_body}")
             error = api_response.get('result', {}).get('errormessage', {}).get('error', {})
             desc_2 = error.get("description2") if isinstance(error, dict) else error[0].get("description2") if isinstance(error, list) and error else ""
+
+            query_object = (
+                dict_body.get("request", {})
+                .get("operation", {})
+                .get("content", {})
+                .get("function", {})
+                .get("query", {})
+                .get("object")
+            )
             if (
                 api_response['result']['status'] == 'failure'
                 and error
-                and "There was an error processing the request"
-                in desc_2
-                and dict_body["request"]["operation"]["content"]["function"]["query"][
-                    "object"
-                ]
-                == "AUDITHISTORY"
+                and "There was an error processing the request" in desc_2
+                and query_object == "AUDITHISTORY"
             ):
                 return {"result": "skip_and_paginate"}
 
@@ -296,7 +301,7 @@ class SageIntacctSDK:
         support_id_msg = self.support_id_msg(errormessages)
         data_type = support_id_msg['type']
         error = support_id_msg['error']
-        if error and error['description2']:
+        if error and error.get('description2'):
             message = error['description2']
             support_id = re.search('Support ID: (.*)]', message)
             if support_id and support_id.group(1):
