@@ -12,6 +12,7 @@ from urllib.parse import unquote
 import requests
 import xmltodict
 from xml.parsers.expat import ExpatError
+from dateutil.relativedelta import relativedelta
 
 from calendar import monthrange
 
@@ -315,7 +316,7 @@ class SageIntacctSDK:
 
         return errormessages
 
-    def format_and_send_request(self, data: Dict) -> Union[List, Dict]:
+    def format_and_send_request(self, data: Dict, report=False) -> Union[List, Dict]:
         """
         Format data accordingly to convert them to xml.
 
@@ -327,8 +328,12 @@ class SageIntacctSDK:
         """
 
         key = next(iter(data))
-        object_type = data[key]['object']
         timestamp = dt.datetime.now()
+
+        if not report:
+            object_type = data[key]['object']
+        else:
+            object_type = key
 
         dict_body = {
             'request': {
@@ -486,6 +491,45 @@ class SageIntacctSDK:
 
         response = self.format_and_send_request(get_fields)
         return response
+    
+    def get_account_balance_by_dimensions(self, start_date, groups=[]):
+        # fetch by accountgroup and month
+        end_date = start_date + relativedelta(months=1)
+        now = dt.datetime.utcnow().replace(tzinfo=dt.timezone.utc)
+        for group in groups:
+            while end_date < now:
+                data = {
+                    'get_accountbalancesbydimensions': {
+                        'startdate': {
+                            'year': start_date.year,
+                            'month': start_date.month,
+                            'day': start_date.day
+                        },
+                        'enddate': {
+                            'year': start_date.year,
+                            'month': start_date.month,
+                            'day': start_date.day
+                        },
+                        'accountgroupname': group,
+                        'groupby': 'location',
+                    }
+                }
+                logger.info(f"Fetching account_balances_by_dimensions from {start_date} to {end_date}")
+                intacct_objects = self.format_and_send_request(data, report=True)
+
+                intacct_objects = intacct_objects.get('data', {}).get(
+                    'account_balance'
+                , [])
+                # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
+                if isinstance(intacct_objects, dict):
+                    intacct_objects = [intacct_objects]
+
+                for record in intacct_objects:
+                    yield record
+                
+                start_date = end_date
+                end_date = start_date + relativedelta(months=1)
+
 
 def get_client(
     *,

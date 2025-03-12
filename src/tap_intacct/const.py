@@ -36,6 +36,7 @@ KEY_PROPERTIES = {
     'budget_details': ["RECORDNO"],
     'budget_list': ["RECORDNO"],
     'po_documents': ["RECORDNO"],
+    'account_balances_by_dimensions': []
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -78,8 +79,10 @@ REP_KEYS = {
 
 IGNORE_FIELDS =["PASSWORD"]
 
-
-
 GET_BY_DATE_FIELD = "WHENMODIFIED"
 
 DEFAULT_API_URL = 'https://api.intacct.com/ia/xml/xmlgw.phtml'
+
+REPORT_STREAMS = [
+    "account_balances_by_dimensions"
+]
