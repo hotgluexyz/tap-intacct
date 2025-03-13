@@ -194,6 +194,7 @@ def _load_schema_from_api(stream: str):
             if type_data_type in ['date', 'date-time']:
                 format_dict = {'type': ["null", 'string'], 'format': type_data_type}
 
+        format_dict['field_meta'] = {} if stream == 'audit_history' else rec
         schema_dict['properties'][rec['ID']] = format_dict
     schema_dict['required'] = required_list
     return schema_dict
