@@ -176,7 +176,7 @@ class SageIntacctSDK:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
-            logger.info(f"Request to {api_url} failed with body: {dict_body}")
+            logger.info(f"Request to {api_url} failed with body: {dict_body} and status code {response.status_code}")            
             if response.status_code == 502:
                 raise BadGatewayError(
                     f"Response status code: {response.status_code}, response: {response.text}"
@@ -185,6 +185,7 @@ class SageIntacctSDK:
                 raise OfflineServiceError(
                     f"Response status code: {response.status_code}, response: {response.text}"
                 )
+            # TODO: Not sure if this is needed
             if response.status_code == 429:
                 raise RateLimitError(
                     f"Response status code: {response.status_code}, response: {response.text}"
@@ -238,7 +239,7 @@ class SageIntacctSDK:
         exception_msg = parsed_response.get("response", {}).get("errormessage", {}).get("error", {})
         correction = exception_msg.get("correction", {})
         
-        logger.info(f"Request to {api_url} failed with body {dict_body}")
+        logger.info(f"Request to {api_url} failed with body {dict_body} and status code {response.status_code}")
         if response.status_code == 400:
             if exception_msg.get("errorno") == "GW-0011":
                 raise AuthFailure(f'One or more authentication values are incorrect. Response:{parsed_response}')
@@ -259,6 +260,9 @@ class SageIntacctSDK:
 
         if response.status_code == 498:
             raise ExpiredTokenError(f'Expired token, try to refresh it. Response: {parsed_response}')
+        
+        if response.status_code == 429:
+            raise RateLimitError(f'Rate limit exceeded: {parsed_response}')
 
         if response.status_code == 500:
             raise InternalServerError(f'Internal server error. Response: {parsed_response}')
@@ -511,4 +515,3 @@ def get_client(
     )
 
     return connection
-
