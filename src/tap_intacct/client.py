@@ -176,23 +176,7 @@ class SageIntacctSDK:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
-            logger.info(f"Request to {api_url} failed with body: {dict_body} and status code {response.status_code}")            
-            if response.status_code == 502:
-                raise BadGatewayError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
-            if response.status_code == 503:
-                raise OfflineServiceError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
-            # TODO: Not sure if this is needed
-            if response.status_code == 429:
-                raise RateLimitError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
-            raise InvalidXmlResponse(
-                f"Response status code: {response.status_code}, response: {response.text}"
-            )
+            logger.info(f"Unable to parse response: {response.text}")
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
@@ -260,12 +244,21 @@ class SageIntacctSDK:
 
         if response.status_code == 498:
             raise ExpiredTokenError(f'Expired token, try to refresh it. Response: {parsed_response}')
-        
+
         if response.status_code == 429:
             raise RateLimitError(f'Rate limit exceeded: {parsed_response}')
 
         if response.status_code == 500:
             raise InternalServerError(f'Internal server error. Response: {parsed_response}')
+
+        if response.status_code == 502:
+            raise BadGatewayError(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
+        if response.status_code == 503:
+            raise OfflineServiceError(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
 
         if correction and 'Please Try Again Later' in correction:
             raise PleaseTryAgainLaterError(parsed_response)
