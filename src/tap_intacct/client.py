@@ -172,23 +172,27 @@ class SageIntacctSDK:
         body = xmltodict.unparse(dict_body)
         response = requests.post(api_url, headers=api_headers, data=body)
 
+        if not response.ok:
+            logger.error(f"Request to {api_url} failed with body: {dict_body}")
+
+        if response.status_code == 502:
+            raise BadGatewayError(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
+        if response.status_code == 503:
+            raise OfflineServiceError(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
+        if response.status_code == 429:
+            raise RateLimitError(
+                f"Response status code: {response.status_code}, response: {response.text}"
+            )
+
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
-            logger.info(f"Request to {api_url} failed with body: {dict_body}")
-            if response.status_code == 502:
-                raise BadGatewayError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
-            if response.status_code == 503:
-                raise OfflineServiceError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
-            if response.status_code == 429:
-                raise RateLimitError(
-                    f"Response status code: {response.status_code}, response: {response.text}"
-                )
+            logger.error(f"Unable to parse response: {response.text}")
             raise InvalidXmlResponse(
                 f"Response status code: {response.status_code}, response: {response.text}"
             )
