@@ -36,6 +36,7 @@ KEY_PROPERTIES = {
     'budget_details': ["RECORDNO"],
     'budget_list': ["RECORDNO"],
     'po_documents': ["RECORDNO"],
+    'employees': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -69,11 +70,13 @@ INTACCT_OBJECTS = {
     "budget_list": "GLBUDGETHEADER",
     "budget_details": "GLBUDGETITEM",
     "po_documents": "PODOCUMENT",
+    "employees": "EMPLOYEE",
 }
 
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
-    "budget_details": None
+    "budget_details": None,
+    "employees": None,
 }
 
 IGNORE_FIELDS =["PASSWORD"]
