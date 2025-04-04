@@ -175,6 +175,8 @@ def _load_schema_from_api(stream: str):
         
     fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
     fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
+    schema_dict['stream_meta'] = fields_data_response['data']['Type']['Relationships'] or {}
+
     for rec in fields_data_list:
         if rec['ID'] in IGNORE_FIELDS:
             continue
@@ -192,6 +194,7 @@ def _load_schema_from_api(stream: str):
             if type_data_type in ['date', 'date-time']:
                 format_dict = {'type': ["null", 'string'], 'format': type_data_type}
 
+        format_dict['field_meta'] = {} if stream == 'audit_history' else rec
         schema_dict['properties'][rec['ID']] = format_dict
     schema_dict['required'] = required_list
     return schema_dict
@@ -307,6 +310,8 @@ def do_discover(*, stdout: bool = True) -> Dict:
         # Get metadata for each field
         mdata = _populate_metadata(schema_name, schema)
 
+        stream_meta = schema.pop("stream_meta", {})
+
         # Create and add Catalog entry
         catalog_entry = {
             'stream': schema_name,
@@ -314,6 +319,7 @@ def do_discover(*, stdout: bool = True) -> Dict:
             'schema': schema,
             'metadata': metadata.to_list(mdata),
             'key_properties': KEY_PROPERTIES[schema_name],
+            'stream_meta': stream_meta
         }
 
         # create a separate stream for each endpoint audit history
@@ -324,6 +330,8 @@ def do_discover(*, stdout: bool = True) -> Dict:
                 new_stream = catalog_entry.copy()
                 stream_name = f"audit_history_{table}"
                 new_stream["stream"] = stream_name
+                # make sure stream_meta is empty for audit_stream streams
+                new_stream["stream_meta"] = {}
                 new_stream["tap_stream_id"] = stream_name
                 streams.append(new_stream)
         
