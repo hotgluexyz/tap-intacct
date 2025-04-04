@@ -75,8 +75,7 @@ INTACCT_OBJECTS = {
 
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
-    "budget_details": None,
-    "employees": None,
+    "budget_details": None
 }
 
 IGNORE_FIELDS =["PASSWORD"]
