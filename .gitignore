@@ -110,3 +110,5 @@ catalog.json
 state.json.backup
 state.json.tmp
 state.json
+.venv/
+.vscode/
