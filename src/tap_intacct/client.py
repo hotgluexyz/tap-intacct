@@ -147,6 +147,7 @@ class SageIntacctSDK:
             ConnectionError,
             ConnectionResetError,
             requests.exceptions.ConnectionError,
+            requests.exceptions.RequestException,
             InternalServerError,
             RateLimitError,
             RemoteDisconnected,
