@@ -192,8 +192,8 @@ class SageIntacctSDK:
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
-        except Exception as e:
-            logger.error(f"Unable to parse response: {response.text}. Error: {str(e)}")
+        except:
+            logger.error(f"Unable to parse response: {response.text}")
             raise InvalidXmlResponse(
                 f"Response status code: {response.status_code}, response: {response.text}"
             )
