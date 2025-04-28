@@ -147,6 +147,7 @@ class SageIntacctSDK:
             ConnectionError,
             ConnectionResetError,
             requests.exceptions.ConnectionError,
+            requests.exceptions.ChunkedEncodingError,
             InternalServerError,
             RateLimitError,
             RemoteDisconnected,
@@ -191,8 +192,8 @@ class SageIntacctSDK:
         try:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
-        except:
-            logger.error(f"Unable to parse response: {response.text}")
+        except Exception as e:
+            logger.error(f"Unable to parse response: {response.text}. Error: {str(e)}")
             raise InvalidXmlResponse(
                 f"Response status code: {response.status_code}, response: {response.text}"
             )
