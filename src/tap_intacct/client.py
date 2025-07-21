@@ -8,6 +8,7 @@ import re
 import uuid
 from typing import Dict, List, Union
 from urllib.parse import unquote
+import copy
 
 import requests
 import xmltodict
@@ -138,6 +139,17 @@ class SageIntacctSDK:
 
         else:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
+        
+    def clean_creds(self, key_field: str, request_body: dict):
+        if request_body.get(key_field, {}).get("control", {}):
+            for key, _ in request_body[key_field]["control"].items():
+                request_body[key_field]["control"][key] = "***"
+        
+        if request_body.get(key_field, {}).get("operation", {}).get("authentication", {}):
+            for key, _ in request_body[key_field]["operation"]["authentication"].items():
+                request_body[key_field]["operation"]["authentication"][key] = "***"
+        
+        return request_body
 
     @backoff.on_exception(
         backoff.expo,
@@ -173,8 +185,10 @@ class SageIntacctSDK:
         body = xmltodict.unparse(dict_body)
         response = requests.post(api_url, headers=api_headers, data=body)
 
+        cleaned_body = self.clean_creds("request", dict_body)
+
         if not response.ok:
-            logger.error(f"Request to {api_url} failed with body: {dict_body}")
+            logger.error(f"Request to {api_url} failed with body: {cleaned_body}")
 
         if response.status_code == 502:
             raise BadGatewayError(
@@ -197,13 +211,17 @@ class SageIntacctSDK:
             raise InvalidXmlResponse(
                 f"Response status code: {response.status_code}, response: {response.text}"
             )
+        
+        # clean response
+        cleaned_response = copy.deepcopy(parsed_response)
+        cleaned_response = self.clean_creds("response", cleaned_response)
 
         if response.status_code == 200:
             if parsed_response['response']['control']['status'] == 'success':
                 api_response = parsed_response['response']['operation']
 
             if parsed_response['response']['control']['status'] == 'failure':
-                logger.info(f"Request to {api_url} failed with body: {dict_body}")
+                logger.info(f"Request to {api_url} failed with body: {cleaned_body}")
                 exception_msg = self.decode_support_id(
                     parsed_response['response']['errormessage']
                 )
@@ -220,7 +238,7 @@ class SageIntacctSDK:
             if api_response['result']['status'] == 'success':
                 return api_response
             
-            logger.error(f"Intacct error response: {api_response}, request body: {dict_body}")
+            logger.error(f"Intacct error response: {cleaned_response}, request body: {cleaned_body}")
             error = api_response.get('result', {}).get('errormessage', {}).get('error', {})
             desc_2 = error.get("description2") if isinstance(error, dict) else error[0].get("description2") if isinstance(error, list) and error else ""
 
@@ -243,35 +261,35 @@ class SageIntacctSDK:
         exception_msg = parsed_response.get("response", {}).get("errormessage", {}).get("error", {})
         correction = exception_msg.get("correction", {})
         
-        logger.info(f"Request to {api_url} failed with body {dict_body}")
+        logger.info(f"Request to {api_url} failed with response: {cleaned_response}")
         if response.status_code == 400:
             if exception_msg.get("errorno") == "GW-0011":
-                raise AuthFailure(f'One or more authentication values are incorrect. Response:{parsed_response}')
-            raise InvalidRequest("Invalid request", parsed_response)            
+                raise AuthFailure(f'One or more authentication values are incorrect. Response:{cleaned_response}')
+            raise InvalidRequest("Invalid request", cleaned_response)            
 
         if response.status_code == 401:
             raise InvalidTokenError(
-                f'Invalid token / Incorrect credentials. Response: {parsed_response}'
+                f'Invalid token / Incorrect credentials. Response: {cleaned_response}'
             )
 
         if response.status_code == 403:
             raise NoPrivilegeError(
-                f'Forbidden, the user has insufficient privilege. Response: {parsed_response}'
+                f'Forbidden, the user has insufficient privilege. Response: {cleaned_response}'
             )
 
         if response.status_code == 404:
-            raise NotFoundItemError(f'Not found item with ID. Response: {parsed_response}')
+            raise NotFoundItemError(f'Not found item with ID. Response: {cleaned_response}')
 
         if response.status_code == 498:
-            raise ExpiredTokenError(f'Expired token, try to refresh it. Response: {parsed_response}')
+            raise ExpiredTokenError(f'Expired token, try to refresh it. Response: {cleaned_response}')
 
         if response.status_code == 500:
-            raise InternalServerError(f'Internal server error. Response: {parsed_response}')
+            raise InternalServerError(f'Internal server error. Response: {cleaned_response}')
 
         if correction and 'Please Try Again Later' in correction:
-            raise PleaseTryAgainLaterError(parsed_response)
+            raise PleaseTryAgainLaterError(cleaned_response)
 
-        raise SageIntacctSDKError('Error: {0}'.format(parsed_response))
+        raise SageIntacctSDKError('Error: {0}'.format(cleaned_response))
 
     def support_id_msg(self, errormessages) -> Union[List, Dict]:
         """
