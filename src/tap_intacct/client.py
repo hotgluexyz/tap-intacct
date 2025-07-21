@@ -138,6 +138,17 @@ class SageIntacctSDK:
 
         else:
             raise SageIntacctSDKError('Error: {0}'.format(response['errormessage']))
+        
+    def clean_creds(self, key_field: str, request_body: dict):
+        if request_body.get(key_field, {}).get("control", {}):
+            for key, _ in request_body[key_field]["control"].items():
+                request_body[key_field]["control"][key] = "***"
+        
+        if request_body.get(key_field, {}).get("operation", {}).get("authentication", {}):
+            for key, _ in request_body[key_field]["operation"]["authentication"].items():
+                request_body[key_field]["operation"]["authentication"][key] = "***"
+        
+        return request_body
 
     @backoff.on_exception(
         backoff.expo,
@@ -174,7 +185,8 @@ class SageIntacctSDK:
         response = requests.post(api_url, headers=api_headers, data=body)
 
         if not response.ok:
-            logger.error(f"Request to {api_url} failed with body: {dict_body}")
+            cleaned_body = self.clean_creds("request", dict_body)
+            logger.error(f"Request to {api_url} failed with body: {cleaned_body}")
 
         if response.status_code == 502:
             raise BadGatewayError(
@@ -203,7 +215,8 @@ class SageIntacctSDK:
                 api_response = parsed_response['response']['operation']
 
             if parsed_response['response']['control']['status'] == 'failure':
-                logger.info(f"Request to {api_url} failed with body: {dict_body}")
+                cleaned_body = self.clean_creds("request", dict_body)
+                logger.info(f"Request to {api_url} failed with body: {cleaned_body}")
                 exception_msg = self.decode_support_id(
                     parsed_response['response']['errormessage']
                 )
@@ -243,7 +256,8 @@ class SageIntacctSDK:
         exception_msg = parsed_response.get("response", {}).get("errormessage", {}).get("error", {})
         correction = exception_msg.get("correction", {})
         
-        logger.info(f"Request to {api_url} failed with body {dict_body}")
+        parsed_response = self.clean_creds("response", parsed_response)
+        logger.info(f"Request to {api_url} failed with response: {parsed_response}")
         if response.status_code == 400:
             if exception_msg.get("errorno") == "GW-0011":
                 raise AuthFailure(f'One or more authentication values are incorrect. Response:{parsed_response}')
