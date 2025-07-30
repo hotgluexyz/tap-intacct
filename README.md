@@ -1,8 +1,8 @@
 # tap-intacct
 
-This is a [Singer](https://singer.io) tap that produces JSON-formatted data
-following the [Singer
-spec](https://github.com/singer-io/getting-started/blob/master/SPEC.md).
+**tap-intacct** is a Singer Tap for syncing data from Sage Intacct. 
+**tap-intacct** can be run on [hotglue](https://hotglue.com), an embedded integration platform for running Singer Taps and Targets.
+
 
 ## Quick Start
 
