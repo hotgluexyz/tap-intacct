@@ -183,7 +183,7 @@ class SageIntacctSDK:
         api_headers = {'content-type': 'application/xml'}
         api_headers.update(self.__headers)
         body = xmltodict.unparse(dict_body)
-        response = requests.post(api_url, headers=api_headers, data=body)
+        response = requests.post(api_url, headers=api_headers, data=body, timeout=30)
 
         cleaned_body = self.clean_creds("request", dict_body)
 
