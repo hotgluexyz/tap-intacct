@@ -254,9 +254,10 @@ def sync_stream(stream: str) -> None:
             fields=fields,
             from_date=from_datetime,
         )
-
+        logger.info(f"Checking if all fields are supported for {stream}")
         # Test getting a record
         next(data, None)
+        logger.info(f"All fields supported for {stream}")
     except SageIntacctSDKError as e:
         # Get the error description
         error = ast.literal_eval(e.message[7:])
@@ -276,13 +277,19 @@ def sync_stream(stream: str) -> None:
                 fields.remove(field)
 
     # Make the request with the final fields
+    logger.info(f"Starting requests to sync {stream}")
     data = Context.intacct_client.get_by_date(
         object_type=stream,
         fields=fields,
         from_date=from_datetime,
     )
 
+    first_iteration = True
     for intacct_object in data:
+        if first_iteration:
+            logger.info(f"Processing records for {stream}")
+            first_iteration = False
+
         if stream.startswith("audit_history"):
             rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)
         else:
@@ -297,7 +304,9 @@ def sync_stream(stream: str) -> None:
         Context.counts[stream] += 1
 
     # Update state
+    logger.info(f"Updating state for {stream}")
     singer.utils.update_state(Context.state, stream, bookmark)
+    logger.info(f"Sync completed for {stream}")
 
 
 def do_discover(*, stdout: bool = True) -> Dict:
