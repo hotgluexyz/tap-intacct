@@ -96,6 +96,23 @@ class SageIntacctSDK:
             user_password=self.__user_password,
         )
 
+    @backoff.on_exception(
+        backoff.expo,
+        (
+            BadGatewayError,
+            OfflineServiceError,
+            ConnectionError,
+            ConnectionResetError,
+            requests.exceptions.ConnectionError,
+            requests.exceptions.RequestException,
+            InternalServerError,
+            RateLimitError,
+            RemoteDisconnected,
+        ),
+        max_tries=8,
+        factor=3,
+    )
+    @singer.utils.ratelimit(10, 1)
     def _set_session_id(self, user_id: str, company_id: str, user_password: str):
         """
         Sets the session id for APIs
@@ -151,23 +168,6 @@ class SageIntacctSDK:
         
         return request_body
 
-    @backoff.on_exception(
-        backoff.expo,
-        (
-            BadGatewayError,
-            OfflineServiceError,
-            ConnectionError,
-            ConnectionResetError,
-            requests.exceptions.ConnectionError,
-            requests.exceptions.RequestException,
-            InternalServerError,
-            RateLimitError,
-            RemoteDisconnected,
-        ),
-        max_tries=8,
-        factor=3,
-    )
-    @singer.utils.ratelimit(10, 1)
     def _post_request(self, dict_body: dict, api_url: str) -> Dict:
         """
         Create a HTTP post request.
@@ -337,7 +337,25 @@ class SageIntacctSDK:
             errormessages['error']['description2'] = message if message else None
 
         return errormessages
+    
 
+    @backoff.on_exception(
+        backoff.expo,
+        (
+            BadGatewayError,
+            OfflineServiceError,
+            ConnectionError,
+            ConnectionResetError,
+            requests.exceptions.ConnectionError,
+            requests.exceptions.RequestException,
+            InternalServerError,
+            RateLimitError,
+            RemoteDisconnected,
+        ),
+        max_tries=8,
+        factor=3,
+    )
+    @singer.utils.ratelimit(10, 1)
     def format_and_send_request(self, data: Dict) -> Union[List, Dict]:
         """
         Format data accordingly to convert them to xml.
