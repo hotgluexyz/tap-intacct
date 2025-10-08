@@ -77,6 +77,7 @@ INTACCT_OBJECTS = {
 
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
+    "general_ledger_journal_entry_lines": "ENTRY_DATE",
     "budget_details": None
 }
 

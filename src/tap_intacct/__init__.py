@@ -5,6 +5,7 @@ import ast
 import sys
 from pathlib import Path
 from typing import Dict, FrozenSet, Optional
+from dateutil.relativedelta import relativedelta
 
 import singer
 from singer import metadata
@@ -88,7 +89,15 @@ def _get_abs_path(path: str) -> Path:
 
 def _get_start(key: str) -> dt.datetime:
     if key in Context.state:
-        start = singer.utils.strptime_to_utc(Context.state[key])
+        if key == "general_ledger_journal_entry_lines":
+            report_periods = Context.config.get("report_periods", 3)
+            today = dt.date.today()
+            beginning_of_month = today.replace(day=1)
+            beginning_of_month = dt.datetime.combine(beginning_of_month, dt.datetime.min.time())
+            date = (beginning_of_month - relativedelta(months=report_periods - 1))
+            start = singer.utils.strptime_to_utc(date.isoformat())
+        else:
+            start = singer.utils.strptime_to_utc(Context.state[key])
 
         # commenting logic below due to HGI-5749 
         # # Subtract look-back from Config (default 1 hour) from State, in case of late arriving records.
@@ -211,14 +220,6 @@ def _load_schemas_from_intact():
     for key in INTACCT_OBJECTS:
         schemas[key] = _load_schema_from_api(key)
     return schemas
-
-def _load_schemas():
-    schemas = {}
-    for filename in _get_abs_path('schemas').iterdir():
-        stream = filename.stem
-        schemas[stream] = _load_schema(stream)
-    return schemas
-
 
 def _transform_and_write_record(
     row: Dict, schema: str, stream: str, time_extracted: dt.datetime

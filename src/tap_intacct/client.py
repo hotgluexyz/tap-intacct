@@ -6,7 +6,7 @@ import datetime as dt
 import json
 import re
 import uuid
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Optional
 from urllib.parse import unquote
 import copy
 
@@ -48,7 +48,7 @@ class OfflineServiceError(Exception):
 class RateLimitError(Exception):
     pass
 
-def _format_date_for_intacct(datetime: dt.datetime) -> str:
+def _format_date_for_intacct(datetime: dt.datetime, stream: Optional[str] = None) -> str:
     """
     Intacct expects datetimes in a 'MM/DD/YY HH:MM:SS' string format.
     Args:
@@ -57,6 +57,9 @@ def _format_date_for_intacct(datetime: dt.datetime) -> str:
     Returns:
         'MM/DD/YY HH:MM:SS' formatted string.
     """
+    if stream and stream == "general_ledger_journal_entry_lines":
+        return datetime.strftime('%m/%d/%Y')
+
     return datetime.strftime('%m/%d/%Y %H:%M:%S')
 
 
@@ -440,7 +443,7 @@ class SageIntacctSDK:
             filter = {
                 'greaterthanorequalto': {
                     'field': rep_key,
-                    'value': _format_date_for_intacct(from_date),
+                    'value': _format_date_for_intacct(from_date, object_type),
                 }
             }
             
@@ -552,4 +555,3 @@ def get_client(
     )
 
     return connection
-
