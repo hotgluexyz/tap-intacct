@@ -2,6 +2,7 @@
 import datetime as dt
 import json
 import ast
+import os
 import sys
 from pathlib import Path
 from typing import Dict, FrozenSet, Optional
@@ -12,8 +13,16 @@ from singer import metadata
 
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
-from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS, REP_KEYS, GET_BY_DATE_FIELD
-
+from tap_intacct.const import (
+    DEFAULT_API_URL,
+    KEY_PROPERTIES,
+    REQUIRED_CONFIG_KEYS,
+    INTACCT_OBJECTS,
+    IGNORE_FIELDS,
+    REP_KEYS,
+    GET_BY_DATE_FIELD,
+    STREAMS_WITH_ATTACHMENTS,
+)
 logger = singer.get_logger()
 
 
@@ -262,7 +271,7 @@ def sync_stream(stream: str) -> None:
     except SageIntacctSDKError as e:
         # Get the error description
         error = ast.literal_eval(e.message[7:])
-        logger.warn(f"Hit error when querying {stream}. Error: {error}")
+        logger.warning(f"Hit error when querying {stream}. Error: {error}")
         result = error['response']['operation']['result']['errormessage']['error']['description2']
         start = result.find(";")
         if start == -1:
@@ -295,6 +304,34 @@ def sync_stream(stream: str) -> None:
             rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)
         else:
             rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
+        
+        # Download attachments for streams that support them
+        if stream in STREAMS_WITH_ATTACHMENTS and intacct_object.get("SUPDOCID"):
+            supdoc_id = intacct_object["SUPDOCID"]
+            record_no = intacct_object["RECORDNO"]
+            job_id = os.environ.get("JOB_ID")
+            
+            if job_id:
+                output_dir = f"/home/hotglue/{job_id}/sync-output"
+            else:
+                output_dir = "sync-output"
+
+            try:
+                logger.info(f"Fetching attachments for {stream} record {record_no} (SUPDOCID: {supdoc_id})")
+                attachments_info = Context.intacct_client.persist_attachments(
+                    supdoc_id=supdoc_id,
+                    object_name=stream,
+                    output_dir=output_dir
+                )
+                
+                # Add attachment metadata to the record
+                if attachments_info:
+                    logger.info(f"Downloaded {len(attachments_info)} attachment(s) for record {record_no}")
+                else:
+                    logger.info(f"No attachments found for record {record_no}")
+                    
+            except Exception as e:
+                logger.warning(f"Failed to fetch attachments for record {record_no}: {e}")
 
         if rep_key:
             row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])

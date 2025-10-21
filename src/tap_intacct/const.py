@@ -81,6 +81,8 @@ REP_KEYS = {
     "budget_details": None
 }
 
+STREAMS_WITH_ATTACHMENTS = ["accounts_payable_bills"]
+
 IGNORE_FIELDS =["PASSWORD"]
 
 
