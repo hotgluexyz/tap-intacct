@@ -524,9 +524,6 @@ class SageIntacctSDK:
         supdoc = response['data']['supdoc']
         attachments_info = []
         
-        # Create output directory if it doesn't exist
-        os.makedirs(output_dir, exist_ok=True)
-        
         # Handle both single attachment and multiple attachments
         attachments = supdoc.get('attachments', {})
         if not attachments:
@@ -536,7 +533,11 @@ class SageIntacctSDK:
         attachment_list = attachments.get('attachment', [])
         if isinstance(attachment_list, dict):
             attachment_list = [attachment_list]
-        
+            
+        if attachment_list:
+            # Create output directory if it doesn't exist
+            os.makedirs(output_dir, exist_ok=True)
+
         # Iterate over attachments and decode base64 data
         for idx, attachment in enumerate(attachment_list):
             attachment_name = attachment.get('attachmentname', f'attachment_{idx}')
@@ -545,8 +546,14 @@ class SageIntacctSDK:
 
             if attachment_data:
                 try:
-                    # Create filename with format: {object_name}_{supdocid}_{attachmentname}.{attachment_type}
-                    file_path = os.path.join(output_dir, f"{object_name}_{supdoc_id}_{attachment_name}.{attachment_type}")
+                    # Create filename with format: {attachmentname}.{attachment_type}
+                    # If attachment_name already has extension, don't add attachment_type
+                    if attachment_type and not attachment_name.endswith(f'.{attachment_type}'):
+                        filename = f"{attachment_name}.{attachment_type}"
+                    else:
+                        filename = attachment_name
+                    
+                    file_path = os.path.join(output_dir, filename)
 
                     if os.path.exists(file_path):
                         logger.info(f"Attachment already exists: {file_path}")

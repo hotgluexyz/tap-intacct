@@ -306,15 +306,15 @@ def sync_stream(stream: str) -> None:
             rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
         
         # Download attachments for streams that support them
-        if stream in STREAMS_WITH_ATTACHMENTS and intacct_object.get("SUPDOCID"):
+        if Context.config.get("sync_attachments") and STREAMS_WITH_ATTACHMENTS.get(stream) and intacct_object.get("SUPDOCID"):
             supdoc_id = intacct_object["SUPDOCID"]
             record_no = intacct_object["RECORDNO"]
             job_id = os.environ.get("JOB_ID")
             
             if job_id:
-                output_dir = f"/home/hotglue/{job_id}/sync-output"
+                output_dir = f"/home/hotglue/{job_id}/sync-output/{STREAMS_WITH_ATTACHMENTS[stream]}/{record_no}"
             else:
-                output_dir = "sync-output"
+                output_dir = f"sync-output/{STREAMS_WITH_ATTACHMENTS[stream]}/{record_no}"
 
             try:
                 logger.info(f"Fetching attachments for {stream} record {record_no} (SUPDOCID: {supdoc_id})")
