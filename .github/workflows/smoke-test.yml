@@ -5,8 +5,6 @@ on:
     types: [smoke_test]  # Custom event type
   pull_request:
     types: [opened, synchronize, reopened]
-  workflow_dispatch:
-    description: 'Run smoke tests manually'
 
 jobs:
   smoke-test:
