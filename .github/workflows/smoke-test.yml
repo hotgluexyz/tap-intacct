@@ -6,6 +6,13 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to test'
+        required: true
+        default: 'master'
+
 jobs:
   smoke-test:
     runs-on: ubuntu-latest
