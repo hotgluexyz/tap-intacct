@@ -6,7 +6,6 @@ include HISTORY.md
 include LICENSE
 include README.md
 include pyproject.toml
-include pytest.ini
 include LICENSE
 include sample_config.json
 recursive-include src *.json
