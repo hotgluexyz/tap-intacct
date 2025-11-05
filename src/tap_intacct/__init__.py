@@ -2,17 +2,27 @@
 import datetime as dt
 import json
 import ast
+import os
 import sys
 from pathlib import Path
 from typing import Dict, FrozenSet, Optional
+from dateutil.relativedelta import relativedelta
 
 import singer
 from singer import metadata
 
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
-from tap_intacct.const import DEFAULT_API_URL, KEY_PROPERTIES, REQUIRED_CONFIG_KEYS, INTACCT_OBJECTS, IGNORE_FIELDS, REP_KEYS, GET_BY_DATE_FIELD
-
+from tap_intacct.const import (
+    DEFAULT_API_URL,
+    KEY_PROPERTIES,
+    REQUIRED_CONFIG_KEYS,
+    INTACCT_OBJECTS,
+    IGNORE_FIELDS,
+    REP_KEYS,
+    GET_BY_DATE_FIELD,
+    STREAMS_WITH_ATTACHMENTS,
+)
 logger = singer.get_logger()
 
 
@@ -88,7 +98,15 @@ def _get_abs_path(path: str) -> Path:
 
 def _get_start(key: str) -> dt.datetime:
     if key in Context.state:
-        start = singer.utils.strptime_to_utc(Context.state[key])
+        if key == "general_ledger_journal_entry_lines":
+            report_periods = Context.config.get("report_periods", 3)
+            today = dt.date.today()
+            beginning_of_month = today.replace(day=1)
+            beginning_of_month = dt.datetime.combine(beginning_of_month, dt.datetime.min.time())
+            date = (beginning_of_month - relativedelta(months=report_periods - 1))
+            start = singer.utils.strptime_to_utc(date.isoformat())
+        else:
+            start = singer.utils.strptime_to_utc(Context.state[key])
 
         # commenting logic below due to HGI-5749 
         # # Subtract look-back from Config (default 1 hour) from State, in case of late arriving records.
@@ -212,14 +230,6 @@ def _load_schemas_from_intact():
         schemas[key] = _load_schema_from_api(key)
     return schemas
 
-def _load_schemas():
-    schemas = {}
-    for filename in _get_abs_path('schemas').iterdir():
-        stream = filename.stem
-        schemas[stream] = _load_schema(stream)
-    return schemas
-
-
 def _transform_and_write_record(
     row: Dict, schema: str, stream: str, time_extracted: dt.datetime
 ):
@@ -261,7 +271,7 @@ def sync_stream(stream: str) -> None:
     except SageIntacctSDKError as e:
         # Get the error description
         error = ast.literal_eval(e.message[7:])
-        logger.warn(f"Hit error when querying {stream}. Error: {error}")
+        logger.warning(f"Hit error when querying {stream}. Error: {error}")
         result = error['response']['operation']['result']['errormessage']['error']['description2']
         start = result.find(";")
         if start == -1:
@@ -294,6 +304,34 @@ def sync_stream(stream: str) -> None:
             rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)
         else:
             rep_key = REP_KEYS.get(stream, GET_BY_DATE_FIELD)
+        
+        # Download attachments for streams that support them
+        if Context.config.get("sync_attachments") and STREAMS_WITH_ATTACHMENTS.get(stream) and intacct_object.get("SUPDOCID"):
+            supdoc_id = intacct_object["SUPDOCID"]
+            record_no = intacct_object["RECORDNO"]
+            job_id = os.environ.get("JOB_ID")
+            
+            if job_id:
+                output_dir = f"/home/hotglue/{job_id}/sync-output/{STREAMS_WITH_ATTACHMENTS[stream]}/{record_no}"
+            else:
+                output_dir = f"sync-output/{STREAMS_WITH_ATTACHMENTS[stream]}/{record_no}"
+
+            try:
+                logger.info(f"Fetching attachments for {stream} record {record_no} (SUPDOCID: {supdoc_id})")
+                attachments_info = Context.intacct_client.persist_attachments(
+                    supdoc_id=supdoc_id,
+                    object_name=stream,
+                    output_dir=output_dir
+                )
+                
+                # Add attachment metadata to the record
+                if attachments_info:
+                    logger.info(f"Downloaded {len(attachments_info)} attachment(s) for record {record_no}")
+                else:
+                    logger.info(f"No attachments found for record {record_no}")
+                    
+            except Exception as e:
+                logger.warning(f"Failed to fetch attachments for record {record_no}: {e}")
 
         if rep_key:
             row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])

@@ -12,6 +12,8 @@ KEY_PROPERTIES = {
     'accounts_payable_payments': ["RECORDNO"],
     'accounts_payable_payment_details': ["RECORDNO"],
     'accounts_payable_vendors': ["VENDORID"],
+    "accounts_payable_adjustments": ["RECORDNO"],
+    "accounts_payable_adjustment_items": ["RECORDNO"],
     "accounts_payable_bank_accounts": ["RECORDNO"],
     "checking_accounts": ["RECORDNO"],
     "savings_accounts": ["RECORDNO"],
@@ -37,6 +39,7 @@ KEY_PROPERTIES = {
     'budget_list': ["RECORDNO"],
     'po_documents': ["RECORDNO"],
     'employees': ["RECORDNO"],
+    'subsidiaries': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -46,6 +49,8 @@ INTACCT_OBJECTS = {
     "accounts_payable_payments": "APPYMT",
     "accounts_payable_payment_details": "APPYMTDETAIL",
     "accounts_payable_vendors": "VENDOR",
+    "accounts_payable_adjustments": "APADJUSTMENT",
+    "accounts_payable_adjustment_items": "APADJUSTMENTITEM",
     "accounts_payable_bank_accounts": "PROVIDERBANKACCOUNT",
     "checking_accounts": "CHECKINGACCOUNT",
     "savings_accounts": "SAVINGSACCOUNT",
@@ -71,11 +76,17 @@ INTACCT_OBJECTS = {
     "budget_details": "GLBUDGETITEM",
     "po_documents": "PODOCUMENT",
     "employees": "EMPLOYEE",
+    "subsidiaries": "LOCATIONENTITY",
 }
 
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
+    "general_ledger_journal_entry_lines": "ENTRY_DATE",
     "budget_details": None
+}
+
+STREAMS_WITH_ATTACHMENTS = {
+    "accounts_payable_bills": "bill_attachments"
 }
 
 IGNORE_FIELDS =["PASSWORD"]

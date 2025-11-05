@@ -2,19 +2,18 @@
 API Base class with util functions
 """
 import backoff
+import base64
 import datetime as dt
 import json
+import os
 import re
 import uuid
-from typing import Dict, List, Union
+from typing import Dict, List, Union, Optional
 from urllib.parse import unquote
 import copy
 
 import requests
 import xmltodict
-from xml.parsers.expat import ExpatError
-
-from calendar import monthrange
 
 import singer
 
@@ -29,6 +28,7 @@ from tap_intacct.exceptions import (
     InvalidRequest,
     AuthFailure
 )
+from tap_intacct.const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 from http.client import RemoteDisconnected
 
@@ -48,7 +48,7 @@ class OfflineServiceError(Exception):
 class RateLimitError(Exception):
     pass
 
-def _format_date_for_intacct(datetime: dt.datetime) -> str:
+def _format_date_for_intacct(datetime: dt.datetime, stream: Optional[str] = None) -> str:
     """
     Intacct expects datetimes in a 'MM/DD/YY HH:MM:SS' string format.
     Args:
@@ -57,6 +57,9 @@ def _format_date_for_intacct(datetime: dt.datetime) -> str:
     Returns:
         'MM/DD/YY HH:MM:SS' formatted string.
     """
+    if stream and stream == "general_ledger_journal_entry_lines":
+        return datetime.strftime('%m/%d/%Y')
+
     return datetime.strftime('%m/%d/%Y %H:%M:%S')
 
 
@@ -356,7 +359,7 @@ class SageIntacctSDK:
         factor=3,
     )
     @singer.utils.ratelimit(10, 1)
-    def format_and_send_request(self, data: Dict) -> Union[List, Dict]:
+    def format_and_send_request(self, data: Dict, is_attachments: bool = False) -> Union[List, Dict]:
         """
         Format data accordingly to convert them to xml.
 
@@ -368,7 +371,10 @@ class SageIntacctSDK:
         """
 
         key = next(iter(data))
-        object_type = data[key]['object']
+        if is_attachments:
+            object_type = 'supdoc'
+        else:
+            object_type = data[key]['object']
         timestamp = dt.datetime.now()
 
         dict_body = {
@@ -440,7 +446,7 @@ class SageIntacctSDK:
             filter = {
                 'greaterthanorequalto': {
                     'field': rep_key,
-                    'value': _format_date_for_intacct(from_date),
+                    'value': _format_date_for_intacct(from_date, object_type),
                 }
             }
             
@@ -491,7 +497,91 @@ class SageIntacctSDK:
                 yield record
 
             offset = offset + pagesize
+            
+    def persist_attachments(self, supdoc_id: str, object_name: str, output_dir: str):
+        """
+        Get attachments for a given object type and record number.
+        
+        Parameters:
+            supdoc_id (str): The record number to fetch attachments for
+            object_name (str): The object/stream name (e.g., 'accounts_payable_bills')
+            output_dir (str): Directory to save attachment files
+            
+        Returns:
+            List of attachment metadata with file paths
+        """
+        data = {
+            'get': {
+                '@object': 'supdoc',
+                '@key': supdoc_id,
+            }
+        }
+        
+        response = self.format_and_send_request(data, is_attachments=True)
+        if not response.get('data') or not response["data"].get("supdoc"):
+            return []
+        
+        supdoc = response['data']['supdoc']
+        attachments_info = []
+        
+        # Handle both single attachment and multiple attachments
+        attachments = supdoc.get('attachments', {})
+        if not attachments:
+            return []
 
+        # Normalize to list if single attachment
+        attachment_list = attachments.get('attachment', [])
+        if isinstance(attachment_list, dict):
+            attachment_list = [attachment_list]
+            
+        if attachment_list:
+            # Create output directory if it doesn't exist
+            os.makedirs(output_dir, exist_ok=True)
+
+        # Iterate over attachments and decode base64 data
+        for idx, attachment in enumerate(attachment_list):
+            attachment_name = attachment.get('attachmentname', f'attachment_{idx}')
+            attachment_type = attachment.get('attachmenttype', '')
+            attachment_data = attachment.get('attachmentdata', '')
+
+            if attachment_data:
+                try:
+                    # Create filename with format: {attachmentname}.{attachment_type}
+                    # If attachment_name already has extension, don't add attachment_type
+                    if attachment_type and not attachment_name.endswith(f'.{attachment_type}'):
+                        filename = f"{attachment_name}.{attachment_type}"
+                    else:
+                        filename = attachment_name
+                    
+                    file_path = os.path.join(output_dir, filename)
+
+                    if os.path.exists(file_path):
+                        logger.info(f"Attachment already exists: {file_path}")
+                        continue
+
+                    # Decode base64 data
+                    decoded_data = base64.b64decode(attachment_data)
+
+                    # Write to file
+                    with open(file_path, 'wb') as f:
+                        f.write(decoded_data)
+
+                    logger.info(f"Saved attachment: {file_path}")
+
+                    # Store metadata
+                    attachments_info.append({
+                        'attachment_id': supdoc_id,
+                        'attachment_name': attachment_name,
+                        'attachment_type': attachment_type,
+                        'file_path': file_path,
+                        'size_bytes': len(decoded_data)
+                    })
+
+                except Exception as e:
+                    logger.error(f"Error saving attachment {attachment_name} for record {supdoc_id}: {e}")
+
+        return attachments_info
+        
     def get_sample(self, intacct_object: str):
         """
         Get a sample of data from an endpoint, useful for determining schemas.
@@ -552,4 +642,3 @@ def get_client(
     )
 
     return connection
-
