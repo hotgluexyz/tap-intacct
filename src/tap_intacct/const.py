@@ -8,6 +8,7 @@ REQUIRED_CONFIG_KEYS = [
 
 KEY_PROPERTIES = {
     "dimensions": ["objectName"],
+    "dimension_values": ["id", "dimensionType"],
     'accounts_payable_bills': ["RECORDNO"],
     'accounts_payable_bill_items': ["RECORDNO"],
     'accounts_payable_payments': ["RECORDNO"],
@@ -78,7 +79,8 @@ INTACCT_OBJECTS = {
     "po_documents": "PODOCUMENT",
     "employees": "EMPLOYEE",
     "subsidiaries": "LOCATIONENTITY",
-    "dimensions": "DIMENSION",
+    "dimensions": None,
+    "dimension_values": None
 }
 
 REP_KEYS = {
