@@ -172,18 +172,6 @@ def _load_schema_from_api(stream: str):
         schema_dict
 
     """
-    Context.intacct_client = get_client(
-        api_url=Context.config['api_url'],
-        company_id=Context.config['company_id'],
-        sender_id=Context.config['sender_id'],
-        sender_password=Context.config['sender_password'],
-        user_id=Context.config['user_id'],
-        user_password=Context.config['user_password'],
-        headers={'User-Agent': Context.config['user_agent']}
-        if 'user_agent' in Context.config
-        else {},
-    )
-    
     # Special handling for dimensions - getDimensions doesn't support lookup
     if stream == 'dimensions':
         schema_dict = {
@@ -199,6 +187,18 @@ def _load_schema_from_api(stream: str):
             'stream_meta': {}
         }
         return schema_dict
+
+    Context.intacct_client = get_client(
+        api_url=Context.config['api_url'],
+        company_id=Context.config['company_id'],
+        sender_id=Context.config['sender_id'],
+        sender_password=Context.config['sender_password'],
+        user_id=Context.config['user_id'],
+        user_password=Context.config['user_password'],
+        headers={'User-Agent': Context.config['user_agent']}
+        if 'user_agent' in Context.config
+        else {},
+    )
     
     schema_dict = {}
     schema_dict['type'] = 'object'
