@@ -183,6 +183,23 @@ def _load_schema_from_api(stream: str):
         if 'user_agent' in Context.config
         else {},
     )
+    
+    # Special handling for dimensions - getDimensions doesn't support lookup
+    if stream == 'dimensions':
+        schema_dict = {
+            'type': 'object',
+            'properties': {
+                'objectName': {'type': ['null', 'string']},
+                'objectLabel': {'type': ['null', 'string']},
+                'termLabel': {'type': ['null', 'string']},
+                'userDefinedDimension': {'type': ['null', 'boolean']},
+                'enabledInGL': {'type': ['null', 'boolean']}
+            },
+            'required': ['objectName'],
+            'stream_meta': {}
+        }
+        return schema_dict
+    
     schema_dict = {}
     schema_dict['type'] = 'object'
     schema_dict['properties'] = {}
@@ -256,6 +273,20 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
+    
+    # Special handling for dimensions - getDimensions doesn't support date-based queries
+    if stream == 'dimensions':
+        logger.info("Fetching all dimensions using getDimensions API")
+        data = Context.intacct_client.get_dimensions()
+        
+        for dimension in data:
+            _transform_and_write_record(dimension, schema, stream, time_extracted)
+            Context.counts[stream] += 1
+        
+        # Dimensions don't have a timestamp, so we use current time as bookmark
+        singer.utils.update_state(Context.state, stream, time_extracted)
+        logger.info('Sync completed for %s', stream)
+        return
 
     try:
         # Attempt to get data with all fields

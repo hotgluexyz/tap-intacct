@@ -7,6 +7,7 @@ REQUIRED_CONFIG_KEYS = [
 ]
 
 KEY_PROPERTIES = {
+    "dimensions": ["objectName"],
     'accounts_payable_bills': ["RECORDNO"],
     'accounts_payable_bill_items': ["RECORDNO"],
     'accounts_payable_payments': ["RECORDNO"],
@@ -77,12 +78,14 @@ INTACCT_OBJECTS = {
     "po_documents": "PODOCUMENT",
     "employees": "EMPLOYEE",
     "subsidiaries": "LOCATIONENTITY",
+    "dimensions": "DIMENSION",
 }
 
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
     "general_ledger_journal_entry_lines": "ENTRY_DATE",
-    "budget_details": None
+    "budget_details": None,
+    "dimensions": None
 }
 
 STREAMS_WITH_ATTACHMENTS = {

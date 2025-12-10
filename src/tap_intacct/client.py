@@ -373,6 +373,8 @@ class SageIntacctSDK:
         key = next(iter(data))
         if is_attachments:
             object_type = 'supdoc'
+        elif key == 'getDimensions':
+            object_type = 'getDimensions'
         else:
             object_type = data[key]['object']
         timestamp = dt.datetime.now()
@@ -617,6 +619,27 @@ class SageIntacctSDK:
 
         response = self.format_and_send_request(get_fields)
         return response
+    
+    def get_dimensions(self) -> List[Dict]:
+        """
+        Get list of dimensions using getDimensions API.
+        This API doesn't support lookup or query methods.
+        
+        Returns:
+            List of dimension objects
+        """
+        data = {
+            'getDimensions': None
+        }
+        
+        response = self.format_and_send_request(data)
+        dimensions_data = response.get('data', {}).get('dimensions', {}).get('dimension', [])
+        
+        # Ensure it's always a list
+        if isinstance(dimensions_data, dict):
+            dimensions_data = [dimensions_data]
+
+        return dimensions_data
 
 def get_client(
     *,
