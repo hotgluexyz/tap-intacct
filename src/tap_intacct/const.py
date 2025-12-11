@@ -7,8 +7,6 @@ REQUIRED_CONFIG_KEYS = [
 ]
 
 KEY_PROPERTIES = {
-    "dimensions": ["objectName"],
-    "dimension_values": ["id", "dimensionType"],
     'accounts_payable_bills': ["RECORDNO"],
     'accounts_payable_bill_items': ["RECORDNO"],
     'accounts_payable_payments': ["RECORDNO"],
@@ -42,6 +40,14 @@ KEY_PROPERTIES = {
     'po_documents': ["RECORDNO"],
     'employees': ["RECORDNO"],
     'subsidiaries': ["RECORDNO"],
+    "dimensions": ["objectName"],
+    "dimension_values": ["id", "dimensionType"],
+    'warehouses': ["RECORDNO"],
+    'contracts': ["RECORDNO"],
+    'cost_types': ["RECORDNO"],
+    'affiliate_entities': ["RECORDNO"],
+    'work_orders': ["RECORDNO"],
+    'fixed_assets': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -79,6 +85,12 @@ INTACCT_OBJECTS = {
     "po_documents": "PODOCUMENT",
     "employees": "EMPLOYEE",
     "subsidiaries": "LOCATIONENTITY",
+    "warehouses": "WAREHOUSE",
+    # "contracts": "CONTRACT", # Unable to fetch data from the API
+    # "cost_types": "COSTTYPE", # Unable to fetch data from the API
+    "affiliate_entities": "AFFILIATEENTITY",
+    # "work_orders": "WORKORDER", # Unable to fetch data from the API
+    "fixed_assets": "FIXEDASSET",
     "dimensions": None,
     "dimension_values": None
 }

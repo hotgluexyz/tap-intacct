@@ -206,6 +206,27 @@ def _load_schema_from_api(stream: str):
             'stream_meta': {}
         }
         return schema_dict
+    
+    # Special handling for fixed assets - we can not use the schema from the API
+    if stream == 'fixed_assets':
+        schema_dict = {
+            'type': 'object',
+            'properties': {
+                'RECORDNO': {'type': ['null', 'string']},
+                'NAME': {'type': ['null', 'string']},
+                'STATUS': {'type': ['null', 'string']},
+                'PARENTKEY': {'type': ['null', 'string']},
+                'PARENT.NAME': {'type': ['null', 'string']},
+                'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
+                'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
+                'CREATEDBY': {'type': ['null', 'string']},
+                'MODIFIEDBY': {'type': ['null', 'string']},
+                'RECORD_URL': {'type': ['null', 'string']},
+            },
+            'required': ['RECORDNO'],
+            'stream_meta': {}
+        }
+        return schema_dict
 
     Context.intacct_client = get_client(
         api_url=Context.config['api_url'],
