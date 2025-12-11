@@ -373,6 +373,8 @@ class SageIntacctSDK:
         key = next(iter(data))
         if is_attachments:
             object_type = 'supdoc'
+        elif key == 'getDimensions':
+            object_type = 'getDimensions'
         else:
             object_type = data[key]['object']
         timestamp = dt.datetime.now()
@@ -401,7 +403,7 @@ class SageIntacctSDK:
 
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime, is_custom_object: bool = False
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -415,10 +417,10 @@ class SageIntacctSDK:
             filter_table_value = INTACCT_OBJECTS[filter_table].lower()
             object_type = "audit_history"   
 
-        intacct_object_type = INTACCT_OBJECTS[object_type]
+        intacct_object_type = INTACCT_OBJECTS[object_type] if not is_custom_object else object_type
         total_intacct_objects = []
-        pk = KEY_PROPERTIES[object_type][0]
-        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+        pk = KEY_PROPERTIES[object_type][0] if not is_custom_object else "id"
+        rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD) if not is_custom_object else "updatedAt"
 
 
         from_date = from_date + dt.timedelta(seconds=1)
@@ -617,6 +619,53 @@ class SageIntacctSDK:
 
         response = self.format_and_send_request(get_fields)
         return response
+    
+    def get_dimensions(self) -> List[Dict]:
+        """
+        Get list of dimensions using getDimensions API.
+        This API doesn't support lookup or query methods.
+        
+        Returns:
+            List of dimension objects
+        """
+        data = {
+            'getDimensions': None
+        }
+        
+        response = self.format_and_send_request(data)
+        dimensions_data = response.get('data', {}).get('dimensions', {}).get('dimension', [])
+        
+        # Ensure it's always a list
+        if isinstance(dimensions_data, dict):
+            dimensions_data = [dimensions_data]
+
+        return dimensions_data
+    
+    def get_dimension_values(self, fields: List[str], from_date: dt.datetime) -> List[Dict]:
+        """
+        Get list of dimension values using getDimensionValues API.
+        This API doesn't support lookup or query methods.
+        
+        Returns:
+            List of dimension value objects
+        """
+        dimensions = self.get_dimensions()
+        
+        if "dimensionType" in fields:
+            fields.remove("dimensionType")
+        
+        for dimension in dimensions:
+            if dimension.get('userDefinedDimension') == 'true':
+                dimension_type = dimension.get('objectName')
+                for record in self.get_by_date(
+                        object_type=dimension_type,
+                        fields=fields,
+                        from_date=from_date,
+                        is_custom_object=True
+                    ):
+                    # Add dimensionType to the record
+                    record['dimensionType'] = dimension_type
+                    yield record
 
 def get_client(
     *,

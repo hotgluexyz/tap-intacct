@@ -172,6 +172,62 @@ def _load_schema_from_api(stream: str):
         schema_dict
 
     """
+    # Special handling for dimensions - getDimensions doesn't support lookup
+    if stream == 'dimensions':
+        schema_dict = {
+            'type': 'object',
+            'properties': {
+                'objectName': {'type': ['null', 'string']},
+                'objectLabel': {'type': ['null', 'string']},
+                'termLabel': {'type': ['null', 'string']},
+                'userDefinedDimension': {'type': ['null', 'boolean']},
+                'enabledInGL': {'type': ['null', 'boolean']}
+            },
+            'required': ['objectName'],
+            'stream_meta': {}
+        }
+        return schema_dict
+    
+    # Special handling for dimension values - we will not be using the schema from the API
+    if stream == 'dimension_values':
+        schema_dict = {
+            'type': 'object',
+            'properties': {
+                'id': {'type': ['null', 'integer']},
+                'name': {'type': ['null', 'string']},
+                'createdBy': {'type': ['null', 'integer']},
+                'createdAt': {'type': ['null', 'string']},
+                'updatedBy': {'type': ['null', 'integer']},
+                'updatedAt': {'type': ['null', 'string']},
+                'RECORD_URL': {'type': ['null', 'string']},
+                "dimensionType": {'type': ['null', 'string']},
+            },
+            'required': ['id'],
+            'stream_meta': {}
+        }
+        return schema_dict
+    
+    # Special handling for fixed assets - we can not use the schema from the API
+    if stream == 'fixed_assets':
+        schema_dict = {
+            'type': 'object',
+            'properties': {
+                'RECORDNO': {'type': ['null', 'string']},
+                'NAME': {'type': ['null', 'string']},
+                'STATUS': {'type': ['null', 'string']},
+                'PARENTKEY': {'type': ['null', 'string']},
+                'PARENT.NAME': {'type': ['null', 'string']},
+                'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
+                'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
+                'CREATEDBY': {'type': ['null', 'string']},
+                'MODIFIEDBY': {'type': ['null', 'string']},
+                'RECORD_URL': {'type': ['null', 'string']},
+            },
+            'required': ['RECORDNO'],
+            'stream_meta': {}
+        }
+        return schema_dict
+
     Context.intacct_client = get_client(
         api_url=Context.config['api_url'],
         company_id=Context.config['company_id'],
@@ -183,6 +239,7 @@ def _load_schema_from_api(stream: str):
         if 'user_agent' in Context.config
         else {},
     )
+    
     schema_dict = {}
     schema_dict['type'] = 'object'
     schema_dict['properties'] = {}
@@ -256,6 +313,35 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
+    
+    # Special handling for dimensions - getDimensions doesn't support date-based queries
+    if stream == 'dimensions':
+        logger.info("Fetching all dimensions using getDimensions API")
+        data = Context.intacct_client.get_dimensions()
+        
+        for dimension in data:
+            _transform_and_write_record(dimension, schema, stream, time_extracted)
+            Context.counts[stream] += 1
+        
+        # Dimensions don't have a timestamp, so we use current time as bookmark
+        singer.utils.update_state(Context.state, stream, time_extracted)
+        logger.info('Sync completed for %s', stream)
+        return
+    
+    if stream == 'dimension_values':
+        data = Context.intacct_client.get_dimension_values(
+            fields=fields,
+            from_date=from_datetime,
+        )
+        
+        for dimension_value in data:
+            _transform_and_write_record(dimension_value, schema, stream, time_extracted)
+            Context.counts[stream] += 1
+            
+
+        singer.utils.update_state(Context.state, stream, time_extracted)
+        logger.info('Sync completed for %s', stream)
+        return
 
     try:
         # Attempt to get data with all fields
