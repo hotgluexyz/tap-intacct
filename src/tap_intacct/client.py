@@ -403,7 +403,7 @@ class SageIntacctSDK:
 
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime, is_custom_object: bool = False
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime, to_date: dt.datetime, is_custom_object: bool = False
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -444,6 +444,19 @@ class SageIntacctSDK:
             }
         elif object_type == 'budget_details':
             filter = None
+        elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt":
+            filter = {
+                'and': {
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date, object_type),
+                    },
+                    'lessthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(to_date, object_type),
+                    }
+                }
+            }
         else:
             filter = {
                 'greaterthanorequalto': {
@@ -641,7 +654,7 @@ class SageIntacctSDK:
 
         return dimensions_data
     
-    def get_dimension_values(self, fields: List[str], from_date: dt.datetime) -> List[Dict]:
+    def get_dimension_values(self, fields: List[str], from_date: dt.datetime, to_date: dt.datetime) -> List[Dict]:
         """
         Get list of dimension values using getDimensionValues API.
         This API doesn't support lookup or query methods.
@@ -661,7 +674,8 @@ class SageIntacctSDK:
                         object_type=dimension_type,
                         fields=fields,
                         from_date=from_date,
-                        is_custom_object=True
+                        is_custom_object=True,
+                        to_date=to_date
                     ):
                     # Add dimensionType to the record
                     record['dimensionType'] = dimension_type

@@ -308,6 +308,7 @@ def sync_stream(stream: str) -> None:
     schema = Context.get_schema(stream)
 
     from_datetime = _get_start(stream)
+    to_datetime = dt.datetime.now(dt.timezone.utc)
     time_extracted = singer.utils.now()
 
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
@@ -332,6 +333,7 @@ def sync_stream(stream: str) -> None:
         data = Context.intacct_client.get_dimension_values(
             fields=fields,
             from_date=from_datetime,
+            to_date=to_datetime,
         )
         
         for dimension_value in data:
@@ -349,6 +351,7 @@ def sync_stream(stream: str) -> None:
             object_type=stream,
             fields=fields,
             from_date=from_datetime,
+            to_date=to_datetime,
         )
         logger.info(f"Checking if all fields are supported for {stream}")
         # Test getting a record
@@ -378,6 +381,7 @@ def sync_stream(stream: str) -> None:
         object_type=stream,
         fields=fields,
         from_date=from_datetime,
+        to_date=to_datetime,
     )
 
     first_iteration = True
