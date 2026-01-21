@@ -403,7 +403,7 @@ class SageIntacctSDK:
 
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime, is_custom_object: bool = False
+        self, *, object_type: str, fields: List[str], from_date: dt.datetime, to_date: dt.datetime, is_custom_object: bool = False, pagesize: int = 1000
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -446,9 +446,15 @@ class SageIntacctSDK:
             filter = None
         else:
             filter = {
-                'greaterthanorequalto': {
-                    'field': rep_key,
-                    'value': _format_date_for_intacct(from_date, object_type),
+                'and': {
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date, object_type),
+                    },
+                    'lessthanorequalto': {
+                        'field': 'WHENMODIFIED',
+                        'value': _format_date_for_intacct(to_date),
+                    }
                 }
             }
             
@@ -466,7 +472,6 @@ class SageIntacctSDK:
             
         response = self.format_and_send_request(get_count)
         count = int(response['data']['@totalcount'])
-        pagesize = 1000
         offset = 0
         while offset < count:
 
@@ -641,7 +646,7 @@ class SageIntacctSDK:
 
         return dimensions_data
     
-    def get_dimension_values(self, fields: List[str], from_date: dt.datetime) -> List[Dict]:
+    def get_dimension_values(self, fields: List[str], from_date: dt.datetime, to_date: dt.datetime) -> List[Dict]:
         """
         Get list of dimension values using getDimensionValues API.
         This API doesn't support lookup or query methods.
