@@ -674,7 +674,8 @@ class SageIntacctSDK:
                         object_type=dimension_type,
                         fields=fields,
                         from_date=from_date,
-                        is_custom_object=True
+                        is_custom_object=True,
+                        to_date=to_date
                     ):
                     # Add dimensionType to the record
                     record['dimensionType'] = dimension_type
