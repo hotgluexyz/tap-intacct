@@ -453,17 +453,15 @@ class SageIntacctSDK:
                     },
                     'lessthanorequalto': {
                         'field': rep_key,
-                        'value': _format_date_for_intacct(to_date),
+                        'value': _format_date_for_intacct(to_date, object_type),
                     }
                 }
             }
         else:
             filter = {
-                'and': {
-                    'greaterthanorequalto': {
-                        'field': rep_key,
-                        'value': _format_date_for_intacct(from_date, object_type),
-                    }
+                'greaterthanorequalto': {
+                    'field': rep_key,
+                    'value': _format_date_for_intacct(from_date, object_type),
                 }
             }
             
@@ -483,7 +481,7 @@ class SageIntacctSDK:
         count = int(response['data']['@totalcount'])
         pagesize = 1000
         offset = 0
-        while offset < pagesize:
+        while offset < count:
 
             data = {
                 'query': {
