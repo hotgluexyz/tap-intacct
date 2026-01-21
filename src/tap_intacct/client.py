@@ -452,7 +452,7 @@ class SageIntacctSDK:
                         'value': _format_date_for_intacct(from_date, object_type),
                     },
                     'lessthanorequalto': {
-                        'field': 'WHENMODIFIED',
+                        'field': GET_BY_DATE_FIELD,
                         'value': _format_date_for_intacct(to_date),
                     }
                 }
