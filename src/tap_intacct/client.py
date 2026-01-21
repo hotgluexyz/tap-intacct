@@ -432,6 +432,10 @@ class SageIntacctSDK:
                         'field': rep_key,
                         'value': _format_date_for_intacct(from_date),
                     },
+                    'lessthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(to_date, object_type),
+                    },
                     "equalto":{
                         'field': "OBJECTTYPE",
                         'value': filter_table_value,
@@ -444,7 +448,7 @@ class SageIntacctSDK:
             }
         elif object_type == 'budget_details':
             filter = None
-        elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt":
+        elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt" or rep_key == "ENTRY_DATE":
             filter = {
                 'and': {
                     'greaterthanorequalto': {
