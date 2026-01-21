@@ -444,7 +444,7 @@ class SageIntacctSDK:
             }
         elif object_type == 'budget_details':
             filter = None
-        if rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt":
+        elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt":
             filter = {
                 'and': {
                     'greaterthanorequalto': {
