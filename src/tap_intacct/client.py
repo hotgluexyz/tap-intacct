@@ -444,7 +444,7 @@ class SageIntacctSDK:
             }
         elif object_type == 'budget_details':
             filter = None
-        else:
+        if rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt":
             filter = {
                 'and': {
                     'greaterthanorequalto': {
@@ -452,8 +452,17 @@ class SageIntacctSDK:
                         'value': _format_date_for_intacct(from_date, object_type),
                     },
                     'lessthanorequalto': {
-                        'field': GET_BY_DATE_FIELD,
+                        'field': rep_key,
                         'value': _format_date_for_intacct(to_date),
+                    }
+                }
+            }
+        else:
+            filter = {
+                'and': {
+                    'greaterthanorequalto': {
+                        'field': rep_key,
+                        'value': _format_date_for_intacct(from_date, object_type),
                     }
                 }
             }
@@ -474,7 +483,7 @@ class SageIntacctSDK:
         count = int(response['data']['@totalcount'])
         pagesize = 1000
         offset = 0
-        while offset < count:
+        while offset < pagesize:
 
             data = {
                 'query': {
