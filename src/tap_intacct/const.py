@@ -95,6 +95,11 @@ INTACCT_OBJECTS = {
     "dimension_values": None
 }
 
+NON_AUDIT_HISTORY_OBJECTS = [
+    "dimensions",
+    "dimension_values",
+]
+
 REP_KEYS = {
     "audit_history" : "ACCESSTIME",
     "general_ledger_journal_entry_lines": "ENTRY_DATE",
