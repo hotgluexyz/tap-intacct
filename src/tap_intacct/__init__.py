@@ -22,6 +22,7 @@ from tap_intacct.const import (
     REP_KEYS,
     GET_BY_DATE_FIELD,
     STREAMS_WITH_ATTACHMENTS,
+    NON_AUDIT_HISTORY_OBJECTS,
 )
 logger = singer.get_logger()
 
@@ -464,6 +465,8 @@ def do_discover(*, stdout: bool = True) -> Dict:
             tables = list(raw_schemas.keys())
             tables.remove("audit_history")
             for table in tables:
+                if table in NON_AUDIT_HISTORY_OBJECTS:
+                    continue
                 new_stream = catalog_entry.copy()
                 stream_name = f"audit_history_{table}"
                 new_stream["stream"] = stream_name
