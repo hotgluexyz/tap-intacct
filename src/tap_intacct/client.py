@@ -31,6 +31,7 @@ from tap_intacct.exceptions import (
 from tap_intacct.const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
 
 from http.client import RemoteDisconnected
+from bs4 import BeautifulSoup
 
 class PleaseTryAgainLaterError(Exception):
     pass
@@ -47,6 +48,14 @@ class OfflineServiceError(Exception):
     pass
 class RateLimitError(Exception):
     pass
+class CloudflareError(Exception):
+    """Raised when Cloudflare challenge/error page is encountered."""
+    pass
+
+def extract_text_from_html(content: str) -> str:
+    soup = BeautifulSoup(content, 'html.parser')
+    text = '- '.join(soup.stripped_strings)
+    return text
 
 def _format_date_for_intacct(datetime: dt.datetime, stream: Optional[str] = None) -> str:
     """
@@ -99,6 +108,13 @@ class SageIntacctSDK:
             user_password=self.__user_password,
         )
 
+    @backoff.on_exception(
+        backoff.constant,
+        CloudflareError,
+        interval=90,
+        jitter=backoff.full_jitter,
+        max_tries=4,
+    )
     @backoff.on_exception(
         backoff.expo,
         (
@@ -193,6 +209,10 @@ class SageIntacctSDK:
         if not response.ok:
             logger.error(f"Request to {api_url} failed with body: {cleaned_body}")
 
+            if "cf-error-details" in response.text:
+                resp_text = extract_text_from_html(response.text)
+                raise CloudflareError(resp_text)
+
         if response.status_code == 502:
             raise BadGatewayError(
                 f"Response status code: {response.status_code}, response: {response.text}"
@@ -210,6 +230,9 @@ class SageIntacctSDK:
             parsed_xml = xmltodict.parse(response.text)
             parsed_response = json.loads(json.dumps(parsed_xml))
         except:
+            if "cf-error-details" in response.text:
+                resp_text = extract_text_from_html(response.text)
+                raise CloudflareError(resp_text)
             logger.error(f"Unable to parse response: {response.text}")
             raise InvalidXmlResponse(
                 f"Response status code: {response.status_code}, response: {response.text}"
@@ -342,6 +365,13 @@ class SageIntacctSDK:
         return errormessages
     
 
+    @backoff.on_exception(
+        backoff.constant,
+        CloudflareError,
+        interval=90,
+        jitter=backoff.full_jitter,
+        max_tries=4,
+    )
     @backoff.on_exception(
         backoff.expo,
         (
