@@ -98,6 +98,16 @@ INTACCT_OBJECTS = {
 NON_AUDIT_HISTORY_OBJECTS = [
     "dimensions",
     "dimension_values",
+    'general_ledger_journal_entry_lines',
+    'accounts_payable_bill_items',
+    'accounts_payable_adjustment_items',
+    'accounts_payable_payment_details',
+    'adjustments',
+    'adjustment_items',
+    'invoice_items',
+    'deposits',
+    'affiliate_entities',
+    'fixed_assets',
 ]
 
 REP_KEYS = {
