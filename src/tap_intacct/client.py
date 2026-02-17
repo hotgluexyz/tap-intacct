@@ -410,8 +410,6 @@ class SageIntacctSDK:
             object_type = "audit_history"   
 
         intacct_object_type = INTACCT_OBJECTS[object_type]
-        total_intacct_objects = []
-        pk = KEY_PROPERTIES[object_type][0]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
 
 
