@@ -410,8 +410,6 @@ class SageIntacctSDK:
             object_type = "audit_history"   
 
         intacct_object_type = INTACCT_OBJECTS[object_type]
-        total_intacct_objects = []
-        pk = KEY_PROPERTIES[object_type][0]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
 
 
@@ -447,7 +445,7 @@ class SageIntacctSDK:
         get_count = {
             'query': {
                 'object': intacct_object_type,
-                'select': {'field': pk},
+                'select': {'field': fields},
                 'pagesize': '1',
                 'options': {'showprivate': 'true'},
             }
@@ -480,15 +478,20 @@ class SageIntacctSDK:
                 offset = offset + 99
                 continue
 
-            intacct_objects = intacct_objects['data'][
-                intacct_object_type
-            ]
+            intacct_objects = intacct_objects['data'].get(
+                intacct_object_type,
+                []
+            )
             # When only 1 object is found, Intacct returns a dict, otherwise it returns a list of dicts.
             if isinstance(intacct_objects, dict):
                 intacct_objects = [intacct_objects]
 
             for record in intacct_objects:
                 yield record
+            
+            # if count doesn't match the actual number of records, break the loop to avoid unnecessary requests
+            if not intacct_objects:
+                break
 
             offset = offset + pagesize
 
