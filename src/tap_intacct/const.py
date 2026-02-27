@@ -105,9 +105,7 @@ NON_AUDIT_HISTORY_OBJECTS = [
     'adjustments',
     'adjustment_items',
     'invoice_items',
-    'deposits',
     'affiliate_entities',
-    'fixed_assets',
 ]
 
 REP_KEYS = {
