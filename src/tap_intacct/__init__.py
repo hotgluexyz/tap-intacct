@@ -259,15 +259,27 @@ def sync_stream(stream: str) -> None:
         next(data, None)
         logger.info(f"All fields supported for {stream}")
     except SageIntacctSDKError as e:
-        # Get the error description
+        # Get the error description (support single error or list of errors)
         error = ast.literal_eval(e.message[7:])
-        logger.warn(f"Hit error when querying {stream}. Error: {error}")
-        result = error['response']['operation']['result']['errormessage']['error']['description2']
-        start = result.find(";")
-        if start == -1:
-            start = result.rfind(":", 0, result.rfind(":") - 1)
-
-        result = result[(start+1):(result.rfind("[")-1)].replace(" ", "").replace("]", "").replace("[", "").split(",")
+        logger.warning(f"Hit error when querying {stream}. Error: {error}")
+        err_obj = error['response']['operation']['result']['errormessage']['error']
+        errors = err_obj if isinstance(err_obj, list) else [err_obj]
+        result = []
+        for err in errors:
+            desc = err.get('description2')
+            if not desc:
+                continue
+            start = desc.find(";")
+            if start == -1:
+                start = desc.rfind(":", 0, desc.rfind(":") - 1) if desc.rfind(":") >= 0 else -1
+            if start == -1:
+                continue
+            bracket = desc.rfind("[")
+            if bracket == -1:
+                continue
+            parsed = desc[(start + 1):(bracket - 1)].replace(" ", "").replace("]", "").replace("[", "").split(",")
+            result.extend(s for s in parsed if s)
+        result = list(dict.fromkeys(result))  # deduplicate, preserve order
         logger.info(f"Ignoring fields: {result}")
 
         # Remove any bad fields automatically
