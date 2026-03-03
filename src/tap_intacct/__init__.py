@@ -4,7 +4,7 @@ import json
 import ast
 import sys
 from pathlib import Path
-from typing import Dict, FrozenSet, Optional
+from typing import Dict, FrozenSet, List, Optional, Tuple
 
 import singer
 from singer import metadata
@@ -232,6 +232,33 @@ def _transform_and_write_record(
     singer.write_record(stream, rec, time_extracted=time_extracted)
 
 
+def _parse_unsupported_fields(error_message: str) -> Tuple[dict, List[str]]:
+    """
+    Parse Intacct SDK error message to extract the error payload and list of
+    unsupported field names (for automatic removal from the request).
+    Supports both a single error and a list of errors in the response.
+    """
+    error = ast.literal_eval(error_message[7:])
+    err_obj = error['response']['operation']['result']['errormessage']['error']
+    errors = err_obj if isinstance(err_obj, list) else [err_obj]
+    result: List[str] = []
+    for err in errors:
+        desc = err.get('description2')
+        if not desc:
+            continue
+        start = desc.find(";")
+        if start == -1:
+            start = desc.rfind(":", 0, desc.rfind(":") - 1) if desc.rfind(":") >= 0 else -1
+        if start == -1:
+            continue
+        bracket = desc.rfind("[")
+        if bracket == -1:
+            continue
+        parsed = desc[(start + 1):(bracket - 1)].replace(" ", "").replace("]", "").replace("[", "").split(",")
+        result.extend(s for s in parsed if s)
+    return error, list(set(result))
+
+
 def sync_stream(stream: str) -> None:
     """
     Extracts records for the selected stream.
@@ -259,19 +286,12 @@ def sync_stream(stream: str) -> None:
         next(data, None)
         logger.info(f"All fields supported for {stream}")
     except SageIntacctSDKError as e:
-        # Get the error description
-        error = ast.literal_eval(e.message[7:])
-        logger.warn(f"Hit error when querying {stream}. Error: {error}")
-        result = error['response']['operation']['result']['errormessage']['error']['description2']
-        start = result.find(";")
-        if start == -1:
-            start = result.rfind(":", 0, result.rfind(":") - 1)
-
-        result = result[(start+1):(result.rfind("[")-1)].replace(" ", "").replace("]", "").replace("[", "").split(",")
-        logger.info(f"Ignoring fields: {result}")
+        error, unsupported_fields = _parse_unsupported_fields(e.message)
+        logger.warning(f"Hit error when querying {stream}. Error: {error}")
+        logger.info(f"Ignoring fields: {unsupported_fields}")
 
         # Remove any bad fields automatically
-        for field in result:
+        for field in unsupported_fields:
             # NOTE: Apparently this was failing because field was not in fields
             if field in fields:
                 fields.remove(field)
