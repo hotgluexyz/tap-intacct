@@ -207,27 +207,6 @@ def _load_schema_from_api(stream: str):
             'stream_meta': {}
         }
         return schema_dict
-    
-    # Special handling for fixed assets - we can not use the schema from the API
-    if stream == 'fixed_assets':
-        schema_dict = {
-            'type': 'object',
-            'properties': {
-                'RECORDNO': {'type': ['null', 'string']},
-                'NAME': {'type': ['null', 'string']},
-                'STATUS': {'type': ['null', 'string']},
-                'PARENTKEY': {'type': ['null', 'string']},
-                'PARENT.NAME': {'type': ['null', 'string']},
-                'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
-                'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
-                'CREATEDBY': {'type': ['null', 'string']},
-                'MODIFIEDBY': {'type': ['null', 'string']},
-                'RECORD_URL': {'type': ['null', 'string']},
-            },
-            'required': ['RECORDNO'],
-            'stream_meta': {}
-        }
-        return schema_dict
 
     Context.intacct_client = get_client(
         api_url=Context.config['api_url'],
@@ -241,6 +220,38 @@ def _load_schema_from_api(stream: str):
         else {},
     )
     
+    # Special handling for fixed assets - we can not use the schema from the API
+    if stream == 'fixed_assets':
+        # Check if the user is subscribed to the Fixed Assets module
+        get_fields = {
+            'getUserPermissions': {
+                'userId': Context.config['user_id']
+            }
+        }
+        response = Context.intacct_client.format_and_send_request(get_fields)
+        has_fixed_assets = "Fixed Assets" in [x.get("applicationName","") for x in response.get("data",{}).get("permissions",{}).get("appSubscription",[])]
+        if has_fixed_assets:
+            schema_dict = {
+                'type': 'object',
+                'properties': {
+                    'RECORDNO': {'type': ['null', 'string']},
+                    'NAME': {'type': ['null', 'string']},
+                    'STATUS': {'type': ['null', 'string']},
+                    'PARENTKEY': {'type': ['null', 'string']},
+                    'PARENT.NAME': {'type': ['null', 'string']},
+                    'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
+                    'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
+                    'CREATEDBY': {'type': ['null', 'string']},
+                    'MODIFIEDBY': {'type': ['null', 'string']},
+                    'RECORD_URL': {'type': ['null', 'string']},
+                },
+                'required': ['RECORDNO'],
+                'stream_meta': {}
+            }
+            return schema_dict
+        else:
+            return None
+
     schema_dict = {}
     schema_dict['type'] = 'object'
     schema_dict['properties'] = {}
@@ -285,7 +296,11 @@ def _load_schemas_from_intact():
     """
     schemas = {}
     for key in INTACCT_OBJECTS:
-        schemas[key] = _load_schema_from_api(key)
+        key_present = _load_schema_from_api(key)
+        if not key_present:
+            logger.info(f"No module or no schema found for {key}")
+            continue
+        schemas[key] = key_present
     return schemas
 
 def _transform_and_write_record(
