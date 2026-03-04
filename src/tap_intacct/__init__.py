@@ -159,7 +159,7 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     return mdata
 
 
-def is_subscribed_to_model(module_name: str) -> bool:
+def is_subscribed_to_module(module_name: str) -> bool:
     get_fields = {
         'getUserPermissions': {
             'userId': Context.config['user_id']
@@ -230,7 +230,7 @@ def _load_schema_from_api(stream: str):
     
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
-        if is_subscribed_to_model("Fixed Assets"):
+        if is_subscribed_to_module("Fixed Assets"):
             schema_dict = {
                 'type': 'object',
                 'properties': {
