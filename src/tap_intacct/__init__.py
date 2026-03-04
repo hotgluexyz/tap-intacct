@@ -159,7 +159,15 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     return mdata
 
 
-
+def is_subscribed_to_model(module_name: str) -> bool:
+    get_fields = {
+        'getUserPermissions': {
+            'userId': Context.config['user_id']
+        }
+    }
+    response = Context.intacct_client.format_and_send_request(get_fields)
+    module_subscriptions = response.get("data",{}).get("permissions",{}).get("appSubscription",[])
+    return module_name in [x.get("applicationName","") for x in module_subscriptions]
 
 
 def _load_schema_from_api(stream: str):
@@ -222,19 +230,7 @@ def _load_schema_from_api(stream: str):
     
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
-        get_fields = {
-            'getUserPermissions': {
-                'userId': Context.config['user_id']
-            }
-        }
-        response = Context.intacct_client.format_and_send_request(get_fields)
-        module_subscriptions = response.get("data",{}).get("permissions",{}).get("appSubscription",[])
-        if isinstance(module_subscriptions, dict):
-            module_subscriptions = [module_subscriptions]
-        elif not isinstance(module_subscriptions, list):
-            module_subscriptions = []
-        has_fixed_assets = "Fixed Assets" in [x.get("applicationName","") for x in module_subscriptions]
-        if has_fixed_assets:
+        if is_subscribed_to_model("Fixed Assets"):
             schema_dict = {
                 'type': 'object',
                 'properties': {
