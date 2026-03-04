@@ -222,7 +222,6 @@ def _load_schema_from_api(stream: str):
     
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
-        # Check if the user is subscribed to the Fixed Assets module
         get_fields = {
             'getUserPermissions': {
                 'userId': Context.config['user_id']
