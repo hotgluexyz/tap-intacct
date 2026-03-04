@@ -229,7 +229,12 @@ def _load_schema_from_api(stream: str):
             }
         }
         response = Context.intacct_client.format_and_send_request(get_fields)
-        has_fixed_assets = "Fixed Assets" in [x.get("applicationName","") for x in response.get("data",{}).get("permissions",{}).get("appSubscription",[])]
+        module_subscriptions = response.get("data",{}).get("permissions",{}).get("appSubscription",[])
+        if isinstance(module_subscriptions, dict):
+            module_subscriptions = [module_subscriptions]
+        elif not isinstance(module_subscriptions, list):
+            module_subscriptions = []
+        has_fixed_assets = "Fixed Assets" in [x.get("applicationName","") for x in module_subscriptions]
         if has_fixed_assets:
             schema_dict = {
                 'type': 'object',
