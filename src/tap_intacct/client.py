@@ -405,6 +405,8 @@ class SageIntacctSDK:
             object_type = 'supdoc'
         elif key == 'getDimensions':
             object_type = 'getDimensions'
+        elif key == 'getUserPermissions':
+            object_type = 'getUserPermissions'
         else:
             object_type = data[key]['object']
         timestamp = dt.datetime.now()
