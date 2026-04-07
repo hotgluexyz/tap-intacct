@@ -48,6 +48,8 @@ KEY_PROPERTIES = {
     'affiliate_entities': ["RECORDNO"],
     'work_orders': ["RECORDNO"],
     'fixed_assets': ["RECORDNO"],
+    'consolidation_books': ["RECORDNO"],
+    'consolidation_book_journals': ["RECORDNO"],
 }
 
 # List of available objects with their internal object-reference/endpoint name.
@@ -92,7 +94,9 @@ INTACCT_OBJECTS = {
     # "work_orders": "WORKORDER", # Unable to fetch data from the API
     "fixed_assets": "FIXEDASSET",
     "dimensions": None,
-    "dimension_values": None
+    "dimension_values": None,
+    "consolidation_books": "GCBOOK",
+    "consolidation_book_journals": "GCBOOKADJJOURNAL"
 }
 
 NON_AUDIT_HISTORY_OBJECTS = [
