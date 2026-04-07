@@ -109,6 +109,7 @@ NON_AUDIT_HISTORY_OBJECTS = [
     'adjustments',
     'adjustment_items',
     'invoice_items',
+    'consolidation_book_journals',
 ]
 
 REP_KEYS = {
