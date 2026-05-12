@@ -23,6 +23,7 @@ from tap_intacct.const import (
     GET_BY_DATE_FIELD,
     STREAMS_WITH_ATTACHMENTS,
     NON_AUDIT_HISTORY_OBJECTS,
+    PERMISSION_TOLERANT_STREAMS,
 )
 logger = singer.get_logger()
 
@@ -519,7 +520,15 @@ def do_sync() -> None:
         else:
             singer.write_schema(stream, Context.get_schema(stream), KEY_PROPERTIES[stream])
         Context.counts[stream] = 0
-        sync_stream(stream)
+        try:
+            sync_stream(stream)
+        except SageIntacctSDKError as e:
+            if stream in PERMISSION_TOLERANT_STREAMS and "You do not have permission for API" in e.message:
+                logger.warning(
+                    f"Skipping sync for {stream}, in sufficient permissions for API"
+                )
+                continue
+            raise
 
     singer.write_state(Context.state)
     logger.info('Sync completed')
