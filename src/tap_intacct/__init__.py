@@ -306,16 +306,15 @@ def sync_stream(stream: str) -> None:
 
     first_iteration = True
     previous_accounts_payable_vendors_PK = None
-    accounts_payable_vendors_PK = "RECORDNO"
     for intacct_object in data:
         if first_iteration:
             logger.info(f"Processing records for {stream}")
             first_iteration = False
 
         if INTACCT_OBJECTS[stream] == "VENDOR":
-            if intacct_object[accounts_payable_vendors_PK] == previous_accounts_payable_vendors_PK:
+            if intacct_object[KEY_PROPERTIES[stream][0]] == previous_accounts_payable_vendors_PK:
                 continue
-            previous_accounts_payable_vendors_PK = intacct_object[accounts_payable_vendors_PK]
+            previous_accounts_payable_vendors_PK = intacct_object[KEY_PROPERTIES[stream][0]]
 
         if stream.startswith("audit_history"):
             rep_key = REP_KEYS.get("audit_history", GET_BY_DATE_FIELD)

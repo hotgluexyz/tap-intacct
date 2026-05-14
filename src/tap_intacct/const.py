@@ -11,7 +11,7 @@ KEY_PROPERTIES = {
     'accounts_payable_bill_items': ["RECORDNO"],
     'accounts_payable_payments': ["RECORDNO"],
     'accounts_payable_payment_details': ["RECORDNO"],
-    'accounts_payable_vendors': ["VENDORID"],
+    'accounts_payable_vendors': ["RECORDNO"],
     "accounts_payable_bank_accounts": ["RECORDNO"],
     "checking_accounts": ["RECORDNO"],
     "savings_accounts": ["RECORDNO"],

@@ -416,7 +416,7 @@ class SageIntacctSDK:
             # Keep vendor pagination deterministic across pages.
             orderby = {
                 "order": [
-                    {"field": "RECORDNO", "ascending": None},
+                    {"field": KEY_PROPERTIES[object_type][0], "ascending": None},
                     {"field": "WHENLASTPAID", "descending": None},
                 ]
             }
