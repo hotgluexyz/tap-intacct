@@ -411,6 +411,15 @@ class SageIntacctSDK:
 
         intacct_object_type = INTACCT_OBJECTS[object_type]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
+        orderby = None
+        if intacct_object_type == "VENDOR":
+            # Keep vendor pagination deterministic across pages.
+            orderby = {
+                "order": [
+                    {"field": "RECORDNO", "ascending": None},
+                    {"field": "WHENLASTPAID", "descending": None},
+                ]
+            }
 
 
         from_date = from_date + dt.timedelta(seconds=1)
@@ -453,6 +462,8 @@ class SageIntacctSDK:
 
         if filter:
             get_count["query"]["filter"] = filter
+        if orderby:
+            get_count["query"]["orderby"] = orderby
             
         response = self.format_and_send_request(get_count)
         count = int(response['data']['@totalcount'])
@@ -472,6 +483,8 @@ class SageIntacctSDK:
 
             if filter:
                 data["query"]["filter"] = filter
+            if orderby:
+                data["query"]["orderby"] = orderby
             intacct_objects = self.format_and_send_request(data)
 
             if intacct_objects == "skip_and_paginate" and object_type == "audit_history":
