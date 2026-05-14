@@ -311,7 +311,7 @@ def sync_stream(stream: str) -> None:
             logger.info(f"Processing records for {stream}")
             first_iteration = False
 
-        if INTACCT_OBJECTS[stream] == "VENDOR":
+        if stream == "accounts_payable_vendors":
             if intacct_object[KEY_PROPERTIES[stream][0]] == previous_accounts_payable_vendors_PK:
                 continue
             previous_accounts_payable_vendors_PK = intacct_object[KEY_PROPERTIES[stream][0]]

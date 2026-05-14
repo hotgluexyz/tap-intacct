@@ -412,7 +412,7 @@ class SageIntacctSDK:
         intacct_object_type = INTACCT_OBJECTS[object_type]
         rep_key = REP_KEYS.get(object_type, GET_BY_DATE_FIELD)
         orderby = None
-        if intacct_object_type == "VENDOR":
+        if object_type == "accounts_payable_vendors":
             # Keep vendor pagination deterministic across pages.
             orderby = {
                 "order": [
