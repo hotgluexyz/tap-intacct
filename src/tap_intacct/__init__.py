@@ -219,24 +219,31 @@ def _load_schema_from_api(stream: str):
     
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
-        schema_dict = {
-            'type': 'object',
-            'properties': {
-                'RECORDNO': {'type': ['null', 'string']},
-                'NAME': {'type': ['null', 'string']},
-                'STATUS': {'type': ['null', 'string']},
-                'PARENTKEY': {'type': ['null', 'string']},
-                'PARENT.NAME': {'type': ['null', 'string']},
-                'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
-                'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
-                'CREATEDBY': {'type': ['null', 'string']},
-                'MODIFIEDBY': {'type': ['null', 'string']},
-                'RECORD_URL': {'type': ['null', 'string']},
-            },
-            'required': ['RECORDNO'],
-            'stream_meta': {}
-        }
-        return schema_dict
+        try:
+            _ = list(Context.intacct_client.get_by_date(object_type="fixed_assets", fields=["RECORDNO"], from_date=dt.datetime.now() - dt.timedelta(days=1), to_date=dt.datetime.now()))
+
+            schema_dict = {
+                'type': 'object',
+                'properties': {
+                    'RECORDNO': {'type': ['null', 'string']},
+                    'NAME': {'type': ['null', 'string']},
+                    'STATUS': {'type': ['null', 'string']},
+                    'PARENTKEY': {'type': ['null', 'string']},
+                    'PARENT.NAME': {'type': ['null', 'string']},
+                    'WHENCREATED': {'format': 'date-time', 'type': ['null', 'string']},
+                    'WHENMODIFIED': {'format': 'date-time', 'type': ['null', 'string']},
+                    'CREATEDBY': {'type': ['null', 'string']},
+                    'MODIFIEDBY': {'type': ['null', 'string']},
+                    'RECORD_URL': {'type': ['null', 'string']},
+                },
+                'required': ['RECORDNO'],
+                'stream_meta': {}
+            }
+            return schema_dict
+        
+        except Exception as e:
+            logger.warning(f"Failed to query fixed assets: {e}. Not adding to the catalog.")
+            return None
 
     schema_dict = {}
     schema_dict['type'] = 'object'
