@@ -159,17 +159,6 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
     return mdata
 
 
-def is_subscribed_to_module(module_name: str) -> bool:
-    get_fields = {
-        'getUserPermissions': {
-            'userId': Context.config['user_id']
-        }
-    }
-    response = Context.intacct_client.format_and_send_request(get_fields)
-    module_subscriptions = response.get("data",{}).get("permissions",{}).get("appSubscription",[])
-    return module_name in [x.get("applicationName","") for x in module_subscriptions]
-
-
 def _load_schema_from_api(stream: str):
     """
     Function to load schema data via an api call for each INTACCT Object to get the fields list for each schema name
@@ -230,7 +219,17 @@ def _load_schema_from_api(stream: str):
     
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
-        if is_subscribed_to_module("Fixed Assets"):
+        try:
+            get_fixed_assets = {
+                'query': {
+                    'object': INTACCT_OBJECTS['fixed_assets'],
+                    'select': {'field': KEY_PROPERTIES["fixed_assets"][0]},
+                    'pagesize': '1',
+                    'options': {'showprivate': 'true'},
+                }
+            }
+            _ = Context.intacct_client.format_and_send_request(get_fixed_assets)
+
             schema_dict = {
                 'type': 'object',
                 'properties': {
@@ -249,7 +248,9 @@ def _load_schema_from_api(stream: str):
                 'stream_meta': {}
             }
             return schema_dict
-        else:
+        
+        except Exception as e:
+            logger.warning(f"Failed to query fixed assets: {e}. Not adding to the catalog.")
             return None
 
     schema_dict = {}
