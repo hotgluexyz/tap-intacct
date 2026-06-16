@@ -220,7 +220,15 @@ def _load_schema_from_api(stream: str):
     # Special handling for fixed assets - we can not use the schema from the API
     if stream == 'fixed_assets':
         try:
-            _ = list(Context.intacct_client.get_by_date(object_type="fixed_assets", fields=["RECORDNO"], from_date=dt.datetime.now() - dt.timedelta(days=1), to_date=dt.datetime.now()))
+            get_fixed_assets = {
+                'query': {
+                    'object': INTACCT_OBJECTS['fixed_assets'],
+                    'select': {'field': KEY_PROPERTIES["fixed_assets"][0]},
+                    'pagesize': '1',
+                    'options': {'showprivate': 'true'},
+                }
+            }
+            _ = Context.intacct_client.format_and_send_request(get_fixed_assets)
 
             schema_dict = {
                 'type': 'object',
