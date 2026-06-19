@@ -158,21 +158,9 @@ def _populate_metadata(schema_name: str, schema: Dict) -> Dict:
 
     return mdata
 
-
-def _load_schema_from_api(stream: str):
-    """
-    Function to load schema data via an api call for each INTACCT Object to get the fields list for each schema name
-    dynamically
-    Args:
-        stream:
-
-    Returns:
-        schema_dict
-
-    """
-    # Special handling for dimensions - getDimensions doesn't support lookup
-    if stream == 'dimensions':
-        schema_dict = {
+def get_stream_schema(stream: str, client) -> Dict:
+    if stream == "dimensions":
+        return {
             'type': 'object',
             'properties': {
                 'objectName': {'type': ['null', 'string']},
@@ -184,11 +172,9 @@ def _load_schema_from_api(stream: str):
             'required': ['objectName'],
             'stream_meta': {}
         }
-        return schema_dict
-    
-    # Special handling for dimension values - we will not be using the schema from the API
-    if stream == 'dimension_values':
-        schema_dict = {
+
+    if stream == "dimension_values":
+        return {
             'type': 'object',
             'properties': {
                 'id': {'type': ['null', 'integer']},
@@ -203,34 +189,9 @@ def _load_schema_from_api(stream: str):
             'required': ['id'],
             'stream_meta': {}
         }
-        return schema_dict
 
-    Context.intacct_client = get_client(
-        api_url=Context.config['api_url'],
-        company_id=Context.config['company_id'],
-        sender_id=Context.config['sender_id'],
-        sender_password=Context.config['sender_password'],
-        user_id=Context.config['user_id'],
-        user_password=Context.config['user_password'],
-        headers={'User-Agent': Context.config['user_agent']}
-        if 'user_agent' in Context.config
-        else {},
-    )
-    
-    # Special handling for fixed assets - we can not use the schema from the API
-    if stream == 'fixed_assets':
-        try:
-            get_fixed_assets = {
-                'query': {
-                    'object': INTACCT_OBJECTS['fixed_assets'],
-                    'select': {'field': KEY_PROPERTIES["fixed_assets"][0]},
-                    'pagesize': '1',
-                    'options': {'showprivate': 'true'},
-                }
-            }
-            _ = Context.intacct_client.format_and_send_request(get_fixed_assets)
-
-            schema_dict = {
+    if stream == "fixed_assets":
+        return {
                 'type': 'object',
                 'properties': {
                     'RECORDNO': {'type': ['null', 'string']},
@@ -247,12 +208,8 @@ def _load_schema_from_api(stream: str):
                 'required': ['RECORDNO'],
                 'stream_meta': {}
             }
-            return schema_dict
-        
-        except Exception as e:
-            logger.warning(f"Failed to query fixed assets: {e}. Not adding to the catalog.")
-            return None
 
+    # build shchema 
     schema_dict = {}
     schema_dict['type'] = 'object'
     schema_dict['properties'] = {}
@@ -261,7 +218,7 @@ def _load_schema_from_api(stream: str):
     if stream == 'budget_details':
         required_list = ["RECORDNO"]
         
-    fields_data_response = Context.intacct_client.get_fields_data_using_schema_name(object_type=stream)
+    fields_data_response = client.get_fields_data_using_schema_name(object_type=stream)
     fields_data_list = fields_data_response['data']['Type']['Fields']['Field']
     schema_dict['stream_meta'] = fields_data_response['data']['Type']['Relationships'] or {}
 
@@ -285,19 +242,61 @@ def _load_schema_from_api(stream: str):
         format_dict['field_meta'] = {} if stream == 'audit_history' else rec
         schema_dict['properties'][rec['ID']] = format_dict
     schema_dict['required'] = required_list
+
     return schema_dict
 
 
+def _load_schema_from_api(stream: str, has_permissions_for_dimensions: bool = False):
+    """Probe stream availability via the API and return its schema when accessible."""
+    Context.intacct_client = get_client(
+        api_url=Context.config['api_url'],
+        company_id=Context.config['company_id'],
+        sender_id=Context.config['sender_id'],
+        sender_password=Context.config['sender_password'],
+        user_id=Context.config['user_id'],
+        user_password=Context.config['user_password'],
+        headers={'User-Agent': Context.config['user_agent']}
+        if 'user_agent' in Context.config
+        else {},
+    )
+
+    if stream == "dimensions":
+        availability_query = {'getDimensions': None}
+    else:
+        availability_query = {
+            'query': {
+                'object': INTACCT_OBJECTS[stream],
+                'select': {'field': KEY_PROPERTIES[stream][0]},
+                'pagesize': '1',
+                'options': {'showprivate': 'true'},
+            }
+        }
+    
+    stream_available = False if stream != "dimension_values" else has_permissions_for_dimensions
+    if not stream_available:
+        try:
+            Context.intacct_client.format_and_send_request(availability_query)
+            stream_available = True
+            if stream == "dimensions":
+                has_permissions_for_dimensions = True
+        except Exception as e:
+            logger.warning(
+                f"Failed to query {stream}: {e}. Not adding to the catalog."
+            )
+
+    if not stream_available:
+        return has_permissions_for_dimensions, None
+
+    return has_permissions_for_dimensions, get_stream_schema(
+        stream, Context.intacct_client
+    )
+
 def _load_schemas_from_intact():
-    """
-    Function to loop through given INTACCT objects list and pass each object as
-    a key to load_schema_from_api to inturn get the fields list
-    Returns:
-   schemas
-    """
+    """Load catalog schemas for each configured Intacct object."""
     schemas = {}
+    has_permissions_for_dimensions = False
     for key in INTACCT_OBJECTS:
-        key_present = _load_schema_from_api(key)
+        has_permissions_for_dimensions, key_present = _load_schema_from_api(key, has_permissions_for_dimensions)
         if not key_present:
             logger.info(f"No module or no schema found for {key}")
             continue
