@@ -88,8 +88,8 @@ INTACCT_OBJECTS = {
     "employees": "EMPLOYEE",
     "subsidiaries": "LOCATIONENTITY",
     "warehouses": "WAREHOUSE",
-    # "contracts": "CONTRACT", # Unable to fetch data from the API
-    # "cost_types": "COSTTYPE", # Unable to fetch data from the API
+    "contracts": "CONTRACT",
+    "cost_types": "COSTTYPE",
     "affiliate_entities": "AFFILIATEENTITY",
     # "work_orders": "WORKORDER", # Unable to fetch data from the API
     "fixed_assets": "FIXEDASSET",
@@ -110,6 +110,11 @@ NON_AUDIT_HISTORY_OBJECTS = [
     'adjustment_items',
     'invoice_items',
     'consolidation_book_journals',
+]
+
+PERMISSION_TOLERANT_STREAMS = [
+    'contracts',
+    'cost_types',
 ]
 
 REP_KEYS = {
