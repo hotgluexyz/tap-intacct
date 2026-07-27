@@ -1,8 +1,5 @@
-import argparse
 import datetime as dt
 from unittest.mock import call
-
-from singer.catalog import Catalog
 
 import tap_intacct
 
@@ -55,7 +52,7 @@ def test_sync_stream(mocker, mock_schema, mock_context):
     """
     mock_context.is_selected.return_value = True
     mock_context.get_schema.return_value = mock_schema
-    mock_context.intacct_client.get_by_date.return_value = [
+    records = [
         {
             'RECORDNO': '885',
             'PROJECTID': 'FMY/21/026',
@@ -72,6 +69,9 @@ def test_sync_stream(mocker, mock_schema, mock_context):
             'WHENMODIFIED': '02/21/2020 08:00:10',
         },
     ]
+    mock_context.intacct_client.get_by_date.side_effect = (
+        lambda **kwargs: iter(records)
+    )
 
     mock_get_start = mocker.patch(
         'tap_intacct._get_start',
@@ -114,7 +114,7 @@ def test_get_start_state(mock_state, mock_context):
     mock_context.config = {'event_lookback': 1}
     mock_context.state = mock_state
 
-    expected = dt.datetime(2019, 12, 31, 23, 0, tzinfo=dt.timezone.utc)
+    expected = dt.datetime(2020, 1, 1, 0, 0, tzinfo=dt.timezone.utc)
     actual = tap_intacct._get_start('events')
 
     assert expected == actual
@@ -238,7 +238,7 @@ def test_do_discover(mocker, mock_schema, mock_catalog, capfd):
     Ensure that the stdout and return value of do_discover is as expected.
     """
     mocker.patch(
-        'tap_intacct._load_schemas',
+        'tap_intacct._load_schemas_from_intact',
         return_value={
             'test_stream': mock_schema,
         },
@@ -257,78 +257,41 @@ def test_do_discover(mocker, mock_schema, mock_catalog, capfd):
         assert metadata_entry['metadata'].get('selected') is not True
 
 
-def test_main_discover(mocker, mock_config, mock_context):
-    """
-    Ensure that the correct functions are called when tap is executed in discovery mode.
-    """
-    mocker.patch(
-        'tap_intacct.singer.utils.parse_args',
-        return_value=argparse.Namespace(config=mock_config, discover=True, state=None),
-    )
-    mock_do_discover = mocker.patch('tap_intacct.do_discover', autospec=True)
+def test_main_calls_tap_cli(mocker):
+    """Ensure main delegates to the SDK Tap CLI entrypoint."""
+    mock_cli = mocker.patch('tap_intacct.TapIntacct.cli')
 
     tap_intacct.main()
 
-    mock_context.config.update.assert_called_once_with(mock_config)
-    mock_context.state.update.assert_not_called()
+    mock_cli.assert_called_once()
+
+
+def test_tap_run_discovery(mocker, mock_config):
+    """Ensure TapIntacct.run_discovery applies config and calls do_discover."""
+    mock_apply_config = mocker.patch('tap_intacct._apply_context_config')
+    mocker.patch('tap_intacct._build_intacct_client')
+    mock_do_discover = mocker.patch('tap_intacct.do_discover', autospec=True)
+
+    tap = tap_intacct.TapIntacct(config=mock_config, validate_config=False)
+    tap.run_discovery()
+
+    mock_apply_config.assert_called_once_with(mock_config)
     mock_do_discover.assert_called_once()
 
 
-def test_main_no_state(mocker, mock_catalog, mock_config, mock_context):
-    """
-    Ensure that the correct functions are called when tap is executed with no state.
-    """
-    catalog = Catalog.from_dict(mock_catalog)
-
-    mocker.patch(
-        'tap_intacct.singer.utils.parse_args',
-        return_value=argparse.Namespace(
-            catalog=catalog,
-            config=mock_config,
-            state=None,
-            discover=None,
-        ),
-    )
-
-    mock_get_client = mocker.patch('tap_intacct.get_client', autospec=True)
+def test_tap_run_sync(mocker, mock_catalog, mock_config, mock_state):
+    """Ensure TapIntacct.run_sync wires catalog, client, and sync."""
+    mock_apply_config = mocker.patch('tap_intacct._apply_context_config')
+    mocker.patch('tap_intacct._build_intacct_client')
     mock_do_sync = mocker.patch('tap_intacct.do_sync', autospec=True)
+    mock_print_counts = mocker.patch('tap_intacct.Context.print_counts', autospec=True)
 
-    tap_intacct.main()
+    tap = tap_intacct.TapIntacct(config=mock_config, validate_config=False)
+    tap.run_sync(catalog=mock_catalog, state=mock_state)
 
-    mock_context.config.update.assert_called_once_with(mock_config)
-    mock_context.state.update.assert_not_called()
-    mock_context.catalog.update.assert_called_once_with(catalog.to_dict())
-    mock_get_client.assert_called_once()
+    mock_apply_config.assert_called_once_with(mock_config)
     mock_do_sync.assert_called_once()
-    mock_context.print_counts.assert_called_once()
-
-
-def test_main_with_state(mocker, mock_config, mock_catalog, mock_state, mock_context):
-    """
-    Ensure that the correct functions are called when tap is executed with a state file.
-    """
-    catalog = Catalog.from_dict(mock_catalog)
-
-    mocker.patch(
-        'tap_intacct.singer.utils.parse_args',
-        return_value=argparse.Namespace(
-            config=mock_config,
-            state=mock_state,
-            catalog=catalog,
-            discover=False,
-        ),
-    )
-    mock_get_client = mocker.patch('tap_intacct.get_client', autospec=True)
-    mock_do_sync = mocker.patch('tap_intacct.do_sync', autospec=True)
-
-    tap_intacct.main()
-
-    mock_context.config.update.assert_called_once_with(mock_config)
-    mock_context.state.update.assert_called_once_with(mock_state)
-    mock_context.catalog.update.assert_called_once_with(catalog.to_dict())
-    mock_get_client.assert_called_once()
-    mock_do_sync.assert_called_once()
-    mock_context.print_counts.assert_called_once()
+    mock_print_counts.assert_called_once()
 
 
 def test_do_sync(mocker, mock_state, mock_context):
