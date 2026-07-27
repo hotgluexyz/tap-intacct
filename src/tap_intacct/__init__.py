@@ -241,18 +241,6 @@ def get_stream_schema(stream: str, client) -> Dict:
 
 def _load_schema_from_api(stream: str, has_permissions_for_dimensions: bool = False):
     """Probe stream availability via the API and return its schema when accessible."""
-    Context.intacct_client = get_client(
-        api_url=Context.config['api_url'],
-        company_id=Context.config['company_id'],
-        sender_id=Context.config['sender_id'],
-        sender_password=Context.config['sender_password'],
-        user_id=Context.config['user_id'],
-        user_password=Context.config['user_password'],
-        headers={'User-Agent': Context.config['user_agent']}
-        if 'user_agent' in Context.config
-        else {},
-    )
-
     if stream == "dimensions":
         availability_query = {'getDimensions': None}
     else:
@@ -286,6 +274,8 @@ def _load_schema_from_api(stream: str, has_permissions_for_dimensions: bool = Fa
 
 def _load_schemas_from_intact():
     """Load catalog schemas for each configured Intacct object."""
+    if Context.intacct_client is None:
+        Context.intacct_client = _build_intacct_client()
     schemas = {}
     has_permissions_for_dimensions = False
     for key in INTACCT_OBJECTS:
