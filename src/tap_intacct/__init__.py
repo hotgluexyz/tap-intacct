@@ -508,14 +508,6 @@ def do_sync() -> None:
     logger.info('Sync completed')
 
 
-def _apply_context_config(config):
-    Context.config.update({
-        'api_url': DEFAULT_API_URL,
-        'event_lookback': 1,
-        **config,
-    })
-
-
 def _build_intacct_client():
     return get_client(
         api_url=Context.config['api_url'],
@@ -551,12 +543,12 @@ class TapIntacct(Tap):
         return []
 
     def run_discovery(self):
-        _apply_context_config(dict(self.config))
+        Context.config.update(dict(self.config))
         Context.intacct_client = _build_intacct_client()
         do_discover()
 
     def run_sync(self, catalog=None, state=None):
-        _apply_context_config(dict(self.config))
+        Context.config.update(dict(self.config))
         Context.stream_map = {}
         Context.intacct_client = _build_intacct_client()
 
