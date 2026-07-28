@@ -3,6 +3,8 @@
 **tap-intacct** is a Singer Tap for syncing data from Sage Intacct. 
 **tap-intacct** can be run on [hotglue](https://hotglue.com), an embedded integration platform for running Singer Taps and Targets.
 
+Built with the [Hotglue Singer SDK](https://github.com/hotgluexyz/HotglueSingerSDK) for Singer Taps.
+
 
 ## Quick Start
 

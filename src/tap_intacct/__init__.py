@@ -4,19 +4,21 @@ import json
 import ast
 import os
 import sys
-from pathlib import Path
 from typing import Dict, FrozenSet, Optional
 from dateutil.relativedelta import relativedelta
 
 import singer
 from singer import metadata
+from singer.catalog import Catalog
+
+from hotglue_singer_sdk import typing as th
+from hotglue_singer_sdk.tap_base import Tap
 
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
 from tap_intacct.const import (
     DEFAULT_API_URL,
     KEY_PROPERTIES,
-    REQUIRED_CONFIG_KEYS,
     INTACCT_OBJECTS,
     IGNORE_FIELDS,
     REP_KEYS,
@@ -25,10 +27,6 @@ from tap_intacct.const import (
     NON_AUDIT_HISTORY_OBJECTS,
 )
 logger = singer.get_logger()
-
-
-class DependencyException(Exception):
-    pass
 
 
 class Context:
@@ -90,11 +88,6 @@ class Context:
                 stream_count,
             )
         logger.info('------------------')
-
-
-def _get_abs_path(path: str) -> Path:
-    p = Path(__file__).parent / path
-    return p.resolve()
 
 
 def _get_start(key: str) -> dt.datetime:
@@ -248,18 +241,6 @@ def get_stream_schema(stream: str, client) -> Dict:
 
 def _load_schema_from_api(stream: str, has_permissions_for_dimensions: bool = False):
     """Probe stream availability via the API and return its schema when accessible."""
-    Context.intacct_client = get_client(
-        api_url=Context.config['api_url'],
-        company_id=Context.config['company_id'],
-        sender_id=Context.config['sender_id'],
-        sender_password=Context.config['sender_password'],
-        user_id=Context.config['user_id'],
-        user_password=Context.config['user_password'],
-        headers={'User-Agent': Context.config['user_agent']}
-        if 'user_agent' in Context.config
-        else {},
-    )
-
     if stream == "dimensions":
         availability_query = {'getDimensions': None}
     else:
@@ -293,6 +274,8 @@ def _load_schema_from_api(stream: str, has_permissions_for_dimensions: bool = Fa
 
 def _load_schemas_from_intact():
     """Load catalog schemas for each configured Intacct object."""
+    if Context.intacct_client is None:
+        Context.intacct_client = _build_intacct_client()
     schemas = {}
     has_permissions_for_dimensions = False
     for key in INTACCT_OBJECTS:
@@ -525,35 +508,73 @@ def do_sync() -> None:
     logger.info('Sync completed')
 
 
-@singer.utils.handle_top_exception(logger)
-def main() -> None:
-    args = singer.utils.parse_args(REQUIRED_CONFIG_KEYS)
-    Context.config.update(args.config)
+def _build_intacct_client():
+    return get_client(
+        api_url=Context.config['api_url'],
+        company_id=Context.config['company_id'],
+        sender_id=Context.config['sender_id'],
+        sender_password=Context.config['sender_password'],
+        user_id=Context.config['user_id'],
+        user_password=Context.config['user_password'],
+        headers={'User-Agent': Context.config['user_agent']}
+        if 'user_agent' in Context.config
+        else {},
+    )
 
-    if args.state:
-        Context.state.update(args.state)
 
-    if args.discover:
+class TapIntacct(Tap):
+    name = "tap-intacct"
+
+    config_jsonschema = th.PropertiesList(
+        th.Property("company_id", th.StringType, required=True),
+        th.Property("sender_id", th.StringType, required=True),
+        th.Property("sender_password", th.StringType, required=True),
+        th.Property("user_id", th.StringType, required=True),
+        th.Property("user_password", th.StringType, required=True),
+        th.Property("start_date", th.StringType),
+        th.Property("api_url", th.StringType),
+        th.Property("event_lookback", th.IntegerType),
+        th.Property("report_periods", th.IntegerType),
+        th.Property("sync_attachments", th.BooleanType),
+        th.Property("user_agent", th.StringType),
+    ).to_dict()
+
+    def discover_streams(self):
+        return []
+
+    def run_discovery(self):
+        Context.config.update(dict(self.config))
+        Context.intacct_client = _build_intacct_client()
         do_discover()
-    else:
-        Context.catalog.update(
-            args.catalog.to_dict() if args.catalog else do_discover(stdout=False)
-        )
 
-        Context.intacct_client = get_client(
-            api_url=Context.config['api_url'],
-            company_id=Context.config['company_id'],
-            sender_id=Context.config['sender_id'],
-            sender_password=Context.config['sender_password'],
-            user_id=Context.config['user_id'],
-            user_password=Context.config['user_password'],
-            headers={'User-Agent': Context.config['user_agent']}
-            if 'user_agent' in Context.config
-            else {},
-        )
+    def run_sync(self, catalog=None, state=None):
+        Context.config.update(dict(self.config))
+        Context.stream_map = {}
+        Context.intacct_client = _build_intacct_client()
+
+        if state:
+            if isinstance(state, str):
+                with open(state) as f:
+                    Context.state.update(json.load(f))
+            else:
+                Context.state.update(state)
+
+        if catalog:
+            singer_catalog = (
+                Catalog.load(catalog)
+                if isinstance(catalog, str)
+                else Catalog.from_dict(catalog)
+            )
+            Context.catalog.update(singer_catalog.to_dict())
+        else:
+            Context.catalog.update(do_discover(stdout=False))
 
         do_sync()
         Context.print_counts()
+
+
+def main():
+    TapIntacct.cli()
 
 
 if __name__ == '__main__':
