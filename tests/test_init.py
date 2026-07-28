@@ -267,21 +267,18 @@ def test_main_calls_tap_cli(mocker):
 
 
 def test_tap_run_discovery(mocker, mock_config):
-    """Ensure TapIntacct.run_discovery applies config and calls do_discover."""
-    mock_apply_config = mocker.patch('tap_intacct._apply_context_config')
+    """Ensure TapIntacct.run_discovery calls do_discover."""
     mocker.patch('tap_intacct._build_intacct_client')
     mock_do_discover = mocker.patch('tap_intacct.do_discover', autospec=True)
 
     tap = tap_intacct.TapIntacct(config=mock_config, validate_config=False)
     tap.run_discovery()
 
-    mock_apply_config.assert_called_once_with(mock_config)
     mock_do_discover.assert_called_once()
 
 
 def test_tap_run_sync(mocker, mock_catalog, mock_config, mock_state):
     """Ensure TapIntacct.run_sync wires catalog, client, and sync."""
-    mock_apply_config = mocker.patch('tap_intacct._apply_context_config')
     mocker.patch('tap_intacct._build_intacct_client')
     mock_do_sync = mocker.patch('tap_intacct.do_sync', autospec=True)
     mock_print_counts = mocker.patch('tap_intacct.Context.print_counts', autospec=True)
@@ -289,7 +286,6 @@ def test_tap_run_sync(mocker, mock_catalog, mock_config, mock_state):
     tap = tap_intacct.TapIntacct(config=mock_config, validate_config=False)
     tap.run_sync(catalog=mock_catalog, state=mock_state)
 
-    mock_apply_config.assert_called_once_with(mock_config)
     mock_do_sync.assert_called_once()
     mock_print_counts.assert_called_once()
 
