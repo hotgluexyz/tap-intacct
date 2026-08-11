@@ -442,6 +442,7 @@ class SageIntacctSDK:
         to_date: dt.datetime,
         is_custom_object: bool = False,
         _chunked: bool = False,
+        probe: bool = False,
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -450,7 +451,7 @@ class SageIntacctSDK:
             List of Dict in object_type schema.
         """
         # Chunk GLENTRY by year so offset stays shallow on full syncs.
-        if object_type == "general_ledger_journal_entry_lines" and not _chunked:
+        if object_type == "general_ledger_journal_entry_lines" and not _chunked and not probe:
             cursor = from_date
             while cursor <= to_date:
                 # yearly

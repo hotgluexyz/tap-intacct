@@ -368,6 +368,7 @@ def sync_stream(stream: str) -> None:
             fields=fields,
             from_date=from_datetime,
             to_date=to_datetime,
+            probe=True,
         )
         logger.info(f"Checking if all fields are supported for {stream}")
         # Test getting a record
