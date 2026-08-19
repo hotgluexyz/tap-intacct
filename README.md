@@ -56,3 +56,24 @@ Built with the [Hotglue Singer SDK](https://github.com/hotgluexyz/HotglueSingerS
     ```bash
     tap-intacct --config config.json --catalog catalog.json
     ```
+
+## Subsidiary filters (optional)
+
+GL journal streams support hotglue selected filters:
+
+- `general_ledger_journal_entry_lines` filters on `LOCATIONKEY`
+- `general_ledger_journal_entries` filters on `MEGAENTITYKEY`
+
+Get available filters (uses selected streams from the catalog):
+
+```bash
+tap-intacct --config config.json --get-available-filters --catalog catalog.json > available-filters.json
+```
+
+Sync with selected filters:
+
+```bash
+tap-intacct --config config.json --catalog catalog.json --selected-filters selected-filters.json
+```
+
+Reference data for subsidiary options comes from the `subsidiaries` stream (`LOCATIONENTITY`). Filter values use `name (id)` labels; the tap extracts the id before querying Intacct.

@@ -18,6 +18,7 @@ def _clean_context():
         catalog = {}
         stream_map = {}
         counts = {}
+        selected_filters = None
         intacct_client = None
 
     return CleanContext
