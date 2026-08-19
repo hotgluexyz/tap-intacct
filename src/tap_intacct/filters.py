@@ -12,16 +12,27 @@ def extract_id(value: Any) -> Any:
     return value
 
 
+def _merge_fragment(merged: Dict[str, Any], fragment: Dict[str, Any]) -> None:
+    """Merge one filter fragment, preserving duplicate operator keys as lists."""
+    for operator, body in fragment.items():
+        if operator not in merged:
+            merged[operator] = body
+        elif merged[operator] == body:
+            continue
+        elif isinstance(merged[operator], list):
+            merged[operator].append(body)
+        else:
+            merged[operator] = [merged[operator], body]
+
+
 def merge_filters(*filters: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     """Combine Intacct filter dicts under a single ``and`` block."""
     merged: Dict[str, Any] = {}
     for filt in filters:
         if not filt:
             continue
-        if "and" in filt:
-            merged.update(filt["and"])
-        else:
-            merged.update(filt)
+        fragment = filt["and"] if "and" in filt else filt
+        _merge_fragment(merged, fragment)
 
     return {"and": merged} if merged else None
 

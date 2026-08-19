@@ -40,6 +40,42 @@ class TestMergeFilters:
     def test_returns_none_for_empty_input(self):
         assert merge_filters(None, None) is None
 
+    def test_preserves_duplicate_operator_keys(self):
+        clause_a = {"in": {"field": "LOCATIONKEY", "value": ["9"]}}
+        clause_b = {"in": {"field": "LOCATION", "value": ["500"]}}
+        merged = merge_filters(clause_a, clause_b)
+        assert merged == {
+            "and": {
+                "in": [
+                    {"field": "LOCATIONKEY", "value": ["9"]},
+                    {"field": "LOCATION", "value": ["500"]},
+                ]
+            }
+        }
+
+    def test_build_stream_filter_preserves_duplicate_operators(self):
+        stream_filters = {
+            "clause_1": {
+                "field": "LOCATIONKEY",
+                "operator": "EQ",
+                "value": "9",
+            },
+            "operator_1": "AND",
+            "clause_2": {
+                "field": "LOCATION",
+                "operator": "EQ",
+                "value": "500",
+            },
+        }
+        assert build_stream_filter(stream_filters) == {
+            "and": {
+                "equalto": [
+                    {"field": "LOCATIONKEY", "value": "9"},
+                    {"field": "LOCATION", "value": "500"},
+                ]
+            }
+        }
+
 
 class TestBuildStreamFilter:
     def test_in_operator_extracts_ids_from_labels(self):
