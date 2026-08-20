@@ -77,3 +77,5 @@ tap-intacct --config config.json --catalog catalog.json --selected-filters selec
 ```
 
 Reference data for subsidiary options comes from the `subsidiaries` stream (`LOCATIONENTITY`). Filter values use `name (id)` labels; the tap extracts the id before querying Intacct.
+
+Multiple subsidiary clauses are combined with **OR**. For several subsidiaries, a single `IN` clause is the simplest option.

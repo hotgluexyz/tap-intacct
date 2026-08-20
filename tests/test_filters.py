@@ -53,29 +53,6 @@ class TestMergeFilters:
             }
         }
 
-    def test_build_stream_filter_preserves_duplicate_operators(self):
-        stream_filters = {
-            "clause_1": {
-                "field": "LOCATIONKEY",
-                "operator": "EQ",
-                "value": "9",
-            },
-            "operator_1": "AND",
-            "clause_2": {
-                "field": "LOCATION",
-                "operator": "EQ",
-                "value": "500",
-            },
-        }
-        assert build_stream_filter(stream_filters) == {
-            "and": {
-                "equalto": [
-                    {"field": "LOCATIONKEY", "value": "9"},
-                    {"field": "LOCATION", "value": "500"},
-                ]
-            }
-        }
-
 
 class TestBuildStreamFilter:
     def test_in_operator_extracts_ids_from_labels(self):
@@ -124,21 +101,87 @@ class TestBuildStreamFilter:
         }
         assert build_stream_filter(stream_filters) is None
 
-    def test_or_operator_raises(self):
+    def test_or_operator_combines_equalto_clauses(self):
         stream_filters = {
             "clause_1": {
                 "field": "LOCATIONKEY",
                 "operator": "EQ",
-                "value": "1",
+                "value": "UK (10)",
             },
             "operator_1": "OR",
             "clause_2": {
                 "field": "LOCATIONKEY",
                 "operator": "EQ",
-                "value": "2",
+                "value": "USA1 (1)",
             },
         }
-        with pytest.raises(ValueError, match="OR"):
+        assert build_stream_filter(stream_filters) == {
+            "or": {
+                "equalto": [
+                    {"field": "LOCATIONKEY", "value": "10"},
+                    {"field": "LOCATIONKEY", "value": "1"},
+                ]
+            }
+        }
+
+    def test_or_operator_combines_eq_and_in(self):
+        stream_filters = {
+            "clause_1": {
+                "field": "MEGAENTITYKEY",
+                "operator": "EQ",
+                "value": "UK (10)",
+            },
+            "operator_1": "OR",
+            "clause_2": {
+                "field": "MEGAENTITYKEY",
+                "operator": "IN",
+                "value": ["USA1 (1)", "USA2 (2)"],
+            },
+        }
+        assert build_stream_filter(stream_filters) == {
+            "or": {
+                "equalto": {"field": "MEGAENTITYKEY", "value": "10"},
+                "in": {"field": "MEGAENTITYKEY", "value": ["1", "2"]},
+            }
+        }
+
+    def test_multiple_clauses_default_to_or_without_operator(self):
+        stream_filters = {
+            "clause_1": {
+                "field": "LOCATIONKEY",
+                "operator": "IN",
+                "value": ["UK (10)"],
+            },
+            "clause_2": {
+                "field": "LOCATIONKEY",
+                "operator": "IN",
+                "value": ["USA1 (1)", "USA2 (2)"],
+            },
+        }
+        assert build_stream_filter(stream_filters) == {
+            "or": {
+                "in": [
+                    {"field": "LOCATIONKEY", "value": ["10"]},
+                    {"field": "LOCATIONKEY", "value": ["1", "2"]},
+                ]
+            }
+        }
+
+    def test_and_operator_raises(self):
+        stream_filters = {
+            "clause_1": {
+                "field": "LOCATIONKEY",
+                "operator": "EQ",
+                "value": "UK (10)",
+            },
+            "operator_1": "AND",
+            "clause_2": {
+                "field": "LOCATIONKEY",
+                "operator": "IN",
+                "value": ["USA1 (1)", "USA2 (2)"],
+            },
+        }
+        with pytest.raises(ValueError, match="AND"):
             build_stream_filter(stream_filters)
 
     def test_nested_group_is_flattened(self):

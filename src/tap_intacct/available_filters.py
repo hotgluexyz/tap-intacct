@@ -7,7 +7,7 @@ from tap_intacct.exceptions import SageIntacctSDKError
 
 AVAILABLE_FILTERS = {
     "general_ledger_journal_entry_lines": {
-        "supported_operators": ["AND"],
+        "supported_operators": ["OR"],
         "supports_nesting_clauses": False,
         "filters": {
             "subsidiary": {
@@ -19,7 +19,7 @@ AVAILABLE_FILTERS = {
         },
     },
     "general_ledger_journal_entries": {
-        "supported_operators": ["AND"],
+        "supported_operators": ["OR"],
         "supports_nesting_clauses": False,
         "filters": {
             "subsidiary": {
