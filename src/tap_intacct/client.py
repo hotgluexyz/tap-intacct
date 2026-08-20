@@ -29,6 +29,7 @@ from tap_intacct.exceptions import (
     AuthFailure
 )
 from tap_intacct.const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
+from tap_intacct.filters import merge_filters
 
 from http.client import RemoteDisconnected
 from bs4 import BeautifulSoup
@@ -432,11 +433,57 @@ class SageIntacctSDK:
         return response['result']
 
 
+    def query_all(self, *, object_type: str, fields: List[str]) -> List[Dict]:
+        """Fetch all records for an object type with simple pagination."""
+        pagesize = 1000
+        offset = 0
+        results: List[Dict] = []
+
+        get_count = {
+            'query': {
+                'object': object_type,
+                'select': {'field': fields[0]},
+                'pagesize': '1',
+                'options': {'showprivate': 'true'},
+            }
+        }
+        response = self.format_and_send_request(get_count)
+        count = int(response['data']['@totalcount'])
+
+        while offset < count:
+            data = {
+                'query': {
+                    'object': object_type,
+                    'select': {'field': fields},
+                    'options': {'showprivate': 'true'},
+                    'pagesize': pagesize,
+                    'offset': offset,
+                }
+            }
+            response = self.format_and_send_request(data)
+            items = response['data'][object_type]
+            if isinstance(items, dict):
+                items = [items]
+            results.extend(items)
+            offset += pagesize
+
+        return results
+
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime, to_date: dt.datetime, is_custom_object: bool = False
+        self,
+        *,
+        object_type: str,
+        fields: List[str],
+        from_date: dt.datetime,
+        to_date: dt.datetime,
+        is_custom_object: bool = False,
+        extra_filter: Optional[Dict] = None,
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
+
+        Args:
+            extra_filter: Optional Intacct query filter merged with the date filter.
 
         Returns:
             List of Dict in object_type schema.
@@ -498,7 +545,10 @@ class SageIntacctSDK:
                     'value': _format_date_for_intacct(from_date, object_type),
                 }
             }
-            
+
+        if extra_filter:
+            filter = merge_filters(filter, extra_filter)
+
         get_count = {
             'query': {
                 'object': intacct_object_type,

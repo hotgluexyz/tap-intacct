@@ -12,10 +12,13 @@ from singer import metadata
 from singer.catalog import Catalog
 
 from hotglue_singer_sdk import typing as th
+from hotglue_singer_sdk.helpers._util import read_json_file
 from hotglue_singer_sdk.tap_base import Tap
 
+from tap_intacct.available_filters import AVAILABLE_FILTERS, load_reference_data
 from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
+from tap_intacct.filters import build_stream_filter
 from tap_intacct.const import (
     DEFAULT_API_URL,
     KEY_PROPERTIES,
@@ -38,6 +41,7 @@ class Context:
     catalog: dict = {}
     stream_map: dict = {}
     counts: dict = {}
+    selected_filters: Optional[dict] = None
     # Client used to access the Intacct API.
     intacct_client: Optional[SageIntacctSDK] = None
 
@@ -298,6 +302,17 @@ def _transform_and_write_record(
     singer.write_record(stream, rec, time_extracted=time_extracted)
 
 
+def _get_extra_filter(stream: str) -> Optional[dict]:
+    """Return the Intacct query filter for a stream's selected filters, if any."""
+    if not Context.selected_filters:
+        return None
+    stream_filters = Context.selected_filters.get("streams", {}).get(stream)
+    if not stream_filters:
+        return None
+    logger.info("Applying selected filters for %s: %s", stream, stream_filters)
+    return build_stream_filter(stream_filters)
+
+
 def sync_stream(stream: str) -> None:
     """
     Extracts records for the selected stream.
@@ -313,7 +328,8 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
-    
+    extra_filter = _get_extra_filter(stream)
+
     # Special handling for dimensions - getDimensions doesn't support date-based queries
     if stream == 'dimensions':
         logger.info("Fetching all dimensions using getDimensions API")
@@ -351,6 +367,7 @@ def sync_stream(stream: str) -> None:
             fields=fields,
             from_date=from_datetime,
             to_date=to_datetime,
+            extra_filter=extra_filter,
         )
         logger.info(f"Checking if all fields are supported for {stream}")
         # Test getting a record
@@ -381,6 +398,7 @@ def sync_stream(stream: str) -> None:
         fields=fields,
         from_date=from_datetime,
         to_date=to_datetime,
+        extra_filter=extra_filter,
     )
 
     first_iteration = True
@@ -550,6 +568,7 @@ class TapIntacct(Tap):
     def run_sync(self, catalog=None, state=None):
         Context.config.update(dict(self.config))
         Context.stream_map = {}
+        Context.selected_filters = self._selected_filters
         Context.intacct_client = _build_intacct_client()
 
         if state:
@@ -571,6 +590,50 @@ class TapIntacct(Tap):
 
         do_sync()
         Context.print_counts()
+
+    def _load_reference_data(self, client, stream_name_to_fields):
+        """Load filter reference data via the Intacct client."""
+        return load_reference_data(client, stream_name_to_fields)
+
+    def get_available_filters(self, catalog=None):
+        """Emit the available-filters payload for catalog streams that support filtering."""
+        Context.config.update(dict(self.config))
+
+        if isinstance(catalog, str):
+            catalog_dict = read_json_file(catalog)
+        elif isinstance(catalog, dict):
+            catalog_dict = catalog
+        else:
+            catalog_dict = self.input_catalog.to_dict()
+
+        stream_names = []
+        for entry in catalog_dict.get("streams", []):
+            stream_metadata = metadata.to_map(entry.get("metadata", []))
+            if metadata.get(stream_metadata, (), "selected"):
+                stream_names.append(entry["stream"])
+
+        streams_filters_metadata = {
+            stream_name: filters_metadata
+            for stream_name, filters_metadata in AVAILABLE_FILTERS.items()
+            if stream_name in stream_names
+        }
+
+        reference_data_fields = self.extract_reference_data_fields_metadata(
+            streams_filters_metadata
+        )
+
+        reference_data = {}
+        if reference_data_fields:
+            client = _build_intacct_client()
+            reference_data = self._load_reference_data(client, reference_data_fields)
+
+        payload = {
+            "filters_version": self.available_filters_version,
+            "reference_data": reference_data,
+            "streams": streams_filters_metadata,
+        }
+        json.dump(payload, sys.stdout, indent=2)
+        sys.stdout.flush()
 
 
 def main():
