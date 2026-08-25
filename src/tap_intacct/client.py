@@ -14,6 +14,7 @@ import copy
 
 import requests
 import xmltodict
+from dateutil.relativedelta import relativedelta
 
 import singer
 
@@ -433,7 +434,15 @@ class SageIntacctSDK:
 
 
     def get_by_date(
-        self, *, object_type: str, fields: List[str], from_date: dt.datetime, to_date: dt.datetime, is_custom_object: bool = False
+        self,
+        *,
+        object_type: str,
+        fields: List[str],
+        from_date: dt.datetime,
+        to_date: dt.datetime,
+        is_custom_object: bool = False,
+        _chunked: bool = False,
+        probe: bool = False,
     ) -> List[Dict]:
         """
         Get multiple objects of a single type from Sage Intacct, filtered by GET_BY_DATE_FIELD (WHENMODIFIED) date.
@@ -441,6 +450,26 @@ class SageIntacctSDK:
         Returns:
             List of Dict in object_type schema.
         """
+        # Chunk GLENTRY by year so offset stays shallow on full syncs.
+        if object_type == "general_ledger_journal_entry_lines" and not _chunked and not probe:
+            cursor = from_date
+            while cursor <= to_date:
+                # yearly
+                next_start = cursor.replace(
+                    month=1, day=1, hour=0, minute=0, second=0, microsecond=0
+                ) + relativedelta(years=1)
+                chunk_end = min(next_start - dt.timedelta(microseconds=1), to_date)
+                yield from self.get_by_date(
+                    object_type=object_type,
+                    fields=fields,
+                    from_date=cursor,
+                    to_date=chunk_end,
+                    is_custom_object=is_custom_object,
+                    _chunked=True,
+                )
+                cursor = next_start
+            return
+
         # if stream is an audit_history stream filter by object type
         if object_type.startswith("audit_history"):
             filter_table = object_type.split("audit_history_")[-1]
