@@ -4,7 +4,7 @@ interactions:
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
       19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
-      controlid="bc6db921-ebc5-4dda-96f1-18d9de5430ad"><getAPISession></getAPISession></function></content></operation></request>'
+      controlid="d5441710-fec1-47cc-bcd9-7d522cfa06eb"><getAPISession></getAPISession></function></content></operation></request>'
     headers:
       Accept:
       - '*/*'
@@ -24,13 +24,13 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2016-12-06
-        04:39:19</controlid><uniqueid>true</uniqueid><dtdversion>13353505987.7019</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1998-07-25T20:38:44+00:00</sessiontimestamp><sessiontimeout>1977-07-02T08:31:07+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-UfwdvYgolIUtB</function><controlid>-Fallback-scrubbed-vErMKIyCRjPptBKmxmzZszheZHHLNroCksrV</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1989-04-13
+        14:08:54</controlid><uniqueid>true</uniqueid><dtdversion>-83.3706145399939</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1995-02-25T17:06:19+00:00</sessiontimestamp><sessiontimeout>1999-12-12T21:50:23+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-rPmgaTuujgYbR</function><controlid>-Fallback-scrubbed-xvmIutsSOStGxNHaAaopDlEnZXpyLLbynJjb</controlid><data><api><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d1f95cb66c6a6-GRU
+      - a3138e9dcf25f266-GRU
       Cache-Control:
       - private
       Connection:
@@ -53,7 +53,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:50:02 GMT
+      - Wed, 26 Aug 2026 14:34:25 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -71,13 +71,13 @@ interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.04'
+      - '0.02'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '837'
+      - '879'
     status:
       code: 200
       message: OK
@@ -85,8 +85,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="5b6a71a4-ba72-476f-a662-b37eeb946049"><query><object>GLBATCH</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="f3bbce61-4ed1-406b-8c14-c73461dd1200"><query><object>GLBATCH</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -108,15 +108,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2016-12-06
-        04:39:19</controlid><uniqueid>true</uniqueid><dtdversion>13353505987.7019</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1989-04-13T08:31:50+00:00</sessiontimestamp><sessiontimeout>2005-12-28T03:58:35+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xEXvU</function><controlid>-Fallback-scrubbed-mfAlkMAjOqEVTkNGMlqIxMZEKpyqtiDjzpxA</controlid><data
-        listtype="-Fallback-scrubbed-DTxzxLj" totalcount="10" offset="8194" count="947"
-        numremaining="1567"><GLBATCH><RECORDNO>3164</RECORDNO></GLBATCH></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1989-04-13
+        14:08:54</controlid><uniqueid>true</uniqueid><dtdversion>-83.3706145399939</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1981-02-02T18:12:08+00:00</sessiontimestamp><sessiontimeout>1978-03-30T02:21:52+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-GfAoU</function><controlid>-Fallback-scrubbed-vKvlbqdAnKhRbvSwcAuiDoBfzxtvdDvVALlX</controlid><data
+        listtype="-Fallback-scrubbed-gtsksHN" totalcount="10" offset="9328" count="9574"
+        numremaining="6179"><GLBATCH><RECORDNO>3155</RECORDNO></GLBATCH></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d1f9b3b421da1-GRU
+      - a3138ea33f1ab6fb-GRU
       Cache-Control:
       - private
       Connection:
@@ -139,7 +139,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:50:03 GMT
+      - Wed, 26 Aug 2026 14:34:25 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -153,113 +153,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '617'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.08'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '768'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="91b6a86c-5480-4749-ad84-10bc9f78a41c"><query><object>GLBATCH</object><select><field>RECORDNO</field><field>BATCHNO</field><field>BATCH_TITLE</field><field>BALANCE</field><field>JOURNAL</field><field>JOURNAL_ENABLEEREPORTING</field><field>STATISTICAL</field><field>BATCH_DATE</field><field>MODULE</field><field>USERKEY</field><field>REFERENCENO</field><field>REVERSED</field><field>REVERSEDKEY</field><field>REVERSEDFROM</field><field>TEMPLATEKEY</field><field>TEMPLATEID</field><field>PRBATCHKEY</field><field>MODIFIED</field><field>MODIFIEDBYID</field><field>SCHOPKEY</field><field>GLACCTALLOCATIONRUNKEY</field><field>GLACCTALLOCATIONID</field><field>BASELOCATION</field><field>BASELOCATION_NO</field><field>USERINFO.LOGINID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>STATE</field><field>JOURNALSEQNO</field><field>TAXIMPLICATIONS</field><field>VATVENDORID</field><field>VATCUSTOMERID</field><field>VATCONTACTID</field><field>TAXSOLUTIONID</field><field>TRANSACTIONSOURCE</field><field>INVOICEMODE</field><field>EREPORTINGTYPE</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '2129'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2016-12-06
-        04:39:19</controlid><uniqueid>true</uniqueid><dtdversion>13353505987.7019</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1995-07-13T20:28:41+00:00</sessiontimestamp><sessiontimeout>2000-05-31T05:12:24+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xEXvU</function><controlid>-Fallback-scrubbed-mvxzGyloMSHoyHvWDVqiWgNoOYiNIieOEiHz</controlid><data
-        listtype="-Fallback-scrubbed-DTxzxLj" totalcount="10" offset="8194" count="9689"
-        numremaining="8194"><GLBATCH><RECORDNO>3164</RECORDNO><BATCHNO>9328</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-mQFVcrnOqTFkwJzaVwPSonzr</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/27/2009
-        10:16:44</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>05/27/2009
-        10:16:44</WHENCREATED><WHENMODIFIED>07/29/2026 19:55:04</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>947</MEGAENTITYKEY><MEGAENTITYID>8147</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-DpSY</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-fmePwTqwsgwTPbFxAbzKcuFCRRTVWsQuvQpiROGBPlWURbYPbYAojNUDpvKVieGKxCJqAAhTtjceyWOAkBPKVng</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3167</RECORDNO><BATCHNO>2944</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-xsjMkHWzidmxDZkxrJwXUIAduvUVExT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/02/1970
-        00:54:24</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>08/02/1970
-        00:54:24</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:42</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>947</MEGAENTITYKEY><MEGAENTITYID>8147</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-DpSY</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-shEINqHWVTvVpelAarJVOhFlcOucbYlCApaXgvNLYPimyithwqXDQPkHafJaSvBRqLwdGujbodWLGSGpLJloYBK</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3166</RECORDNO><BATCHNO>3721</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-smZUcIwmgLeLlsXdPrbhbjPxPdOiDN</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/31/1977
-        12:30:50</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>08/31/1977
-        12:30:50</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:39</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>3752</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-FPx</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-SQYyxWgHpga</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-KvwiNvoAWMUrhqBVWcVPljPYlEuHpoxwNKTsZQWDODnuLaIsehxbicXhfqSZyKeklZrwOuczxmjZqVgcEvGFJLv</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3163</RECORDNO><BATCHNO>4665</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-BMzcQGLCYWdyVmeEWCeWLdRfPa</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/16/2003
-        23:05:23</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>05/16/2003
-        23:05:23</WHENCREATED><WHENMODIFIED>07/29/2026 19:53:30</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-RaKgqojXbPVfOZtTESeOWMTlCxvhiYCVMQczEOJPoinKfuFSnYvynYdPpvXkhSKXMLdAgczClUIslBLMCZuLnXa</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3168</RECORDNO><BATCHNO>3810</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XvLIwNekynsSYBvmHkEFaFNQRbMzLT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>03/04/1978
-        07:34:08</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>03/04/1978
-        07:34:08</WHENCREATED><WHENMODIFIED>07/29/2026 20:26:14</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-cAQuRmEIBJeJZwWxZMMauuiTlbbSixtwCiqrXsxSQeBqEtnuskTWnejebhiLwYcXBgfncnXGmnhsfjLGvtDKNwJ</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3169</RECORDNO><BATCHNO>1567</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XvLIwNekynsSYBvmHkEFaFNQRbMzLT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>10/14/1992
-        05:45:26</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>10/14/1992
-        05:45:26</WHENCREATED><WHENMODIFIED>07/29/2026 20:27:10</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-bGIVprLXmwHVaQnsHKjPgZfkpjMQVFWSgWOaVzcWPFETaGrIBCzMyETycBRluQNdCBJTvKlxKOrErpeizvxJtEg</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3221</RECORDNO><BATCHNO>1644</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-MRCEztXraApoNQbcuuqcCElDzbpDbOMCcbidfMOAFfjbGHHyQVISrXLdZewX</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-gPu</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>07/09/1980</BATCH_DATE><MODULE>-Fallback-scrubbed-iZDz</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>6781</PRBATCHKEY><MODIFIED>10/03/1993
-        19:10:19</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>10/03/1993
-        19:10:19</WHENCREATED><WHENMODIFIED>08/25/2026 13:34:01</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-sqyFryGctgXsPBOuzoBQoezBqErNJmSLKMZiQFywFNsuzJGUqCgXvhfdtbBbxpBbjZLUUIWsKoHDHayoQxAdpjJ</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3220</RECORDNO><BATCHNO>6172</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-ekAqLMxhczhAXUEHsLtauIououDssrUzKMRvYqbDcxqtWboCJzevzxYhGfjU</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-gPu</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>07/09/1980</BATCH_DATE><MODULE>-Fallback-scrubbed-iZDz</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>3674</PRBATCHKEY><MODIFIED>11/28/2002
-        00:46:35</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>11/28/2002
-        00:46:35</WHENCREATED><WHENMODIFIED>08/25/2026 13:33:59</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-yObuAoVbwAAtlQCdJlOdYzvnTUrIRiqrHcPueHKRLuImtVMJKhpHBLNmXDhEuZGWtmyPegNFWYTokKZxojhrsnI</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3155</RECORDNO><BATCHNO>2455</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-KwVxexTGVEUTVtlPBfquuGVUdRoaseilQxeKfIyeMrFHzeJxCWLZinbGv</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-njZ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>02/13/1976</BATCH_DATE><MODULE>-Fallback-scrubbed-XFdw</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>8328</PRBATCHKEY><MODIFIED>12/25/2008
-        12:41:06</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>12/25/2008
-        12:41:06</WHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-oAQigNuVmEkStIiIWxfanlyxkukzZujgNQoKSlkKMhgjyOoOqPODBcvWxtqUmEWHcoSisrdqKfnTtjAMcjyhmWk</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3216</RECORDNO><BATCHNO>7468</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-yy</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-yy</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>05/19/2008</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>11/17/2018
-        12:08:08</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>11/17/2018
-        12:08:08</WHENCREATED><WHENMODIFIED>08/18/2026 13:36:01</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-GunpDxVWAptAmHNaDIvbgBQyQXuPnRcKXOJTnWPXFuyVtgfIshLFmUATkAwklGWFFsxJgpPLfqFDOCwbXYrmLHO</RECORD_URL></GLBATCH></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a30d1fa0ab7a190e-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Tue, 25 Aug 2026 19:50:04 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '554'
+      - '530'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -269,7 +163,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '16620'
+      - '838'
     status:
       code: 200
       message: OK
@@ -277,94 +171,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="ef21a395-ffc4-4400-91ab-590d273e99fe"><query><object>GLBATCH</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '880'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2016-12-06
-        04:39:19</controlid><uniqueid>true</uniqueid><dtdversion>13353505987.7019</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1999-03-08T10:50:05+00:00</sessiontimestamp><sessiontimeout>2026-05-31T08:52:17+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xEXvU</function><controlid>-Fallback-scrubbed-RNnYqMrmzPoQHpzlVUuLtcdmDaXyJhsvgSNB</controlid><data
-        listtype="-Fallback-scrubbed-DTxzxLj" totalcount="10" offset="8194" count="947"
-        numremaining="1567"><GLBATCH><RECORDNO>3164</RECORDNO></GLBATCH></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a30d1fa5cd754f4d-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Tue, 25 Aug 2026 19:50:05 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '604'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.04'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '768'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="206fede7-5854-4932-980f-ef8874096939"><query><object>GLBATCH</object><select><field>RECORDNO</field><field>BATCHNO</field><field>BATCH_TITLE</field><field>BALANCE</field><field>JOURNAL</field><field>JOURNAL_ENABLEEREPORTING</field><field>STATISTICAL</field><field>BATCH_DATE</field><field>MODULE</field><field>USERKEY</field><field>REFERENCENO</field><field>REVERSED</field><field>REVERSEDKEY</field><field>REVERSEDFROM</field><field>TEMPLATEKEY</field><field>TEMPLATEID</field><field>PRBATCHKEY</field><field>MODIFIED</field><field>MODIFIEDBYID</field><field>SCHOPKEY</field><field>GLACCTALLOCATIONRUNKEY</field><field>GLACCTALLOCATIONID</field><field>BASELOCATION</field><field>BASELOCATION_NO</field><field>USERINFO.LOGINID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>STATE</field><field>JOURNALSEQNO</field><field>TAXIMPLICATIONS</field><field>VATVENDORID</field><field>VATCUSTOMERID</field><field>VATCONTACTID</field><field>TAXSOLUTIONID</field><field>TRANSACTIONSOURCE</field><field>INVOICEMODE</field><field>EREPORTINGTYPE</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="8c5d32ea-2925-4acf-a6ae-578cbd916abc"><query><object>GLBATCH</object><select><field>RECORDNO</field><field>BATCHNO</field><field>BATCH_TITLE</field><field>BALANCE</field><field>JOURNAL</field><field>JOURNAL_ENABLEEREPORTING</field><field>STATISTICAL</field><field>BATCH_DATE</field><field>MODULE</field><field>USERKEY</field><field>REFERENCENO</field><field>REVERSED</field><field>REVERSEDKEY</field><field>REVERSEDFROM</field><field>TEMPLATEKEY</field><field>TEMPLATEID</field><field>PRBATCHKEY</field><field>MODIFIED</field><field>MODIFIEDBYID</field><field>SCHOPKEY</field><field>GLACCTALLOCATIONRUNKEY</field><field>GLACCTALLOCATIONID</field><field>BASELOCATION</field><field>BASELOCATION_NO</field><field>USERINFO.LOGINID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>STATE</field><field>JOURNALSEQNO</field><field>TAXIMPLICATIONS</field><field>VATVENDORID</field><field>VATCUSTOMERID</field><field>VATCONTACTID</field><field>TAXSOLUTIONID</field><field>TRANSACTIONSOURCE</field><field>INVOICEMODE</field><field>EREPORTINGTYPE</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -386,35 +194,35 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2016-12-06
-        04:39:19</controlid><uniqueid>true</uniqueid><dtdversion>13353505987.7019</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1999-03-08T10:50:05+00:00</sessiontimestamp><sessiontimeout>2026-05-31T08:52:17+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xEXvU</function><controlid>-Fallback-scrubbed-AxnhNoeUuzUYXwndQZYYzgjGpgZhPDwcDpGK</controlid><data
-        listtype="-Fallback-scrubbed-DTxzxLj" totalcount="10" offset="8194" count="9689"
-        numremaining="8194"><GLBATCH><RECORDNO>3164</RECORDNO><BATCHNO>9328</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-mQFVcrnOqTFkwJzaVwPSonzr</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/27/2009
-        10:16:44</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>05/27/2009
-        10:16:44</WHENCREATED><WHENMODIFIED>07/29/2026 19:55:04</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>947</MEGAENTITYKEY><MEGAENTITYID>8147</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-DpSY</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-fmePwTqwsgwTPbFxAbzKcuFCRRTVWsQuvQpiROGBPlWURbYPbYAojNUDpvKVieGKxCJqAAhTtjceyWOAkBPKVng</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3167</RECORDNO><BATCHNO>2944</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-xsjMkHWzidmxDZkxrJwXUIAduvUVExT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/02/1970
-        00:54:24</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>08/02/1970
-        00:54:24</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:42</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>947</MEGAENTITYKEY><MEGAENTITYID>8147</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-DpSY</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-shEINqHWVTvVpelAarJVOhFlcOucbYlCApaXgvNLYPimyithwqXDQPkHafJaSvBRqLwdGujbodWLGSGpLJloYBK</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3166</RECORDNO><BATCHNO>3721</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-smZUcIwmgLeLlsXdPrbhbjPxPdOiDN</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/31/1977
-        12:30:50</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>08/31/1977
-        12:30:50</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:39</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY>3752</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-FPx</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-SQYyxWgHpga</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-KvwiNvoAWMUrhqBVWcVPljPYlEuHpoxwNKTsZQWDODnuLaIsehxbicXhfqSZyKeklZrwOuczxmjZqVgcEvGFJLv</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3163</RECORDNO><BATCHNO>4665</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-BMzcQGLCYWdyVmeEWCeWLdRfPa</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/16/2003
-        23:05:23</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>05/16/2003
-        23:05:23</WHENCREATED><WHENMODIFIED>07/29/2026 19:53:30</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-RaKgqojXbPVfOZtTESeOWMTlCxvhiYCVMQczEOJPoinKfuFSnYvynYdPpvXkhSKXMLdAgczClUIslBLMCZuLnXa</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3168</RECORDNO><BATCHNO>3810</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XvLIwNekynsSYBvmHkEFaFNQRbMzLT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>03/04/1978
-        07:34:08</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>03/04/1978
-        07:34:08</WHENCREATED><WHENMODIFIED>07/29/2026 20:26:14</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-cAQuRmEIBJeJZwWxZMMauuiTlbbSixtwCiqrXsxSQeBqEtnuskTWnejebhiLwYcXBgfncnXGmnhsfjLGvtDKNwJ</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3169</RECORDNO><BATCHNO>1567</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XvLIwNekynsSYBvmHkEFaFNQRbMzLT</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-BE</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>12/15/1972</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>10/14/1992
-        05:45:26</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>10/14/1992
-        05:45:26</WHENCREATED><WHENMODIFIED>07/29/2026 20:27:10</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-bGIVprLXmwHVaQnsHKjPgZfkpjMQVFWSgWOaVzcWPFETaGrIBCzMyETycBRluQNdCBJTvKlxKOrErpeizvxJtEg</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3221</RECORDNO><BATCHNO>1644</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-MRCEztXraApoNQbcuuqcCElDzbpDbOMCcbidfMOAFfjbGHHyQVISrXLdZewX</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-gPu</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>07/09/1980</BATCH_DATE><MODULE>-Fallback-scrubbed-iZDz</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>6781</PRBATCHKEY><MODIFIED>10/03/1993
-        19:10:19</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>10/03/1993
-        19:10:19</WHENCREATED><WHENMODIFIED>08/25/2026 13:34:01</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-sqyFryGctgXsPBOuzoBQoezBqErNJmSLKMZiQFywFNsuzJGUqCgXvhfdtbBbxpBbjZLUUIWsKoHDHayoQxAdpjJ</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3220</RECORDNO><BATCHNO>6172</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-ekAqLMxhczhAXUEHsLtauIououDssrUzKMRvYqbDcxqtWboCJzevzxYhGfjU</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-gPu</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>07/09/1980</BATCH_DATE><MODULE>-Fallback-scrubbed-iZDz</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>3674</PRBATCHKEY><MODIFIED>11/28/2002
-        00:46:35</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>11/28/2002
-        00:46:35</WHENCREATED><WHENMODIFIED>08/25/2026 13:33:59</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-yObuAoVbwAAtlQCdJlOdYzvnTUrIRiqrHcPueHKRLuImtVMJKhpHBLNmXDhEuZGWtmyPegNFWYTokKZxojhrsnI</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3155</RECORDNO><BATCHNO>2455</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-KwVxexTGVEUTVtlPBfquuGVUdRoaseilQxeKfIyeMrFHzeJxCWLZinbGv</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-njZ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>02/13/1976</BATCH_DATE><MODULE>-Fallback-scrubbed-XFdw</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>8328</PRBATCHKEY><MODIFIED>12/25/2008
-        12:41:06</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>12/25/2008
-        12:41:06</WHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-oAQigNuVmEkStIiIWxfanlyxkukzZujgNQoKSlkKMhgjyOoOqPODBcvWxtqUmEWHcoSisrdqKfnTtjAMcjyhmWk</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3216</RECORDNO><BATCHNO>7468</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-yy</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-yy</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>05/19/2008</BATCH_DATE><MODULE>-Fallback-scrubbed-ebPG</MODULE><USERKEY>313</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>11/17/2018
-        12:08:08</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-EtVp</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-EtVp</USERINFO.LOGINID><WHENCREATED>11/17/2018
-        12:08:08</WHENCREATED><WHENMODIFIED>08/18/2026 13:36:01</WHENMODIFIED><CREATEDBY>313</CREATEDBY><MODIFIEDBY>313</MODIFIEDBY><STATE>-Fallback-scrubbed-pAvxpK</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-EtVp</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EtVp</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-GunpDxVWAptAmHNaDIvbgBQyQXuPnRcKXOJTnWPXFuyVtgfIshLFmUATkAwklGWFFsxJgpPLfqFDOCwbXYrmLHO</RECORD_URL></GLBATCH></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1989-04-13
+        14:08:54</controlid><uniqueid>true</uniqueid><dtdversion>-83.3706145399939</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1982-01-05T23:11:16+00:00</sessiontimestamp><sessiontimeout>2013-09-14T05:05:27+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-GfAoU</function><controlid>-Fallback-scrubbed-fzEFUnRJtChwGQFMNUFRtgeoZeYSAaHoBxEb</controlid><data
+        listtype="-Fallback-scrubbed-gtsksHN" totalcount="10" offset="9328" count="4257"
+        numremaining="9328"><GLBATCH><RECORDNO>3155</RECORDNO><BATCHNO>997</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XBkGbSefLBJdgPKUSZiuCdvwqjiwCIOBkIGEXzwipNoZupqpRRkqHLwCS</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-Xov</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>11/03/2011</BATCH_DATE><MODULE>-Fallback-scrubbed-DeHo</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>7484</PRBATCHKEY><MODIFIED>08/24/2005
+        08:41:21</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/24/2005
+        08:41:21</WHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-kaDHLfJAGeTnzBndIoFBzDcEJXbESonVQrKGCuIUrFyrmdfHkeoqBbFIpeaTgubhrjrNQLnlEKvmIXZBPHjqGvg</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3163</RECORDNO><BATCHNO>1683</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-MwmLTBvSFJyvNssxOsWwlDSqCx</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>02/20/2025
+        06:37:06</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>02/20/2025
+        06:37:06</WHENCREATED><WHENMODIFIED>07/29/2026 19:53:30</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-xvvVIJZpvZWLRzHFgkFUsVbaDaVxVSMfxgCoZFXmmIZGxyLhHMQCBuHcXOitfUFKqwrgpspuLdPdijKAMsPndry</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3164</RECORDNO><BATCHNO>1405</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-hpnPlKbMBAPWwYRkqJXNyAqN</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/04/1986
+        03:59:57</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/04/1986
+        03:59:57</WHENCREATED><WHENMODIFIED>07/29/2026 19:55:04</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>9574</MEGAENTITYKEY><MEGAENTITYID>9122</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-akyl</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-IOmFqjNmfUOiQpnTInUscXmomAdZouNoVsStQWjhCpbUbNZsxGNRwGIOTjYbkuHokzoXdkyyuGKTPXLxhKZSgzk</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3166</RECORDNO><BATCHNO>4260</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-AztnivEITNOLNRCezfCasDoutTOxfQ</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>09/15/1985
+        22:52:41</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>09/15/1985
+        22:52:41</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:39</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>1477</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-mBC</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-vGomnmQOqPw</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-rkpjnEwhVDMQuAMycvuNDMQLLohhbSYEoVVpsuIhItMfsMlaTiflqkWsdeEwGEmAsWOhkwctbTxRYIIShEYgBMc</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3167</RECORDNO><BATCHNO>9580</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-iTHTFNAZdNKqUKxtbzkhYTguxoBkeaa</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/01/1985
+        22:02:01</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/01/1985
+        22:02:01</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:42</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>9574</MEGAENTITYKEY><MEGAENTITYID>9122</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-akyl</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-FDIMtDTGXNjZkaRVWhUUlQzBXtiqiwoTfhxGWFZBXvAlYzQHQYtmgeZWhfnoBdrFmZlmEwdxizdLLWWKoZCuukr</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3168</RECORDNO><BATCHNO>4813</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-FSCROKdpaBQPtqHTFahVDfabzdUkRw</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/02/1989
+        12:14:28</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>05/02/1989
+        12:14:28</WHENCREATED><WHENMODIFIED>07/29/2026 20:26:14</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-srRLHDANvJwkuOpnKMXnaPgqjQVVQImfxUhQyZUneXlclfJHyTUBiSwZUfPVitYxSnirgZChsDrARVYqnDbTBsf</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3169</RECORDNO><BATCHNO>6179</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-FSCROKdpaBQPtqHTFahVDfabzdUkRw</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>04/30/1993
+        10:04:47</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>04/30/1993
+        10:04:47</WHENCREATED><WHENMODIFIED>07/29/2026 20:27:10</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-RGvuBgYecazMWjXzjyoHPvRgzIcLvZdrPzIoBuHevDZkxkRYOnqNpSoeCxYmoRJmontZoQMjogKTcINsdRcGxvO</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3216</RECORDNO><BATCHNO>5013</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-tf</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-tf</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/07/2012</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/06/2016
+        08:05:10</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>05/06/2016
+        08:05:10</WHENCREATED><WHENMODIFIED>08/18/2026 13:36:01</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-nBYvQwGgGpjkzVQbGZDcTYMxclTkbLLFHBfwoOeiubMpwyFWGwXMlHVptTelvULIVnTGVcxEpqkaUUxAGMgNmub</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3220</RECORDNO><BATCHNO>6555</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XBRpapdovfBqOduskYKQdprhlkwbgaUvwKywcdKWEmcXUQGyoWWMYZJgffcU</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-OzY</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>06/04/1998</BATCH_DATE><MODULE>-Fallback-scrubbed-Oqng</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>2465</PRBATCHKEY><MODIFIED>12/13/2011
+        02:07:26</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>12/13/2011
+        02:07:26</WHENCREATED><WHENMODIFIED>08/25/2026 13:33:59</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-hPaOvGWpKtxSZeQubRKkpSuHTnxHLxafqQgmpchVAYBheVEzfkeMoXuIJfGKcNsdcqLhpoLhRZZnGahKcJDWOop</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3221</RECORDNO><BATCHNO>9681</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-YodJOeATSrooFcHdqzQKgFiLmiPBoyYgXXbsBYFpKJsrOZuGjhHWrDgrrmXM</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-OzY</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>06/04/1998</BATCH_DATE><MODULE>-Fallback-scrubbed-Oqng</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>6565</PRBATCHKEY><MODIFIED>09/12/1980
+        02:51:00</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>09/12/1980
+        02:51:00</WHENCREATED><WHENMODIFIED>08/25/2026 13:34:01</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-YExPPgrTLBVZiRcMDrVNAUDxSBmyONSKKSZBFKthGIpjLztIhmrMELFcrfdzyOAYEpIftgqIyweRJLfYnmuMwxG</RECORD_URL></GLBATCH></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d1fab2cdedf24-GRU
+      - a3138ea80a71407e-GRU
       Cache-Control:
       - private
       Connection:
@@ -437,7 +245,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:50:05 GMT
+      - Wed, 26 Aug 2026 14:34:26 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -451,7 +259,93 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '513'
+      - '703'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '18516'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="5187126a-64a7-4027-aef9-bfa5f381432a"><query><object>GLBATCH</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '880'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1989-04-13
+        14:08:54</controlid><uniqueid>true</uniqueid><dtdversion>-83.3706145399939</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1983-08-07T09:58:27+00:00</sessiontimestamp><sessiontimeout>1973-01-26T14:47:32+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-GfAoU</function><controlid>-Fallback-scrubbed-TEUvwGscdkdCgArQAtOcfwPuiJHmRFouNWiS</controlid><data
+        listtype="-Fallback-scrubbed-gtsksHN" totalcount="10" offset="9328" count="9574"
+        numremaining="6179"><GLBATCH><RECORDNO>3155</RECORDNO></GLBATCH></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a3138eae38f55b29-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Wed, 26 Aug 2026 14:34:27 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '511'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -461,7 +355,113 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '16620'
+      - '838'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="46d97242-4a25-4e43-82c2-b5af0efd0e32"><query><object>GLBATCH</object><select><field>RECORDNO</field><field>BATCHNO</field><field>BATCH_TITLE</field><field>BALANCE</field><field>JOURNAL</field><field>JOURNAL_ENABLEEREPORTING</field><field>STATISTICAL</field><field>BATCH_DATE</field><field>MODULE</field><field>USERKEY</field><field>REFERENCENO</field><field>REVERSED</field><field>REVERSEDKEY</field><field>REVERSEDFROM</field><field>TEMPLATEKEY</field><field>TEMPLATEID</field><field>PRBATCHKEY</field><field>MODIFIED</field><field>MODIFIEDBYID</field><field>SCHOPKEY</field><field>GLACCTALLOCATIONRUNKEY</field><field>GLACCTALLOCATIONID</field><field>BASELOCATION</field><field>BASELOCATION_NO</field><field>USERINFO.LOGINID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>STATE</field><field>JOURNALSEQNO</field><field>TAXIMPLICATIONS</field><field>VATVENDORID</field><field>VATCUSTOMERID</field><field>VATCONTACTID</field><field>TAXSOLUTIONID</field><field>TRANSACTIONSOURCE</field><field>INVOICEMODE</field><field>EREPORTINGTYPE</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2129'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1989-04-13
+        14:08:54</controlid><uniqueid>true</uniqueid><dtdversion>-83.3706145399939</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2012-04-23T22:50:47+00:00</sessiontimestamp><sessiontimeout>2002-02-28T22:03:58+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-GfAoU</function><controlid>-Fallback-scrubbed-mPlwrjqrKMLfyoZglTJMJmBAAkytAhOmsSUe</controlid><data
+        listtype="-Fallback-scrubbed-gtsksHN" totalcount="10" offset="9328" count="4257"
+        numremaining="9328"><GLBATCH><RECORDNO>3155</RECORDNO><BATCHNO>997</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XBkGbSefLBJdgPKUSZiuCdvwqjiwCIOBkIGEXzwipNoZupqpRRkqHLwCS</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-Xov</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>11/03/2011</BATCH_DATE><MODULE>-Fallback-scrubbed-DeHo</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>7484</PRBATCHKEY><MODIFIED>08/24/2005
+        08:41:21</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/24/2005
+        08:41:21</WHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-kaDHLfJAGeTnzBndIoFBzDcEJXbESonVQrKGCuIUrFyrmdfHkeoqBbFIpeaTgubhrjrNQLnlEKvmIXZBPHjqGvg</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3163</RECORDNO><BATCHNO>1683</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-MwmLTBvSFJyvNssxOsWwlDSqCx</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>02/20/2025
+        06:37:06</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>02/20/2025
+        06:37:06</WHENCREATED><WHENMODIFIED>07/29/2026 19:53:30</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-xvvVIJZpvZWLRzHFgkFUsVbaDaVxVSMfxgCoZFXmmIZGxyLhHMQCBuHcXOitfUFKqwrgpspuLdPdijKAMsPndry</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3164</RECORDNO><BATCHNO>1405</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-hpnPlKbMBAPWwYRkqJXNyAqN</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/04/1986
+        03:59:57</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/04/1986
+        03:59:57</WHENCREATED><WHENMODIFIED>07/29/2026 19:55:04</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>9574</MEGAENTITYKEY><MEGAENTITYID>9122</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-akyl</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-IOmFqjNmfUOiQpnTInUscXmomAdZouNoVsStQWjhCpbUbNZsxGNRwGIOTjYbkuHokzoXdkyyuGKTPXLxhKZSgzk</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3166</RECORDNO><BATCHNO>4260</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-AztnivEITNOLNRCezfCasDoutTOxfQ</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>09/15/1985
+        22:52:41</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>09/15/1985
+        22:52:41</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:39</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>1477</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-mBC</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-vGomnmQOqPw</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-rkpjnEwhVDMQuAMycvuNDMQLLohhbSYEoVVpsuIhItMfsMlaTiflqkWsdeEwGEmAsWOhkwctbTxRYIIShEYgBMc</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3167</RECORDNO><BATCHNO>9580</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-iTHTFNAZdNKqUKxtbzkhYTguxoBkeaa</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>08/01/1985
+        22:02:01</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>08/01/1985
+        22:02:01</WHENCREATED><WHENMODIFIED>07/29/2026 20:16:42</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY>9574</MEGAENTITYKEY><MEGAENTITYID>9122</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-akyl</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-FDIMtDTGXNjZkaRVWhUUlQzBXtiqiwoTfhxGWFZBXvAlYzQHQYtmgeZWhfnoBdrFmZlmEwdxizdLLWWKoZCuukr</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3168</RECORDNO><BATCHNO>4813</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-FSCROKdpaBQPtqHTFahVDfabzdUkRw</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/02/1989
+        12:14:28</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>05/02/1989
+        12:14:28</WHENCREATED><WHENMODIFIED>07/29/2026 20:26:14</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-srRLHDANvJwkuOpnKMXnaPgqjQVVQImfxUhQyZUneXlclfJHyTUBiSwZUfPVitYxSnirgZChsDrARVYqnDbTBsf</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3169</RECORDNO><BATCHNO>6179</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-FSCROKdpaBQPtqHTFahVDfabzdUkRw</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-aQ</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/31/2023</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>04/30/1993
+        10:04:47</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>04/30/1993
+        10:04:47</WHENCREATED><WHENMODIFIED>07/29/2026 20:27:10</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-RGvuBgYecazMWjXzjyoHPvRgzIcLvZdrPzIoBuHevDZkxkRYOnqNpSoeCxYmoRJmontZoQMjogKTcINsdRcGxvO</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3216</RECORDNO><BATCHNO>5013</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-tf</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-tf</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>03/07/2012</BATCH_DATE><MODULE>-Fallback-scrubbed-xQar</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY></PRBATCHKEY><MODIFIED>05/06/2016
+        08:05:10</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>05/06/2016
+        08:05:10</WHENCREATED><WHENMODIFIED>08/18/2026 13:36:01</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-nBYvQwGgGpjkzVQbGZDcTYMxclTkbLLFHBfwoOeiubMpwyFWGwXMlHVptTelvULIVnTGVcxEpqkaUUxAGMgNmub</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3220</RECORDNO><BATCHNO>6555</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-XBRpapdovfBqOduskYKQdprhlkwbgaUvwKywcdKWEmcXUQGyoWWMYZJgffcU</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-OzY</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>06/04/1998</BATCH_DATE><MODULE>-Fallback-scrubbed-Oqng</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>2465</PRBATCHKEY><MODIFIED>12/13/2011
+        02:07:26</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>12/13/2011
+        02:07:26</WHENCREATED><WHENMODIFIED>08/25/2026 13:33:59</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-hPaOvGWpKtxSZeQubRKkpSuHTnxHLxafqQgmpchVAYBheVEzfkeMoXuIJfGKcNsdcqLhpoLhRZZnGahKcJDWOop</RECORD_URL></GLBATCH><GLBATCH><RECORDNO>3221</RECORDNO><BATCHNO>9681</BATCHNO><BATCH_TITLE>-Fallback-scrubbed-YodJOeATSrooFcHdqzQKgFiLmiPBoyYgXXbsBYFpKJsrOZuGjhHWrDgrrmXM</BATCH_TITLE><BALANCE></BALANCE><JOURNAL>-Fallback-scrubbed-OzY</JOURNAL><JOURNAL_ENABLEEREPORTING>true</JOURNAL_ENABLEEREPORTING><STATISTICAL>true</STATISTICAL><BATCH_DATE>06/04/1998</BATCH_DATE><MODULE>-Fallback-scrubbed-Oqng</MODULE><USERKEY>679</USERKEY><REFERENCENO></REFERENCENO><REVERSED></REVERSED><REVERSEDKEY></REVERSEDKEY><REVERSEDFROM></REVERSEDFROM><TEMPLATEKEY></TEMPLATEKEY><TEMPLATEID></TEMPLATEID><PRBATCHKEY>6565</PRBATCHKEY><MODIFIED>09/12/1980
+        02:51:00</MODIFIED><MODIFIEDBYID>-Fallback-scrubbed-moRf</MODIFIEDBYID><SCHOPKEY></SCHOPKEY><GLACCTALLOCATIONRUNKEY></GLACCTALLOCATIONRUNKEY><GLACCTALLOCATIONID></GLACCTALLOCATIONID><BASELOCATION></BASELOCATION><BASELOCATION_NO></BASELOCATION_NO><USERINFO.LOGINID>-Fallback-scrubbed-moRf</USERINFO.LOGINID><WHENCREATED>09/12/1980
+        02:51:00</WHENCREATED><WHENMODIFIED>08/25/2026 13:34:01</WHENMODIFIED><CREATEDBY>679</CREATEDBY><MODIFIEDBY>679</MODIFIEDBY><STATE>-Fallback-scrubbed-hwSBlM</STATE><JOURNALSEQNO></JOURNALSEQNO><TAXIMPLICATIONS></TAXIMPLICATIONS><VATVENDORID></VATVENDORID><VATCUSTOMERID></VATCUSTOMERID><VATCONTACTID></VATCONTACTID><TAXSOLUTIONID></TAXSOLUTIONID><TRANSACTIONSOURCE></TRANSACTIONSOURCE><INVOICEMODE></INVOICEMODE><EREPORTINGTYPE></EREPORTINGTYPE><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><CREATEDBYLOGINID>-Fallback-scrubbed-moRf</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-moRf</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-YExPPgrTLBVZiRcMDrVNAUDxSBmyONSKKSZBFKthGIpjLztIhmrMELFcrfdzyOAYEpIftgqIyweRJLfYnmuMwxG</RECORD_URL></GLBATCH></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a3138eb2fe9fc6a6-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Wed, 26 Aug 2026 14:34:28 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '646'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '18516'
     status:
       code: 200
       message: OK

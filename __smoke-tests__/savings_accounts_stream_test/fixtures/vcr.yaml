@@ -4,7 +4,7 @@ interactions:
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
       19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
-      controlid="3aa94448-1474-4d58-a635-639030588bb7"><getAPISession></getAPISession></function></content></operation></request>'
+      controlid="99e6c0b4-d962-431a-84cb-c00d9022ede0"><getAPISession></getAPISession></function></content></operation></request>'
     headers:
       Accept:
       - '*/*'
@@ -24,13 +24,13 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1973-02-20
-        10:05:54</controlid><uniqueid>false</uniqueid><dtdversion>888893.738810557</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1985-12-31T09:31:58+00:00</sessiontimestamp><sessiontimeout>1985-01-02T12:55:25+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RScdQYNtRXNbp</function><controlid>-Fallback-scrubbed-DTHidkiVENxUXIUNEypAnxStKyjXFBaDOpqh</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1988-12-19
+        19:44:39</controlid><uniqueid>true</uniqueid><dtdversion>122653512908.126</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1979-04-20T09:03:57+00:00</sessiontimestamp><sessiontimeout>2010-09-30T07:01:06+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-qVhrjwfQbBXzS</function><controlid>-Fallback-scrubbed-ddFjMqaoirCCcAfCWLBfCZSUUOmZybqJhASy</controlid><data><api><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d245c8dd9f199-GRU
+      - a3139030eb93c700-GRU
       Cache-Control:
       - private
       Connection:
@@ -53,7 +53,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:53:18 GMT
+      - Wed, 26 Aug 2026 14:35:29 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -67,7 +67,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '628'
+      - '591'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -77,7 +77,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '837'
+      - '878'
     status:
       code: 200
       message: OK
@@ -85,8 +85,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="40068600-172c-4d70-864f-329d8adb4cce"><query><object>SAVINGSACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="6b6184f4-edca-4212-bb0c-8b33ac80ac30"><query><object>SAVINGSACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -108,15 +108,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1973-02-20
-        10:05:54</controlid><uniqueid>false</uniqueid><dtdversion>888893.738810557</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1985-12-31T09:31:58+00:00</sessiontimestamp><sessiontimeout>1985-01-02T12:55:25+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mhoYo</function><controlid>-Fallback-scrubbed-ldepDsMNvsPkkGHcUNGulKCMPvqtvePBMYam</controlid><data
-        listtype="-Fallback-scrubbed-OzAAlruXIIYFHn" totalcount="1" offset="7962"
-        count="9243" numremaining="7962"><SAVINGSACCOUNT><RECORDNO>5</RECORDNO></SAVINGSACCOUNT></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1988-12-19
+        19:44:39</controlid><uniqueid>true</uniqueid><dtdversion>122653512908.126</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2022-02-10T11:38:31+00:00</sessiontimestamp><sessiontimeout>2011-12-08T21:38:23+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-aBjRU</function><controlid>-Fallback-scrubbed-QjmpOmYdCLEOeFYuBmSCRSbiwfgQreNaLRjE</controlid><data
+        listtype="-Fallback-scrubbed-PLSAZqDgbOSpgu" totalcount="1" offset="1027"
+        count="1477" numremaining="1027"><SAVINGSACCOUNT><RECORDNO>5</RECORDNO></SAVINGSACCOUNT></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d24627a3f88fb-GRU
+      - a31390363edd1b2e-GRU
       Cache-Control:
       - private
       Connection:
@@ -139,7 +139,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:53:19 GMT
+      - Wed, 26 Aug 2026 14:35:30 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -153,17 +153,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '470'
+      - '749'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.01'
+      - '0.06'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '785'
+      - '854'
     status:
       code: 200
       message: OK
@@ -171,8 +171,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="369f6562-485c-4ec4-95be-9b77665b379c"><query><object>SAVINGSACCOUNT</object><select><field>BANKACCOUNTID</field><field>BANKACCOUNTNO</field><field>GLACCOUNTNO</field><field>GLACCOUNTKEY</field><field>BANKNAME</field><field>ROUTINGNO</field><field>BRANCHID</field><field>BANKACCOUNTTYPE</field><field>PHONE</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>FINANCIALDATA.APJOURNAL</field><field>FINANCIALDATA.RECORDNO</field><field>FINANCIALDATA.ARJOURNAL</field><field>SERVICECHARGEGLACCOUNT</field><field>SERVICECHARGEACCOUNTLABEL</field><field>INTERESTEARNEDGLACCOUNT</field><field>INTERESTEARNEDACCOUNTLABEL</field><field>DEPT#</field><field>DEPARTMENTID</field><field>LOCATION#</field><field>LOCATIONID</field><field>STATUS</field><field>LASTRECONCILEDBALANCE</field><field>LASTRECONCILEDDATE</field><field>NEXTCHECK</field><field>SHARECHECKNO</field><field>CUTOFFDATE</field><field>FINANCIALDATA.RECONMODE</field><field>CURRENCY</field><field>FORWFPM</field><field>ACHCOMPANYID</field><field>PMCHECKTEMPLATEID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>RECORDNO</field><field>OUTSOURCECHECK</field><field>FRACTIONALROUTINGNO</field><field>NAMEONTHEACCOUNT</field><field>WPBSTATUS</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>FINANCIALINSTITUTIONID</field><field>RULESETKEY</field><field>RULESETID</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="9de57106-a76d-4add-9a09-5b46414516dd"><query><object>SAVINGSACCOUNT</object><select><field>BANKACCOUNTID</field><field>BANKACCOUNTNO</field><field>GLACCOUNTNO</field><field>GLACCOUNTKEY</field><field>BANKNAME</field><field>ROUTINGNO</field><field>BRANCHID</field><field>BANKACCOUNTTYPE</field><field>PHONE</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>FINANCIALDATA.APJOURNAL</field><field>FINANCIALDATA.RECORDNO</field><field>FINANCIALDATA.ARJOURNAL</field><field>SERVICECHARGEGLACCOUNT</field><field>SERVICECHARGEACCOUNTLABEL</field><field>INTERESTEARNEDGLACCOUNT</field><field>INTERESTEARNEDACCOUNTLABEL</field><field>DEPT#</field><field>DEPARTMENTID</field><field>LOCATION#</field><field>LOCATIONID</field><field>STATUS</field><field>LASTRECONCILEDBALANCE</field><field>LASTRECONCILEDDATE</field><field>NEXTCHECK</field><field>SHARECHECKNO</field><field>CUTOFFDATE</field><field>FINANCIALDATA.RECONMODE</field><field>CURRENCY</field><field>FORWFPM</field><field>ACHCOMPANYID</field><field>PMCHECKTEMPLATEID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>RECORDNO</field><field>OUTSOURCECHECK</field><field>FRACTIONALROUTINGNO</field><field>NAMEONTHEACCOUNT</field><field>WPBSTATUS</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>FINANCIALINSTITUTIONID</field><field>RULESETKEY</field><field>RULESETID</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -194,16 +194,16 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1973-02-20
-        10:05:54</controlid><uniqueid>false</uniqueid><dtdversion>888893.738810557</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1986-06-24T23:52:26+00:00</sessiontimestamp><sessiontimeout>2011-03-10T04:18:16+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mhoYo</function><controlid>-Fallback-scrubbed-PqKBqoWdgFOztJACcdrBymxCARMUZbhvesOV</controlid><data
-        listtype="-Fallback-scrubbed-OzAAlruXIIYFHn" totalcount="1" offset="7962"
-        count="9243" numremaining="7962"><SAVINGSACCOUNT><BANKACCOUNTID>-Fallback-scrubbed-yvUULQFVnyMOaStB</BANKACCOUNTID><BANKACCOUNTNO></BANKACCOUNTNO><GLACCOUNTNO>9446</GLACCOUNTNO><GLACCOUNTKEY>2126</GLACCOUNTKEY><BANKNAME>-Fallback-scrubbed-enWTH</BANKNAME><ROUTINGNO></ROUTINGNO><BRANCHID></BRANCHID><BANKACCOUNTTYPE>-Fallback-scrubbed-jCsorfr</BANKACCOUNTTYPE><PHONE></PHONE><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-eTFArvdmAZGYU</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-LX</MAILADDRESS.COUNTRYCODE><FINANCIALDATA.APJOURNAL>-Fallback-scrubbed-BBL</FINANCIALDATA.APJOURNAL><FINANCIALDATA.RECORDNO>5069</FINANCIALDATA.RECORDNO><FINANCIALDATA.ARJOURNAL>-Fallback-scrubbed-cgH</FINANCIALDATA.ARJOURNAL><SERVICECHARGEGLACCOUNT></SERVICECHARGEGLACCOUNT><SERVICECHARGEACCOUNTLABEL></SERVICECHARGEACCOUNTLABEL><INTERESTEARNEDGLACCOUNT></INTERESTEARNEDGLACCOUNT><INTERESTEARNEDACCOUNTLABEL></INTERESTEARNEDACCOUNTLABEL><DEPT></DEPT><DEPARTMENTID></DEPARTMENTID><LOCATION>5687</LOCATION><LOCATIONID>2306</LOCATIONID><STATUS>-Fallback-scrubbed-GLRhHQ</STATUS><LASTRECONCILEDBALANCE></LASTRECONCILEDBALANCE><LASTRECONCILEDDATE></LASTRECONCILEDDATE><NEXTCHECK></NEXTCHECK><SHARECHECKNO>false</SHARECHECKNO><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.RECONMODE>-Fallback-scrubbed-TvllxJ</FINANCIALDATA.RECONMODE><CURRENCY>-Fallback-scrubbed-XRt</CURRENCY><FORWFPM>false</FORWFPM><ACHCOMPANYID></ACHCOMPANYID><PMCHECKTEMPLATEID></PMCHECKTEMPLATEID><WHENCREATED>09/22/1970
-        21:53:00</WHENCREATED><WHENMODIFIED>08/26/2025 22:30:56</WHENMODIFIED><CREATEDBY>3238</CREATEDBY><MODIFIEDBY>3238</MODIFIEDBY><RECORDNO>5</RECORDNO><OUTSOURCECHECK></OUTSOURCECHECK><FRACTIONALROUTINGNO></FRACTIONALROUTINGNO><NAMEONTHEACCOUNT></NAMEONTHEACCOUNT><WPBSTATUS></WPBSTATUS><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><RULESETKEY></RULESETKEY><RULESETID></RULESETID><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-dCdC</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-dCdC</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-gwUPIHrOQFNDoOaMGSjPahHxupxuRbxjtDalHuiSKLrsutCVidoyOmDPXnONLUWYncTcVPjvGgMLLWFVZLEGtUl</RECORD_URL></SAVINGSACCOUNT></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1988-12-19
+        19:44:39</controlid><uniqueid>true</uniqueid><dtdversion>122653512908.126</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1993-11-17T07:50:26+00:00</sessiontimestamp><sessiontimeout>2000-09-18T14:32:21+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-aBjRU</function><controlid>-Fallback-scrubbed-UhJfUSbujNyVYZqWrHbjKDBzhUXxwruKTSYE</controlid><data
+        listtype="-Fallback-scrubbed-PLSAZqDgbOSpgu" totalcount="1" offset="1027"
+        count="1477" numremaining="1027"><SAVINGSACCOUNT><BANKACCOUNTID>-Fallback-scrubbed-uNCTjyhWcUfYHjEa</BANKACCOUNTID><BANKACCOUNTNO></BANKACCOUNTNO><GLACCOUNTNO>7728</GLACCOUNTNO><GLACCOUNTKEY>6690</GLACCOUNTKEY><BANKNAME>-Fallback-scrubbed-lTqme</BANKNAME><ROUTINGNO></ROUTINGNO><BRANCHID></BRANCHID><BANKACCOUNTTYPE>-Fallback-scrubbed-rVvtTgI</BANKACCOUNTTYPE><PHONE></PHONE><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-zsGMKzFbxfrnC</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-lk</MAILADDRESS.COUNTRYCODE><FINANCIALDATA.APJOURNAL>-Fallback-scrubbed-yHh</FINANCIALDATA.APJOURNAL><FINANCIALDATA.RECORDNO>3426</FINANCIALDATA.RECORDNO><FINANCIALDATA.ARJOURNAL>-Fallback-scrubbed-Nur</FINANCIALDATA.ARJOURNAL><SERVICECHARGEGLACCOUNT></SERVICECHARGEGLACCOUNT><SERVICECHARGEACCOUNTLABEL></SERVICECHARGEACCOUNTLABEL><INTERESTEARNEDGLACCOUNT></INTERESTEARNEDGLACCOUNT><INTERESTEARNEDACCOUNTLABEL></INTERESTEARNEDACCOUNTLABEL><DEPT></DEPT><DEPARTMENTID></DEPARTMENTID><LOCATION>9896</LOCATION><LOCATIONID>7647</LOCATIONID><STATUS>active</STATUS><LASTRECONCILEDBALANCE></LASTRECONCILEDBALANCE><LASTRECONCILEDDATE></LASTRECONCILEDDATE><NEXTCHECK></NEXTCHECK><SHARECHECKNO>true</SHARECHECKNO><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.RECONMODE>-Fallback-scrubbed-GaOsUW</FINANCIALDATA.RECONMODE><CURRENCY>-Fallback-scrubbed-Eer</CURRENCY><FORWFPM>true</FORWFPM><ACHCOMPANYID></ACHCOMPANYID><PMCHECKTEMPLATEID></PMCHECKTEMPLATEID><WHENCREATED>05/22/2000
+        08:46:18</WHENCREATED><WHENMODIFIED>08/26/2025 22:30:56</WHENMODIFIED><CREATEDBY>3420</CREATEDBY><MODIFIEDBY>3420</MODIFIEDBY><RECORDNO>5</RECORDNO><OUTSOURCECHECK></OUTSOURCECHECK><FRACTIONALROUTINGNO></FRACTIONALROUTINGNO><NAMEONTHEACCOUNT></NAMEONTHEACCOUNT><WPBSTATUS></WPBSTATUS><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><RULESETKEY></RULESETKEY><RULESETID></RULESETID><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-nIWH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-nIWH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-pIFKoLfZEYNdrRWigQspTtyheUDMQvDJkMyfefssVjQoETAqpGvmBjXBFvxhcYWBBzJhhYCQipPWxNztnsSJXjU</RECORD_URL></SAVINGSACCOUNT></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d2466edaaf1d1-GRU
+      - a313903c98cf01a0-GRU
       Cache-Control:
       - private
       Connection:
@@ -226,7 +226,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:53:20 GMT
+      - Wed, 26 Aug 2026 14:35:31 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -240,7 +240,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '678'
+      - '584'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -250,7 +250,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '3379'
+      - '3685'
     status:
       code: 200
       message: OK
@@ -258,8 +258,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="3e196302-6446-4f6d-bc49-da3bc609744c"><query><object>SAVINGSACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="d342e16f-4fdb-4572-b3a3-8d703b3cc710"><query><object>SAVINGSACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -281,15 +281,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1973-02-20
-        10:05:54</controlid><uniqueid>false</uniqueid><dtdversion>888893.738810557</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2024-07-20T20:15:52+00:00</sessiontimestamp><sessiontimeout>1975-12-19T22:59:50+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mhoYo</function><controlid>-Fallback-scrubbed-deKbAJdjdJraDUCzszJfnwFeJOcmnVLrcyBc</controlid><data
-        listtype="-Fallback-scrubbed-OzAAlruXIIYFHn" totalcount="1" offset="7962"
-        count="9243" numremaining="7962"><SAVINGSACCOUNT><RECORDNO>5</RECORDNO></SAVINGSACCOUNT></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1988-12-19
+        19:44:39</controlid><uniqueid>true</uniqueid><dtdversion>122653512908.126</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2005-05-20T05:13:08+00:00</sessiontimestamp><sessiontimeout>1990-06-05T14:29:39+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-aBjRU</function><controlid>-Fallback-scrubbed-CQNfuSOPODYFownhkjKMVshLWYEivEGBBThn</controlid><data
+        listtype="-Fallback-scrubbed-PLSAZqDgbOSpgu" totalcount="1" offset="1027"
+        count="1477" numremaining="1027"><SAVINGSACCOUNT><RECORDNO>5</RECORDNO></SAVINGSACCOUNT></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d246cadf36270-GRU
+      - a3139041cd451433-GRU
       Cache-Control:
       - private
       Connection:
@@ -312,7 +312,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:53:20 GMT
+      - Wed, 26 Aug 2026 14:35:32 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -326,17 +326,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '469'
+      - '565'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.01'
+      - '0.06'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '785'
+      - '854'
     status:
       code: 200
       message: OK
@@ -344,8 +344,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
-      controlid="fad98333-0967-4d62-97f5-fb69eadbd0b6"><query><object>SAVINGSACCOUNT</object><select><field>BANKACCOUNTID</field><field>BANKACCOUNTNO</field><field>GLACCOUNTNO</field><field>GLACCOUNTKEY</field><field>BANKNAME</field><field>ROUTINGNO</field><field>BRANCHID</field><field>BANKACCOUNTTYPE</field><field>PHONE</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>FINANCIALDATA.APJOURNAL</field><field>FINANCIALDATA.RECORDNO</field><field>FINANCIALDATA.ARJOURNAL</field><field>SERVICECHARGEGLACCOUNT</field><field>SERVICECHARGEACCOUNTLABEL</field><field>INTERESTEARNEDGLACCOUNT</field><field>INTERESTEARNEDACCOUNTLABEL</field><field>DEPT#</field><field>DEPARTMENTID</field><field>LOCATION#</field><field>LOCATIONID</field><field>STATUS</field><field>LASTRECONCILEDBALANCE</field><field>LASTRECONCILEDDATE</field><field>NEXTCHECK</field><field>SHARECHECKNO</field><field>CUTOFFDATE</field><field>FINANCIALDATA.RECONMODE</field><field>CURRENCY</field><field>FORWFPM</field><field>ACHCOMPANYID</field><field>PMCHECKTEMPLATEID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>RECORDNO</field><field>OUTSOURCECHECK</field><field>FRACTIONALROUTINGNO</field><field>NAMEONTHEACCOUNT</field><field>WPBSTATUS</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>FINANCIALINSTITUTIONID</field><field>RULESETKEY</field><field>RULESETID</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
+      controlid="22b8937e-3f7a-4621-9cfc-10d92e2aadc3"><query><object>SAVINGSACCOUNT</object><select><field>BANKACCOUNTID</field><field>BANKACCOUNTNO</field><field>GLACCOUNTNO</field><field>GLACCOUNTKEY</field><field>BANKNAME</field><field>ROUTINGNO</field><field>BRANCHID</field><field>BANKACCOUNTTYPE</field><field>PHONE</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>FINANCIALDATA.APJOURNAL</field><field>FINANCIALDATA.RECORDNO</field><field>FINANCIALDATA.ARJOURNAL</field><field>SERVICECHARGEGLACCOUNT</field><field>SERVICECHARGEACCOUNTLABEL</field><field>INTERESTEARNEDGLACCOUNT</field><field>INTERESTEARNEDACCOUNTLABEL</field><field>DEPT#</field><field>DEPARTMENTID</field><field>LOCATION#</field><field>LOCATIONID</field><field>STATUS</field><field>LASTRECONCILEDBALANCE</field><field>LASTRECONCILEDDATE</field><field>NEXTCHECK</field><field>SHARECHECKNO</field><field>CUTOFFDATE</field><field>FINANCIALDATA.RECONMODE</field><field>CURRENCY</field><field>FORWFPM</field><field>ACHCOMPANYID</field><field>PMCHECKTEMPLATEID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>RECORDNO</field><field>OUTSOURCECHECK</field><field>FRACTIONALROUTINGNO</field><field>NAMEONTHEACCOUNT</field><field>WPBSTATUS</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>FINANCIALINSTITUTIONID</field><field>RULESETKEY</field><field>RULESETID</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -367,16 +367,16 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1973-02-20
-        10:05:54</controlid><uniqueid>false</uniqueid><dtdversion>888893.738810557</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1993-01-03T17:45:56+00:00</sessiontimestamp><sessiontimeout>1976-03-16T05:04:53+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mhoYo</function><controlid>-Fallback-scrubbed-jBTEGBfisRWDGgUbLEGpdNygNcQFKahsQdCh</controlid><data
-        listtype="-Fallback-scrubbed-OzAAlruXIIYFHn" totalcount="1" offset="7962"
-        count="9243" numremaining="7962"><SAVINGSACCOUNT><BANKACCOUNTID>-Fallback-scrubbed-yvUULQFVnyMOaStB</BANKACCOUNTID><BANKACCOUNTNO></BANKACCOUNTNO><GLACCOUNTNO>9446</GLACCOUNTNO><GLACCOUNTKEY>2126</GLACCOUNTKEY><BANKNAME>-Fallback-scrubbed-enWTH</BANKNAME><ROUTINGNO></ROUTINGNO><BRANCHID></BRANCHID><BANKACCOUNTTYPE>-Fallback-scrubbed-jCsorfr</BANKACCOUNTTYPE><PHONE></PHONE><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-eTFArvdmAZGYU</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-LX</MAILADDRESS.COUNTRYCODE><FINANCIALDATA.APJOURNAL>-Fallback-scrubbed-BBL</FINANCIALDATA.APJOURNAL><FINANCIALDATA.RECORDNO>5069</FINANCIALDATA.RECORDNO><FINANCIALDATA.ARJOURNAL>-Fallback-scrubbed-cgH</FINANCIALDATA.ARJOURNAL><SERVICECHARGEGLACCOUNT></SERVICECHARGEGLACCOUNT><SERVICECHARGEACCOUNTLABEL></SERVICECHARGEACCOUNTLABEL><INTERESTEARNEDGLACCOUNT></INTERESTEARNEDGLACCOUNT><INTERESTEARNEDACCOUNTLABEL></INTERESTEARNEDACCOUNTLABEL><DEPT></DEPT><DEPARTMENTID></DEPARTMENTID><LOCATION>5687</LOCATION><LOCATIONID>2306</LOCATIONID><STATUS>-Fallback-scrubbed-GLRhHQ</STATUS><LASTRECONCILEDBALANCE></LASTRECONCILEDBALANCE><LASTRECONCILEDDATE></LASTRECONCILEDDATE><NEXTCHECK></NEXTCHECK><SHARECHECKNO>false</SHARECHECKNO><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.RECONMODE>-Fallback-scrubbed-TvllxJ</FINANCIALDATA.RECONMODE><CURRENCY>-Fallback-scrubbed-XRt</CURRENCY><FORWFPM>false</FORWFPM><ACHCOMPANYID></ACHCOMPANYID><PMCHECKTEMPLATEID></PMCHECKTEMPLATEID><WHENCREATED>09/22/1970
-        21:53:00</WHENCREATED><WHENMODIFIED>08/26/2025 22:30:56</WHENMODIFIED><CREATEDBY>3238</CREATEDBY><MODIFIEDBY>3238</MODIFIEDBY><RECORDNO>5</RECORDNO><OUTSOURCECHECK></OUTSOURCECHECK><FRACTIONALROUTINGNO></FRACTIONALROUTINGNO><NAMEONTHEACCOUNT></NAMEONTHEACCOUNT><WPBSTATUS></WPBSTATUS><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><RULESETKEY></RULESETKEY><RULESETID></RULESETID><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-dCdC</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-dCdC</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-gwUPIHrOQFNDoOaMGSjPahHxupxuRbxjtDalHuiSKLrsutCVidoyOmDPXnONLUWYncTcVPjvGgMLLWFVZLEGtUl</RECORD_URL></SAVINGSACCOUNT></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1988-12-19
+        19:44:39</controlid><uniqueid>true</uniqueid><dtdversion>122653512908.126</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2020-04-20T11:58:58+00:00</sessiontimestamp><sessiontimeout>2015-01-12T07:45:40+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-aBjRU</function><controlid>-Fallback-scrubbed-btBMRbOZDmlKlgcFEmmXyYgtyFeZjqFVsgbu</controlid><data
+        listtype="-Fallback-scrubbed-PLSAZqDgbOSpgu" totalcount="1" offset="1027"
+        count="1477" numremaining="1027"><SAVINGSACCOUNT><BANKACCOUNTID>-Fallback-scrubbed-uNCTjyhWcUfYHjEa</BANKACCOUNTID><BANKACCOUNTNO></BANKACCOUNTNO><GLACCOUNTNO>7728</GLACCOUNTNO><GLACCOUNTKEY>6690</GLACCOUNTKEY><BANKNAME>-Fallback-scrubbed-lTqme</BANKNAME><ROUTINGNO></ROUTINGNO><BRANCHID></BRANCHID><BANKACCOUNTTYPE>-Fallback-scrubbed-rVvtTgI</BANKACCOUNTTYPE><PHONE></PHONE><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-zsGMKzFbxfrnC</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-lk</MAILADDRESS.COUNTRYCODE><FINANCIALDATA.APJOURNAL>-Fallback-scrubbed-yHh</FINANCIALDATA.APJOURNAL><FINANCIALDATA.RECORDNO>3426</FINANCIALDATA.RECORDNO><FINANCIALDATA.ARJOURNAL>-Fallback-scrubbed-Nur</FINANCIALDATA.ARJOURNAL><SERVICECHARGEGLACCOUNT></SERVICECHARGEGLACCOUNT><SERVICECHARGEACCOUNTLABEL></SERVICECHARGEACCOUNTLABEL><INTERESTEARNEDGLACCOUNT></INTERESTEARNEDGLACCOUNT><INTERESTEARNEDACCOUNTLABEL></INTERESTEARNEDACCOUNTLABEL><DEPT></DEPT><DEPARTMENTID></DEPARTMENTID><LOCATION>9896</LOCATION><LOCATIONID>7647</LOCATIONID><STATUS>active</STATUS><LASTRECONCILEDBALANCE></LASTRECONCILEDBALANCE><LASTRECONCILEDDATE></LASTRECONCILEDDATE><NEXTCHECK></NEXTCHECK><SHARECHECKNO>true</SHARECHECKNO><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.RECONMODE>-Fallback-scrubbed-GaOsUW</FINANCIALDATA.RECONMODE><CURRENCY>-Fallback-scrubbed-Eer</CURRENCY><FORWFPM>true</FORWFPM><ACHCOMPANYID></ACHCOMPANYID><PMCHECKTEMPLATEID></PMCHECKTEMPLATEID><WHENCREATED>05/22/2000
+        08:46:18</WHENCREATED><WHENMODIFIED>08/26/2025 22:30:56</WHENMODIFIED><CREATEDBY>3420</CREATEDBY><MODIFIEDBY>3420</MODIFIEDBY><RECORDNO>5</RECORDNO><OUTSOURCECHECK></OUTSOURCECHECK><FRACTIONALROUTINGNO></FRACTIONALROUTINGNO><NAMEONTHEACCOUNT></NAMEONTHEACCOUNT><WPBSTATUS></WPBSTATUS><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><RULESETKEY></RULESETKEY><RULESETID></RULESETID><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-nIWH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-nIWH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-pIFKoLfZEYNdrRWigQspTtyheUDMQvDJkMyfefssVjQoETAqpGvmBjXBFvxhcYWBBzJhhYCQipPWxNztnsSJXjU</RECORD_URL></SAVINGSACCOUNT></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a30d24713f546257-GRU
+      - a31390485af64585-GRU
       Cache-Control:
       - private
       Connection:
@@ -399,7 +399,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Tue, 25 Aug 2026 19:53:21 GMT
+      - Wed, 26 Aug 2026 14:35:33 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -413,17 +413,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '610'
+      - '578'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.02'
+      - '0.03'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '3379'
+      - '3685'
     status:
       code: 200
       message: OK
