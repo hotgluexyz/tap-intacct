@@ -252,8 +252,15 @@ class SageIntacctSDK:
                 exception_msg = self.decode_support_id(
                     parsed_response['response']['errormessage']
                 )
+                error = exception_msg.get("error", {})
+                msg = (
+                    error.get("description2") if isinstance(error, dict)
+                    else error[0].get("description2") if isinstance(error, list) and error
+                    else None
+                ) or "Some of the parameters are wrong"
+                msg = re.sub(r'\s*\[Support ID:[^\]]*\]', '', msg).strip()
                 raise WrongParamsError(
-                    'Some of the parameters are wrong', exception_msg
+                    msg, exception_msg
                 )
 
             if api_response['authentication']['status'] == 'failure':
@@ -351,6 +358,7 @@ class SageIntacctSDK:
         support_id_msg = self.support_id_msg(errormessages)
         data_type = support_id_msg['type']
         error = support_id_msg['error']
+        message = None
         if error and error.get('description2'):
             message = error['description2']
             support_id = re.search('Support ID: (.*)]', message)
@@ -358,10 +366,10 @@ class SageIntacctSDK:
                 decoded_support_id = unquote(support_id.group(1))
                 message = message.replace(support_id.group(1), decoded_support_id)
 
-        if data_type == 'list':
-            errormessages['error'][0]['description2'] = message if message else None
-        elif data_type == 'dict':
-            errormessages['error']['description2'] = message if message else None
+        if message is not None and data_type == 'list':
+            errormessages['error'][0]['description2'] = message
+        elif message is not None and data_type == 'dict':
+            errormessages['error']['description2'] = message
 
         return errormessages
     
