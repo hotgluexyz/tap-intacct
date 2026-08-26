@@ -252,8 +252,13 @@ class SageIntacctSDK:
                 exception_msg = self.decode_support_id(
                     parsed_response['response']['errormessage']
                 )
+                msg = (
+                    exception_msg.get("error", {}).get("description2")
+                    or "Some of the parameters are wrong"
+                )
+                msg = re.sub(r'\s*\[Support ID:[^\]]*\]', '', msg).strip()
                 raise WrongParamsError(
-                    'Some of the parameters are wrong', exception_msg
+                    msg, exception_msg
                 )
 
             if api_response['authentication']['status'] == 'failure':
