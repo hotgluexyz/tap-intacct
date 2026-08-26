@@ -1,0 +1,110 @@
+{
+  "streams": [
+    {
+      "stream": "dimensions",
+      "tap_stream_id": "dimensions",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "objectName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "objectLabel": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "termLabel": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "userDefinedDimension": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "enabledInGL": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "required": [
+          "objectName"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "objectName"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "objectName"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "objectLabel"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "termLabel"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "userDefinedDimension"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "enabledInGL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "objectName"
+      ],
+      "stream_meta": {}
+    }
+  ]
+}

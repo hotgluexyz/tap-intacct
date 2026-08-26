@@ -1,0 +1,769 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="3b09e656-10f1-46e8-baed-d69b1ab6990e"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2002-11-22T07:42:50+00:00</sessiontimestamp><sessiontimeout>2023-03-30T18:34:59+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-skcvZqXEpqCQJ</function><controlid>-Fallback-scrubbed-yMgpenzhbyJBQdREbwEaYjdfkwbvTlxPdkPB</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1ce97e714fa6-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:13 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '699'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.05'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="3ef03c59-6b18-4b2b-9936-2a76039527fe"><getDimensions></getDimensions></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '526'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2018-08-19T20:42:15+00:00</sessiontimestamp><sessiontimeout>1974-04-02T01:48:26+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-JNUqfFcBjRPju</function><controlid>-Fallback-scrubbed-KZfsuNarzGIDtDlLOBmrCtHTfhqXXQInVHsY</controlid><data><dimensions><dimension><objectName>DEPARTMENT</objectName><objectLabel>-Fallback-scrubbed-xSkHcrsUyV</objectLabel><termLabel>-Fallback-scrubbed-xSkHcrsUyV</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>LOCATION</objectName><objectLabel>-Fallback-scrubbed-lMVreZFe</objectLabel><termLabel>-Fallback-scrubbed-lMVreZFe</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>PROJECT</objectName><objectLabel>-Fallback-scrubbed-jiJRZZz</objectLabel><termLabel>-Fallback-scrubbed-jiJRZZz</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CUSTOMER</objectName><objectLabel>-Fallback-scrubbed-YHpfexmD</objectLabel><termLabel>-Fallback-scrubbed-YHpfexmD</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>VENDOR</objectName><objectLabel>-Fallback-scrubbed-WvgxLU</objectLabel><termLabel>-Fallback-scrubbed-WvgxLU</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>EMPLOYEE</objectName><objectLabel>-Fallback-scrubbed-kLxNPwwC</objectLabel><termLabel>-Fallback-scrubbed-kLxNPwwC</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>ITEM</objectName><objectLabel>-Fallback-scrubbed-sRkx</objectLabel><termLabel>-Fallback-scrubbed-sRkx</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CLASS</objectName><objectLabel>-Fallback-scrubbed-qzHQs</objectLabel><termLabel>-Fallback-scrubbed-jOAZxUU</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CONTRACT</objectName><objectLabel>-Fallback-scrubbed-PutaPiKW</objectLabel><termLabel>-Fallback-scrubbed-PutaPiKW</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>TASK</objectName><objectLabel>-Fallback-scrubbed-cltw</objectLabel><termLabel>-Fallback-scrubbed-cltw</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>WAREHOUSE</objectName><objectLabel>-Fallback-scrubbed-AzPcWnQcm</objectLabel><termLabel>-Fallback-scrubbed-AzPcWnQcm</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>COSTTYPE</objectName><objectLabel>-Fallback-scrubbed-JUbGwADiv</objectLabel><termLabel>-Fallback-scrubbed-JUbGwADiv</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>AFFILIATEENTITY</objectName><objectLabel>-Fallback-scrubbed-URvPIyMwSJBEJMWZ</objectLabel><termLabel>-Fallback-scrubbed-URvPIyMwSJBEJMWZ</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>WORKORDER</objectName><objectLabel>-Fallback-scrubbed-XJlSYMvLSz</objectLabel><termLabel>-Fallback-scrubbed-XJlSYMvLSz</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>FIXEDASSET</objectName><objectLabel>-Fallback-scrubbed-FWQqT</objectLabel><termLabel>-Fallback-scrubbed-FWQqT</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>LOANACCOUNT</objectName><objectLabel>-Fallback-scrubbed-mPGO</objectLabel><termLabel>-Fallback-scrubbed-mPGO</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>DIMENSION</objectName><objectLabel>-Fallback-scrubbed-EJqWXJTso</objectLabel><termLabel>-Fallback-scrubbed-EJqWXJTso</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CUSTOM_EVENT</objectName><objectLabel>-Fallback-scrubbed-YreWOTQBxzdv</objectLabel><termLabel>-Fallback-scrubbed-YreWOTQBxzdv</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>DONOR</objectName><objectLabel>-Fallback-scrubbed-PJwKr</objectLabel><termLabel>-Fallback-scrubbed-PJwKr</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>ORDER_NUMBER</objectName><objectLabel>-Fallback-scrubbed-EkzDIfZYEnuS</objectLabel><termLabel>-Fallback-scrubbed-EkzDIfZYEnuS</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>SALES_CHANNEL</objectName><objectLabel>-Fallback-scrubbed-iLTjgfNCknHbD</objectLabel><termLabel>-Fallback-scrubbed-iLTjgfNCknHbD</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>SECTOR</objectName><objectLabel>-Fallback-scrubbed-hHyYEr</objectLabel><termLabel>-Fallback-scrubbed-hHyYEr</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension></dimensions></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1cf0fd08f204-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:14 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '524'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.07'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5167'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="2f0819c0-94f5-4452-8a19-a76ead1344f1"><query><object>DIMENSION</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '870'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2018-08-19T20:42:15+00:00</sessiontimestamp><sessiontimeout>1974-04-02T01:48:26+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-WmAJhRVSHtXVUcWMWlOsvUcvQSLgXHZCsnvs</controlid><data
+        listtype="-Fallback-scrubbed-uOvPAlnXh" totalcount="1" offset="455" count="5276"
+        numremaining="455"><DIMENSION><id>10015</id></DIMENSION></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1cf5d85a3236-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:15 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '529'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '762'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="aec2ce28-18a8-4f37-98fc-f8f6bd00782c"><query><object>DIMENSION</object><select><field>id</field><field>name</field><field>createdBy</field><field>createdAt</field><field>updatedBy</field><field>updatedAt</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1031'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2005-11-02T19:42:10+00:00</sessiontimestamp><sessiontimeout>1976-12-08T10:22:39+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-cCebbAwJYixJtRHcPpRMZuJTNVKOlcysZccx</controlid><data
+        listtype="-Fallback-scrubbed-uOvPAlnXh" totalcount="1" offset="455" count="5276"
+        numremaining="455"><DIMENSION><id>10015</id><name>-Fallback-scrubbed-EJqWXJTso</name><createdBy>6711</createdBy><createdAt>12/15/1985
+        14:49:24</createdAt><updatedBy>6711</updatedBy><updatedAt>03/11/2026 20:18:02</updatedAt><RECORD_URL>-Fallback-scrubbed-mWzokvModBjqOoZkyUGuhwJmRHnfVWbLNIilyfvshpRWGKHIvDhwqDchcbgSpiYVJeVUbBhjRxubfCZyRdKaPyT</RECORD_URL></DIMENSION></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1cfaba8d8cdf-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:15 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '515'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.03'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1030'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="1a01a8b2-99a8-4ae8-841c-6bb03371ab74"><query><object>CUSTOM_EVENT</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '873'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2012-05-07T18:42:58+00:00</sessiontimestamp><sessiontimeout>1974-11-20T16:29:47+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-ltWLFUQPHSkCTkqDmkJDLqxYcCMDrPwgUmno</controlid><data
+        listtype="-Fallback-scrubbed-UGzjUxkOfDbW" totalcount="0" offset="455" count="455"
+        numremaining="455"></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1cff7b2bf1f3-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:16 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '668'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.06'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '722'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="222b1bd1-13b7-4e7f-9437-85bc6b4ed3f6"><query><object>DONOR</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '866'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1976-01-06T12:38:21+00:00</sessiontimestamp><sessiontimeout>1991-04-10T00:00:09+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-QXstIbRNrXpeAgFxOUIWdVgHAupkaqLKLGem</controlid><data
+        listtype="-Fallback-scrubbed-FXwMj" totalcount="0" offset="455" count="455"
+        numremaining="455"></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d05c9d7768e-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:17 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '577'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '715'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="b65f083d-051b-48d3-834c-f09a7a410f89"><query><object>ORDER_NUMBER</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '873'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1980-04-04T07:28:59+00:00</sessiontimestamp><sessiontimeout>1991-01-20T15:27:47+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-IbKCwpDhDQarwqCdnQfpGknazgPHmFwwCCit</controlid><data
+        listtype="-Fallback-scrubbed-dMozqOBVgndJ" totalcount="0" offset="455" count="455"
+        numremaining="455"></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d0cb8c5b30b-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:18 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '503'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '722'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="85f0aaa6-66b8-4ca1-9716-7974593310b6"><query><object>SALES_CHANNEL</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '874'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1988-10-12T14:12:13+00:00</sessiontimestamp><sessiontimeout>2007-01-09T14:18:56+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-bLdhUBBkjTyeIHkeBqGPhEVcLCfFwzgHLFWj</controlid><data
+        listtype="-Fallback-scrubbed-bRHpNlIuumDbv" totalcount="0" offset="455" count="455"
+        numremaining="455"></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d1158e023ac-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:19 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '612'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '723'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="2ca5cc0a-c63e-4540-a20d-4c9cc36e8100"><query><object>SECTOR</object><select><field>id</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>updatedAt</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>updatedAt</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '867'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2023-05-20
+        05:34:52</controlid><uniqueid>true</uniqueid><dtdversion>5.17072951553458</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1987-11-07T08:46:50+00:00</sessiontimestamp><sessiontimeout>1971-05-19T05:51:33+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RxGBl</function><controlid>-Fallback-scrubbed-MXbkRzMPbXykDaggEBjeJKchCKFHUvjzEcwz</controlid><data
+        listtype="-Fallback-scrubbed-lfsino" totalcount="0" offset="455" count="455"
+        numremaining="455"></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d16e9df9a7f-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:20 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '534'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.03'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '716'
+    status:
+      code: 200
+      message: OK
+version: 1

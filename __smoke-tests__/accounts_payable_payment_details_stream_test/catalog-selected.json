@@ -1,0 +1,1175 @@
+{
+  "streams": [
+    {
+      "stream": "accounts_payable_payment_details",
+      "tap_stream_id": "accounts_payable_payment_details",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORDKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDKEY",
+              "LABEL": "Bill record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ENTRYKEY",
+              "LABEL": "Bill entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "POSADJKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "POSADJKEY",
+              "LABEL": "Positive adjustment record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "POSADJENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "POSADJENTRYKEY",
+              "LABEL": "Positive adjustment record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYMENTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYMENTKEY",
+              "LABEL": "Payment record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYMENTENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYMENTENTRYKEY",
+              "LABEL": "Payment entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYMENTDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "PAYMENTDATE",
+              "LABEL": "Payment date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYMENTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYMENTAMOUNT",
+              "LABEL": "Payment base amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_PAYMENTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRX_PAYMENTAMOUNT",
+              "LABEL": "Payment transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "INLINEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INLINEKEY",
+              "LABEL": "Inline transaction record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "INLINEENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INLINEENTRYKEY",
+              "LABEL": "Inline transaction entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "INLINEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INLINEAMOUNT",
+              "LABEL": "Inline transaction base amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_INLINEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRX_INLINEAMOUNT",
+              "LABEL": "Inline transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISCOUNTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISCOUNTKEY",
+              "LABEL": "Discount record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISCOUNTENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISCOUNTENTRYKEY",
+              "LABEL": "Discount entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISCOUNTDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "DISCOUNTDATE",
+              "LABEL": "Discount date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISCOUNTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISCOUNTAMOUNT",
+              "LABEL": "Discount base amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_DISCOUNTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRX_DISCOUNTAMOUNT",
+              "LABEL": "Discount transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADJUSTMENTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADJUSTMENTKEY",
+              "LABEL": "Adjustment transaction record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADJUSTMENTENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADJUSTMENTENTRYKEY",
+              "LABEL": "Adjustment transaction entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADJUSTMENTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADJUSTMENTAMOUNT",
+              "LABEL": "Adjustment transaction base amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_ADJUSTMENTAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRX_ADJUSTMENTAMOUNT",
+              "LABEL": "Adjustment transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADVANCEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADVANCEKEY",
+              "LABEL": "Advance record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADVANCEENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADVANCEENTRYKEY",
+              "LABEL": "Advance entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "POSTEDADVANCEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "POSTEDADVANCEKEY",
+              "LABEL": "Posted advance record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "POSTEDADVANCEENTRYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "POSTEDADVANCEENTRYKEY",
+              "LABEL": "Posted advance entry record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "POSTEDADVANCEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "POSTEDADVANCEAMOUNT",
+              "LABEL": "Posted advance base amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_POSTEDADVANCEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRX_POSTEDADVANCEAMOUNT",
+              "LABEL": "Posted advance transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCY",
+              "LABEL": "Payment currency",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATE",
+              "LABEL": "State",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODULEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODULEKEY",
+              "LABEL": "Module key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "JOINTPAYEENAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "JOINTPAYEENAME",
+              "LABEL": "Joint payee",
+              "DESCRIPTION": "Joint payee",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "JOINTPAYEEPRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "JOINTPAYEEPRINTAS",
+              "LABEL": "Joint payee print as",
+              "DESCRIPTION": "Joint payee print as",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "POSADJKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "POSADJENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYMENTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYMENTENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYMENTDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYMENTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_PAYMENTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INLINEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INLINEENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INLINEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_INLINEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISCOUNTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISCOUNTENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISCOUNTDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISCOUNTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_DISCOUNTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADJUSTMENTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADJUSTMENTENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADJUSTMENTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_ADJUSTMENTAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADVANCEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADVANCEENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "POSTEDADVANCEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "POSTEDADVANCEENTRYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "POSTEDADVANCEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_POSTEDADVANCEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODULEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "JOINTPAYEENAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "JOINTPAYEEPRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "APBILL",
+            "OBJECTNAME": "APBILL",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "RECORDKEY"
+          },
+          {
+            "OBJECTPATH": "APBILLITEM",
+            "OBJECTNAME": "APBILLITEM",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "POSADJ",
+            "OBJECTNAME": "APADJUSTMENT",
+            "LABEL": "AP positive adjustment",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "POSADJKEY"
+          },
+          {
+            "OBJECTPATH": "POSADJITEM",
+            "OBJECTNAME": "APADJUSTMENTITEM",
+            "LABEL": "AP positive adjustment detail",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "POSADJENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "APPYMT",
+            "OBJECTNAME": "APPYMT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "PAYMENTKEY"
+          },
+          {
+            "OBJECTPATH": "APPYMTENTRY",
+            "OBJECTNAME": "APPYMTENTRY",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "PAYMENTENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "INLINEBILL",
+            "OBJECTNAME": "APBILL",
+            "LABEL": "AP inline bill",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "INLINEKEY"
+          },
+          {
+            "OBJECTPATH": "INLINEBILLITEM",
+            "OBJECTNAME": "APBILLITEM",
+            "LABEL": "AP inline bill item",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "INLINEENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "APDISCOUNT",
+            "OBJECTNAME": "APDISCOUNT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "DISCOUNTKEY"
+          },
+          {
+            "OBJECTPATH": "APDISCOUNTENTRY",
+            "OBJECTNAME": "PRENTRY",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "DISCOUNTENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "APADJUSTMENT",
+            "OBJECTNAME": "APADJUSTMENT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ADJUSTMENTKEY"
+          },
+          {
+            "OBJECTPATH": "APADJUSTMENTENTRY",
+            "OBJECTNAME": "APADJUSTMENTITEM",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ADJUSTMENTENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "APPOSTEDADVANCE",
+            "OBJECTNAME": "APPOSTEDADVANCE",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ADVANCEKEY"
+          },
+          {
+            "OBJECTPATH": "APPOSTEDADVANCEENTRY",
+            "OBJECTNAME": "APPOSTEDADVANCEENTRY",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ADVANCEENTRYKEY"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          }
+        ]
+      }
+    }
+  ]
+}

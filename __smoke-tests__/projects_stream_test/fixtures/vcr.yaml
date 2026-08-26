@@ -1,0 +1,429 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="c5476f32-ce1b-4e6f-9455-c97509d5b4fd"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-05-03
+        16:26:30</controlid><uniqueid>false</uniqueid><dtdversion>73.372208622574</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2014-10-15T20:51:38+00:00</sessiontimestamp><sessiontimeout>1974-04-29T16:38:13+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-rWgdlbTGeMjGF</function><controlid>-Fallback-scrubbed-QaSITIiIvkNGWMLKAMHeyyodeZechqbUJhgp</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d2400ca03190e-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:53:03 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '675'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="a6cd75d4-ffab-48fd-9469-280f866d1985"><query><object>PROJECT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '880'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-05-03
+        16:26:30</controlid><uniqueid>false</uniqueid><dtdversion>73.372208622574</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1989-01-19T20:08:54+00:00</sessiontimestamp><sessiontimeout>2003-10-08T18:49:00+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-qZMzH</function><controlid>-Fallback-scrubbed-ODVYfeGKqcoXVNKLpYCqeFjoYiBMFiQXrOKa</controlid><data
+        listtype="-Fallback-scrubbed-thXXqmD" totalcount="1" offset="6504" count="262"
+        numremaining="6504"><PROJECT><RECORDNO>17</RECORDNO></PROJECT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d240718a59f3d-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:53:04 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '504'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '765'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="cac4082d-5750-4ce0-8056-fbd48ec1e773"><query><object>PROJECT</object><select><field>RECORDNO</field><field>PROJECTID</field><field>NAME</field><field>DESCRIPTION</field><field>CURRENCY</field><field>PROJECTCATEGORY</field><field>PROJECTSTATUSKEY</field><field>PROJECTSTATUS</field><field>PREVENTTIMESHEET</field><field>PREVENTEXPENSE</field><field>PREVENTAPPO</field><field>PREVENTGENINVOICE</field><field>STATUS</field><field>BEGINDATE</field><field>ENDDATE</field><field>BUDGETAMOUNT</field><field>CONTRACTAMOUNT</field><field>ACTUALAMOUNT</field><field>BUDGETQTY</field><field>ESTQTY</field><field>ACTUALQTY</field><field>APPROVEDQTY</field><field>REMAININGQTY</field><field>PERCENTCOMPLETE</field><field>OBSPERCENTCOMPLETE</field><field>BILLINGTYPE</field><field>SONUMBER</field><field>PONUMBER</field><field>POAMOUNT</field><field>PQNUMBER</field><field>SFDCKEY</field><field>QARROWKEY</field><field>OAKEY</field><field>PARENTKEY</field><field>PARENTID</field><field>PARENTNAME</field><field>INVOICEWITHPARENT</field><field>CUSTOMERKEY</field><field>CUSTOMERID</field><field>CUSTOMERNAME</field><field>SALESCONTACTKEY</field><field>SALESCONTACTID</field><field>SALESCONTACTNAME</field><field>PROJECTTYPEKEY</field><field>PROJECTTYPE</field><field>MANAGERKEY</field><field>MANAGERID</field><field>MANAGERCONTACTNAME</field><field>PROJECTDEPTKEY</field><field>DEPARTMENTID</field><field>DEPARTMENTNAME</field><field>PROJECTLOCATIONKEY</field><field>LOCATIONID</field><field>LOCATIONNAME</field><field>SITEINFO.CONTACTNAME</field><field>CONTACTINFO.CONTACTNAME</field><field>SHIPTO.CONTACTNAME</field><field>BILLTO.CONTACTNAME</field><field>TERMSKEY</field><field>TERMNAME</field><field>DOCNUMBER</field><field>CUSTUSERKEY</field><field>CUSTUSERID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>BUDGETEDCOST</field><field>CLASSID</field><field>CLASSNAME</field><field>CLASSKEY</field><field>USERRESTRICTIONS</field><field>BILLABLEEXPDEFAULT</field><field>BILLABLEAPPODEFAULT</field><field>BUDGETID</field><field>BUDGETKEY</field><field>BILLINGRATE</field><field>BILLINGPRICING</field><field>EXPENSERATE</field><field>EXPENSEPRICING</field><field>POAPRATE</field><field>POAPPRICING</field><field>SITEKEY</field><field>CONTACTKEY</field><field>SHIPTOKEY</field><field>BILLTOKEY</field><field>INVOICEMESSAGE</field><field>INVOICECURRENCY</field><field>BILLINGOVERMAX</field><field>EXCLUDEEXPENSES</field><field>CONTRACTKEY</field><field>CONTRACTID</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>ROOTPARENTKEY</field><field>ROOTPARENTID</field><field>ROOTPARENTNAME</field><field>CFDA</field><field>FUNDEDNAME</field><field>AGENCY</field><field>PAYER</field><field>FUNDINGOTHERID</field><field>ASSISTANCETYPE</field><field>REVRESTRICTION</field><field>RESTRICTIONEXPIRY</field><field>RESTRICTIONEXPIRATIONDATE</field><field>TIMESATISFACTIONSCHEDULED</field><field>ROLLUP_PROJ_KEY</field><field>ROLLUPPROJECTID</field><field>ROLLUPPROJECTNAME</field><field>WIPEXCLUDE</field><field>MELOCATIONKEY</field><field>MELOCATIONID</field><field>MELOCATIONNAME</field><field>SCOPE</field><field>INCLUSIONS</field><field>EXCLUSIONS</field><field>TERMS</field><field>SCHEDULESTARTDATE</field><field>ACTUALSTARTDATE</field><field>SCHEDULEDCOMPLETIONDATE</field><field>REVISEDCOMPLETIONDATE</field><field>SUBSTANTIALCOMPLETIONDATE</field><field>ACTUALCOMPLETIONDATE</field><field>NOTICETOPROCEED</field><field>RESPONSEDUE</field><field>EXECUTEDON</field><field>SCHEDULEIMPACT</field><field>TAXSOLUTIONKEY</field><field>TAXSOLUTIONID</field><field>POTAXSCHEDULEID</field><field>POTAXSCHEDULEKEY</field><field>CIPASSETID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4666'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-05-03
+        16:26:30</controlid><uniqueid>false</uniqueid><dtdversion>73.372208622574</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2020-05-14T22:39:44+00:00</sessiontimestamp><sessiontimeout>2002-09-27T08:59:41+00:00</sessiontimeout></authentication><result><status>failure</status><function>-Fallback-scrubbed-qZMzH</function><controlid>-Fallback-scrubbed-jSwcXAljZrhkIVmslYmSoApjdrGvTuxtyIts</controlid><errormessage><error><errorno>-Fallback-scrubbed-PgakQGvexd</errorno><description></description><description2>-Fallback-scrubbed-kUtKlOnWdCFyVLsLxhidqTskPToiEWBAkgRvuolhaSeKutKWSTUOpaztNbAlJrIcDdNWBVaGitaHGFnyMxWQJdLwNiBNhJQMWSmLZNdLUCARePvVnswkJNmNxKfqsVqhJswwtSQPprxHTudNCNVXakOutveYfMnHlSSjBKghfjjhQXUvICMcvYDeMvjKyHDOllHGUcVTJKmWxHvRFJELuarIQsjEeYOGTfiITVCkWeoDjqfBFRmcyLGUkoKdfufprILOuotWdXzDhubfXrGTXeIDKJECTfCgTLGM</description2><correction></correction></error></errormessage></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d240d38f04ae8-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:53:05 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '540'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '1088'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="8eabdbf0-cbed-49b1-bf7f-d8987c93044e"><query><object>PROJECT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '880'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-05-03
+        16:26:30</controlid><uniqueid>false</uniqueid><dtdversion>73.372208622574</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2003-03-17T16:20:24+00:00</sessiontimestamp><sessiontimeout>2002-01-08T14:28:43+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-qZMzH</function><controlid>-Fallback-scrubbed-tmIZZnthqLtbhwpoxCIGoXoAUOGQwwBOIevu</controlid><data
+        listtype="-Fallback-scrubbed-thXXqmD" totalcount="1" offset="6504" count="262"
+        numremaining="6504"><PROJECT><RECORDNO>17</RECORDNO></PROJECT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d24128caa4f8c-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:53:06 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '494'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '765'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="90f49459-4bd9-46a7-83a3-50fbd05e0ea5"><query><object>PROJECT</object><select><field>RECORDNO</field><field>PROJECTID</field><field>NAME</field><field>DESCRIPTION</field><field>CURRENCY</field><field>PROJECTCATEGORY</field><field>PROJECTSTATUSKEY</field><field>PROJECTSTATUS</field><field>PREVENTTIMESHEET</field><field>PREVENTEXPENSE</field><field>PREVENTAPPO</field><field>PREVENTGENINVOICE</field><field>STATUS</field><field>BEGINDATE</field><field>ENDDATE</field><field>BUDGETAMOUNT</field><field>CONTRACTAMOUNT</field><field>ACTUALAMOUNT</field><field>BUDGETQTY</field><field>ESTQTY</field><field>ACTUALQTY</field><field>APPROVEDQTY</field><field>REMAININGQTY</field><field>PERCENTCOMPLETE</field><field>OBSPERCENTCOMPLETE</field><field>BILLINGTYPE</field><field>SONUMBER</field><field>PONUMBER</field><field>POAMOUNT</field><field>PQNUMBER</field><field>SFDCKEY</field><field>QARROWKEY</field><field>OAKEY</field><field>PARENTKEY</field><field>PARENTID</field><field>PARENTNAME</field><field>INVOICEWITHPARENT</field><field>CUSTOMERKEY</field><field>CUSTOMERID</field><field>CUSTOMERNAME</field><field>SALESCONTACTKEY</field><field>SALESCONTACTID</field><field>SALESCONTACTNAME</field><field>PROJECTTYPEKEY</field><field>PROJECTTYPE</field><field>MANAGERKEY</field><field>MANAGERID</field><field>MANAGERCONTACTNAME</field><field>PROJECTDEPTKEY</field><field>DEPARTMENTID</field><field>DEPARTMENTNAME</field><field>PROJECTLOCATIONKEY</field><field>LOCATIONID</field><field>LOCATIONNAME</field><field>SITEINFO.CONTACTNAME</field><field>CONTACTINFO.CONTACTNAME</field><field>SHIPTO.CONTACTNAME</field><field>BILLTO.CONTACTNAME</field><field>TERMSKEY</field><field>TERMNAME</field><field>DOCNUMBER</field><field>CUSTUSERKEY</field><field>CUSTUSERID</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>BUDGETEDCOST</field><field>CLASSID</field><field>CLASSNAME</field><field>CLASSKEY</field><field>USERRESTRICTIONS</field><field>BILLABLEEXPDEFAULT</field><field>BILLABLEAPPODEFAULT</field><field>BUDGETID</field><field>BUDGETKEY</field><field>BILLINGRATE</field><field>BILLINGPRICING</field><field>EXPENSERATE</field><field>EXPENSEPRICING</field><field>POAPRATE</field><field>POAPPRICING</field><field>SITEKEY</field><field>CONTACTKEY</field><field>SHIPTOKEY</field><field>BILLTOKEY</field><field>INVOICEMESSAGE</field><field>INVOICECURRENCY</field><field>BILLINGOVERMAX</field><field>EXCLUDEEXPENSES</field><field>CONTRACTKEY</field><field>CONTRACTID</field><field>SUPDOCID</field><field>SUPDOCKEY</field><field>ROOTPARENTKEY</field><field>ROOTPARENTID</field><field>ROOTPARENTNAME</field><field>ROLLUP_PROJ_KEY</field><field>ROLLUPPROJECTID</field><field>ROLLUPPROJECTNAME</field><field>WIPEXCLUDE</field><field>MELOCATIONKEY</field><field>MELOCATIONID</field><field>MELOCATIONNAME</field><field>SCOPE</field><field>INCLUSIONS</field><field>EXCLUSIONS</field><field>TERMS</field><field>SCHEDULESTARTDATE</field><field>ACTUALSTARTDATE</field><field>SCHEDULEDCOMPLETIONDATE</field><field>REVISEDCOMPLETIONDATE</field><field>SUBSTANTIALCOMPLETIONDATE</field><field>ACTUALCOMPLETIONDATE</field><field>NOTICETOPROCEED</field><field>RESPONSEDUE</field><field>EXECUTEDON</field><field>SCHEDULEIMPACT</field><field>TAXSOLUTIONKEY</field><field>TAXSOLUTIONID</field><field>POTAXSCHEDULEID</field><field>POTAXSCHEDULEKEY</field><field>CIPASSETID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4382'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-05-03
+        16:26:30</controlid><uniqueid>false</uniqueid><dtdversion>73.372208622574</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2007-06-29T22:58:29+00:00</sessiontimestamp><sessiontimeout>1990-06-12T02:20:20+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-qZMzH</function><controlid>-Fallback-scrubbed-twSMWqvApvwDHgWMGkFNRKJmUlOJrYJuxkIU</controlid><data
+        listtype="-Fallback-scrubbed-thXXqmD" totalcount="1" offset="6504" count="262"
+        numremaining="6504"><PROJECT><RECORDNO>17</RECORDNO><PROJECTID>9697</PROJECTID><NAME>Alexander
+        Lamb</NAME><DESCRIPTION>-Fallback-scrubbed-EcyuypZHwFEDERi</DESCRIPTION><CURRENCY></CURRENCY><PROJECTCATEGORY>-Fallback-scrubbed-VbxTkEGF</PROJECTCATEGORY><PROJECTSTATUSKEY>5355</PROJECTSTATUSKEY><PROJECTSTATUS>-Fallback-scrubbed-gsimZj</PROJECTSTATUS><PREVENTTIMESHEET></PREVENTTIMESHEET><PREVENTEXPENSE></PREVENTEXPENSE><PREVENTAPPO></PREVENTAPPO><PREVENTGENINVOICE></PREVENTGENINVOICE><STATUS>-Fallback-scrubbed-pyMMOY</STATUS><BEGINDATE>04/15/2015</BEGINDATE><ENDDATE>09/11/2022</ENDDATE><BUDGETAMOUNT>6504</BUDGETAMOUNT><CONTRACTAMOUNT></CONTRACTAMOUNT><ACTUALAMOUNT></ACTUALAMOUNT><BUDGETQTY>6504</BUDGETQTY><ESTQTY>6504</ESTQTY><ACTUALQTY>6504</ACTUALQTY><APPROVEDQTY>6504</APPROVEDQTY><REMAININGQTY>6504</REMAININGQTY><PERCENTCOMPLETE></PERCENTCOMPLETE><OBSPERCENTCOMPLETE>6504</OBSPERCENTCOMPLETE><BILLINGTYPE></BILLINGTYPE><SONUMBER></SONUMBER><PONUMBER></PONUMBER><POAMOUNT></POAMOUNT><PQNUMBER></PQNUMBER><SFDCKEY></SFDCKEY><QARROWKEY></QARROWKEY><OAKEY></OAKEY><PARENTKEY></PARENTKEY><PARENTID></PARENTID><PARENTNAME></PARENTNAME><INVOICEWITHPARENT>false</INVOICEWITHPARENT><CUSTOMERKEY></CUSTOMERKEY><CUSTOMERID></CUSTOMERID><CUSTOMERNAME></CUSTOMERNAME><SALESCONTACTKEY></SALESCONTACTKEY><SALESCONTACTID></SALESCONTACTID><SALESCONTACTNAME></SALESCONTACTNAME><PROJECTTYPEKEY>5194</PROJECTTYPEKEY><PROJECTTYPE>-Fallback-scrubbed-SbHKJedw</PROJECTTYPE><MANAGERKEY></MANAGERKEY><MANAGERID></MANAGERID><MANAGERCONTACTNAME></MANAGERCONTACTNAME><PROJECTDEPTKEY></PROJECTDEPTKEY><DEPARTMENTID></DEPARTMENTID><DEPARTMENTNAME></DEPARTMENTNAME><PROJECTLOCATIONKEY></PROJECTLOCATIONKEY><LOCATIONID></LOCATIONID><LOCATIONNAME></LOCATIONNAME><SITEINFO.CONTACTNAME></SITEINFO.CONTACTNAME><CONTACTINFO.CONTACTNAME></CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><BILLTO.CONTACTNAME></BILLTO.CONTACTNAME><TERMSKEY></TERMSKEY><TERMNAME></TERMNAME><DOCNUMBER></DOCNUMBER><CUSTUSERKEY></CUSTUSERKEY><CUSTUSERID></CUSTUSERID><WHENCREATED>10/24/1974
+        12:37:43</WHENCREATED><WHENMODIFIED>12/12/2025 19:32:24</WHENMODIFIED><CREATEDBY>7154</CREATEDBY><MODIFIEDBY>7154</MODIFIEDBY><BUDGETEDCOST>6504</BUDGETEDCOST><CLASSID></CLASSID><CLASSNAME></CLASSNAME><CLASSKEY></CLASSKEY><USERRESTRICTIONS>-Fallback-scrubbed-qySRtLuKaBcmdS</USERRESTRICTIONS><BILLABLEEXPDEFAULT>false</BILLABLEEXPDEFAULT><BILLABLEAPPODEFAULT>false</BILLABLEAPPODEFAULT><BUDGETID></BUDGETID><BUDGETKEY></BUDGETKEY><BILLINGRATE></BILLINGRATE><BILLINGPRICING>-Fallback-scrubbed-TqmJESvTaycv</BILLINGPRICING><EXPENSERATE>6504</EXPENSERATE><EXPENSEPRICING>-Fallback-scrubbed-VQaiFelkBJMye</EXPENSEPRICING><POAPRATE>6504</POAPRATE><POAPPRICING>-Fallback-scrubbed-VQaiFelkBJMye</POAPPRICING><SITEKEY></SITEKEY><CONTACTKEY></CONTACTKEY><SHIPTOKEY></SHIPTOKEY><BILLTOKEY></BILLTOKEY><INVOICEMESSAGE></INVOICEMESSAGE><INVOICECURRENCY></INVOICECURRENCY><BILLINGOVERMAX>-Fallback-scrubbed-aRngJgVjKo</BILLINGOVERMAX><EXCLUDEEXPENSES>false</EXCLUDEEXPENSES><CONTRACTKEY></CONTRACTKEY><CONTRACTID></CONTRACTID><SUPDOCID></SUPDOCID><SUPDOCKEY></SUPDOCKEY><ROOTPARENTKEY>377</ROOTPARENTKEY><ROOTPARENTID>9697</ROOTPARENTID><ROOTPARENTNAME>Alexander
+        Lamb</ROOTPARENTNAME><ROLLUP_PROJ_KEY></ROLLUP_PROJ_KEY><ROLLUPPROJECTID></ROLLUPPROJECTID><ROLLUPPROJECTNAME></ROLLUPPROJECTNAME><WIPEXCLUDE>false</WIPEXCLUDE><MELOCATIONKEY></MELOCATIONKEY><MELOCATIONID></MELOCATIONID><MELOCATIONNAME></MELOCATIONNAME><SCOPE></SCOPE><INCLUSIONS></INCLUSIONS><EXCLUSIONS></EXCLUSIONS><TERMS></TERMS><SCHEDULESTARTDATE></SCHEDULESTARTDATE><ACTUALSTARTDATE></ACTUALSTARTDATE><SCHEDULEDCOMPLETIONDATE></SCHEDULEDCOMPLETIONDATE><REVISEDCOMPLETIONDATE></REVISEDCOMPLETIONDATE><SUBSTANTIALCOMPLETIONDATE></SUBSTANTIALCOMPLETIONDATE><ACTUALCOMPLETIONDATE></ACTUALCOMPLETIONDATE><NOTICETOPROCEED></NOTICETOPROCEED><RESPONSEDUE></RESPONSEDUE><EXECUTEDON></EXECUTEDON><SCHEDULEIMPACT></SCHEDULEIMPACT><TAXSOLUTIONKEY></TAXSOLUTIONKEY><TAXSOLUTIONID></TAXSOLUTIONID><POTAXSCHEDULEID></POTAXSCHEDULEID><POTAXSCHEDULEKEY></POTAXSCHEDULEKEY><CIPASSETID></CIPASSETID><CREATEDBYLOGINID>-Fallback-scrubbed-SteU</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-SteU</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-nZfoLBGikvywwMXQUVDYcwafLLMQoYHMDyXnqWEkDndnEnGgCZDBMOtBNXTvRWnCEeXWbcaSLgrMfiougCmrGjp</RECORD_URL></PROJECT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d2417a987da71-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:53:07 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '709'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '4865'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,444 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="5a397bcc-b8b3-4199-971c-65852e9baa6e"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1996-06-09
+        21:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-198426.356920963</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1985-05-03T01:52:31+00:00</sessiontimestamp><sessiontimeout>2021-12-02T11:30:34+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-BEtkhHTnnXZty</function><controlid>-Fallback-scrubbed-TNrATXOdiODDuixaERLHTIIWWUauTgElsVzn</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d11c3cc244835-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:40:36 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '556'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="14443e7d-8cda-42fa-9907-93bc0ad34fb6"><query><object>APPYMT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '879'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1996-06-09
+        21:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-198426.356920963</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1996-02-23T03:05:32+00:00</sessiontimestamp><sessiontimeout>2019-09-05T15:34:28+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-BZcsh</function><controlid>-Fallback-scrubbed-uCwOLMfJMjyfVFGSHlsXLWWOlAGnJxaJlwxt</controlid><data
+        listtype="-Fallback-scrubbed-LRByis" totalcount="8" offset="4568" count="3695"
+        numremaining="8683"><APPYMT><RECORDNO>1863</RECORDNO></APPYMT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d11c8bb4cda79-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:40:38 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '1617'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '764'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="a682dd76-476b-414f-a42a-e969df190f79"><query><object>APPYMT</object><select><field>RECORDNO</field><field>PRBATCHKEY</field><field>RECORDTYPE</field><field>RECORDID</field><field>FINANCIALENTITY</field><field>FINANCIALENTITYTYPE</field><field>FINANCIALACCOUNTNAME</field><field>FINANCIALACCOUNTCURRENCY</field><field>STATE</field><field>RAWSTATE</field><field>PAYMENTPROVIDER</field><field>PAYMENTMETHOD</field><field>PAYMENTMETHODKEY</field><field>ENTITY</field><field>VENDORID</field><field>VENDORNAME</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>WHENCREATED</field><field>WHENDUE</field><field>WHENPAID</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>PRBATCH</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>CLEARED</field><field>CLRDATE</field><field>SYSTEMGENERATED</field><field>BILLTOPAYTOKEY</field><field>WHENPOSTED</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>PAYMENTREQUESTMETHOD</field><field>VENDORKEY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>DISPLAYSTATE</field><field>PAYMENTSUBMITTER</field><field>FILEPAYMENTSERVICE</field><field>BANKFILEKEY</field><field>BANKTRXAMOUNT</field><field>BANKBASEAMOUNT</field><field>BANKCURRENCY</field><field>BANKBASECURRENCY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2685'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1996-06-09
+        21:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-198426.356920963</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2016-10-29T16:38:23+00:00</sessiontimestamp><sessiontimeout>1979-07-01T13:43:09+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-BZcsh</function><controlid>-Fallback-scrubbed-puyyJPSAAkGPaUSmkVuKlILCTCZXZhnYwVOT</controlid><data
+        listtype="-Fallback-scrubbed-LRByis" totalcount="8" offset="4568" count="2176"
+        numremaining="4568"><APPYMT><RECORDNO>1863</RECORDNO><PRBATCHKEY>4966</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-AOzikU</ENTITY><VENDORID>20001</VENDORID><VENDORNAME>-Fallback-scrubbed-FjWBqNRYvFayqLMfKwwLCBJwbqWJmOcgzBf</VENDORNAME><DOCNUMBER>9096</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-UPipptCgVnI</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>7690</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>7690</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>7690</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>7690</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-LKxePKjtJOPfsTwXPZUWSzFZCDncuGRcSxWDPvhuvawgEdEEiORnMLOJayZw</PRBATCH><AUWHENCREATED>04/26/2022
+        22:08:00</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>7467</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>7690</BANKTRXAMOUNT><BANKBASEAMOUNT>7690</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-ZgTLQqYdHYFDTYmljeTdXKfzgQSKfjFiImEgZtXAGhFrQMGgMahMVFfFJjyTjNpBjANCLQpILrzGxuMZuYDnROU</RECORD_URL></APPYMT><APPYMT><RECORDNO>1864</RECORDNO><PRBATCHKEY>233</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-t</STATE><RAWSTATE>-Fallback-scrubbed-t</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>-Fallback-scrubbed-OmMitMboiOiBg</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-SZozuIJoAHJ</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>08/09/1980</WHENCREATED><WHENDUE>08/09/1980</WHENDUE><WHENPAID>08/09/1980</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>5581</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>5581</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>5581</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>5581</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-iAnpTRfgzOeyNfNijJbkiJlsuvjlyteiCouFXzbaSiCPFcdmTKOmcdijPBzKXCTReGKC</PRBATCH><AUWHENCREATED>11/18/2009
+        08:34:01</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:52:34</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>08/09/1980</WHENPOSTED><INCLUSIVETAX></INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-WgWlCV</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>5581</BANKTRXAMOUNT><BANKBASEAMOUNT>5581</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-LAhxkiEIeseXTRXiSndjRNemcKqZeaPQnWZAmLWZQmOZsOlhAlNdAgPzRswlRYUHNPiIaotjehdrxBddoxEpCFF</RECORD_URL></APPYMT><APPYMT><RECORDNO>1861</RECORDNO><PRBATCHKEY>7167</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-t</STATE><RAWSTATE>-Fallback-scrubbed-t</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>6123</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-SZozuIJoAHJ</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1865</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1865</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1865</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1865</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-mzmsXSYqHNTAnHUspYAVHReoZqdLMGWkCGzqYDllfbQwDifuNAZtZHPNYSTj</PRBATCH><AUWHENCREATED>10/13/2012
+        04:28:27</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:52:34</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-WgWlCV</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1865</BANKTRXAMOUNT><BANKBASEAMOUNT>1865</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-wloppUSFwwnXvDhsnNDJpqqvflKVIlTqPYRbAReZvHIspFpULgBadFyHHpEuKiDxjpQaWcCzmMRKZgygritiylQ</RECORD_URL></APPYMT><APPYMT><RECORDNO>1818</RECORDNO><PRBATCHKEY>6675</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-ysiaMDe</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-PFdP</PAYMENTMETHOD><PAYMENTMETHODKEY>3390</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-jldbUN</ENTITY><VENDORID>20024</VENDORID><VENDORNAME>-Fallback-scrubbed-FycdmznAnGyqZ</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>07/02/1985</WHENCREATED><WHENDUE>07/02/1985</WHENDUE><WHENPAID>07/02/1985</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1417</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1417</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1417</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1417</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-FPWyotiOMZWgiYxhkdjmD</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-WhRRGUFjxldlHEsNCvLLHHfxqDCtAYEISFaJQAaGYxgVtbPLSYCqlc</PRBATCH><AUWHENCREATED>09/22/1977
+        01:50:11</AUWHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>3473</BILLTOPAYTOKEY><WHENPOSTED>07/02/1985</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>4849</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1417</BANKTRXAMOUNT><BANKBASEAMOUNT>1417</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-UycepnydiVzndGnGGMdmehEMpoMjnekzLJogQuhWwRLtxsIIiclwWPhstNDxsGUvGhClFgyggBOKeAvjczOwJaU</RECORD_URL></APPYMT><APPYMT><RECORDNO>1857</RECORDNO><PRBATCHKEY>5815</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-x</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-wWzaJfYgBjUYL</PAYMENTMETHOD><PAYMENTMETHODKEY>3695</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-oryJgv</ENTITY><VENDORID>20007</VENDORID><VENDORNAME>-Fallback-scrubbed-DmHyCd</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-QcJtrKHF</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID></WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>5050</TOTALENTERED><TOTALSELECTED>5050</TOTALSELECTED><TOTALPAID>4568</TOTALPAID><TOTALDUE>5050</TOTALDUE><TRX_TOTALENTERED>5050</TRX_TOTALENTERED><TRX_TOTALSELECTED>5050</TRX_TOTALSELECTED><TRX_TOTALPAID>4568</TRX_TOTALPAID><TRX_TOTALDUE>5050</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qGwcqENoURT</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-KlISCqanIEYXrUc</PRBATCH><AUWHENCREATED>03/16/2006
+        11:16:07</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>1178</BILLTOPAYTOKEY><WHENPOSTED>07/28/1998</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD>-Fallback-scrubbed-UXmevJeYMP</PAYMENTREQUESTMETHOD><VENDORKEY>3837</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-XClvmrEJ</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>5050</BANKTRXAMOUNT><BANKBASEAMOUNT>5050</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-EShJPLpvUtALSoSNiEJeDTWKmJhxkSfYyeLMsbPHaRjGoxFWMkFMppaXygeYRMACigdJRbmVRbsCQdwLYjrpuaY</RECORD_URL></APPYMT><APPYMT><RECORDNO>1859</RECORDNO><PRBATCHKEY>1911</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>3841</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-jkVyjCjpft</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1980</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1980</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1980</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1980</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-NgqAWORvuWubgwjuAGpNhosneJbAySMTjqanYwndodZlsxhwnGsQPXebzBE</PRBATCH><AUWHENCREATED>04/15/2005
+        06:16:15</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:12:41</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1980</BANKTRXAMOUNT><BANKBASEAMOUNT>1980</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-TrGnIVGnMIgxXmPYsIONEwvjUSDbpZQDMkJpZIorbiJPYjNrzPZgVrMIPFMRTAFvdJsYiQusczoIklhWDzJYpsA</RECORD_URL></APPYMT><APPYMT><RECORDNO>1822</RECORDNO><PRBATCHKEY>2655</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-ysiaMDe</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-PFdP</PAYMENTMETHOD><PAYMENTMETHODKEY>3390</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-jldbUN</ENTITY><VENDORID>20024</VENDORID><VENDORNAME>-Fallback-scrubbed-FycdmznAnGyqZ</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>07/02/1985</WHENCREATED><WHENDUE>07/02/1985</WHENDUE><WHENPAID>07/02/1985</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1417</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1417</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1417</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1417</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-FPWyotiOMZWgiYxhkdjmD</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-QTAPWwwUixNGZFVdXParoBLpfMFjTUtRleJmiTXqRDXgciimjrYbCm</PRBATCH><AUWHENCREATED>08/18/2006
+        17:07:11</AUWHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>3473</BILLTOPAYTOKEY><WHENPOSTED>07/02/1985</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>4849</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1417</BANKTRXAMOUNT><BANKBASEAMOUNT>1417</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-YeRJyElcRGvQconVVJpMjViqtUwDIYUpzflRHVWDtKmrWeFfQIkwasHtWzZjlTFFHWTdAHeXczffVpwkeOSfZdX</RECORD_URL></APPYMT><APPYMT><RECORDNO>1842</RECORDNO><PRBATCHKEY>5815</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-x</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-wWzaJfYgBjUYL</PAYMENTMETHOD><PAYMENTMETHODKEY>3695</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-eDBfMh</ENTITY><VENDORID>20008</VENDORID><VENDORNAME>-Fallback-scrubbed-TMoOYsvNwNZcte</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>10/09/1992</WHENCREATED><WHENDUE>10/09/1992</WHENDUE><WHENPAID></WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>2518</TOTALENTERED><TOTALSELECTED>2518</TOTALSELECTED><TOTALPAID>4568</TOTALPAID><TOTALDUE>2518</TOTALDUE><TRX_TOTALENTERED>2518</TRX_TOTALENTERED><TRX_TOTALSELECTED>2518</TRX_TOTALSELECTED><TRX_TOTALPAID>4568</TRX_TOTALPAID><TRX_TOTALDUE>2518</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-sHzwecvkTfGigF</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-KlISCqanIEYXrUc</PRBATCH><AUWHENCREATED>07/05/1986
+        09:49:59</AUWHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>5175</BILLTOPAYTOKEY><WHENPOSTED>07/28/1998</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD>-Fallback-scrubbed-UXmevJeYMP</PAYMENTREQUESTMETHOD><VENDORKEY>2176</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-XClvmrEJ</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>2518</BANKTRXAMOUNT><BANKBASEAMOUNT>2518</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY>3695</MEGAENTITYKEY><MEGAENTITYID>1417</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-WFSK</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-mbfLJwFItAYBKVkLKuWPnVkwoDqJnNvxXJPPjPQkNCYCQbymYcBtyKpcQRCjYkwGIMMxWEmRBqLsWnJDUKegqhy</RECORD_URL></APPYMT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d11d45c650b84-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:40:39 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '867'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.06'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '19708'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="2f1d71af-1cc9-4a90-8586-9192cebdba10"><query><object>APPYMT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '879'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1996-06-09
+        21:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-198426.356920963</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1981-11-18T05:29:21+00:00</sessiontimestamp><sessiontimeout>2024-10-13T22:34:12+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-BZcsh</function><controlid>-Fallback-scrubbed-YkzUnzZFhAzXmunuchmjyNSFsXyKHJTAMtSA</controlid><data
+        listtype="-Fallback-scrubbed-LRByis" totalcount="8" offset="4568" count="3695"
+        numremaining="8683"><APPYMT><RECORDNO>1863</RECORDNO></APPYMT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d11dbcf20f237-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:40:40 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '564'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '764'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="dd1ef20a-0f97-4938-8b90-760d3d5dcb12"><query><object>APPYMT</object><select><field>RECORDNO</field><field>PRBATCHKEY</field><field>RECORDTYPE</field><field>RECORDID</field><field>FINANCIALENTITY</field><field>FINANCIALENTITYTYPE</field><field>FINANCIALACCOUNTNAME</field><field>FINANCIALACCOUNTCURRENCY</field><field>STATE</field><field>RAWSTATE</field><field>PAYMENTPROVIDER</field><field>PAYMENTMETHOD</field><field>PAYMENTMETHODKEY</field><field>ENTITY</field><field>VENDORID</field><field>VENDORNAME</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>WHENCREATED</field><field>WHENDUE</field><field>WHENPAID</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>PRBATCH</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>CLEARED</field><field>CLRDATE</field><field>SYSTEMGENERATED</field><field>BILLTOPAYTOKEY</field><field>WHENPOSTED</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>PAYMENTREQUESTMETHOD</field><field>VENDORKEY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>DISPLAYSTATE</field><field>PAYMENTSUBMITTER</field><field>FILEPAYMENTSERVICE</field><field>BANKFILEKEY</field><field>BANKTRXAMOUNT</field><field>BANKBASEAMOUNT</field><field>BANKCURRENCY</field><field>BANKBASECURRENCY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2685'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1996-06-09
+        21:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-198426.356920963</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1979-01-06T13:46:19+00:00</sessiontimestamp><sessiontimeout>1976-03-18T12:06:24+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-BZcsh</function><controlid>-Fallback-scrubbed-nfCjksMwFEprWuzxucspcCWqJlbEUknWUnDY</controlid><data
+        listtype="-Fallback-scrubbed-LRByis" totalcount="8" offset="4568" count="2176"
+        numremaining="4568"><APPYMT><RECORDNO>1863</RECORDNO><PRBATCHKEY>4966</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-AOzikU</ENTITY><VENDORID>20001</VENDORID><VENDORNAME>-Fallback-scrubbed-FjWBqNRYvFayqLMfKwwLCBJwbqWJmOcgzBf</VENDORNAME><DOCNUMBER>9096</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-UPipptCgVnI</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>7690</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>7690</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>7690</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>7690</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-LKxePKjtJOPfsTwXPZUWSzFZCDncuGRcSxWDPvhuvawgEdEEiORnMLOJayZw</PRBATCH><AUWHENCREATED>04/26/2022
+        22:08:00</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>7467</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>7690</BANKTRXAMOUNT><BANKBASEAMOUNT>7690</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-ZgTLQqYdHYFDTYmljeTdXKfzgQSKfjFiImEgZtXAGhFrQMGgMahMVFfFJjyTjNpBjANCLQpILrzGxuMZuYDnROU</RECORD_URL></APPYMT><APPYMT><RECORDNO>1864</RECORDNO><PRBATCHKEY>233</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-t</STATE><RAWSTATE>-Fallback-scrubbed-t</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>-Fallback-scrubbed-OmMitMboiOiBg</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-SZozuIJoAHJ</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>08/09/1980</WHENCREATED><WHENDUE>08/09/1980</WHENDUE><WHENPAID>08/09/1980</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>5581</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>5581</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>5581</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>5581</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-iAnpTRfgzOeyNfNijJbkiJlsuvjlyteiCouFXzbaSiCPFcdmTKOmcdijPBzKXCTReGKC</PRBATCH><AUWHENCREATED>11/18/2009
+        08:34:01</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:52:34</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>08/09/1980</WHENPOSTED><INCLUSIVETAX></INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-WgWlCV</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>5581</BANKTRXAMOUNT><BANKBASEAMOUNT>5581</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-LAhxkiEIeseXTRXiSndjRNemcKqZeaPQnWZAmLWZQmOZsOlhAlNdAgPzRswlRYUHNPiIaotjehdrxBddoxEpCFF</RECORD_URL></APPYMT><APPYMT><RECORDNO>1861</RECORDNO><PRBATCHKEY>7167</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-t</STATE><RAWSTATE>-Fallback-scrubbed-t</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>6123</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-SZozuIJoAHJ</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1865</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1865</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1865</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1865</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-mzmsXSYqHNTAnHUspYAVHReoZqdLMGWkCGzqYDllfbQwDifuNAZtZHPNYSTj</PRBATCH><AUWHENCREATED>10/13/2012
+        04:28:27</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:52:34</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-WgWlCV</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1865</BANKTRXAMOUNT><BANKBASEAMOUNT>1865</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-wloppUSFwwnXvDhsnNDJpqqvflKVIlTqPYRbAReZvHIspFpULgBadFyHHpEuKiDxjpQaWcCzmMRKZgygritiylQ</RECORD_URL></APPYMT><APPYMT><RECORDNO>1818</RECORDNO><PRBATCHKEY>6675</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-ysiaMDe</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-PFdP</PAYMENTMETHOD><PAYMENTMETHODKEY>3390</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-jldbUN</ENTITY><VENDORID>20024</VENDORID><VENDORNAME>-Fallback-scrubbed-FycdmznAnGyqZ</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>07/02/1985</WHENCREATED><WHENDUE>07/02/1985</WHENDUE><WHENPAID>07/02/1985</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1417</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1417</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1417</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1417</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-FPWyotiOMZWgiYxhkdjmD</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-WhRRGUFjxldlHEsNCvLLHHfxqDCtAYEISFaJQAaGYxgVtbPLSYCqlc</PRBATCH><AUWHENCREATED>09/22/1977
+        01:50:11</AUWHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>3473</BILLTOPAYTOKEY><WHENPOSTED>07/02/1985</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>4849</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1417</BANKTRXAMOUNT><BANKBASEAMOUNT>1417</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-UycepnydiVzndGnGGMdmehEMpoMjnekzLJogQuhWwRLtxsIIiclwWPhstNDxsGUvGhClFgyggBOKeAvjczOwJaU</RECORD_URL></APPYMT><APPYMT><RECORDNO>1857</RECORDNO><PRBATCHKEY>5815</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-x</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-wWzaJfYgBjUYL</PAYMENTMETHOD><PAYMENTMETHODKEY>3695</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-oryJgv</ENTITY><VENDORID>20007</VENDORID><VENDORNAME>-Fallback-scrubbed-DmHyCd</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-QcJtrKHF</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID></WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>5050</TOTALENTERED><TOTALSELECTED>5050</TOTALSELECTED><TOTALPAID>4568</TOTALPAID><TOTALDUE>5050</TOTALDUE><TRX_TOTALENTERED>5050</TRX_TOTALENTERED><TRX_TOTALSELECTED>5050</TRX_TOTALSELECTED><TRX_TOTALPAID>4568</TRX_TOTALPAID><TRX_TOTALDUE>5050</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qGwcqENoURT</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-KlISCqanIEYXrUc</PRBATCH><AUWHENCREATED>03/16/2006
+        11:16:07</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>1178</BILLTOPAYTOKEY><WHENPOSTED>07/28/1998</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD>-Fallback-scrubbed-UXmevJeYMP</PAYMENTREQUESTMETHOD><VENDORKEY>3837</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-XClvmrEJ</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>5050</BANKTRXAMOUNT><BANKBASEAMOUNT>5050</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-EShJPLpvUtALSoSNiEJeDTWKmJhxkSfYyeLMsbPHaRjGoxFWMkFMppaXygeYRMACigdJRbmVRbsCQdwLYjrpuaY</RECORD_URL></APPYMT><APPYMT><RECORDNO>1859</RECORDNO><PRBATCHKEY>1911</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-NBAGbzfDsuEC</PAYMENTMETHOD><PAYMENTMETHODKEY>9772</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-EbODHg</ENTITY><VENDORID>20003</VENDORID><VENDORNAME>-Fallback-scrubbed-Fda</VENDORNAME><DOCNUMBER>3841</DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-jkVyjCjpft</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>01/30/1972</WHENCREATED><WHENDUE>01/30/1972</WHENDUE><WHENPAID>01/30/1972</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1980</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1980</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1980</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1980</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-qzMGzRMoUfryp</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-NgqAWORvuWubgwjuAGpNhosneJbAySMTjqanYwndodZlsxhwnGsQPXebzBE</PRBATCH><AUWHENCREATED>04/15/2005
+        06:16:15</AUWHENCREATED><WHENMODIFIED>02/27/2026 00:12:41</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-G</SYSTEMGENERATED><BILLTOPAYTOKEY>485</BILLTOPAYTOKEY><WHENPOSTED>01/30/1972</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>1248</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1980</BANKTRXAMOUNT><BANKBASEAMOUNT>1980</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-TrGnIVGnMIgxXmPYsIONEwvjUSDbpZQDMkJpZIorbiJPYjNrzPZgVrMIPFMRTAFvdJsYiQusczoIklhWDzJYpsA</RECORD_URL></APPYMT><APPYMT><RECORDNO>1822</RECORDNO><PRBATCHKEY>2655</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-ysiaMDe</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-P</STATE><RAWSTATE>-Fallback-scrubbed-P</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-PFdP</PAYMENTMETHOD><PAYMENTMETHODKEY>3390</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-jldbUN</ENTITY><VENDORID>20024</VENDORID><VENDORNAME>-Fallback-scrubbed-FycdmznAnGyqZ</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>07/02/1985</WHENCREATED><WHENDUE>07/02/1985</WHENDUE><WHENPAID>07/02/1985</WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>1417</TOTALENTERED><TOTALSELECTED>4568</TOTALSELECTED><TOTALPAID>1417</TOTALPAID><TOTALDUE>4568</TOTALDUE><TRX_TOTALENTERED>1417</TRX_TOTALENTERED><TRX_TOTALSELECTED>4568</TRX_TOTALSELECTED><TRX_TOTALPAID>1417</TRX_TOTALPAID><TRX_TOTALDUE>4568</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-FPWyotiOMZWgiYxhkdjmD</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-QTAPWwwUixNGZFVdXParoBLpfMFjTUtRleJmiTXqRDXgciimjrYbCm</PRBATCH><AUWHENCREATED>08/18/2006
+        17:07:11</AUWHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>3473</BILLTOPAYTOKEY><WHENPOSTED>07/02/1985</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD></PAYMENTREQUESTMETHOD><VENDORKEY>4849</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-fupPpMcDs</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>1417</BANKTRXAMOUNT><BANKBASEAMOUNT>1417</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-YeRJyElcRGvQconVVJpMjViqtUwDIYUpzflRHVWDtKmrWeFfQIkwasHtWzZjlTFFHWTdAHeXczffVpwkeOSfZdX</RECORD_URL></APPYMT><APPYMT><RECORDNO>1842</RECORDNO><PRBATCHKEY>5815</PRBATCHKEY><RECORDTYPE>-Fallback-scrubbed-ar</RECORDTYPE><RECORDID></RECORDID><FINANCIALENTITY>-Fallback-scrubbed-kFKwypY</FINANCIALENTITY><FINANCIALENTITYTYPE>-Fallback-scrubbed-mF</FINANCIALENTITYTYPE><FINANCIALACCOUNTNAME>-Fallback-scrubbed-BnSYGSugQyzyBgeFngCCG</FINANCIALACCOUNTNAME><FINANCIALACCOUNTCURRENCY>-Fallback-scrubbed-Qql</FINANCIALACCOUNTCURRENCY><STATE>-Fallback-scrubbed-x</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><PAYMENTPROVIDER></PAYMENTPROVIDER><PAYMENTMETHOD>-Fallback-scrubbed-wWzaJfYgBjUYL</PAYMENTMETHOD><PAYMENTMETHODKEY>3695</PAYMENTMETHODKEY><ENTITY>-Fallback-scrubbed-eDBfMh</ENTITY><VENDORID>20008</VENDORID><VENDORNAME>-Fallback-scrubbed-TMoOYsvNwNZcte</VENDORNAME><DOCNUMBER></DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><WHENCREATED>10/09/1992</WHENCREATED><WHENDUE>10/09/1992</WHENDUE><WHENPAID></WHENPAID><BASECURR>-Fallback-scrubbed-Qql</BASECURR><CURRENCY>-Fallback-scrubbed-Qql</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>2518</TOTALENTERED><TOTALSELECTED>2518</TOTALSELECTED><TOTALPAID>4568</TOTALPAID><TOTALDUE>2518</TOTALDUE><TRX_TOTALENTERED>2518</TRX_TOTALENTERED><TRX_TOTALSELECTED>2518</TRX_TOTALSELECTED><TRX_TOTALPAID>4568</TRX_TOTALPAID><TRX_TOTALDUE>2518</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-sHzwecvkTfGigF</BILLTOPAYTOCONTACTNAME><PRBATCH>-Fallback-scrubbed-KlISCqanIEYXrUc</PRBATCH><AUWHENCREATED>07/05/1986
+        09:49:59</AUWHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>9141</CREATEDBY><MODIFIEDBY>9141</MODIFIEDBY><CLEARED>-Fallback-scrubbed-O</CLEARED><CLRDATE></CLRDATE><SYSTEMGENERATED>-Fallback-scrubbed-O</SYSTEMGENERATED><BILLTOPAYTOKEY>5175</BILLTOPAYTOKEY><WHENPOSTED>07/28/1998</WHENPOSTED><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><PAYMENTREQUESTMETHOD>-Fallback-scrubbed-UXmevJeYMP</PAYMENTREQUESTMETHOD><VENDORKEY>2176</VENDORKEY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><DISPLAYSTATE>-Fallback-scrubbed-XClvmrEJ</DISPLAYSTATE><PAYMENTSUBMITTER></PAYMENTSUBMITTER><FILEPAYMENTSERVICE>-Fallback-scrubbed-GEtR</FILEPAYMENTSERVICE><BANKFILEKEY></BANKFILEKEY><BANKTRXAMOUNT>2518</BANKTRXAMOUNT><BANKBASEAMOUNT>2518</BANKBASEAMOUNT><BANKCURRENCY>-Fallback-scrubbed-Qql</BANKCURRENCY><BANKBASECURRENCY>-Fallback-scrubbed-Qql</BANKBASECURRENCY><CREATEDBYLOGINID>-Fallback-scrubbed-DbRH</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-DbRH</MODIFIEDBYLOGINID><MEGAENTITYKEY>3695</MEGAENTITYKEY><MEGAENTITYID>1417</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-WFSK</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-mbfLJwFItAYBKVkLKuWPnVkwoDqJnNvxXJPPjPQkNCYCQbymYcBtyKpcQRCjYkwGIMMxWEmRBqLsWnJDUKegqhy</RECORD_URL></APPYMT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d11e23c6cf249-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:40:41 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '524'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '19708'
+    status:
+      code: 200
+      message: OK
+version: 1

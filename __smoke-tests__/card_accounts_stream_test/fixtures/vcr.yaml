@@ -1,0 +1,434 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="eff8c5ec-2630-421d-9950-5bd701afde16"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2026-02-06
+        15:31:42</controlid><uniqueid>false</uniqueid><dtdversion>56717639113.4668</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1972-08-24T04:06:36+00:00</sessiontimestamp><sessiontimeout>2025-01-27T02:38:49+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-kHqAqJbIAncxj</function><controlid>-Fallback-scrubbed-zTqYOSuoYoerOGuLiFzKallZdxHBBsocyVWZ</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1b032a1ba156-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:55 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '602'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="707dacd5-8485-41d5-820c-5a4f13ff046c"><query><object>CREDITCARD</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '883'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2026-02-06
+        15:31:42</controlid><uniqueid>false</uniqueid><dtdversion>56717639113.4668</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1972-08-24T04:06:36+00:00</sessiontimestamp><sessiontimeout>2025-01-27T02:38:49+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-beJzJ</function><controlid>-Fallback-scrubbed-ebIzMcdErsggBKLvrVvjdoXDznHwtyhihIxX</controlid><data
+        listtype="-Fallback-scrubbed-XWWqTPEaHy" totalcount="3" offset="5626" count="9847"
+        numremaining="508"><CREDITCARD><RECORDNO>4</RECORDNO></CREDITCARD></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1b08efb6f53b-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:56 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '515'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '773'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="a17f3786-fc64-45e3-9ad7-dd186928ba72"><query><object>CREDITCARD</object><select><field>RECORDNO</field><field>CARDID</field><field>DESCRIPTION</field><field>CARDNUM</field><field>CARDTYPE</field><field>EXP_MONTH</field><field>EXP_YEAR</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>STATUS</field><field>LIABACCTKEY</field><field>LIABACCT#</field><field>FEESACCTKEY</field><field>FEESACCTID</field><field>VENDORID</field><field>VENDORKEY</field><field>DEPT</field><field>DEPT#</field><field>LOCATION</field><field>LOCATION#</field><field>LOCATIONNAME</field><field>LIABILITYTYPE</field><field>RECDATE</field><field>RECBAL</field><field>FINANCIALDATA.JOURNAL</field><field>FINANCIALDATA.JOURNALTITLE</field><field>FINANCIALDATA.JRNLKEY2</field><field>FINANCIALDATA.JOURNALTITLE2</field><field>FINANCIALDATA.PARENTENTITY</field><field>FINANCIALDATA.PARENTENTITYNAME</field><field>FINANCIALDATA.CHECKINGACCOUNTID</field><field>FINANCIALDATA.CHECKINGACCOUNTKEY</field><field>FINANCIALDATA.RECORDNO</field><field>USEFORINTACCT</field><field>FEESACCTLABELKEY</field><field>FEESACCTLABELID</field><field>FINCHRGACCT</field><field>FINCHRGACCTKEY</field><field>FINCHRGACCTLABEL</field><field>FINCHRGACCTLABELKEY</field><field>CUTOFFDATE</field><field>FINANCIALDATA.DISABLEIET</field><field>WHENMODIFIED</field><field>WHENCREATED</field><field>MODIFIEDBY</field><field>CREATEDBY</field><field>OUTSOURCECARD</field><field>AUTOMATECARDPYMTSEND</field><field>AUTOMATECARDPYMTCONF</field><field>AMEX_PAYVE_ACCOUNTID</field><field>OUTSOURCECARDOVERRIDE</field><field>AMEX_CARD_ACCOUNT_ID</field><field>WPBSTATUS</field><field>WPBBANK</field><field>WPBACCOUNTNAME</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>WPBREFRESHSTATUS2</field><field>FINANCIALINSTITUTIONID</field><field>WPBSUPPORTMAL</field><field>RULESETKEY</field><field>RULESETID</field><field>RULESETNAME</field><field>CURRENCY_R</field><field>USEDINEMPEXPENSE</field><field>EXPENSEACCTNO</field><field>EECLEARINGACCTLABEL</field><field>EECLEARINGACCTLABELKEY</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3553'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2026-02-06
+        15:31:42</controlid><uniqueid>false</uniqueid><dtdversion>56717639113.4668</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2010-04-29T12:08:40+00:00</sessiontimestamp><sessiontimeout>2024-11-05T17:18:17+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-beJzJ</function><controlid>-Fallback-scrubbed-dZgOdZjxhIMhGmdmBtJnNDbsrLIGZiodcJos</controlid><data
+        listtype="-Fallback-scrubbed-XWWqTPEaHy" totalcount="3" offset="5626" count="5049"
+        numremaining="5626"><CREDITCARD><RECORDNO>4</RECORDNO><CARDID>6655</CARDID><DESCRIPTION>-Fallback-scrubbed-mGcXo</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>8365</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>2894</LIABACCTKEY><LIABACCT>5831</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID>20007</VENDORID><VENDORKEY>1220</VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>-Fallback-scrubbed-TjZjEh</LOCATION><LOCATION>5394</LOCATION><LOCATIONNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-lsyGhU</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY></FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME></FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID></FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY></FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>7279</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        14:33:02</WHENMODIFIED><WHENCREATED>11/21/2006 03:13:24</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-KUs</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>5394</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-TjZjEh</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-XGhtKDdMbrcimRRMBHkosoNzJkDmkNBhpIhQyobDQEyhkKwGNKebpCsBzAjYoFVxUhdMAXFoGhZnYQkJIibGJqf</RECORD_URL></CREDITCARD><CREDITCARD><RECORDNO>5</RECORDNO><CARDID>5391</CARDID><DESCRIPTION>-Fallback-scrubbed-ArvUFigjH</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>2890</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>6764</LIABACCTKEY><LIABACCT>673</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID></VENDORID><VENDORKEY></VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>-Fallback-scrubbed-TjZjEh</LOCATION><LOCATION>5394</LOCATION><LOCATIONNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-yynaw</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME>-Fallback-scrubbed-uqTexPJMZsPsQWcrsXhsz</FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY>9847</FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>7952</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        16:07:38</WHENMODIFIED><WHENCREATED>12/21/1970 06:00:21</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-KUs</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>5394</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-TjZjEh</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-zQTEgixZqnqeJWSAbRjLMDpSkhcachBNqOcSljHPYqZpXmRItfSlUZqTmDcbYYcaZyIZphqgoCpBFJvwkPNHpwu</RECORD_URL></CREDITCARD><CREDITCARD><RECORDNO>6</RECORDNO><CARDID>6809</CARDID><DESCRIPTION>-Fallback-scrubbed-MSHSkoI</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>2890</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>6764</LIABACCTKEY><LIABACCT>673</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID></VENDORID><VENDORKEY></VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>8184</LOCATION><LOCATION>508</LOCATION><LOCATIONNAME>-Fallback-scrubbed-NSXm</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-yynaw</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME>-Fallback-scrubbed-uqTexPJMZsPsQWcrsXhsz</FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY>9847</FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>8613</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        16:13:33</WHENMODIFIED><WHENCREATED>02/10/1973 08:21:53</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-wGi</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>508</MEGAENTITYKEY><MEGAENTITYID>8184</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-NSXm</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-bBNjfXevElqzMqEMeSkGxvlfVycgwywclGaBeHfgGZzrfmjSvwJZfVREXobPjezdzHUgKPxAwXuiztCmUDNXeFX</RECORD_URL></CREDITCARD></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1b0dad16a5e7-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:57 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '678'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '11128'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="b554b836-b67a-4ad0-8424-85deb823ca17"><query><object>CREDITCARD</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '883'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2026-02-06
+        15:31:42</controlid><uniqueid>false</uniqueid><dtdversion>56717639113.4668</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2011-04-09T03:46:47+00:00</sessiontimestamp><sessiontimeout>1972-01-14T08:06:23+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-beJzJ</function><controlid>-Fallback-scrubbed-cKdpFuDfUiXvrTUVCMAbffmFCpJmFHIOkOci</controlid><data
+        listtype="-Fallback-scrubbed-XWWqTPEaHy" totalcount="3" offset="5626" count="9847"
+        numremaining="508"><CREDITCARD><RECORDNO>4</RECORDNO></CREDITCARD></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1b138896bc64-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:58 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '1506'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.03'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '773'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="ae40c1d2-a8f8-4685-8ea5-f665592722be"><query><object>CREDITCARD</object><select><field>RECORDNO</field><field>CARDID</field><field>DESCRIPTION</field><field>CARDNUM</field><field>CARDTYPE</field><field>EXP_MONTH</field><field>EXP_YEAR</field><field>MAILADDRESS.ADDRESS1</field><field>MAILADDRESS.ADDRESS2</field><field>MAILADDRESS.ADDRESS3</field><field>MAILADDRESS.CITY</field><field>MAILADDRESS.STATE</field><field>MAILADDRESS.ZIP</field><field>MAILADDRESS.COUNTRY</field><field>MAILADDRESS.COUNTRYCODE</field><field>STATUS</field><field>LIABACCTKEY</field><field>LIABACCT#</field><field>FEESACCTKEY</field><field>FEESACCTID</field><field>VENDORID</field><field>VENDORKEY</field><field>DEPT</field><field>DEPT#</field><field>LOCATION</field><field>LOCATION#</field><field>LOCATIONNAME</field><field>LIABILITYTYPE</field><field>RECDATE</field><field>RECBAL</field><field>FINANCIALDATA.JOURNAL</field><field>FINANCIALDATA.JOURNALTITLE</field><field>FINANCIALDATA.JRNLKEY2</field><field>FINANCIALDATA.JOURNALTITLE2</field><field>FINANCIALDATA.PARENTENTITY</field><field>FINANCIALDATA.PARENTENTITYNAME</field><field>FINANCIALDATA.CHECKINGACCOUNTID</field><field>FINANCIALDATA.CHECKINGACCOUNTKEY</field><field>FINANCIALDATA.RECORDNO</field><field>USEFORINTACCT</field><field>FEESACCTLABELKEY</field><field>FEESACCTLABELID</field><field>FINCHRGACCT</field><field>FINCHRGACCTKEY</field><field>FINCHRGACCTLABEL</field><field>FINCHRGACCTLABELKEY</field><field>CUTOFFDATE</field><field>FINANCIALDATA.DISABLEIET</field><field>WHENMODIFIED</field><field>WHENCREATED</field><field>MODIFIEDBY</field><field>CREATEDBY</field><field>OUTSOURCECARD</field><field>AUTOMATECARDPYMTSEND</field><field>AUTOMATECARDPYMTCONF</field><field>AMEX_PAYVE_ACCOUNTID</field><field>OUTSOURCECARDOVERRIDE</field><field>AMEX_CARD_ACCOUNT_ID</field><field>WPBSTATUS</field><field>WPBBANK</field><field>WPBACCOUNTNAME</field><field>WPBAVAILABLEBALANCEAMOUNT</field><field>WPBAVAILABLEBALANCEDATE</field><field>WPBLEDGERBALANCEAMOUNT</field><field>WPBLEDGERBALANCEDATE</field><field>WPBLASTTRANSACTIONSRECEIVED</field><field>WPBLASTBANKFEEDDATE</field><field>WPBREFRESHSTATUS</field><field>WPBREFRESHSTATUS2</field><field>FINANCIALINSTITUTIONID</field><field>WPBSUPPORTMAL</field><field>RULESETKEY</field><field>RULESETID</field><field>RULESETNAME</field><field>CURRENCY_R</field><field>USEDINEMPEXPENSE</field><field>EXPENSEACCTNO</field><field>EECLEARINGACCTLABEL</field><field>EECLEARINGACCTLABELKEY</field><field>FINANCIALDATA.TIMEZONE</field><field>FINANCIALDATA.SEQNUMKEY</field><field>WPBIMPORTSTATUS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>07/01/2025
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3553'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2026-02-06
+        15:31:42</controlid><uniqueid>false</uniqueid><dtdversion>56717639113.4668</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2001-12-16T16:32:37+00:00</sessiontimestamp><sessiontimeout>1988-05-13T02:34:00+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-beJzJ</function><controlid>-Fallback-scrubbed-GYbtUnxfUmksDfZKIjgXvFIYyxBuWPyIJKFV</controlid><data
+        listtype="-Fallback-scrubbed-XWWqTPEaHy" totalcount="3" offset="5626" count="5049"
+        numremaining="5626"><CREDITCARD><RECORDNO>4</RECORDNO><CARDID>6655</CARDID><DESCRIPTION>-Fallback-scrubbed-mGcXo</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>8365</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>2894</LIABACCTKEY><LIABACCT>5831</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID>20007</VENDORID><VENDORKEY>1220</VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>-Fallback-scrubbed-TjZjEh</LOCATION><LOCATION>5394</LOCATION><LOCATIONNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-lsyGhU</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY></FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME></FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID></FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY></FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>7279</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        14:33:02</WHENMODIFIED><WHENCREATED>11/21/2006 03:13:24</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-KUs</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>5394</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-TjZjEh</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-XGhtKDdMbrcimRRMBHkosoNzJkDmkNBhpIhQyobDQEyhkKwGNKebpCsBzAjYoFVxUhdMAXFoGhZnYQkJIibGJqf</RECORD_URL></CREDITCARD><CREDITCARD><RECORDNO>5</RECORDNO><CARDID>5391</CARDID><DESCRIPTION>-Fallback-scrubbed-ArvUFigjH</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>2890</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>6764</LIABACCTKEY><LIABACCT>673</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID></VENDORID><VENDORKEY></VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>-Fallback-scrubbed-TjZjEh</LOCATION><LOCATION>5394</LOCATION><LOCATIONNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-yynaw</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME>-Fallback-scrubbed-uqTexPJMZsPsQWcrsXhsz</FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY>9847</FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>7952</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        16:07:38</WHENMODIFIED><WHENCREATED>12/21/1970 06:00:21</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-KUs</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>5394</MEGAENTITYKEY><MEGAENTITYID>-Fallback-scrubbed-TjZjEh</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-pyuSCJXZgpSjeoyB</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-zQTEgixZqnqeJWSAbRjLMDpSkhcachBNqOcSljHPYqZpXmRItfSlUZqTmDcbYYcaZyIZphqgoCpBFJvwkPNHpwu</RECORD_URL></CREDITCARD><CREDITCARD><RECORDNO>6</RECORDNO><CARDID>6809</CARDID><DESCRIPTION>-Fallback-scrubbed-MSHSkoI</DESCRIPTION><CARDNUM></CARDNUM><CARDTYPE>-Fallback-scrubbed-iOjz</CARDTYPE><EXP_MONTH>-Fallback-scrubbed-ypMcTlx</EXP_MONTH><EXP_YEAR>2890</EXP_YEAR><MAILADDRESS.ADDRESS1></MAILADDRESS.ADDRESS1><MAILADDRESS.ADDRESS2></MAILADDRESS.ADDRESS2><MAILADDRESS.ADDRESS3></MAILADDRESS.ADDRESS3><MAILADDRESS.CITY></MAILADDRESS.CITY><MAILADDRESS.STATE></MAILADDRESS.STATE><MAILADDRESS.ZIP></MAILADDRESS.ZIP><MAILADDRESS.COUNTRY>-Fallback-scrubbed-aBCqJzjLnSMdh</MAILADDRESS.COUNTRY><MAILADDRESS.COUNTRYCODE>-Fallback-scrubbed-JN</MAILADDRESS.COUNTRYCODE><STATUS>-Fallback-scrubbed-oBFTyN</STATUS><LIABACCTKEY>6764</LIABACCTKEY><LIABACCT>673</LIABACCT><FEESACCTKEY></FEESACCTKEY><FEESACCTID></FEESACCTID><VENDORID></VENDORID><VENDORKEY></VENDORKEY><DEPT></DEPT><DEPT></DEPT><LOCATION>8184</LOCATION><LOCATION>508</LOCATION><LOCATIONNAME>-Fallback-scrubbed-NSXm</LOCATIONNAME><LIABILITYTYPE>-Fallback-scrubbed-yynaw</LIABILITYTYPE><RECDATE></RECDATE><RECBAL></RECBAL><FINANCIALDATA.JOURNAL>-Fallback-scrubbed-xvQ</FINANCIALDATA.JOURNAL><FINANCIALDATA.JOURNALTITLE>-Fallback-scrubbed-AkukUsdpluNkgSHJReDGqKeOOd</FINANCIALDATA.JOURNALTITLE><FINANCIALDATA.JRNLKEY2></FINANCIALDATA.JRNLKEY2><FINANCIALDATA.JOURNALTITLE2></FINANCIALDATA.JOURNALTITLE2><FINANCIALDATA.PARENTENTITY>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.PARENTENTITY><FINANCIALDATA.PARENTENTITYNAME>-Fallback-scrubbed-uqTexPJMZsPsQWcrsXhsz</FINANCIALDATA.PARENTENTITYNAME><FINANCIALDATA.CHECKINGACCOUNTID>-Fallback-scrubbed-PqUqehn</FINANCIALDATA.CHECKINGACCOUNTID><FINANCIALDATA.CHECKINGACCOUNTKEY>9847</FINANCIALDATA.CHECKINGACCOUNTKEY><FINANCIALDATA.RECORDNO>8613</FINANCIALDATA.RECORDNO><USEFORINTACCT></USEFORINTACCT><FEESACCTLABELKEY></FEESACCTLABELKEY><FEESACCTLABELID></FEESACCTLABELID><FINCHRGACCT></FINCHRGACCT><FINCHRGACCTKEY></FINCHRGACCTKEY><FINCHRGACCTLABEL></FINCHRGACCTLABEL><FINCHRGACCTLABELKEY></FINCHRGACCTLABELKEY><CUTOFFDATE></CUTOFFDATE><FINANCIALDATA.DISABLEIET>false</FINANCIALDATA.DISABLEIET><WHENMODIFIED>10/30/2025
+        16:13:33</WHENMODIFIED><WHENCREATED>02/10/1973 08:21:53</WHENCREATED><MODIFIEDBY>6716</MODIFIEDBY><CREATEDBY>6716</CREATEDBY><OUTSOURCECARD></OUTSOURCECARD><AUTOMATECARDPYMTSEND></AUTOMATECARDPYMTSEND><AUTOMATECARDPYMTCONF></AUTOMATECARDPYMTCONF><AMEX_PAYVE_ACCOUNTID></AMEX_PAYVE_ACCOUNTID><OUTSOURCECARDOVERRIDE></OUTSOURCECARDOVERRIDE><AMEX_CARD_ACCOUNT_ID></AMEX_CARD_ACCOUNT_ID><WPBSTATUS></WPBSTATUS><WPBBANK></WPBBANK><WPBACCOUNTNAME></WPBACCOUNTNAME><WPBAVAILABLEBALANCEAMOUNT></WPBAVAILABLEBALANCEAMOUNT><WPBAVAILABLEBALANCEDATE></WPBAVAILABLEBALANCEDATE><WPBLEDGERBALANCEAMOUNT></WPBLEDGERBALANCEAMOUNT><WPBLEDGERBALANCEDATE></WPBLEDGERBALANCEDATE><WPBLASTTRANSACTIONSRECEIVED></WPBLASTTRANSACTIONSRECEIVED><WPBLASTBANKFEEDDATE></WPBLASTBANKFEEDDATE><WPBREFRESHSTATUS></WPBREFRESHSTATUS><WPBREFRESHSTATUS2></WPBREFRESHSTATUS2><FINANCIALINSTITUTIONID></FINANCIALINSTITUTIONID><WPBSUPPORTMAL></WPBSUPPORTMAL><RULESETKEY></RULESETKEY><RULESETID></RULESETID><RULESETNAME></RULESETNAME><CURRENCY_R>-Fallback-scrubbed-wGi</CURRENCY_R><USEDINEMPEXPENSE>false</USEDINEMPEXPENSE><EXPENSEACCTNO></EXPENSEACCTNO><EECLEARINGACCTLABEL></EECLEARINGACCTLABEL><EECLEARINGACCTLABELKEY></EECLEARINGACCTLABELKEY><FINANCIALDATA.TIMEZONE></FINANCIALDATA.TIMEZONE><FINANCIALDATA.SEQNUMKEY></FINANCIALDATA.SEQNUMKEY><WPBIMPORTSTATUS></WPBIMPORTSTATUS><CREATEDBYLOGINID>-Fallback-scrubbed-FrZX</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-FrZX</MODIFIEDBYLOGINID><MEGAENTITYKEY>508</MEGAENTITYKEY><MEGAENTITYID>8184</MEGAENTITYID><MEGAENTITYNAME>-Fallback-scrubbed-NSXm</MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-bBNjfXevElqzMqEMeSkGxvlfVycgwywclGaBeHfgGZzrfmjSvwJZfVREXobPjezdzHUgKPxAwXuiztCmUDNXeFX</RECORD_URL></CREDITCARD></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1b1ebfca16b3-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:59 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '514'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '11128'
+    status:
+      code: 200
+      message: OK
+version: 1

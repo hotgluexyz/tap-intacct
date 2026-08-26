@@ -1,0 +1,4884 @@
+{
+  "streams": [
+    {
+      "stream": "subsidiaries",
+      "tap_stream_id": "subsidiaries",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "LOCATIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LOCATIONID",
+              "LABEL": "ID",
+              "DESCRIPTION": "Unique identifier",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "NAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "NAME",
+              "LABEL": "Name",
+              "DESCRIPTION": "Free form name for this warehouse location",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTID",
+              "LABEL": "Parent",
+              "DESCRIPTION": "Parent location",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTNAME",
+              "LABEL": "Parent - Name",
+              "DESCRIPTION": "Parent department name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORNAME",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORID",
+              "LABEL": "Manager",
+              "DESCRIPTION": "Manager in charge",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.CONTACTNAME",
+              "LABEL": "Entity",
+              "DESCRIPTION": "Location contact information",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.LASTNAME",
+              "LABEL": "Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.FIRSTNAME",
+              "LABEL": "First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.INITIAL",
+              "LABEL": "Middle name",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PREFIX",
+              "LABEL": "Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PRINTAS",
+              "LABEL": "Location contact",
+              "DESCRIPTION": "Location contact information",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PHONE1",
+              "LABEL": "Primary phone",
+              "DESCRIPTION": "Primary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PHONE2",
+              "LABEL": "Secondary phone",
+              "DESCRIPTION": "Secondary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.EMAIL1",
+              "LABEL": "Primary email address",
+              "DESCRIPTION": "Primary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.EMAIL2",
+              "LABEL": "Secondary email addresses",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.CELLPHONE",
+              "LABEL": "Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PAGER",
+              "LABEL": "Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.URL1",
+              "LABEL": "Primary URL",
+              "DESCRIPTION": "Primary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.URL2",
+              "LABEL": "Secondary URL",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.COMPANYNAME",
+              "LABEL": "Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.FAX",
+              "LABEL": "Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS1",
+              "LABEL": "Address line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS2",
+              "LABEL": "Address line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS3",
+              "LABEL": "Address line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.CITY",
+              "LABEL": "City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.STATE",
+              "LABEL": "State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ZIP",
+              "LABEL": "ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.COUNTRY",
+              "LABEL": "Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STARTDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "STARTDATE",
+              "LABEL": "Start date",
+              "DESCRIPTION": "Start date",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENDDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "ENDDATE",
+              "LABEL": "End date",
+              "DESCRIPTION": "End date",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.CONTACTNAME",
+              "LABEL": "Ship to",
+              "DESCRIPTION": "Ship-to contact",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.LASTNAME",
+              "LABEL": "Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.FIRSTNAME",
+              "LABEL": "First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.INITIAL",
+              "LABEL": "Middle name",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PREFIX",
+              "LABEL": "Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PRINTAS",
+              "LABEL": "Print as",
+              "DESCRIPTION": "Name as appears on official documents",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PHONE1",
+              "LABEL": "Primary phone",
+              "DESCRIPTION": "Primary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PHONE2",
+              "LABEL": "Secondary phone",
+              "DESCRIPTION": "Secondary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.EMAIL1",
+              "LABEL": "Primary email address",
+              "DESCRIPTION": "Primary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.EMAIL2",
+              "LABEL": "Secondary email addresses",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.CELLPHONE",
+              "LABEL": "Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PAGER",
+              "LABEL": "Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.URL1",
+              "LABEL": "Primary URL",
+              "DESCRIPTION": "Primary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.URL2",
+              "LABEL": "Secondary URL",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.COMPANYNAME",
+              "LABEL": "Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.FAX",
+              "LABEL": "Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS1",
+              "LABEL": "Address line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS2",
+              "LABEL": "Address line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS3",
+              "LABEL": "Address line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.CITY",
+              "LABEL": "City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.STATE",
+              "LABEL": "State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ZIP",
+              "LABEL": "ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.COUNTRY",
+              "LABEL": "Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATUS",
+              "LABEL": "Status",
+              "DESCRIPTION": "Active or inactive",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "active",
+                  "inactive"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FEDERALID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FEDERALID",
+              "LABEL": "Federal ID",
+              "DESCRIPTION": "Federal ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FIRSTMONTH": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FIRSTMONTH",
+              "LABEL": "First fiscal month",
+              "DESCRIPTION": "First fiscal month",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  null
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "WEEKSTART": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WEEKSTART",
+              "LABEL": "Week begins on",
+              "DESCRIPTION": "Week begins on",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "9",
+                  null
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "IEPAYABLE.ACCOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IEPAYABLE.ACCOUNT",
+              "LABEL": "Inter-entity payable account",
+              "DESCRIPTION": "Inter-entity payable account",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "IEPAYABLE.NUMBER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IEPAYABLE.NUMBER",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "IERECEIVABLE.ACCOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IERECEIVABLE.ACCOUNT",
+              "LABEL": "Inter-entity receivable account",
+              "DESCRIPTION": "Inter-entity receivable account",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "IERECEIVABLE.NUMBER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IERECEIVABLE.NUMBER",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MESSAGE_TEXT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MESSAGE_TEXT",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MARKETING_TEXT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MARKETING_TEXT",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FOOTNOTETEXT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FOOTNOTETEXT",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REPORTPRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "REPORTPRINTAS",
+              "LABEL": "Print entity name as",
+              "DESCRIPTION": "Entity name for use in all reports",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ISROOT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ISROOT",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RESERVEAMT": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "RESERVEAMT",
+              "LABEL": "Reserve amount",
+              "DESCRIPTION": "Default reserve amt",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORNAME",
+              "LABEL": "Vendor name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORID",
+              "LABEL": "Vendor tied with",
+              "DESCRIPTION": "Vendor tied",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTOMERID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTOMERID",
+              "LABEL": "Customer tied with",
+              "DESCRIPTION": "Customer tied",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTOMERNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTOMERNAME",
+              "LABEL": "Customer name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCY",
+              "LABEL": "Base currency",
+              "DESCRIPTION": "Entity base currency",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ENTITY",
+              "LABEL": "Entity ID and name",
+              "DESCRIPTION": "Entity ID and name",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "HAS_IE_RELATION": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "HAS_IE_RELATION",
+              "LABEL": "Enable different accounts based on the target entity",
+              "DESCRIPTION": "Enable different accounts based on the target entity",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTTITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTTITLE",
+              "LABEL": "Entity title",
+              "DESCRIPTION": "Entity title",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BUSINESSDAYS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BUSINESSDAYS",
+              "LABEL": "Work days",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WEEKENDS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WEEKENDS",
+              "LABEL": "Weekends",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FIRSTMONTHTAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FIRSTMONTHTAX",
+              "LABEL": "First tax month",
+              "DESCRIPTION": "First tax month",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  null
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTKEY",
+              "LABEL": "Contact record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORKEY",
+              "LABEL": "Supervisor record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTKEY",
+              "LABEL": "Parent location key",
+              "DESCRIPTION": "Parent location key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTOKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTOKEY",
+              "LABEL": "Ship-to contact record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "IEPAYABLEACCTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IEPAYABLEACCTKEY",
+              "LABEL": "IE payable account record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "IERECEIVABLEACCTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "IERECEIVABLEACCTKEY",
+              "LABEL": "IE receivable account record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDENTITY",
+              "LABEL": "Vendor entity",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTENTITY",
+              "LABEL": "Customer entity",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXID",
+              "LABEL": "Tax ID",
+              "DESCRIPTION": "Tax identification number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SIRET": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SIRET",
+              "LABEL": "SIREN",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGAL_CATEGORY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGAL_CATEGORY",
+              "LABEL": "Legal category",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAIN_ACTIVITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAIN_ACTIVITY",
+              "LABEL": "Main activity",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TYPE_OF_COMPANY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TYPE_OF_COMPANY",
+              "LABEL": "Type of company",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REGISTERED_CAPITAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "REGISTERED_CAPITAL",
+              "LABEL": "Registered capital",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VAT_REGIME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VAT_REGIME",
+              "LABEL": "VAT regime",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADDRESSCOUNTRYDEFAULT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADDRESSCOUNTRYDEFAULT",
+              "LABEL": "Default country for addresses",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "United States",
+                  "Afghanistan",
+                  "Aland Islands",
+                  "Albania",
+                  "Algeria",
+                  "American Samoa",
+                  "Andorra",
+                  "Angola",
+                  "Anguilla",
+                  "Antarctica",
+                  "Antigua and Barbuda",
+                  "Argentina",
+                  "Armenia",
+                  "Aruba",
+                  "Australia",
+                  "Austria",
+                  "Azerbaijan",
+                  "Bahamas",
+                  "Bahrain",
+                  "Bangladesh",
+                  "Barbados",
+                  "Belarus",
+                  "Belgium",
+                  "Belize",
+                  "Benin",
+                  "Bermuda",
+                  "Bhutan",
+                  "Bolivia",
+                  "Bonaire, Sint Eustatius and Saba",
+                  "Bosnia and Herzegovina",
+                  "Botswana",
+                  "Bouvet Island",
+                  "Brazil",
+                  "British Indian Ocean Territory",
+                  "Brunei Darussalam",
+                  "Bulgaria",
+                  "Burkina Faso",
+                  "Burundi",
+                  "Cambodia",
+                  "Cameroon",
+                  "Canada",
+                  "Canary Islands",
+                  "Cape Verde",
+                  "Cayman Islands",
+                  "Central African Republic",
+                  "Chad",
+                  "Chile",
+                  "China",
+                  "Christmas Island",
+                  "Cocos (Keeling) Islands",
+                  "Colombia",
+                  "Comoros",
+                  "Congo",
+                  "Congo, Democratic Republic",
+                  "Cook Islands",
+                  "Costa Rica",
+                  "C\u00f4te d'Ivoire",
+                  "Croatia",
+                  "Cuba",
+                  "Cura\u00e7ao",
+                  "Cyprus",
+                  "Czech Republic",
+                  "Denmark",
+                  "Djibouti",
+                  "Dominica",
+                  "Dominican Republic",
+                  "Ecuador",
+                  "Egypt",
+                  "El Salvador",
+                  "Equatorial Guinea",
+                  "Eritrea",
+                  "Estonia",
+                  "Eswatini",
+                  "Ethiopia",
+                  "Falkland Islands (Malvinas)",
+                  "Faroe Islands",
+                  "Fiji",
+                  "Finland",
+                  "France",
+                  "French Guiana",
+                  "French Polynesia",
+                  "French Southern Territories",
+                  "Gabon",
+                  "Gambia",
+                  "Georgia",
+                  "Germany",
+                  "Ghana",
+                  "Gibraltar",
+                  "Greece",
+                  "Greenland",
+                  "Grenada",
+                  "Guadeloupe",
+                  "Guam",
+                  "Guatemala",
+                  "Guernsey",
+                  "Guinea",
+                  "Guinea-Bissau",
+                  "Guyana",
+                  "Haiti",
+                  "Heard Is. & Mcdonald Islands",
+                  "Honduras",
+                  "Hong Kong",
+                  "Hungary",
+                  "Iceland",
+                  "India",
+                  "Indonesia",
+                  "Iran, Islamic Republic of",
+                  "Iraq",
+                  "Ireland",
+                  "Isle of Man",
+                  "Israel",
+                  "Italy",
+                  "Jamaica",
+                  "Japan",
+                  "Jersey",
+                  "Jordan",
+                  "Kazakhstan",
+                  "Kenya",
+                  "Kiribati",
+                  "Korea, Republic of",
+                  "Korea, Demo. People's Rep.",
+                  "Kosovo",
+                  "Kuwait",
+                  "Kyrgyzstan",
+                  "Lao",
+                  "Latvia",
+                  "Lebanon",
+                  "Lesotho",
+                  "Liberia",
+                  "Libyan Arab Jamahiriya",
+                  "Liechtenstein",
+                  "Lithuania",
+                  "Luxembourg",
+                  "Macao",
+                  "Macedonia",
+                  "Madagascar",
+                  "Malawi",
+                  "Malaysia",
+                  "Maldives",
+                  "Mali",
+                  "Malta",
+                  "Marshall Islands",
+                  "Martinique",
+                  "Mauritania",
+                  "Mauritius",
+                  "Mayotte",
+                  "Mexico",
+                  "Micronesia",
+                  "Moldova, Republic of",
+                  "Monaco",
+                  "Mongolia",
+                  "Montenegro",
+                  "Montserrat",
+                  "Morocco",
+                  "Mozambique",
+                  "Myanmar",
+                  "Namibia",
+                  "Nauru",
+                  "Nepal",
+                  "Netherlands",
+                  "Netherlands Antilles",
+                  "New Caledonia",
+                  "New Zealand",
+                  "Nicaragua",
+                  "Niger",
+                  "Nigeria",
+                  "Niue",
+                  "Norfolk Island",
+                  "Northern Mariana Islands",
+                  "Norway",
+                  "Oman",
+                  "Pakistan",
+                  "Palau",
+                  "Palestine, State of",
+                  "Panama",
+                  "Papua New Guinea",
+                  "Paraguay",
+                  "Peru",
+                  "Philippines",
+                  "Pitcairn",
+                  "Poland",
+                  "Portugal",
+                  "Puerto Rico",
+                  "Qatar",
+                  "Reunion",
+                  "Romania",
+                  "Russian Federation",
+                  "Rwanda",
+                  "Saint Barthelemy",
+                  "Saint Helena",
+                  "Saint Kitts and Nevis",
+                  "Saint Lucia",
+                  "Saint Martin",
+                  "Saint Pierre and Miquelon",
+                  "Saint Vincent and the Grenadines",
+                  "Samoa",
+                  "San Marino",
+                  "Sao Tome and Principe",
+                  "Saudi Arabia",
+                  "Senegal",
+                  "Serbia",
+                  "Seychelles",
+                  "Sierra Leone",
+                  "Singapore",
+                  "Sint Maarten",
+                  "Slovakia",
+                  "Slovenia",
+                  "Solomon Islands",
+                  "Somalia",
+                  "South Africa",
+                  "S. Georgia & S. Sandwich Is.",
+                  "Spain",
+                  "Sri Lanka",
+                  "Sudan",
+                  "South Sudan",
+                  "Suriname",
+                  "Svalbard and Jan Mayen",
+                  "Sweden",
+                  "Switzerland",
+                  "Syrian Arab Republic",
+                  "Taiwan",
+                  "Tajikistan",
+                  "Tanzania, United Republic of",
+                  "Thailand",
+                  "Timor-Leste",
+                  "Togo",
+                  "Tokelau",
+                  "Tonga",
+                  "Trinidad and Tobago",
+                  "Tunisia",
+                  "Turkey",
+                  "Turkmenistan",
+                  "Turks and Caicos Islands",
+                  "Tuvalu",
+                  "Uganda",
+                  "Ukraine",
+                  "United Arab Emirates",
+                  "United Kingdom",
+                  "US Minor Outlying Islands",
+                  "Uruguay",
+                  "Uzbekistan",
+                  "Vanuatu",
+                  "Vatican City State",
+                  "Venezuela",
+                  "Vietnam",
+                  "Virgin Islands, British",
+                  "Virgin Islands, U.S.",
+                  "Wallis and Futuna",
+                  "Western Sahara",
+                  "Yemen",
+                  "Zambia",
+                  "Zimbabwe"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "LOCATIONTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LOCATIONTYPE",
+              "LABEL": "Location type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "E",
+                  "N",
+                  "C"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ENTITYNAME",
+              "LABEL": "Entity name",
+              "DESCRIPTION": "Entity name",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "STARTOPEN": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "STARTOPEN",
+              "LABEL": "Open books from",
+              "DESCRIPTION": "Open date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENABLELEGALCONTACT": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ENABLELEGALCONTACT",
+              "LABEL": "Enable legal name and address on 1099 and 1096 forms",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALNAME",
+              "LABEL": "Legal name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALADDRESS1",
+              "LABEL": "Legal address line 1",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALADDRESS2",
+              "LABEL": "Legal address line 2",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALADDRESS3",
+              "LABEL": "Legal address line 3",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCITY",
+              "LABEL": "Legal city",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALSTATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALSTATE",
+              "LABEL": "Legal state or territory",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALZIPCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALZIPCODE",
+              "LABEL": "Legal ZIP or postal code",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCOUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCOUNTRY",
+              "LABEL": "Legal country",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCOUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCOUNTRYCODE",
+              "LABEL": "Legal country",
+              "DESCRIPTION": "Legal country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "OPCOUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OPCOUNTRY",
+              "LABEL": "Operating country",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  null,
+                  "United States",
+                  "Afghanistan",
+                  "Aland Islands",
+                  "Albania",
+                  "Algeria",
+                  "American Samoa",
+                  "Andorra",
+                  "Angola",
+                  "Anguilla",
+                  "Antarctica",
+                  "Antigua and Barbuda",
+                  "Argentina",
+                  "Armenia",
+                  "Aruba",
+                  "Australia",
+                  "Austria",
+                  "Azerbaijan",
+                  "Bahamas",
+                  "Bahrain",
+                  "Bangladesh",
+                  "Barbados",
+                  "Belarus",
+                  "Belgium",
+                  "Belize",
+                  "Benin",
+                  "Bermuda",
+                  "Bhutan",
+                  "Bolivia",
+                  "Bonaire, Sint Eustatius and Saba",
+                  "Bosnia and Herzegovina",
+                  "Botswana",
+                  "Bouvet Island",
+                  "Brazil",
+                  "British Indian Ocean Territory",
+                  "Brunei Darussalam",
+                  "Bulgaria",
+                  "Burkina Faso",
+                  "Burundi",
+                  "Cambodia",
+                  "Cameroon",
+                  "Canada",
+                  "Canary Islands",
+                  "Cape Verde",
+                  "Cayman Islands",
+                  "Central African Republic",
+                  "Chad",
+                  "Chile",
+                  "China",
+                  "Christmas Island",
+                  "Cocos (Keeling) Islands",
+                  "Colombia",
+                  "Comoros",
+                  "Congo",
+                  "Congo, Democratic Republic",
+                  "Cook Islands",
+                  "Costa Rica",
+                  "C\u00f4te d'Ivoire",
+                  "Croatia",
+                  "Cuba",
+                  "Cura\u00e7ao",
+                  "Cyprus",
+                  "Czech Republic",
+                  "Denmark",
+                  "Djibouti",
+                  "Dominica",
+                  "Dominican Republic",
+                  "Ecuador",
+                  "Egypt",
+                  "El Salvador",
+                  "Equatorial Guinea",
+                  "Eritrea",
+                  "Estonia",
+                  "Eswatini",
+                  "Ethiopia",
+                  "Falkland Islands (Malvinas)",
+                  "Faroe Islands",
+                  "Fiji",
+                  "Finland",
+                  "France",
+                  "French Guiana",
+                  "French Polynesia",
+                  "French Southern Territories",
+                  "Gabon",
+                  "Gambia",
+                  "Georgia",
+                  "Germany",
+                  "Ghana",
+                  "Gibraltar",
+                  "Greece",
+                  "Greenland",
+                  "Grenada",
+                  "Guadeloupe",
+                  "Guam",
+                  "Guatemala",
+                  "Guernsey",
+                  "Guinea",
+                  "Guinea-Bissau",
+                  "Guyana",
+                  "Haiti",
+                  "Heard Is. & Mcdonald Islands",
+                  "Honduras",
+                  "Hong Kong",
+                  "Hungary",
+                  "Iceland",
+                  "India",
+                  "Indonesia",
+                  "Iran, Islamic Republic of",
+                  "Iraq",
+                  "Ireland",
+                  "Isle of Man",
+                  "Israel",
+                  "Italy",
+                  "Jamaica",
+                  "Japan",
+                  "Jersey",
+                  "Jordan",
+                  "Kazakhstan",
+                  "Kenya",
+                  "Kiribati",
+                  "Korea, Republic of",
+                  "Korea, Demo. People's Rep.",
+                  "Kosovo",
+                  "Kuwait",
+                  "Kyrgyzstan",
+                  "Lao",
+                  "Latvia",
+                  "Lebanon",
+                  "Lesotho",
+                  "Liberia",
+                  "Libyan Arab Jamahiriya",
+                  "Liechtenstein",
+                  "Lithuania",
+                  "Luxembourg",
+                  "Macao",
+                  "Macedonia",
+                  "Madagascar",
+                  "Malawi",
+                  "Malaysia",
+                  "Maldives",
+                  "Mali",
+                  "Malta",
+                  "Marshall Islands",
+                  "Martinique",
+                  "Mauritania",
+                  "Mauritius",
+                  "Mayotte",
+                  "Mexico",
+                  "Micronesia",
+                  "Moldova, Republic of",
+                  "Monaco",
+                  "Mongolia",
+                  "Montenegro",
+                  "Montserrat",
+                  "Morocco",
+                  "Mozambique",
+                  "Myanmar",
+                  "Namibia",
+                  "Nauru",
+                  "Nepal",
+                  "Netherlands",
+                  "Netherlands Antilles",
+                  "New Caledonia",
+                  "New Zealand",
+                  "Nicaragua",
+                  "Niger",
+                  "Nigeria",
+                  "Niue",
+                  "Norfolk Island",
+                  "Northern Mariana Islands",
+                  "Norway",
+                  "Oman",
+                  "Pakistan",
+                  "Palau",
+                  "Palestine, State of",
+                  "Panama",
+                  "Papua New Guinea",
+                  "Paraguay",
+                  "Peru",
+                  "Philippines",
+                  "Pitcairn",
+                  "Poland",
+                  "Portugal",
+                  "Puerto Rico",
+                  "Qatar",
+                  "Reunion",
+                  "Romania",
+                  "Russian Federation",
+                  "Rwanda",
+                  "Saint Barthelemy",
+                  "Saint Helena",
+                  "Saint Kitts and Nevis",
+                  "Saint Lucia",
+                  "Saint Martin",
+                  "Saint Pierre and Miquelon",
+                  "Saint Vincent and the Grenadines",
+                  "Samoa",
+                  "San Marino",
+                  "Sao Tome and Principe",
+                  "Saudi Arabia",
+                  "Senegal",
+                  "Serbia",
+                  "Seychelles",
+                  "Sierra Leone",
+                  "Singapore",
+                  "Sint Maarten",
+                  "Slovakia",
+                  "Slovenia",
+                  "Solomon Islands",
+                  "Somalia",
+                  "South Africa",
+                  "S. Georgia & S. Sandwich Is.",
+                  "Spain",
+                  "Sri Lanka",
+                  "Sudan",
+                  "South Sudan",
+                  "Suriname",
+                  "Svalbard and Jan Mayen",
+                  "Sweden",
+                  "Switzerland",
+                  "Syrian Arab Republic",
+                  "Taiwan",
+                  "Tajikistan",
+                  "Tanzania, United Republic of",
+                  "Thailand",
+                  "Timor-Leste",
+                  "Togo",
+                  "Tokelau",
+                  "Tonga",
+                  "Trinidad and Tobago",
+                  "Tunisia",
+                  "Turkey",
+                  "Turkmenistan",
+                  "Turks and Caicos Islands",
+                  "Tuvalu",
+                  "Uganda",
+                  "Ukraine",
+                  "United Arab Emirates",
+                  "United Kingdom",
+                  "US Minor Outlying Islands",
+                  "Uruguay",
+                  "Uzbekistan",
+                  "Vanuatu",
+                  "Vatican City State",
+                  "Venezuela",
+                  "Vietnam",
+                  "Virgin Islands, British",
+                  "Virgin Islands, U.S.",
+                  "Wallis and Futuna",
+                  "Western Sahara",
+                  "Yemen",
+                  "Zambia",
+                  "Zimbabwe"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARTIALEXEMPT": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "PARTIALEXEMPT",
+              "LABEL": "Enable input tax credit",
+              "DESCRIPTION": "Enable partial exempt for VAT",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DEFAULTPARTIALEXEMPT": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "DEFAULTPARTIALEXEMPT",
+              "LABEL": "Default input tax credit on",
+              "DESCRIPTION": "Default input tax credit on",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "UNRECOVERABLETAXACCTNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "UNRECOVERABLETAXACCTNO",
+              "LABEL": "Unrecoverable tax account",
+              "DESCRIPTION": "Unrecoverable tax account",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ACCOUNTINGTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ACCOUNTINGTYPE",
+              "LABEL": "Type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Entity",
+                  "Fund"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCONTACTNAME",
+              "LABEL": "Legal contact name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCONTACTPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCONTACTPHONE",
+              "LABEL": "Legal contact phone",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCONTACTFAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCONTACTFAX",
+              "LABEL": "Legal contact fax",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALCONTACTEMAIL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALCONTACTEMAIL",
+              "LABEL": "Legal contact email",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LEGALBRANCHNUMBER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LEGALBRANCHNUMBER",
+              "LABEL": "Legal branch number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENABLELEGALCONTACT_TPAR": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ENABLELEGALCONTACT_TPAR",
+              "LABEL": "Enable legal name and address on TPAR",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATUTORYREPORTINGPERIOD": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "STATUTORYREPORTINGPERIOD",
+              "LABEL": "Lock closed periods",
+              "DESCRIPTION": "Lock closed periods",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ISLIMITEDENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ISLIMITEDENTITY",
+              "LABEL": "Limited entity",
+              "DESCRIPTION": "Limited entity",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EINVOICEENABLED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EINVOICEENABLED",
+              "LABEL": "Enable e-invoicing",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYMENTTAXCAPTURE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "PAYMENTTAXCAPTURE",
+              "LABEL": "Cash basis tax capture",
+              "DESCRIPTION": "Cash basis tax capture",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCYKEY",
+              "LABEL": "Base currency",
+              "DESCRIPTION": "Entity base currency",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ELECTRONICADDRESS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ELECTRONICADDRESS",
+              "LABEL": "Electronic address",
+              "DESCRIPTION": "Electronic address",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LOCATIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "NAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STARTDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENDDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FEDERALID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FIRSTMONTH"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WEEKSTART"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IEPAYABLE.ACCOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IEPAYABLE.NUMBER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IERECEIVABLE.ACCOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IERECEIVABLE.NUMBER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MESSAGE_TEXT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MARKETING_TEXT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FOOTNOTETEXT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REPORTPRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ISROOT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RESERVEAMT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTOMERID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTOMERNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "HAS_IE_RELATION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTTITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BUSINESSDAYS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WEEKENDS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FIRSTMONTHTAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTOKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IEPAYABLEACCTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "IERECEIVABLEACCTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SIRET"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGAL_CATEGORY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAIN_ACTIVITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TYPE_OF_COMPANY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REGISTERED_CAPITAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VAT_REGIME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADDRESSCOUNTRYDEFAULT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LOCATIONTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STARTOPEN"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENABLELEGALCONTACT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALSTATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALZIPCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCOUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCOUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OPCOUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARTIALEXEMPT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DEFAULTPARTIALEXEMPT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "UNRECOVERABLETAXACCTNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ACCOUNTINGTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCONTACTPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCONTACTFAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALCONTACTEMAIL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LEGALBRANCHNUMBER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENABLELEGALCONTACT_TPAR"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATUTORYREPORTINGPERIOD"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ISLIMITEDENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EINVOICEENABLED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYMENTTAXCAPTURE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ELECTRONICADDRESS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "CONTACT",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CONTACTINFO.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "MANAGER",
+            "OBJECTNAME": "EMPLOYEE",
+            "LABEL": "Manager",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SUPERVISORID"
+          },
+          {
+            "OBJECTPATH": "SHIPTO",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": "Ship-to contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SHIPTO.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "IEPAYABLE",
+            "OBJECTNAME": "GLACCOUNT",
+            "LABEL": "Inter-entity payable account",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "IEPAYABLE.ACCOUNT"
+          },
+          {
+            "OBJECTPATH": "IERECEIVABLE",
+            "OBJECTNAME": "GLACCOUNT",
+            "LABEL": "Inter-entity receivable account",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "IERECEIVABLE.ACCOUNT"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          }
+        ]
+      }
+    }
+  ]
+}

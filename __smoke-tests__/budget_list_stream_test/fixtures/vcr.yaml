@@ -1,0 +1,444 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="c9971126-2ed7-47f2-9eb9-c9df8ec412bb"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1993-06-01
+        09:16:30</controlid><uniqueid>false</uniqueid><dtdversion>32191511.9790207</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1996-06-05T04:21:02+00:00</sessiontimestamp><sessiontimeout>2024-09-20T22:36:33+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-KKLYEzekvhGWw</function><controlid>-Fallback-scrubbed-VozCFrRHsZIbKUTdYahRSKJzTNqlnQxpIuNm</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1aad8a7eade5-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:41 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '634'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.06'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="f00694d7-4423-4e70-9d7f-0b98afd13a04"><query><object>GLBUDGETHEADER</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '887'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1993-06-01
+        09:16:30</controlid><uniqueid>false</uniqueid><dtdversion>32191511.9790207</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1985-01-01T01:08:47+00:00</sessiontimestamp><sessiontimeout>2012-12-25T15:27:30+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-FjIEu</function><controlid>-Fallback-scrubbed-IOPtwqcPFGDbyQvRjeHbBdGBMrgrjYMWCNoY</controlid><data
+        listtype="-Fallback-scrubbed-nXihUmzcePFHrV" totalcount="8" offset="4346"
+        count="4474" numremaining="7810"><GLBUDGETHEADER><RECORDNO>8</RECORDNO></GLBUDGETHEADER></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1ab30e9da15e-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:42 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '530'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.05'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '785'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="efa28ded-0957-4620-bb4c-ae6eb86072b3"><query><object>GLBUDGETHEADER</object><select><field>RECORDNO</field><field>BUDGETID</field><field>DESCRIPTION</field><field>SYSTEMGENERATED</field><field>DEFAULT_BUDGET</field><field>USER</field><field>STATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>ISCONSOLIDATED</field><field>CURRENCY</field><field>ISPABUDGET</field><field>ISPCNBUDGET</field><field>CREATEDBYUSERDESC</field><field>MODIFIEDBYUSERDESC</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>EXTERNALID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1523'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1993-06-01
+        09:16:30</controlid><uniqueid>false</uniqueid><dtdversion>32191511.9790207</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1974-10-14T08:04:54+00:00</sessiontimestamp><sessiontimeout>2003-02-28T06:45:39+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-FjIEu</function><controlid>-Fallback-scrubbed-LVCMbTZKjlyzcXThuRgHKmNBkZsVROyDWrnI</controlid><data
+        listtype="-Fallback-scrubbed-nXihUmzcePFHrV" totalcount="8" offset="4346"
+        count="4371" numremaining="4346"><GLBUDGETHEADER><RECORDNO>18</RECORDNO><BUDGETID>-Fallback-scrubbed-lGKLCzUsdFUCmq</BUDGETID><DESCRIPTION>-Fallback-scrubbed-lGKLCzUsdFUCmq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-gHoE</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>03/27/1976
+        19:57:53</WHENCREATED><WHENMODIFIED>09/07/2023 19:41:25</WHENMODIFIED><CREATEDBY>429</CREATEDBY><MODIFIEDBY>429</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-iwmBtUjXyvsrAVJoH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-iwmBtUjXyvsrAVJoH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-gHoE</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-gHoE</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-doZESjBiemGnDdRKohocQRZLOnVaMCHYNuvcHnBHLgVZlqkkEMTpsiqGARXoOaOSRghQUqpyiPYNGNWCGGvxafR</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>15</RECORDNO><BUDGETID>-Fallback-scrubbed-fagJctjGkEqxf</BUDGETID><DESCRIPTION>-Fallback-scrubbed-xZZlynELlNuEgHHkWxeLBbtGICPyGTnerlDqq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>08/31/1987
+        13:28:18</WHENCREATED><WHENMODIFIED>05/07/2019 20:44:34</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-GtOpCvceoEwgDvKiZTLtOJZTkDXpFIDoKESSpJlzpgUwlvLbNMLzCUcaNZccaALXNBiMclBJrebfoVRbgJXSSjd</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>8</RECORDNO><BUDGETID>-Fallback-scrubbed-tAQmgWVASbmciSmiEY</BUDGETID><DESCRIPTION>-Fallback-scrubbed-fezPdHTjksEOsmscDAlXtgI</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>04/05/2019
+        10:57:50</WHENCREATED><WHENMODIFIED>04/23/2019 10:35:36</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-NYdhSIkNwgFDATgHErBmhiyCMQdzWTBGmhQUOBSkvlOcGJmMqjTgrsVZNmKcrZAFTdeZGROeqVwKbOwRhEZmNRL</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>17</RECORDNO><BUDGETID>-Fallback-scrubbed-qdMIZIdDcIkQDKtLZBG</BUDGETID><DESCRIPTION>-Fallback-scrubbed-eqrCpYKGuYMRrEosQeQ</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>05/28/1996
+        07:51:01</WHENCREATED><WHENMODIFIED>04/25/2019 08:41:32</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-syztjxwKvfCeFUoMcitUgclmKyJiWWVkybFDxxoOYfyYOCLcXcDaicJeKrLLgQYlmvnPePohCDYLRvLkOrYAmEn</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>12</RECORDNO><BUDGETID>-Fallback-scrubbed-KEhgGOXoJdITNw</BUDGETID><DESCRIPTION>-Fallback-scrubbed-xZZlynELlNuEgHHkWxeLBbtGICPyGTnerlDqq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>04/06/1973
+        23:54:17</WHENCREATED><WHENMODIFIED>05/07/2019 20:45:02</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-DLojUeXsnLIrNCEKaqYGcYZPToBZctfEpClTlghJjlUlZnRwKdrxiUoFuyzmroeymWwhUTBaUALLAZaTClwXMVv</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>10</RECORDNO><BUDGETID>-Fallback-scrubbed-nxJksLcascpffCrKHBHl</BUDGETID><DESCRIPTION>-Fallback-scrubbed-rnozePmgIQfRMjFdeQPYsrlDo</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>07/14/2023
+        01:14:29</WHENCREATED><WHENMODIFIED>04/23/2019 11:20:26</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-xglAVbUiEiOKCxYKXmxXuaZjbXoIeuorDuQiiBVmdqctrEnFKCQIBXwPFobljHTpIBznGlDVtniNhFvFeYNbpzP</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>16</RECORDNO><BUDGETID>-Fallback-scrubbed-XeucenMOGMbMufNWE</BUDGETID><DESCRIPTION>-Fallback-scrubbed-kgPXBozxfGWxkPTxW</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>10/01/1973
+        12:58:11</WHENCREATED><WHENMODIFIED>04/25/2019 08:39:27</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-VZPXmSgngvHQUKWwvnqabvLupNVIWsvSxPWwcLypFaZoCQEWFElnuDOPVAJNOjPzGFLrVXKWiIhTJALIATpDClH</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>3</RECORDNO><BUDGETID>-Fallback-scrubbed-qzkPCMQFzPhKvVn</BUDGETID><DESCRIPTION>-Fallback-scrubbed-uiNvdFclWGVlfeSYxzStBHcjqRMiEfcRnRGy</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-MPPm</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>06/23/1994
+        13:27:54</WHENCREATED><WHENMODIFIED>12/14/2022 16:53:28</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>9609</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-MPPm</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-LEikDtHcCJrKJRppeBuZPXbIyZsKmAPNkJkrBcGBQTnmvcErxfTcQgCPlbxbHerJyaZrDkAAsHHnUkhYDKhOlsN</RECORD_URL></GLBUDGETHEADER></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1ab82c77a4e4-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:43 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '553'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '8275'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="2b40da78-44b1-48da-a092-aceeccf6a956"><query><object>GLBUDGETHEADER</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '887'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1993-06-01
+        09:16:30</controlid><uniqueid>false</uniqueid><dtdversion>32191511.9790207</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1974-10-14T08:04:54+00:00</sessiontimestamp><sessiontimeout>2003-02-28T06:45:39+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-FjIEu</function><controlid>-Fallback-scrubbed-cxlNDWwGpOpdHclhJHkvrwYtOosgIDXgUpQb</controlid><data
+        listtype="-Fallback-scrubbed-nXihUmzcePFHrV" totalcount="8" offset="4346"
+        count="4474" numremaining="7810"><GLBUDGETHEADER><RECORDNO>8</RECORDNO></GLBUDGETHEADER></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1abd3b7af173-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:44 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '582'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.05'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '785'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="87922412-0900-408e-a019-2bd94b647c59"><query><object>GLBUDGETHEADER</object><select><field>RECORDNO</field><field>BUDGETID</field><field>DESCRIPTION</field><field>SYSTEMGENERATED</field><field>DEFAULT_BUDGET</field><field>USER</field><field>STATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>ISCONSOLIDATED</field><field>CURRENCY</field><field>ISPABUDGET</field><field>ISPCNBUDGET</field><field>CREATEDBYUSERDESC</field><field>MODIFIEDBYUSERDESC</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>EXTERNALID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1523'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1993-06-01
+        09:16:30</controlid><uniqueid>false</uniqueid><dtdversion>32191511.9790207</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2018-12-14T17:47:01+00:00</sessiontimestamp><sessiontimeout>2008-09-10T20:35:27+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-FjIEu</function><controlid>-Fallback-scrubbed-jjzIkqIIpaPjAkethaqNsTChlkdYbrVAYrbh</controlid><data
+        listtype="-Fallback-scrubbed-nXihUmzcePFHrV" totalcount="8" offset="4346"
+        count="4371" numremaining="4346"><GLBUDGETHEADER><RECORDNO>18</RECORDNO><BUDGETID>-Fallback-scrubbed-lGKLCzUsdFUCmq</BUDGETID><DESCRIPTION>-Fallback-scrubbed-lGKLCzUsdFUCmq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-gHoE</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>03/27/1976
+        19:57:53</WHENCREATED><WHENMODIFIED>09/07/2023 19:41:25</WHENMODIFIED><CREATEDBY>429</CREATEDBY><MODIFIEDBY>429</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-iwmBtUjXyvsrAVJoH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-iwmBtUjXyvsrAVJoH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-gHoE</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-gHoE</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-doZESjBiemGnDdRKohocQRZLOnVaMCHYNuvcHnBHLgVZlqkkEMTpsiqGARXoOaOSRghQUqpyiPYNGNWCGGvxafR</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>15</RECORDNO><BUDGETID>-Fallback-scrubbed-fagJctjGkEqxf</BUDGETID><DESCRIPTION>-Fallback-scrubbed-xZZlynELlNuEgHHkWxeLBbtGICPyGTnerlDqq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>08/31/1987
+        13:28:18</WHENCREATED><WHENMODIFIED>05/07/2019 20:44:34</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-GtOpCvceoEwgDvKiZTLtOJZTkDXpFIDoKESSpJlzpgUwlvLbNMLzCUcaNZccaALXNBiMclBJrebfoVRbgJXSSjd</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>8</RECORDNO><BUDGETID>-Fallback-scrubbed-tAQmgWVASbmciSmiEY</BUDGETID><DESCRIPTION>-Fallback-scrubbed-fezPdHTjksEOsmscDAlXtgI</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>04/05/2019
+        10:57:50</WHENCREATED><WHENMODIFIED>04/23/2019 10:35:36</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-NYdhSIkNwgFDATgHErBmhiyCMQdzWTBGmhQUOBSkvlOcGJmMqjTgrsVZNmKcrZAFTdeZGROeqVwKbOwRhEZmNRL</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>17</RECORDNO><BUDGETID>-Fallback-scrubbed-qdMIZIdDcIkQDKtLZBG</BUDGETID><DESCRIPTION>-Fallback-scrubbed-eqrCpYKGuYMRrEosQeQ</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>05/28/1996
+        07:51:01</WHENCREATED><WHENMODIFIED>04/25/2019 08:41:32</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-syztjxwKvfCeFUoMcitUgclmKyJiWWVkybFDxxoOYfyYOCLcXcDaicJeKrLLgQYlmvnPePohCDYLRvLkOrYAmEn</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>12</RECORDNO><BUDGETID>-Fallback-scrubbed-KEhgGOXoJdITNw</BUDGETID><DESCRIPTION>-Fallback-scrubbed-xZZlynELlNuEgHHkWxeLBbtGICPyGTnerlDqq</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>04/06/1973
+        23:54:17</WHENCREATED><WHENMODIFIED>05/07/2019 20:45:02</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-DLojUeXsnLIrNCEKaqYGcYZPToBZctfEpClTlghJjlUlZnRwKdrxiUoFuyzmroeymWwhUTBaUALLAZaTClwXMVv</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>10</RECORDNO><BUDGETID>-Fallback-scrubbed-nxJksLcascpffCrKHBHl</BUDGETID><DESCRIPTION>-Fallback-scrubbed-rnozePmgIQfRMjFdeQPYsrlDo</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>07/14/2023
+        01:14:29</WHENCREATED><WHENMODIFIED>04/23/2019 11:20:26</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-xglAVbUiEiOKCxYKXmxXuaZjbXoIeuorDuQiiBVmdqctrEnFKCQIBXwPFobljHTpIBznGlDVtniNhFvFeYNbpzP</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>16</RECORDNO><BUDGETID>-Fallback-scrubbed-XeucenMOGMbMufNWE</BUDGETID><DESCRIPTION>-Fallback-scrubbed-kgPXBozxfGWxkPTxW</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-tOjl</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>10/01/1973
+        12:58:11</WHENCREATED><WHENMODIFIED>04/25/2019 08:39:27</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>569</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-tOjl</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-VZPXmSgngvHQUKWwvnqabvLupNVIWsvSxPWwcLypFaZoCQEWFElnuDOPVAJNOjPzGFLrVXKWiIhTJALIATpDClH</RECORD_URL></GLBUDGETHEADER><GLBUDGETHEADER><RECORDNO>3</RECORDNO><BUDGETID>-Fallback-scrubbed-qzkPCMQFzPhKvVn</BUDGETID><DESCRIPTION>-Fallback-scrubbed-uiNvdFclWGVlfeSYxzStBHcjqRMiEfcRnRGy</DESCRIPTION><SYSTEMGENERATED>false</SYSTEMGENERATED><DEFAULT_BUDGET>false</DEFAULT_BUDGET><USER>-Fallback-scrubbed-MPPm</USER><STATUS>-Fallback-scrubbed-yYkyGB</STATUS><WHENCREATED>06/23/1994
+        13:27:54</WHENCREATED><WHENMODIFIED>12/14/2022 16:53:28</WHENMODIFIED><CREATEDBY>569</CREATEDBY><MODIFIEDBY>9609</MODIFIEDBY><ISCONSOLIDATED>false</ISCONSOLIDATED><CURRENCY></CURRENCY><ISPABUDGET>false</ISPABUDGET><ISPCNBUDGET>false</ISPCNBUDGET><CREATEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</CREATEDBYUSERDESC><MODIFIEDBYUSERDESC>-Fallback-scrubbed-WhgnNZKH</MODIFIEDBYUSERDESC><CREATEDBYLOGINID>-Fallback-scrubbed-tOjl</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-MPPm</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><EXTERNALID></EXTERNALID><RECORD_URL>-Fallback-scrubbed-LEikDtHcCJrKJRppeBuZPXbIyZsKmAPNkJkrBcGBQTnmvcErxfTcQgCPlbxbHerJyaZrDkAAsHHnUkhYDKhOlsN</RECORD_URL></GLBUDGETHEADER></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1ac25e733522-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:46:44 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '518'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.05'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '8275'
+    status:
+      code: 200
+      message: OK
+version: 1

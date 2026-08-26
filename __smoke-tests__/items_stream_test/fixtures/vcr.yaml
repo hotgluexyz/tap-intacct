@@ -1,0 +1,432 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="f5116854-832c-46c5-b7fd-648d7e570bfd"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-09-29
+        22:45:47</controlid><uniqueid>true</uniqueid><dtdversion>8.10884136388432</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1977-05-24T08:12:48+00:00</sessiontimestamp><sessiontimeout>1977-06-15T09:39:27+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-RKSydngWOlnrA</function><controlid>-Fallback-scrubbed-shlUFoEtrxOgalKRNkWmmxgeeeidvEJARcof</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d22100983a48a-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:51:44 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '559'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="0293e203-7fd6-4b05-8698-9135482919b1"><query><object>ITEM</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '877'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-09-29
+        22:45:47</controlid><uniqueid>true</uniqueid><dtdversion>8.10884136388432</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1975-01-02T07:02:23+00:00</sessiontimestamp><sessiontimeout>1988-06-24T04:56:58+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-wAYcn</function><controlid>-Fallback-scrubbed-gWUMpLNIaXaSAWtjCgzVpqPaLWFwTCHEtrYa</controlid><data
+        listtype="-Fallback-scrubbed-Chah" totalcount="1" offset="3148" count="7398"
+        numremaining="3148"><ITEM><RECORDNO>132</RECORDNO></ITEM></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d22159e308a23-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:51:45 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '561'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '757'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="a3136a72-07a0-4326-b897-e95f6bd48ba4"><query><object>ITEM</object><select><field>RECORDNO</field><field>ITEMID</field><field>STATUS</field><field>MRR</field><field>NAME</field><field>EXTENDED_DESCRIPTION</field><field>PODESCRIPTION</field><field>SODESCRIPTION</field><field>ISSUPPLYITEM</field><field>PRODUCTLINEID</field><field>PRODUCTLINERECORDNO</field><field>CYCLE</field><field>CNBILLINGTEMPLATENAME</field><field>CNREVENUETEMPLATENAME</field><field>CNREVENUE2TEMPLATENAME</field><field>CNEXPENSETEMPLATENAME</field><field>CNEXPENSE2TEMPLATENAME</field><field>CNDEFAULTBUNDLE</field><field>CNMEACATEGORYNAME</field><field>PRODUCTTYPE</field><field>SUBSTITUTEID</field><field>SHIP_WEIGHT</field><field>WHENLASTSOLD</field><field>WHENLASTRECEIVED</field><field>INCOMEACCTKEY</field><field>EXPENSEACCTKEY</field><field>INVACCTKEY</field><field>COGSACCTKEY</field><field>OFFSETOEGLACCOUNTKEY</field><field>OFFSETPOGLACCOUNTKEY</field><field>DEFERREDREVACCTKEY</field><field>DEFAULTREVRECTEMPLKEY</field><field>ALLOW_BACKORDER</field><field>TAXABLE</field><field>TAXGROUP.NAME</field><field>TAXCODE</field><field>COST_METHOD</field><field>DEFAULT_CONVERSIONTYPE</field><field>STANDARD_COST</field><field>UOMGRP</field><field>BASEUOM</field><field>UOM.INVUOMDETAIL.UNIT</field><field>UOM.POUOMDETAIL.UNIT</field><field>UOM.POUOMDETAIL.CONVFACTOR</field><field>UOM.SOUOMDETAIL.UNIT</field><field>UOM.SOUOMDETAIL.CONVFACTOR</field><field>DEFAULT_WAREHOUSE</field><field>GLGROUP</field><field>NOTE</field><field>INV_PRECISION</field><field>PO_PRECISION</field><field>SO_PRECISION</field><field>ITEMTYPE</field><field>ENABLE_SERIALNO</field><field>SERIAL_MASKKEY</field><field>ENABLE_LOT_CATEGORY</field><field>LOT_CATEGORYKEY</field><field>ENABLE_BINS</field><field>ENABLE_EXPIRATION</field><field>UPC</field><field>REVPOSTING</field><field>REVPRINTING</field><field>VSOECATEGORY</field><field>VSOEDLVRSTATUS</field><field>VSOEREVDEFSTATUS</field><field>HASSTARTENDDATES</field><field>TERMPERIOD</field><field>TOTALPERIODS</field><field>COMPUTEFORSHORTTERM</field><field>RENEWALMACROID</field><field>RENEWALMACROKEY</field><field>ITEMGLGROUP.INCOMEACCOUNT.ACCTNO</field><field>ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO</field><field>ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO</field><field>ITEMGLGROUP.COGSACCOUNT.ACCTNO</field><field>ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO</field><field>ITEMGLGROUP.OEGLACCOUNT.ACCTNO</field><field>ITEMGLGROUP.POGLACCOUNT.ACCTNO</field><field>ENABLELANDEDCOST</field><field>DEFCONTRACTDELIVERYSTATUS</field><field>DEFCONTRACTDEFERRALSTATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>IONORDER</field><field>IONHAND</field><field>IONHOLD</field><field>GLGRPKEY</field><field>UOMGRPKEY</field><field>TAXGROUPKEY</field><field>DROPSHIP</field><field>BUYTOORDER</field><field>IALLOCATED</field><field>IRESERVED</field><field>IUNCOMMITTED</field><field>IINTRANSIT</field><field>BASEPRICE</field><field>ENABLE_REPLENISHMENT</field><field>REPLENISHMENT_METHOD</field><field>DEFAULT_REPLENISHMENT_UOM</field><field>REORDER_POINT</field><field>SAFETY_STOCK</field><field>REORDER_QTY</field><field>MAX_ORDER_QTY</field><field>AUTOPRINTLABEL</field><field>ALLOWMULTIPLETAXGRPS</field><field>TAXGROUP.TAXSOLUTION.SOLUTIONID</field><field>TAXGROUP.TAXSOLUTIONKEY</field><field>WEIGHTUOM</field><field>NETWEIGHT</field><field>LWHUOM</field><field>LENGTH</field><field>WIDTH</field><field>HEIGHT</field><field>THICKNESSUOM</field><field>THICKNESS</field><field>MINIMUMTHICKNESS</field><field>MAXIMUMTHICKNESS</field><field>AREAUOM</field><field>AREA</field><field>VOLUMEUOM</field><field>VOLUME</field><field>DIAMETERUOM</field><field>INNERDIAMETER</field><field>OUTERDIAMETER</field><field>DUROMETER</field><field>DENSITYUOM</field><field>DENSITY</field><field>UPC12</field><field>EAN13</field><field>SAFETYITEM</field><field>RESTRICTEDITEM</field><field>COMPLIANTITEM</field><field>CONDITION</field><field>ENGINEERINGALERT</field><field>SPECIFICATION1</field><field>SPECIFICATION2</field><field>SPECIFICATION3</field><field>ENGINEERINGAPPROVAL</field><field>QUALITYCONTROLAPPROVAL</field><field>SALESAPPROVAL</field><field>PRIMARYCOUNTRYOFORIGIN</field><field>BRAND</field><field>SUBBRAND</field><field>CATEGORY</field><field>SUBCATEGORY</field><field>CATALOGREF</field><field>COLOR</field><field>STYLE</field><field>SIZE1</field><field>SIZE2</field><field>GIFTCARD</field><field>WEBENABLED</field><field>WEBNAME</field><field>WEBSHORTDESC</field><field>WEBLONGDESC</field><field>ENABLEFULFILLMENT</field><field>CONTRACTENABLED</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5578'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-09-29
+        22:45:47</controlid><uniqueid>true</uniqueid><dtdversion>8.10884136388432</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1975-01-02T07:02:23+00:00</sessiontimestamp><sessiontimeout>1988-06-24T04:56:58+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-wAYcn</function><controlid>-Fallback-scrubbed-gCoFNjBOYgLbOQrewyyQneWMSYJGNwixRmZt</controlid><data
+        listtype="-Fallback-scrubbed-Chah" totalcount="1" offset="3148" count="7398"
+        numremaining="3148"><ITEM><RECORDNO>132</RECORDNO><ITEMID>-Fallback-scrubbed-heujILKaznx</ITEMID><STATUS>-Fallback-scrubbed-ZNpFke</STATUS><MRR>true</MRR><NAME>Tina
+        Bean</NAME><EXTENDED_DESCRIPTION></EXTENDED_DESCRIPTION><PODESCRIPTION></PODESCRIPTION><SODESCRIPTION></SODESCRIPTION><ISSUPPLYITEM></ISSUPPLYITEM><PRODUCTLINEID></PRODUCTLINEID><PRODUCTLINERECORDNO></PRODUCTLINERECORDNO><CYCLE></CYCLE><CNBILLINGTEMPLATENAME></CNBILLINGTEMPLATENAME><CNREVENUETEMPLATENAME></CNREVENUETEMPLATENAME><CNREVENUE2TEMPLATENAME></CNREVENUE2TEMPLATENAME><CNEXPENSETEMPLATENAME></CNEXPENSETEMPLATENAME><CNEXPENSE2TEMPLATENAME></CNEXPENSE2TEMPLATENAME><CNDEFAULTBUNDLE>true</CNDEFAULTBUNDLE><CNMEACATEGORYNAME></CNMEACATEGORYNAME><PRODUCTTYPE>-Fallback-scrubbed-xHRfsgUUxpAJGxL</PRODUCTTYPE><SUBSTITUTEID></SUBSTITUTEID><SHIP_WEIGHT></SHIP_WEIGHT><WHENLASTSOLD></WHENLASTSOLD><WHENLASTRECEIVED></WHENLASTRECEIVED><INCOMEACCTKEY></INCOMEACCTKEY><EXPENSEACCTKEY></EXPENSEACCTKEY><INVACCTKEY></INVACCTKEY><COGSACCTKEY></COGSACCTKEY><OFFSETOEGLACCOUNTKEY></OFFSETOEGLACCOUNTKEY><OFFSETPOGLACCOUNTKEY></OFFSETPOGLACCOUNTKEY><DEFERREDREVACCTKEY></DEFERREDREVACCTKEY><DEFAULTREVRECTEMPLKEY></DEFAULTREVRECTEMPLKEY><ALLOW_BACKORDER>true</ALLOW_BACKORDER><TAXABLE></TAXABLE><TAXGROUP.NAME></TAXGROUP.NAME><TAXCODE></TAXCODE><COST_METHOD>-Fallback-scrubbed-XOESpYqD</COST_METHOD><DEFAULT_CONVERSIONTYPE>-Fallback-scrubbed-eMTfpVzm</DEFAULT_CONVERSIONTYPE><STANDARD_COST></STANDARD_COST><UOMGRP>-Fallback-scrubbed-fTJP</UOMGRP><BASEUOM>-Fallback-scrubbed-fTJP</BASEUOM><UOM.INVUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.INVUOMDETAIL.UNIT><UOM.POUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.POUOMDETAIL.UNIT><UOM.POUOMDETAIL.CONVFACTOR>7398</UOM.POUOMDETAIL.CONVFACTOR><UOM.SOUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.SOUOMDETAIL.UNIT><UOM.SOUOMDETAIL.CONVFACTOR>7398</UOM.SOUOMDETAIL.CONVFACTOR><DEFAULT_WAREHOUSE></DEFAULT_WAREHOUSE><GLGROUP></GLGROUP><NOTE></NOTE><INV_PRECISION></INV_PRECISION><PO_PRECISION></PO_PRECISION><SO_PRECISION></SO_PRECISION><ITEMTYPE>-Fallback-scrubbed-ylDLgEBtjDYNC</ITEMTYPE><ENABLE_SERIALNO></ENABLE_SERIALNO><SERIAL_MASKKEY></SERIAL_MASKKEY><ENABLE_LOT_CATEGORY></ENABLE_LOT_CATEGORY><LOT_CATEGORYKEY></LOT_CATEGORYKEY><ENABLE_BINS></ENABLE_BINS><ENABLE_EXPIRATION></ENABLE_EXPIRATION><UPC></UPC><REVPOSTING></REVPOSTING><REVPRINTING>-Fallback-scrubbed-PYw</REVPRINTING><VSOECATEGORY>-Fallback-scrubbed-ryDkeuLEWkIESVFjBYG</VSOECATEGORY><VSOEDLVRSTATUS>-Fallback-scrubbed-WLRKwAvMW</VSOEDLVRSTATUS><VSOEREVDEFSTATUS>-Fallback-scrubbed-QetpdgQNTkBJLzVbDuvwTxYJdGjBH</VSOEREVDEFSTATUS><HASSTARTENDDATES>true</HASSTARTENDDATES><TERMPERIOD></TERMPERIOD><TOTALPERIODS></TOTALPERIODS><COMPUTEFORSHORTTERM>true</COMPUTEFORSHORTTERM><RENEWALMACROID></RENEWALMACROID><RENEWALMACROKEY></RENEWALMACROKEY><ITEMGLGROUP.INCOMEACCOUNT.ACCTNO></ITEMGLGROUP.INCOMEACCOUNT.ACCTNO><ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO></ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO><ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO></ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO><ITEMGLGROUP.COGSACCOUNT.ACCTNO></ITEMGLGROUP.COGSACCOUNT.ACCTNO><ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO></ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO><ITEMGLGROUP.OEGLACCOUNT.ACCTNO></ITEMGLGROUP.OEGLACCOUNT.ACCTNO><ITEMGLGROUP.POGLACCOUNT.ACCTNO></ITEMGLGROUP.POGLACCOUNT.ACCTNO><ENABLELANDEDCOST>true</ENABLELANDEDCOST><DEFCONTRACTDELIVERYSTATUS>-Fallback-scrubbed-WLRKwAvMW</DEFCONTRACTDELIVERYSTATUS><DEFCONTRACTDEFERRALSTATUS>-Fallback-scrubbed-gvhUldzjszTrLGdjpAnfzcjveyTwPqesvyeNK</DEFCONTRACTDEFERRALSTATUS><WHENCREATED>07/14/1997
+        09:59:14</WHENCREATED><WHENMODIFIED>08/24/2026 20:38:10</WHENMODIFIED><CREATEDBY>7554</CREATEDBY><MODIFIEDBY>7554</MODIFIEDBY><IONORDER></IONORDER><IONHAND></IONHAND><IONHOLD></IONHOLD><GLGRPKEY></GLGRPKEY><UOMGRPKEY>8985</UOMGRPKEY><TAXGROUPKEY></TAXGROUPKEY><DROPSHIP>true</DROPSHIP><BUYTOORDER>true</BUYTOORDER><IALLOCATED></IALLOCATED><IRESERVED></IRESERVED><IUNCOMMITTED>3148</IUNCOMMITTED><IINTRANSIT></IINTRANSIT><BASEPRICE>3148</BASEPRICE><AUTOPRINTLABEL>true</AUTOPRINTLABEL><ALLOWMULTIPLETAXGRPS>true</ALLOWMULTIPLETAXGRPS><TAXGROUP.TAXSOLUTION.SOLUTIONID></TAXGROUP.TAXSOLUTION.SOLUTIONID><TAXGROUP.TAXSOLUTIONKEY></TAXGROUP.TAXSOLUTIONKEY><WEIGHTUOM></WEIGHTUOM><NETWEIGHT></NETWEIGHT><LWHUOM></LWHUOM><LENGTH></LENGTH><WIDTH></WIDTH><HEIGHT></HEIGHT><THICKNESSUOM></THICKNESSUOM><THICKNESS></THICKNESS><MINIMUMTHICKNESS></MINIMUMTHICKNESS><MAXIMUMTHICKNESS></MAXIMUMTHICKNESS><AREAUOM></AREAUOM><AREA></AREA><VOLUMEUOM></VOLUMEUOM><VOLUME></VOLUME><DIAMETERUOM></DIAMETERUOM><INNERDIAMETER></INNERDIAMETER><OUTERDIAMETER></OUTERDIAMETER><DUROMETER></DUROMETER><DENSITYUOM></DENSITYUOM><DENSITY></DENSITY><UPC12></UPC12><EAN13></EAN13><SAFETYITEM></SAFETYITEM><RESTRICTEDITEM></RESTRICTEDITEM><COMPLIANTITEM></COMPLIANTITEM><CONDITION></CONDITION><ENGINEERINGALERT></ENGINEERINGALERT><SPECIFICATION1></SPECIFICATION1><SPECIFICATION2></SPECIFICATION2><SPECIFICATION3></SPECIFICATION3><ENGINEERINGAPPROVAL></ENGINEERINGAPPROVAL><QUALITYCONTROLAPPROVAL></QUALITYCONTROLAPPROVAL><SALESAPPROVAL></SALESAPPROVAL><PRIMARYCOUNTRYOFORIGIN></PRIMARYCOUNTRYOFORIGIN><BRAND></BRAND><SUBBRAND></SUBBRAND><CATEGORY></CATEGORY><SUBCATEGORY></SUBCATEGORY><CATALOGREF></CATALOGREF><COLOR></COLOR><STYLE></STYLE><SIZE1></SIZE1><SIZE2></SIZE2><GIFTCARD></GIFTCARD><WEBENABLED></WEBENABLED><WEBNAME></WEBNAME><WEBSHORTDESC></WEBSHORTDESC><WEBLONGDESC></WEBLONGDESC><ENABLEFULFILLMENT></ENABLEFULFILLMENT><CONTRACTENABLED></CONTRACTENABLED><CREATEDBYLOGINID>-Fallback-scrubbed-eNND</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-eNND</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-CeQvNuDPzVoCSbYOabvlyVXxwKkzfSiCgTFblrwBdzfXnKVuaZZuyvKovtgyriUwhdbLrBGPHzWrpGZqtOxnSKQ</RECORD_URL></ITEM></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d221c2cded575-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:51:46 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '965'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.11'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '6165'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="1c38f0db-12fd-437e-9c09-1ec32a220317"><query><object>ITEM</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '877'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-09-29
+        22:45:47</controlid><uniqueid>true</uniqueid><dtdversion>8.10884136388432</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1971-07-15T02:32:38+00:00</sessiontimestamp><sessiontimeout>1999-07-28T07:55:13+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-wAYcn</function><controlid>-Fallback-scrubbed-uBNLtIzMDPMsFIxSCgqrknDTJBgUvWpcXnBI</controlid><data
+        listtype="-Fallback-scrubbed-Chah" totalcount="1" offset="3148" count="7398"
+        numremaining="3148"><ITEM><RECORDNO>132</RECORDNO></ITEM></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d2223de001d21-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:51:47 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '519'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '757'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="5acaf301-f321-4119-8e6b-c314a872b172"><query><object>ITEM</object><select><field>RECORDNO</field><field>ITEMID</field><field>STATUS</field><field>MRR</field><field>NAME</field><field>EXTENDED_DESCRIPTION</field><field>PODESCRIPTION</field><field>SODESCRIPTION</field><field>ISSUPPLYITEM</field><field>PRODUCTLINEID</field><field>PRODUCTLINERECORDNO</field><field>CYCLE</field><field>CNBILLINGTEMPLATENAME</field><field>CNREVENUETEMPLATENAME</field><field>CNREVENUE2TEMPLATENAME</field><field>CNEXPENSETEMPLATENAME</field><field>CNEXPENSE2TEMPLATENAME</field><field>CNDEFAULTBUNDLE</field><field>CNMEACATEGORYNAME</field><field>PRODUCTTYPE</field><field>SUBSTITUTEID</field><field>SHIP_WEIGHT</field><field>WHENLASTSOLD</field><field>WHENLASTRECEIVED</field><field>INCOMEACCTKEY</field><field>EXPENSEACCTKEY</field><field>INVACCTKEY</field><field>COGSACCTKEY</field><field>OFFSETOEGLACCOUNTKEY</field><field>OFFSETPOGLACCOUNTKEY</field><field>DEFERREDREVACCTKEY</field><field>DEFAULTREVRECTEMPLKEY</field><field>ALLOW_BACKORDER</field><field>TAXABLE</field><field>TAXGROUP.NAME</field><field>TAXCODE</field><field>COST_METHOD</field><field>DEFAULT_CONVERSIONTYPE</field><field>STANDARD_COST</field><field>UOMGRP</field><field>BASEUOM</field><field>UOM.INVUOMDETAIL.UNIT</field><field>UOM.POUOMDETAIL.UNIT</field><field>UOM.POUOMDETAIL.CONVFACTOR</field><field>UOM.SOUOMDETAIL.UNIT</field><field>UOM.SOUOMDETAIL.CONVFACTOR</field><field>DEFAULT_WAREHOUSE</field><field>GLGROUP</field><field>NOTE</field><field>INV_PRECISION</field><field>PO_PRECISION</field><field>SO_PRECISION</field><field>ITEMTYPE</field><field>ENABLE_SERIALNO</field><field>SERIAL_MASKKEY</field><field>ENABLE_LOT_CATEGORY</field><field>LOT_CATEGORYKEY</field><field>ENABLE_BINS</field><field>ENABLE_EXPIRATION</field><field>UPC</field><field>REVPOSTING</field><field>REVPRINTING</field><field>VSOECATEGORY</field><field>VSOEDLVRSTATUS</field><field>VSOEREVDEFSTATUS</field><field>HASSTARTENDDATES</field><field>TERMPERIOD</field><field>TOTALPERIODS</field><field>COMPUTEFORSHORTTERM</field><field>RENEWALMACROID</field><field>RENEWALMACROKEY</field><field>ITEMGLGROUP.INCOMEACCOUNT.ACCTNO</field><field>ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO</field><field>ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO</field><field>ITEMGLGROUP.COGSACCOUNT.ACCTNO</field><field>ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO</field><field>ITEMGLGROUP.OEGLACCOUNT.ACCTNO</field><field>ITEMGLGROUP.POGLACCOUNT.ACCTNO</field><field>ENABLELANDEDCOST</field><field>DEFCONTRACTDELIVERYSTATUS</field><field>DEFCONTRACTDEFERRALSTATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>IONORDER</field><field>IONHAND</field><field>IONHOLD</field><field>GLGRPKEY</field><field>UOMGRPKEY</field><field>TAXGROUPKEY</field><field>DROPSHIP</field><field>BUYTOORDER</field><field>IALLOCATED</field><field>IRESERVED</field><field>IUNCOMMITTED</field><field>IINTRANSIT</field><field>BASEPRICE</field><field>ENABLE_REPLENISHMENT</field><field>REPLENISHMENT_METHOD</field><field>DEFAULT_REPLENISHMENT_UOM</field><field>REORDER_POINT</field><field>SAFETY_STOCK</field><field>REORDER_QTY</field><field>MAX_ORDER_QTY</field><field>AUTOPRINTLABEL</field><field>ALLOWMULTIPLETAXGRPS</field><field>TAXGROUP.TAXSOLUTION.SOLUTIONID</field><field>TAXGROUP.TAXSOLUTIONKEY</field><field>WEIGHTUOM</field><field>NETWEIGHT</field><field>LWHUOM</field><field>LENGTH</field><field>WIDTH</field><field>HEIGHT</field><field>THICKNESSUOM</field><field>THICKNESS</field><field>MINIMUMTHICKNESS</field><field>MAXIMUMTHICKNESS</field><field>AREAUOM</field><field>AREA</field><field>VOLUMEUOM</field><field>VOLUME</field><field>DIAMETERUOM</field><field>INNERDIAMETER</field><field>OUTERDIAMETER</field><field>DUROMETER</field><field>DENSITYUOM</field><field>DENSITY</field><field>UPC12</field><field>EAN13</field><field>SAFETYITEM</field><field>RESTRICTEDITEM</field><field>COMPLIANTITEM</field><field>CONDITION</field><field>ENGINEERINGALERT</field><field>SPECIFICATION1</field><field>SPECIFICATION2</field><field>SPECIFICATION3</field><field>ENGINEERINGAPPROVAL</field><field>QUALITYCONTROLAPPROVAL</field><field>SALESAPPROVAL</field><field>PRIMARYCOUNTRYOFORIGIN</field><field>BRAND</field><field>SUBBRAND</field><field>CATEGORY</field><field>SUBCATEGORY</field><field>CATALOGREF</field><field>COLOR</field><field>STYLE</field><field>SIZE1</field><field>SIZE2</field><field>GIFTCARD</field><field>WEBENABLED</field><field>WEBNAME</field><field>WEBSHORTDESC</field><field>WEBLONGDESC</field><field>ENABLEFULFILLMENT</field><field>CONTRACTENABLED</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5578'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-09-29
+        22:45:47</controlid><uniqueid>true</uniqueid><dtdversion>8.10884136388432</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1993-09-07T17:56:01+00:00</sessiontimestamp><sessiontimeout>1994-07-25T21:29:35+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-wAYcn</function><controlid>-Fallback-scrubbed-PWnUQEJoLYhECVBacLSwbTggHnJKxaGfBIDY</controlid><data
+        listtype="-Fallback-scrubbed-Chah" totalcount="1" offset="3148" count="7398"
+        numremaining="3148"><ITEM><RECORDNO>132</RECORDNO><ITEMID>-Fallback-scrubbed-heujILKaznx</ITEMID><STATUS>-Fallback-scrubbed-ZNpFke</STATUS><MRR>true</MRR><NAME>Tina
+        Bean</NAME><EXTENDED_DESCRIPTION></EXTENDED_DESCRIPTION><PODESCRIPTION></PODESCRIPTION><SODESCRIPTION></SODESCRIPTION><ISSUPPLYITEM></ISSUPPLYITEM><PRODUCTLINEID></PRODUCTLINEID><PRODUCTLINERECORDNO></PRODUCTLINERECORDNO><CYCLE></CYCLE><CNBILLINGTEMPLATENAME></CNBILLINGTEMPLATENAME><CNREVENUETEMPLATENAME></CNREVENUETEMPLATENAME><CNREVENUE2TEMPLATENAME></CNREVENUE2TEMPLATENAME><CNEXPENSETEMPLATENAME></CNEXPENSETEMPLATENAME><CNEXPENSE2TEMPLATENAME></CNEXPENSE2TEMPLATENAME><CNDEFAULTBUNDLE>true</CNDEFAULTBUNDLE><CNMEACATEGORYNAME></CNMEACATEGORYNAME><PRODUCTTYPE>-Fallback-scrubbed-xHRfsgUUxpAJGxL</PRODUCTTYPE><SUBSTITUTEID></SUBSTITUTEID><SHIP_WEIGHT></SHIP_WEIGHT><WHENLASTSOLD></WHENLASTSOLD><WHENLASTRECEIVED></WHENLASTRECEIVED><INCOMEACCTKEY></INCOMEACCTKEY><EXPENSEACCTKEY></EXPENSEACCTKEY><INVACCTKEY></INVACCTKEY><COGSACCTKEY></COGSACCTKEY><OFFSETOEGLACCOUNTKEY></OFFSETOEGLACCOUNTKEY><OFFSETPOGLACCOUNTKEY></OFFSETPOGLACCOUNTKEY><DEFERREDREVACCTKEY></DEFERREDREVACCTKEY><DEFAULTREVRECTEMPLKEY></DEFAULTREVRECTEMPLKEY><ALLOW_BACKORDER>true</ALLOW_BACKORDER><TAXABLE></TAXABLE><TAXGROUP.NAME></TAXGROUP.NAME><TAXCODE></TAXCODE><COST_METHOD>-Fallback-scrubbed-XOESpYqD</COST_METHOD><DEFAULT_CONVERSIONTYPE>-Fallback-scrubbed-eMTfpVzm</DEFAULT_CONVERSIONTYPE><STANDARD_COST></STANDARD_COST><UOMGRP>-Fallback-scrubbed-fTJP</UOMGRP><BASEUOM>-Fallback-scrubbed-fTJP</BASEUOM><UOM.INVUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.INVUOMDETAIL.UNIT><UOM.POUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.POUOMDETAIL.UNIT><UOM.POUOMDETAIL.CONVFACTOR>7398</UOM.POUOMDETAIL.CONVFACTOR><UOM.SOUOMDETAIL.UNIT>-Fallback-scrubbed-fTJP</UOM.SOUOMDETAIL.UNIT><UOM.SOUOMDETAIL.CONVFACTOR>7398</UOM.SOUOMDETAIL.CONVFACTOR><DEFAULT_WAREHOUSE></DEFAULT_WAREHOUSE><GLGROUP></GLGROUP><NOTE></NOTE><INV_PRECISION></INV_PRECISION><PO_PRECISION></PO_PRECISION><SO_PRECISION></SO_PRECISION><ITEMTYPE>-Fallback-scrubbed-ylDLgEBtjDYNC</ITEMTYPE><ENABLE_SERIALNO></ENABLE_SERIALNO><SERIAL_MASKKEY></SERIAL_MASKKEY><ENABLE_LOT_CATEGORY></ENABLE_LOT_CATEGORY><LOT_CATEGORYKEY></LOT_CATEGORYKEY><ENABLE_BINS></ENABLE_BINS><ENABLE_EXPIRATION></ENABLE_EXPIRATION><UPC></UPC><REVPOSTING></REVPOSTING><REVPRINTING>-Fallback-scrubbed-PYw</REVPRINTING><VSOECATEGORY>-Fallback-scrubbed-ryDkeuLEWkIESVFjBYG</VSOECATEGORY><VSOEDLVRSTATUS>-Fallback-scrubbed-WLRKwAvMW</VSOEDLVRSTATUS><VSOEREVDEFSTATUS>-Fallback-scrubbed-QetpdgQNTkBJLzVbDuvwTxYJdGjBH</VSOEREVDEFSTATUS><HASSTARTENDDATES>true</HASSTARTENDDATES><TERMPERIOD></TERMPERIOD><TOTALPERIODS></TOTALPERIODS><COMPUTEFORSHORTTERM>true</COMPUTEFORSHORTTERM><RENEWALMACROID></RENEWALMACROID><RENEWALMACROKEY></RENEWALMACROKEY><ITEMGLGROUP.INCOMEACCOUNT.ACCTNO></ITEMGLGROUP.INCOMEACCOUNT.ACCTNO><ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO></ITEMGLGROUP.EXPENSEACCOUNT.ACCTNO><ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO></ITEMGLGROUP.INVENTORYACCOUNT.ACCTNO><ITEMGLGROUP.COGSACCOUNT.ACCTNO></ITEMGLGROUP.COGSACCOUNT.ACCTNO><ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO></ITEMGLGROUP.DEFRRGLACCOUNT.ACCTNO><ITEMGLGROUP.OEGLACCOUNT.ACCTNO></ITEMGLGROUP.OEGLACCOUNT.ACCTNO><ITEMGLGROUP.POGLACCOUNT.ACCTNO></ITEMGLGROUP.POGLACCOUNT.ACCTNO><ENABLELANDEDCOST>true</ENABLELANDEDCOST><DEFCONTRACTDELIVERYSTATUS>-Fallback-scrubbed-WLRKwAvMW</DEFCONTRACTDELIVERYSTATUS><DEFCONTRACTDEFERRALSTATUS>-Fallback-scrubbed-gvhUldzjszTrLGdjpAnfzcjveyTwPqesvyeNK</DEFCONTRACTDEFERRALSTATUS><WHENCREATED>07/14/1997
+        09:59:14</WHENCREATED><WHENMODIFIED>08/24/2026 20:38:10</WHENMODIFIED><CREATEDBY>7554</CREATEDBY><MODIFIEDBY>7554</MODIFIEDBY><IONORDER></IONORDER><IONHAND></IONHAND><IONHOLD></IONHOLD><GLGRPKEY></GLGRPKEY><UOMGRPKEY>8985</UOMGRPKEY><TAXGROUPKEY></TAXGROUPKEY><DROPSHIP>true</DROPSHIP><BUYTOORDER>true</BUYTOORDER><IALLOCATED></IALLOCATED><IRESERVED></IRESERVED><IUNCOMMITTED>3148</IUNCOMMITTED><IINTRANSIT></IINTRANSIT><BASEPRICE>3148</BASEPRICE><AUTOPRINTLABEL>true</AUTOPRINTLABEL><ALLOWMULTIPLETAXGRPS>true</ALLOWMULTIPLETAXGRPS><TAXGROUP.TAXSOLUTION.SOLUTIONID></TAXGROUP.TAXSOLUTION.SOLUTIONID><TAXGROUP.TAXSOLUTIONKEY></TAXGROUP.TAXSOLUTIONKEY><WEIGHTUOM></WEIGHTUOM><NETWEIGHT></NETWEIGHT><LWHUOM></LWHUOM><LENGTH></LENGTH><WIDTH></WIDTH><HEIGHT></HEIGHT><THICKNESSUOM></THICKNESSUOM><THICKNESS></THICKNESS><MINIMUMTHICKNESS></MINIMUMTHICKNESS><MAXIMUMTHICKNESS></MAXIMUMTHICKNESS><AREAUOM></AREAUOM><AREA></AREA><VOLUMEUOM></VOLUMEUOM><VOLUME></VOLUME><DIAMETERUOM></DIAMETERUOM><INNERDIAMETER></INNERDIAMETER><OUTERDIAMETER></OUTERDIAMETER><DUROMETER></DUROMETER><DENSITYUOM></DENSITYUOM><DENSITY></DENSITY><UPC12></UPC12><EAN13></EAN13><SAFETYITEM></SAFETYITEM><RESTRICTEDITEM></RESTRICTEDITEM><COMPLIANTITEM></COMPLIANTITEM><CONDITION></CONDITION><ENGINEERINGALERT></ENGINEERINGALERT><SPECIFICATION1></SPECIFICATION1><SPECIFICATION2></SPECIFICATION2><SPECIFICATION3></SPECIFICATION3><ENGINEERINGAPPROVAL></ENGINEERINGAPPROVAL><QUALITYCONTROLAPPROVAL></QUALITYCONTROLAPPROVAL><SALESAPPROVAL></SALESAPPROVAL><PRIMARYCOUNTRYOFORIGIN></PRIMARYCOUNTRYOFORIGIN><BRAND></BRAND><SUBBRAND></SUBBRAND><CATEGORY></CATEGORY><SUBCATEGORY></SUBCATEGORY><CATALOGREF></CATALOGREF><COLOR></COLOR><STYLE></STYLE><SIZE1></SIZE1><SIZE2></SIZE2><GIFTCARD></GIFTCARD><WEBENABLED></WEBENABLED><WEBNAME></WEBNAME><WEBSHORTDESC></WEBSHORTDESC><WEBLONGDESC></WEBLONGDESC><ENABLEFULFILLMENT></ENABLEFULFILLMENT><CONTRACTENABLED></CONTRACTENABLED><CREATEDBYLOGINID>-Fallback-scrubbed-eNND</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-eNND</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-CeQvNuDPzVoCSbYOabvlyVXxwKkzfSiCgTFblrwBdzfXnKVuaZZuyvKovtgyriUwhdbLrBGPHzWrpGZqtOxnSKQ</RECORD_URL></ITEM></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d222a3edc28b1-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:51:48 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '546'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '6165'
+    status:
+      code: 200
+      message: OK
+version: 1

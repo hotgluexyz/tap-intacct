@@ -1,0 +1,166 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="5082b2fd-4c7c-49d9-aaf5-bf144fa45dd8"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2001-08-07
+        19:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-4993678.24874905</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1973-04-25T13:35:42+00:00</sessiontimestamp><sessiontimeout>2005-05-24T16:51:01+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-MfJugsNMqzPpf</function><controlid>-Fallback-scrubbed-hrRGCTbyPLjUBfnnnuXwOIQbbvOpmYxUfvfa</controlid><data><api><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d3cafb3a514-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:26 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '614'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '837'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>yj-XmlpO51PJ9g_HNZbAP6ZKU8gy7so-_ky-_Vp2yfYPhzWWwC-jDx-J</sessionid></authentication><content><function
+      controlid="1878113b-24b3-41b1-b148-33726d09b75b"><getDimensions></getDimensions></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '526'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2001-08-07
+        19:53:09</controlid><uniqueid>true</uniqueid><dtdversion>-4993678.24874905</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2021-12-22T13:47:28+00:00</sessiontimestamp><sessiontimeout>2000-08-17T02:00:41+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-CiceRtKIhrqFC</function><controlid>-Fallback-scrubbed-SWNmGKHThJyUezrxStmMuEoIpzWzZgLEoFnD</controlid><data><dimensions><dimension><objectName>DEPARTMENT</objectName><objectLabel>-Fallback-scrubbed-uweepygwLN</objectLabel><termLabel>-Fallback-scrubbed-uweepygwLN</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>LOCATION</objectName><objectLabel>-Fallback-scrubbed-oqhKaAQC</objectLabel><termLabel>-Fallback-scrubbed-oqhKaAQC</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>PROJECT</objectName><objectLabel>-Fallback-scrubbed-KNdVmvT</objectLabel><termLabel>-Fallback-scrubbed-KNdVmvT</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CUSTOMER</objectName><objectLabel>-Fallback-scrubbed-kFsMedlH</objectLabel><termLabel>-Fallback-scrubbed-kFsMedlH</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>VENDOR</objectName><objectLabel>-Fallback-scrubbed-uYGzgh</objectLabel><termLabel>-Fallback-scrubbed-uYGzgh</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>EMPLOYEE</objectName><objectLabel>-Fallback-scrubbed-uLxfuBFX</objectLabel><termLabel>-Fallback-scrubbed-uLxfuBFX</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>ITEM</objectName><objectLabel>-Fallback-scrubbed-LQUk</objectLabel><termLabel>-Fallback-scrubbed-LQUk</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CLASS</objectName><objectLabel>-Fallback-scrubbed-ufzYJ</objectLabel><termLabel>-Fallback-scrubbed-aLggoCl</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CONTRACT</objectName><objectLabel>-Fallback-scrubbed-IbguzBye</objectLabel><termLabel>-Fallback-scrubbed-IbguzBye</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>TASK</objectName><objectLabel>-Fallback-scrubbed-FVZs</objectLabel><termLabel>-Fallback-scrubbed-FVZs</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>WAREHOUSE</objectName><objectLabel>-Fallback-scrubbed-KzbmeTTwU</objectLabel><termLabel>-Fallback-scrubbed-KzbmeTTwU</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>COSTTYPE</objectName><objectLabel>-Fallback-scrubbed-zzIQbABgc</objectLabel><termLabel>-Fallback-scrubbed-zzIQbABgc</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>AFFILIATEENTITY</objectName><objectLabel>-Fallback-scrubbed-ZGDMlTImltMqwkoB</objectLabel><termLabel>-Fallback-scrubbed-ZGDMlTImltMqwkoB</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>WORKORDER</objectName><objectLabel>-Fallback-scrubbed-tyXpyIhDkH</objectLabel><termLabel>-Fallback-scrubbed-tyXpyIhDkH</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>FIXEDASSET</objectName><objectLabel>-Fallback-scrubbed-HeMri</objectLabel><termLabel>-Fallback-scrubbed-HeMri</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>LOANACCOUNT</objectName><objectLabel>-Fallback-scrubbed-sUQl</objectLabel><termLabel>-Fallback-scrubbed-sUQl</termLabel><userDefinedDimension>false</userDefinedDimension><enabledInGL>true</enabledInGL></dimension><dimension><objectName>DIMENSION</objectName><objectLabel>-Fallback-scrubbed-IUWgOoCEM</objectLabel><termLabel>-Fallback-scrubbed-IUWgOoCEM</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>CUSTOM_EVENT</objectName><objectLabel>-Fallback-scrubbed-GXLICUfbosOk</objectLabel><termLabel>-Fallback-scrubbed-GXLICUfbosOk</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>DONOR</objectName><objectLabel>-Fallback-scrubbed-ikxDz</objectLabel><termLabel>-Fallback-scrubbed-ikxDz</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>ORDER_NUMBER</objectName><objectLabel>-Fallback-scrubbed-jZJXBUwWbNzC</objectLabel><termLabel>-Fallback-scrubbed-jZJXBUwWbNzC</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>SALES_CHANNEL</objectName><objectLabel>-Fallback-scrubbed-wMVPwHrWRArBc</objectLabel><termLabel>-Fallback-scrubbed-wMVPwHrWRArBc</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension><dimension><objectName>SECTOR</objectName><objectLabel>-Fallback-scrubbed-FCYGVX</objectLabel><termLabel>-Fallback-scrubbed-FCYGVX</termLabel><userDefinedDimension>true</userDefinedDimension><enabledInGL>false</enabledInGL></dimension></dimensions></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a30d1d421bd00b63-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Tue, 25 Aug 2026 19:48:27 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '513'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.03'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5167'
+    status:
+      code: 200
+      message: OK
+version: 1
