@@ -29,7 +29,13 @@ from tap_intacct.exceptions import (
     InvalidRequest,
     AuthFailure
 )
-from tap_intacct.const import GET_BY_DATE_FIELD, INTACCT_OBJECTS, KEY_PROPERTIES, REP_KEYS
+from tap_intacct.const import (
+    CLOSE_BOOKS_OBJECT,
+    GET_BY_DATE_FIELD,
+    INTACCT_OBJECTS,
+    KEY_PROPERTIES,
+    REP_KEYS,
+)
 
 from http.client import RemoteDisconnected
 from bs4 import BeautifulSoup
@@ -513,7 +519,7 @@ class SageIntacctSDK:
                     }
                 }
             }
-        elif object_type == 'budget_details':
+        elif object_type in ('budget_details', 'reporting_periods'):
             filter = None
         elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt" or rep_key == "ENTRY_DATE":
             filter = {
@@ -668,6 +674,38 @@ class SageIntacctSDK:
 
         return attachments_info
         
+    def get_books_open_from(self) -> Optional[str]:
+        """Earliest date the books are open from, across every CLOSEBOOKS row."""
+        try:
+            response = self.format_and_send_request(
+                {
+                    'readByQuery': {
+                        'object': CLOSE_BOOKS_OBJECT,
+                        'fields': '*',
+                        'query': None,
+                        'pagesize': '1000',
+                    }
+                }
+            )
+        except Exception as e:
+            logger.warning(
+                f"Unable to read {CLOSE_BOOKS_OBJECT}, so closed-period state is unknown: {e}"
+            )
+            return None
+
+        rows = response.get('data', {}).get(CLOSE_BOOKS_OBJECT.lower(), [])
+        if isinstance(rows, dict):
+            rows = [rows]
+
+        start_opens = [row['STARTOPEN'] for row in rows if row.get('STARTOPEN')]
+        if not start_opens:
+            logger.warning(
+                f"{CLOSE_BOOKS_OBJECT} returned no STARTOPEN values; closed-period state is unknown"
+            )
+            return None
+
+        return min(start_opens, key=lambda d: dt.datetime.strptime(d, '%m/%d/%Y'))
+
     def get_sample(self, intacct_object: str):
         """
         Get a sample of data from an endpoint, useful for determining schemas.
