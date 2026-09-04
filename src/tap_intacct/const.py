@@ -26,6 +26,7 @@ KEY_PROPERTIES = {
     'general_ledger_journal_entry_lines': ["RECORDNO"],
     "general_ledger_journals": ["RECORDNO"],
     "reporting_periods": ["RECORDNO"],
+    "close_books": ["RECORDNO"],
     'projects': ["RECORDNO"],
     'invoices': ["RECORDNO"],
     'adjustments': ["RECORDNO"],
@@ -75,6 +76,7 @@ INTACCT_OBJECTS = {
     "general_ledger_journal_entry_lines": "GLENTRY",
     "general_ledger_journals": "GLJOURNAL",
     "reporting_periods": "REPORTINGPERIOD",
+    "close_books": "CLOSEBOOKS",
     "projects": "PROJECT",
     "invoices": "ARINVOICE",
     "adjustments": "ARADJUSTMENT",
@@ -114,6 +116,7 @@ NON_AUDIT_HISTORY_OBJECTS = [
     'adjustment_items',
     'invoice_items',
     'consolidation_book_journals',
+    'close_books',
 ]
 
 REP_KEYS = {
@@ -121,12 +124,7 @@ REP_KEYS = {
     "general_ledger_journal_entry_lines": "ENTRY_DATE",
     "budget_details": None,
     "dimensions": None,
-    "reporting_periods": None,
-}
-CLOSE_BOOKS_OBJECT = "CLOSEBOOKS"
-IS_CLOSED_FIELD = "IS_CLOSED"
-DERIVED_FIELDS = {
-    "reporting_periods": [IS_CLOSED_FIELD],
+    "close_books": None,
 }
 
 STREAMS_WITH_ATTACHMENTS = {

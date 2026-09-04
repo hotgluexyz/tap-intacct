@@ -15,8 +15,6 @@ from tap_intacct.exceptions import SageIntacctSDKError
 from tap_intacct.client import SageIntacctSDK, get_client
 from tap_intacct.const import (
     DEFAULT_API_URL,
-    DERIVED_FIELDS,
-    IS_CLOSED_FIELD,
     KEY_PROPERTIES,
     REQUIRED_CONFIG_KEYS,
     INTACCT_OBJECTS,
@@ -192,6 +190,19 @@ def get_stream_schema(stream: str, client) -> Dict:
             'stream_meta': {}
         }
 
+    if stream == "close_books":
+        return {
+            'type': 'object',
+            'properties': {
+                'RECORDNO': {'type': ['null', 'string']},
+                'STARTOPEN': {'format': 'date-time', 'type': ['null', 'string']},
+                'SI_UUID': {'type': ['null', 'string']},
+                'RECORD_URL': {'type': ['null', 'string']},
+            },
+            'required': ['RECORDNO'],
+            'stream_meta': {}
+        }
+
     if stream == "fixed_assets":
         return {
                 'type': 'object',
@@ -244,12 +255,6 @@ def get_stream_schema(stream: str, client) -> Dict:
         format_dict['field_meta'] = {} if stream == 'audit_history' else rec
         schema_dict['properties'][rec['ID']] = format_dict
     schema_dict['required'] = required_list
-
-    if stream == 'reporting_periods':
-        schema_dict['properties'][IS_CLOSED_FIELD] = {
-            'type': ['null', 'boolean'],
-            'field_meta': {},
-        }
 
     return schema_dict
 
@@ -323,36 +328,6 @@ def _transform_and_write_record(
     singer.write_record(stream, rec, time_extracted=time_extracted)
 
 
-def _is_period_closed(end_date: str, books_open_from: str) -> Optional[bool]:
-    """Whether a reporting period is closed, given the books-open boundary."""
-    if not end_date or not books_open_from:
-        return None
-
-    try:
-        end = dt.datetime.strptime(end_date, '%m/%d/%Y')
-        open_from = dt.datetime.strptime(books_open_from, '%m/%d/%Y')
-    except ValueError:
-        logger.warning(
-            'Could not compare END_DATE %r with books-open date %r', end_date, books_open_from
-        )
-        return None
-
-    return end < open_from
-
-
-def _add_derived_fields(
-    row: Dict, stream: str, derived_fields: list, books_open_from: Optional[str]
-) -> None:
-    """Add the derived field to a record in place."""
-    if stream != 'reporting_periods':
-        return
-
-    if IS_CLOSED_FIELD in derived_fields:
-        is_closed = _is_period_closed(row.get('END_DATE'), books_open_from)
-        if is_closed is not None:
-            row[IS_CLOSED_FIELD] = is_closed
-
-
 def sync_stream(stream: str) -> None:
     """
     Extracts records for the selected stream.
@@ -368,17 +343,6 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
-
-    # Fields the tap derives don't exist on the Intacct object; selecting them
-    # would make the query fail.
-    derived_fields = [f for f in DERIVED_FIELDS.get(stream, []) if f in fields]
-    for field in derived_fields:
-        fields.remove(field)
-
-    books_open_from = None
-    if stream == 'reporting_periods' and derived_fields:
-        books_open_from = Context.intacct_client.get_books_open_from()
-        logger.info('Books are open from %s', books_open_from or 'unknown')
 
     # Special handling for dimensions - getDimensions doesn't support date-based queries
     if stream == 'dimensions':
@@ -493,9 +457,6 @@ def sync_stream(stream: str) -> None:
             row_timestamp = singer.utils.strptime_to_utc(intacct_object[rep_key])
             if row_timestamp > bookmark:
                 bookmark = row_timestamp
-
-        if derived_fields:
-            _add_derived_fields(intacct_object, stream, derived_fields, books_open_from)
 
         _transform_and_write_record(intacct_object, schema, stream, time_extracted)
         Context.counts[stream] += 1
