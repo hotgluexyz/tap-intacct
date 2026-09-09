@@ -513,7 +513,7 @@ class SageIntacctSDK:
                     }
                 }
             }
-        elif object_type == 'budget_details':
+        elif object_type in ('budget_details', 'close_books'):
             filter = None
         elif rep_key == GET_BY_DATE_FIELD or rep_key == "updatedAt" or rep_key == "ENTRY_DATE":
             filter = {

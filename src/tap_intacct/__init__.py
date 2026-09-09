@@ -190,6 +190,19 @@ def get_stream_schema(stream: str, client) -> Dict:
             'stream_meta': {}
         }
 
+    if stream == "close_books":
+        return {
+            'type': 'object',
+            'properties': {
+                'RECORDNO': {'type': ['null', 'string']},
+                'STARTOPEN': {'format': 'date-time', 'type': ['null', 'string']},
+                'SI_UUID': {'type': ['null', 'string']},
+                'RECORD_URL': {'type': ['null', 'string']},
+            },
+            'required': ['RECORDNO'],
+            'stream_meta': {}
+        }
+
     if stream == "fixed_assets":
         return {
                 'type': 'object',
@@ -330,7 +343,7 @@ def sync_stream(stream: str) -> None:
     logger.info('Syncing %s data from %s to %s', stream, from_datetime, time_extracted)
     bookmark = from_datetime
     fields = Context.get_selected_fields(stream)
-    
+
     # Special handling for dimensions - getDimensions doesn't support date-based queries
     if stream == 'dimensions':
         logger.info("Fetching all dimensions using getDimensions API")
