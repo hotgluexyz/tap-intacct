@@ -1,0 +1,6924 @@
+{
+  "streams": [
+    {
+      "stream": "customers",
+      "tap_stream_id": "customers",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTOMERID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTOMERID",
+              "LABEL": "Customer ID",
+              "DESCRIPTION": "Unique ID of customer",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "NAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "NAME",
+              "LABEL": "Customer name",
+              "DESCRIPTION": "Name of customer",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ENTITY",
+              "LABEL": "Entity",
+              "DESCRIPTION": "Entity",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTKEY",
+              "LABEL": "Parent key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTID",
+              "LABEL": "Parent customer",
+              "DESCRIPTION": "Name of parent customer",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTNAME",
+              "LABEL": "Parent - Name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.CONTACTNAME",
+              "LABEL": "Customer name",
+              "DESCRIPTION": "Unique identifier for customer contact name",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.COMPANYNAME",
+              "LABEL": "Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.PREFIX",
+              "LABEL": "Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.FIRSTNAME",
+              "LABEL": "First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.LASTNAME",
+              "LABEL": "Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.INITIAL",
+              "LABEL": "Middle name",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.PRINTAS",
+              "LABEL": "Print as",
+              "DESCRIPTION": "Print as",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXABLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXABLE",
+              "LABEL": "Taxable",
+              "DESCRIPTION": "Taxable",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXGROUPKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXGROUPKEY",
+              "LABEL": "Tax group record number",
+              "DESCRIPTION": "Tax group record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXGROUP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXGROUP",
+              "LABEL": "Tax group",
+              "DESCRIPTION": "Tax group",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXSCHEDULE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXSCHEDULE",
+              "LABEL": "Default tax schedule",
+              "DESCRIPTION": "Default tax schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.ENTITYUSECODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.ENTITYUSECODE",
+              "LABEL": "Exemption use code",
+              "DESCRIPTION": "Exemption use code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXID",
+              "LABEL": "Tax ID",
+              "DESCRIPTION": "Tax identification number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.SIRET": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.SIRET",
+              "LABEL": "SIRET",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.ELECTRONICADDRESS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.ELECTRONICADDRESS",
+              "LABEL": "Electronic address",
+              "DESCRIPTION": "Electronic address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.LEGAL_CATEGORY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.LEGAL_CATEGORY",
+              "LABEL": "Legal category",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAIN_ACTIVITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAIN_ACTIVITY",
+              "LABEL": "Main activity",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TYPE_OF_COMPANY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TYPE_OF_COMPANY",
+              "LABEL": "Type of company",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.REGISTERED_CAPITAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.REGISTERED_CAPITAL",
+              "LABEL": "Registered capital",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.VAT_REGIME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.VAT_REGIME",
+              "LABEL": "VAT regime",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.PHONE1",
+              "LABEL": "Phone number",
+              "DESCRIPTION": "Phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.PHONE2",
+              "LABEL": "Phone 2",
+              "DESCRIPTION": "Secondary phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.CELLPHONE",
+              "LABEL": "Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.PAGER",
+              "LABEL": "Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.FAX",
+              "LABEL": "Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXIDVALIDATIONDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXIDVALIDATIONDATE",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.GSTREGISTERED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.GSTREGISTERED",
+              "LABEL": "GST registered",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "T",
+                  "F"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXCOMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXCOMPANYNAME",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.TAXADDRESS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.TAXADDRESS",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.EMAIL1",
+              "LABEL": "Email address",
+              "DESCRIPTION": "Email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.EMAIL2",
+              "LABEL": "Secondary email address",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.URL1",
+              "LABEL": "URL",
+              "DESCRIPTION": "URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.URL2",
+              "LABEL": "URL 2",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.VISIBLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.VISIBLE",
+              "LABEL": "Visible",
+              "DESCRIPTION": "Visible",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.ADDRESS1",
+              "LABEL": "Address line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.ADDRESS2",
+              "LABEL": "Address line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.ADDRESS3",
+              "LABEL": "Address line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.CITY",
+              "LABEL": "City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.STATE",
+              "LABEL": "State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.ZIP",
+              "LABEL": "ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.COUNTRY",
+              "LABEL": "Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.LATITUDE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.LATITUDE",
+              "LABEL": "Latitude",
+              "DESCRIPTION": "Latitude",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.MAILADDRESS.LONGITUDE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.MAILADDRESS.LONGITUDE",
+              "LABEL": "Longitude",
+              "DESCRIPTION": "Longitude",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACT.STATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACT.STATUS",
+              "LABEL": "Display contact: Status",
+              "DESCRIPTION": "Active or inactive",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "active",
+                  "inactive"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERMNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERMNAME",
+              "LABEL": "Term",
+              "DESCRIPTION": "Term",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERMVALUE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERMVALUE",
+              "LABEL": "Term value",
+              "DESCRIPTION": "Term value",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTREPID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTREPID",
+              "LABEL": "Customer rep",
+              "DESCRIPTION": "Customer rep",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTREPNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTREPNAME",
+              "LABEL": "Customer rep name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RESALENO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RESALENO",
+              "LABEL": "Resale number",
+              "DESCRIPTION": "Resale number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXID",
+              "LABEL": "Tax ID",
+              "DESCRIPTION": "Tax identification number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DATEVID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DATEVID",
+              "LABEL": "DATEV ID",
+              "DESCRIPTION": "DATEV ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREDITLIMIT": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "CREDITLIMIT",
+              "LABEL": "Credit limit",
+              "DESCRIPTION": "Credit limit",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TOTALDUE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TOTALDUE",
+              "LABEL": "Total due",
+              "DESCRIPTION": "Total due",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "COMMENTS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "COMMENTS",
+              "LABEL": "Comments",
+              "DESCRIPTION": "Comments",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ACCOUNTLABEL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ACCOUNTLABEL",
+              "LABEL": "Account label",
+              "DESCRIPTION": "Account label option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ARACCOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ARACCOUNT",
+              "LABEL": "Default revenue account",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ARACCOUNTTITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ARACCOUNTTITLE",
+              "LABEL": "AR account title",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LAST_INVOICEDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "LAST_INVOICEDATE",
+              "LABEL": "Last invoice date",
+              "DESCRIPTION": "Last invoice date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LAST_STATEMENTDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "LAST_STATEMENTDATE",
+              "LABEL": "Last statement date",
+              "DESCRIPTION": "Last statement date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DELIVERY_OPTIONS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DELIVERY_OPTIONS",
+              "LABEL": "Delivery options",
+              "DESCRIPTION": "Delivery options",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Print",
+                  "E-Mail",
+                  "Print#~#E-Mail"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERRITORYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERRITORYID",
+              "LABEL": "Territory ID",
+              "DESCRIPTION": "Territory ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERRITORYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERRITORYNAME",
+              "LABEL": "Territory name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPPINGMETHOD": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPPINGMETHOD",
+              "LABEL": "Shipping method",
+              "DESCRIPTION": "Shipping method",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTTYPE",
+              "LABEL": "Customer type ID",
+              "DESCRIPTION": "Customer type",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "GLGRPKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "GLGRPKEY",
+              "LABEL": "GL group record number",
+              "DESCRIPTION": "GL group record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "GLGROUP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "GLGROUP",
+              "LABEL": "GL group",
+              "DESCRIPTION": "GL group",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRICESCHEDULE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRICESCHEDULE",
+              "LABEL": "Price schedule",
+              "DESCRIPTION": "Price schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISCOUNT": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "DISCOUNT",
+              "LABEL": "Discount percent",
+              "DESCRIPTION": "Discount",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRICELIST": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRICELIST",
+              "LABEL": "Customer price list",
+              "DESCRIPTION": "Customer price schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VSOEPRICELIST": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VSOEPRICELIST",
+              "LABEL": "Fair value price list",
+              "DESCRIPTION": "Fair value price schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCY",
+              "LABEL": "Default currency",
+              "DESCRIPTION": "Default currency",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.CONTACTNAME",
+              "LABEL": "Primary contact",
+              "DESCRIPTION": "Primary contact name",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PREFIX",
+              "LABEL": "Contact: Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.FIRSTNAME",
+              "LABEL": "Contact: First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.INITIAL",
+              "LABEL": "Contact: MI",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.LASTNAME",
+              "LABEL": "Contact: Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.COMPANYNAME",
+              "LABEL": "Contact: Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PRINTAS",
+              "LABEL": "Contact: Print as",
+              "DESCRIPTION": "Name as appears on official documents",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PHONE1",
+              "LABEL": "Contact: Phone 1",
+              "DESCRIPTION": "Primary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PHONE2",
+              "LABEL": "Contact: Phone 2",
+              "DESCRIPTION": "Secondary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.CELLPHONE",
+              "LABEL": "Contact: Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.PAGER",
+              "LABEL": "Contact: Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.FAX",
+              "LABEL": "Contact: Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.EMAIL1",
+              "LABEL": "Contact: Email 1",
+              "DESCRIPTION": "Primary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.EMAIL2",
+              "LABEL": "Contact: Email 2",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.URL1",
+              "LABEL": "Contact: URL 1",
+              "DESCRIPTION": "Primary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.URL2",
+              "LABEL": "Contact: URL 2",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.VISIBLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.VISIBLE",
+              "LABEL": "Primary: Contact visible",
+              "DESCRIPTION": "Visible",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS1",
+              "LABEL": "Contact address: Address line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS2",
+              "LABEL": "Contact address: Address line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ADDRESS3",
+              "LABEL": "Contact address: Address line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.CITY",
+              "LABEL": "Contact address: City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.STATE",
+              "LABEL": "Contact address: State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.ZIP",
+              "LABEL": "Contact address: ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.COUNTRY",
+              "LABEL": "Contact address: Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTINFO.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTINFO.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Contact address: Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.CONTACTNAME",
+              "LABEL": "Ship-to contact",
+              "DESCRIPTION": "Contact name for shipping",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PREFIX",
+              "LABEL": "Ship-to contact: Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.FIRSTNAME",
+              "LABEL": "Ship-to contact: First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.INITIAL",
+              "LABEL": "Ship-to contact: MI",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.LASTNAME",
+              "LABEL": "Ship-to contact: Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.COMPANYNAME",
+              "LABEL": "Ship-to contact: Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PRINTAS",
+              "LABEL": "Ship-to contact: Print as",
+              "DESCRIPTION": "Name as appears on official documents",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.TAXABLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.TAXABLE",
+              "LABEL": "Shipping contact taxable",
+              "DESCRIPTION": "Taxable",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.TAXGROUP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.TAXGROUP",
+              "LABEL": "Shipping tax group",
+              "DESCRIPTION": "Shipping tax group",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.TAXSCHEDULE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.TAXSCHEDULE",
+              "LABEL": "Default tax schedule",
+              "DESCRIPTION": "Default tax schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.TAXID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.TAXID",
+              "LABEL": "Tax ID",
+              "DESCRIPTION": "Tax identification number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PHONE1",
+              "LABEL": "Ship-to contact: Phone 1",
+              "DESCRIPTION": "Primary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PHONE2",
+              "LABEL": "Ship-to contact: Phone 2",
+              "DESCRIPTION": "Secondary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.CELLPHONE",
+              "LABEL": "Ship-to contact: Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.PAGER",
+              "LABEL": "Ship-to contact: Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.FAX",
+              "LABEL": "Ship-to contact: Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.EMAIL1",
+              "LABEL": "Ship-to contact: Email 1",
+              "DESCRIPTION": "Primary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.EMAIL2",
+              "LABEL": "Ship-to contact: Email 2",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.URL1",
+              "LABEL": "Ship-to contact: URL 1",
+              "DESCRIPTION": "Primary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.URL2",
+              "LABEL": "Ship-to contact: URL 2",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.VISIBLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.VISIBLE",
+              "LABEL": "Ship-to primary: Contact visible",
+              "DESCRIPTION": "Visible",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS1",
+              "LABEL": "Ship-to contact address: Line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS2",
+              "LABEL": "Ship-to contact address: Line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ADDRESS3",
+              "LABEL": "Ship-to contact address: Line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.CITY",
+              "LABEL": "Ship-to contact address: City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.STATE",
+              "LABEL": "Ship-to contact address: State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.ZIP",
+              "LABEL": "Ship-to contact address: ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.COUNTRY",
+              "LABEL": "Ship-to contact address: Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTO.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTO.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Ship-to contact address: Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.CONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.CONTACTNAME",
+              "LABEL": "Bill-to contact",
+              "DESCRIPTION": "Contact name for billing",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.PREFIX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.PREFIX",
+              "LABEL": "Bill-to contact: Prefix",
+              "DESCRIPTION": "Prefix",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.FIRSTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.FIRSTNAME",
+              "LABEL": "Bill-to contact: First name",
+              "DESCRIPTION": "First name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.INITIAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.INITIAL",
+              "LABEL": "Bill-to contact: MI",
+              "DESCRIPTION": "Middle name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.LASTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.LASTNAME",
+              "LABEL": "Bill-to contact: Last name",
+              "DESCRIPTION": "Last name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.COMPANYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.COMPANYNAME",
+              "LABEL": "Bill-to contact: Company name",
+              "DESCRIPTION": "Full name of the company",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.PRINTAS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.PRINTAS",
+              "LABEL": "Bill-to contact: Print as",
+              "DESCRIPTION": "Name as appears on official documents",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.TAXABLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.TAXABLE",
+              "LABEL": "Billing contact taxable",
+              "DESCRIPTION": "Taxable",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.TAXGROUP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.TAXGROUP",
+              "LABEL": "Billing tax group",
+              "DESCRIPTION": "Billing tax group",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.TAXSCHEDULE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.TAXSCHEDULE",
+              "LABEL": "Default tax schedule",
+              "DESCRIPTION": "Default tax schedule",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.PHONE1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.PHONE1",
+              "LABEL": "Bill-to contact: Phone 1",
+              "DESCRIPTION": "Primary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.PHONE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.PHONE2",
+              "LABEL": "Bill-to contact: Phone 2",
+              "DESCRIPTION": "Secondary phone",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.CELLPHONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.CELLPHONE",
+              "LABEL": "Bill-to contact: Mobile phone",
+              "DESCRIPTION": "Mobile phone number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.PAGER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.PAGER",
+              "LABEL": "Bill-to contact: Pager",
+              "DESCRIPTION": "Pager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.FAX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.FAX",
+              "LABEL": "Bill-to contact: Fax",
+              "DESCRIPTION": "Fax",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.EMAIL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.EMAIL1",
+              "LABEL": "Bill-to contact: Email 1",
+              "DESCRIPTION": "Primary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.EMAIL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.EMAIL2",
+              "LABEL": "Bill-to contact: Email 2",
+              "DESCRIPTION": "Secondary email address",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.URL1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.URL1",
+              "LABEL": "Bill-to contact: URL 1",
+              "DESCRIPTION": "Primary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.URL2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.URL2",
+              "LABEL": "Bill-to contact: URL 2",
+              "DESCRIPTION": "Secondary URL",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.VISIBLE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.VISIBLE",
+              "LABEL": "Bill-to contact: Visible",
+              "DESCRIPTION": "Visible",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.ADDRESS1",
+              "LABEL": "Bill-to contact address: Line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.ADDRESS2",
+              "LABEL": "Bill-to contact address: Line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.ADDRESS3",
+              "LABEL": "Bill-to contact address: Line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.CITY",
+              "LABEL": "Bill-to contact address: City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.STATE",
+              "LABEL": "Bill-to contact address: State or territory",
+              "DESCRIPTION": "State or territory",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.ZIP",
+              "LABEL": "Bill-to contact address: ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.COUNTRY",
+              "LABEL": "Bill-to contact address: Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTO.MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTO.MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Bill-to contact address: Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATUS",
+              "LABEL": "Status",
+              "DESCRIPTION": "Active/active-non-posting/inactive",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "active",
+                  "active non-posting",
+                  "inactive"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "ONETIME": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ONETIME",
+              "LABEL": "One-time use",
+              "DESCRIPTION": "One-time use",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTMESSAGEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTMESSAGEKEY",
+              "LABEL": "Customer message key",
+              "DESCRIPTION": "Customer message key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTMESSAGEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTMESSAGEID",
+              "LABEL": "Default customer message",
+              "DESCRIPTION": "Default customer message",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ONHOLD": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ONHOLD",
+              "LABEL": "On hold",
+              "DESCRIPTION": "On hold",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRCLST_OVERRIDE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRCLST_OVERRIDE",
+              "LABEL": "Price list override",
+              "DESCRIPTION": "Price list override",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "C",
+                  "B",
+                  "S"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEPRCLSTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEPRCLSTKEY",
+              "LABEL": "OE price list key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEPRICESCHEDKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEPRICESCHEDKEY",
+              "LABEL": "OE price schedule key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENABLEONLINECARDPAYMENT": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ENABLEONLINECARDPAYMENT",
+              "LABEL": "Enable online credit card",
+              "DESCRIPTION": "Enable online credit card",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "ENABLEONLINEACHPAYMENT": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "ENABLEONLINEACHPAYMENT",
+              "LABEL": "Enable online ACH debit",
+              "DESCRIPTION": "Enable online ACH debit",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "VSOEPRCLSTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VSOEPRCLSTKEY",
+              "LABEL": "Fair value price list key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this customer was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ARINVOICEPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ARINVOICEPRINTTEMPLATEID",
+              "LABEL": "AR invoice printing template",
+              "DESCRIPTION": "Format template for printing AR invoice documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEQUOTEPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEQUOTEPRINTTEMPLATEID",
+              "LABEL": "Order Entry - Quote printing template",
+              "DESCRIPTION": "Format template for printing Order Entry quote documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEORDERPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEORDERPRINTTEMPLATEID",
+              "LABEL": "Order Entry - Order printing template",
+              "DESCRIPTION": "Format template for printing Order Entry order documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OELISTPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OELISTPRINTTEMPLATEID",
+              "LABEL": "Order Entry - List printing template",
+              "DESCRIPTION": "Format template for printing Order Entry list documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEINVOICEPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEINVOICEPRINTTEMPLATEID",
+              "LABEL": "Order Entry - Invoice printing template",
+              "DESCRIPTION": "Format template for printing Order Entry invoice documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEADJPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEADJPRINTTEMPLATEID",
+              "LABEL": "Order Entry - Adjustment printing template",
+              "DESCRIPTION": "Format template for printing Order Entry adjustment documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OEOTHERPRINTTEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OEOTHERPRINTTEMPLATEID",
+              "LABEL": "Order Entry - Other printing template",
+              "DESCRIPTION": "Format template for printing Order Entry other documents (XSL, DOC, or DOX)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OBJECTRESTRICTION": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OBJECTRESTRICTION",
+              "LABEL": "Visibility",
+              "DESCRIPTION": "Visibility",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Unrestricted",
+                  "RootOnly",
+                  "Restricted"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "DISPLAYCONTACTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DISPLAYCONTACTKEY",
+              "LABEL": "Display contact record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTKEY",
+              "LABEL": "Primary contact record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTOKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTOKEY",
+              "LABEL": "Ship-to contact record number",
+              "DESCRIPTION": "Ship-to contact record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTOKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTOKEY",
+              "LABEL": "Bill-to contact record number",
+              "DESCRIPTION": "Bill-to contact record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTREPKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTREPKEY",
+              "LABEL": "Customer representative employee record number",
+              "DESCRIPTION": "Customer representative employee record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPVIAKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPVIAKEY",
+              "LABEL": "Shipping method record number",
+              "DESCRIPTION": "Shipping method record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERRITORYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERRITORYKEY",
+              "LABEL": "Territory record number",
+              "DESCRIPTION": "Territory record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TERMSKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TERMSKEY",
+              "LABEL": "Term record number",
+              "DESCRIPTION": "Term record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ACCOUNTLABELKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ACCOUNTLABELKEY",
+              "LABEL": "Account label record number",
+              "DESCRIPTION": "Account label record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ACCOUNTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ACCOUNTKEY",
+              "LABEL": "GL account record number",
+              "DESCRIPTION": "GL account record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTTYPEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTTYPEKEY",
+              "LABEL": "Customer type record number",
+              "DESCRIPTION": "Customer type record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRICESCHEDULEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRICESCHEDULEKEY",
+              "LABEL": "Price schedule record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OFFSETACCOUNTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OFFSETACCOUNTKEY",
+              "LABEL": "AR account record number",
+              "DESCRIPTION": "AR account record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OFFSETGLACCOUNTNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OFFSETGLACCOUNTNO",
+              "LABEL": "AR account",
+              "DESCRIPTION": "AR account",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OFFSETGLACCOUNTNOTITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OFFSETGLACCOUNTNOTITLE",
+              "LABEL": "Default AR account",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADVBILLBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADVBILLBY",
+              "LABEL": "Bill in advance",
+              "DESCRIPTION": "Bill in advance",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "ADVBILLBYTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "ADVBILLBYTYPE",
+              "LABEL": "Before contract start date",
+              "DESCRIPTION": "Bill in advance type",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  null,
+                  "days",
+                  "months"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPDOCID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPDOCID",
+              "LABEL": "Attachment",
+              "DESCRIPTION": "Attachment",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RETAINAGEPERCENTAGE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "RETAINAGEPERCENTAGE",
+              "LABEL": "Default retainage percentage",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "PERCENT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EMAILOPTIN": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "EMAILOPTIN",
+              "LABEL": "Accepts emailed invoices",
+              "DESCRIPTION": "Accepts emailed invoices",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUBSCRIPTIONENDDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "SUBSCRIPTIONENDDATE",
+              "LABEL": "Subscription end date",
+              "DESCRIPTION": "MRR subscription date",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPDOCKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPDOCKEY",
+              "LABEL": "Attachment key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTMESSAGE.MESSAGE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTMESSAGE.MESSAGE",
+              "LABEL": "Message text",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "HEALTHSCORE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "HEALTHSCORE",
+              "LABEL": "Health score",
+              "DESCRIPTION": "Numeric health score (0-100)",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "HEALTHSTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "HEALTHSTATUS",
+              "LABEL": "Health status",
+              "DESCRIPTION": "Current health status of the customer",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Healthy",
+                  "At Risk",
+                  "Escalated"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CHURNRISK": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "CHURNRISK",
+              "LABEL": "At risk for churn",
+              "DESCRIPTION": "Indicates if the customer is at risk for churn",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SERVICERCUSTOMERSYNCSTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SERVICERCUSTOMERSYNCSTATUS",
+              "LABEL": "State",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Request initiated",
+                  "In progress",
+                  "Request received",
+                  "Request failed",
+                  "Active",
+                  "Deleted",
+                  "Not assigned",
+                  "Delete - Manual merge",
+                  "Pending"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SI_UUID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SI_UUID",
+              "LABEL": "Universal unique identifier",
+              "DESCRIPTION": "Universal unique identifier",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYKEY",
+              "LABEL": "Created at - Entity key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYID",
+              "LABEL": "Created at - Entity ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYNAME",
+              "LABEL": "Created at - Entity name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RCLASS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RCLASS",
+              "LABEL": "Class",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RDEPARTMENT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RDEPARTMENT",
+              "LABEL": "Department",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTOMERID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "NAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXABLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXGROUPKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXGROUP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXSCHEDULE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.ENTITYUSECODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.SIRET"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.ELECTRONICADDRESS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.LEGAL_CATEGORY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAIN_ACTIVITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TYPE_OF_COMPANY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.REGISTERED_CAPITAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.VAT_REGIME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXIDVALIDATIONDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.GSTREGISTERED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXCOMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.TAXADDRESS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.VISIBLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.LATITUDE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.MAILADDRESS.LONGITUDE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACT.STATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERMNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERMVALUE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTREPID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTREPNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RESALENO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DATEVID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREDITLIMIT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TOTALDUE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "COMMENTS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ACCOUNTLABEL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ARACCOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ARACCOUNTTITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LAST_INVOICEDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LAST_STATEMENTDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DELIVERY_OPTIONS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERRITORYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERRITORYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPPINGMETHOD"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "GLGRPKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "GLGROUP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRICESCHEDULE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISCOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRICELIST"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VSOEPRICELIST"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.VISIBLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTINFO.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.TAXABLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.TAXGROUP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.TAXSCHEDULE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.TAXID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.VISIBLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTO.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.CONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.PREFIX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.FIRSTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.INITIAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.LASTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.COMPANYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.PRINTAS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.TAXABLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.TAXGROUP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.TAXSCHEDULE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.PHONE1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.PHONE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.CELLPHONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.PAGER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.FAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.EMAIL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.EMAIL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.URL1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.URL2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.VISIBLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTO.MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ONETIME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTMESSAGEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTMESSAGEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ONHOLD"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRCLST_OVERRIDE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEPRCLSTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEPRICESCHEDKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENABLEONLINECARDPAYMENT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ENABLEONLINEACHPAYMENT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VSOEPRCLSTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ARINVOICEPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEQUOTEPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEORDERPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OELISTPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEINVOICEPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEADJPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OEOTHERPRINTTEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OBJECTRESTRICTION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DISPLAYCONTACTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTOKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTOKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTREPKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPVIAKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERRITORYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TERMSKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ACCOUNTLABELKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ACCOUNTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTTYPEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRICESCHEDULEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OFFSETACCOUNTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OFFSETGLACCOUNTNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OFFSETGLACCOUNTNOTITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADVBILLBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ADVBILLBYTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPDOCID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RETAINAGEPERCENTAGE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EMAILOPTIN"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUBSCRIPTIONENDDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPDOCKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTMESSAGE.MESSAGE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "HEALTHSCORE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "HEALTHSTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CHURNRISK"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SERVICERCUSTOMERSYNCSTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SI_UUID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RCLASS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RDEPARTMENT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "PARENT",
+            "OBJECTNAME": "CUSTOMER",
+            "LABEL": "Parent customer",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "PARENTID"
+          },
+          {
+            "OBJECTPATH": "SHIPTOCONTACT",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": "Ship-to contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SHIPTO.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "BILLTOCONTACT",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": "Bill-to contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "BILLTO.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "DISPLAYCONTACT",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": "Contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "DISPLAYCONTACT.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "PRIMARYCONTACT",
+            "OBJECTNAME": "CONTACT",
+            "LABEL": "Primary contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CONTACTINFO.CONTACTNAME"
+          },
+          {
+            "OBJECTPATH": "ACCOUNTLABEL",
+            "OBJECTNAME": "ARACCOUNTLABEL",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ACCOUNTLABEL"
+          },
+          {
+            "OBJECTPATH": "ARACCOUNT",
+            "OBJECTNAME": "GLACCOUNT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "ARACCOUNT"
+          },
+          {
+            "OBJECTPATH": "TERM",
+            "OBJECTNAME": "ARTERM",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "TERMNAME"
+          },
+          {
+            "OBJECTPATH": "GLGROUP",
+            "OBJECTNAME": "CUSTGLGROUP",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "GLGROUP"
+          },
+          {
+            "OBJECTPATH": "CUSTREP",
+            "OBJECTNAME": "EMPLOYEE",
+            "LABEL": "Customer rep",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CUSTREPID"
+          },
+          {
+            "OBJECTPATH": "SHIPMETHOD",
+            "OBJECTNAME": "SHIPMETHOD",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SHIPPINGMETHOD"
+          },
+          {
+            "OBJECTPATH": "TERRITORY",
+            "OBJECTNAME": "TERRITORY",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "TERRITORYID"
+          },
+          {
+            "OBJECTPATH": "CUSTTYPE",
+            "OBJECTNAME": "CUSTTYPE",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CUSTTYPE"
+          },
+          {
+            "OBJECTPATH": "OFFSETGLACCOUNTNO",
+            "OBJECTNAME": "GLACCOUNT",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "OFFSETGLACCOUNTNO"
+          },
+          {
+            "OBJECTPATH": "SERVICERCUSTOMER",
+            "OBJECTNAME": "SERVICERCUSTOMER",
+            "LABEL": "Servicer customer",
+            "RELATIONSHIPTYPE": "ONE2ONE",
+            "RELATEDBY": "SERVICERCUSTOMER.CUSTOMERKEY"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          },
+          {
+            "OBJECTPATH": "MELOCATION",
+            "OBJECTNAME": "LOCATION",
+            "LABEL": "Created at entity information",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MEGAENTITYID"
+          },
+          {
+            "OBJECTPATH": "R10007",
+            "OBJECTNAME": "CLASS",
+            "LABEL": "Customer",
+            "RELATIONSHIPTYPE": "ONE2ONE",
+            "RELATEDBY": "RCLASS"
+          },
+          {
+            "OBJECTPATH": "R10008",
+            "OBJECTNAME": "DEPARTMENT",
+            "LABEL": "Customer",
+            "RELATIONSHIPTYPE": "ONE2ONE",
+            "RELATEDBY": "RDEPARTMENT"
+          }
+        ]
+      }
+    }
+  ]
+}

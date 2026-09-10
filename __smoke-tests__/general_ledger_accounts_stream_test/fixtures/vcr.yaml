@@ -1,0 +1,436 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="b9b4a4d5-5cff-4cdf-9b01-1ce1336bc937"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-07-20
+        05:32:49</controlid><uniqueid>false</uniqueid><dtdversion>-23648605268.832</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1970-02-09T10:02:28+00:00</sessiontimestamp><sessiontimeout>1972-04-29T14:01:30+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-WgPTfKBPgziIJ</function><controlid>-Fallback-scrubbed-TEARbkGkmiXAayGRMlDtKDUBSmusTDOLYdlM</controlid><data><api><sessionid>f6j***</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef1e14c16068d-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:57:59 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '705'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '829'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="a9f95cb5-0016-4566-b80c-e72cf2f14bba"><query><object>GLACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '832'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-07-20
+        05:32:49</controlid><uniqueid>false</uniqueid><dtdversion>-23648605268.832</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1975-07-04T03:25:34+00:00</sessiontimestamp><sessiontimeout>1980-05-03T03:14:28+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xopIu</function><controlid>-Fallback-scrubbed-pziTrOvwshQFWBhYErIWhxTDkiciWnwGaFHA</controlid><data
+        listtype="-Fallback-scrubbed-erpKThSCZ" totalcount="4" offset="6954" count="1678"
+        numremaining="5276"><GLACCOUNT><RECORDNO>1</RECORDNO></GLACCOUNT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef1e7399cd824-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:58:00 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '710'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '840'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="925906f6-11dc-4c4d-8ddd-61381b89c938"><query><object>GLACCOUNT</object><select><field>RECORDNO</field><field>ACCOUNTNO</field><field>TITLE</field><field>ACCOUNTTYPE</field><field>NORMALBALANCE</field><field>CLOSINGTYPE</field><field>CLOSINGACCOUNTNO</field><field>CLOSINGACCOUNTTITLE</field><field>STATUS</field><field>REQUIREDEPT</field><field>REQUIRELOC</field><field>TAXABLE</field><field>CATEGORYKEY</field><field>CATEGORY</field><field>TAXCODE</field><field>MRCCODE</field><field>CLOSETOACCTKEY</field><field>ALTERNATIVEACCOUNT</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>SUBLEDGERCONTROLON</field><field>AUTOMATICACCOUNT</field><field>WIPSETUPACCTTYPE</field><field>ENABLE_GLMATCHING</field><field>RECLASSIFICATIONACCOUNTNO</field><field>RECLASSIFICATIONACCTKEY</field><field>LETTRAGESEQUENCEID</field><field>SI_UUID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>REQUIREPROJECT</field><field>REQUIRECUSTOMER</field><field>REQUIREVENDOR</field><field>REQUIREEMPLOYEE</field><field>REQUIREITEM</field><field>REQUIRECLASS</field><field>REQUIREWAREHOUSE</field><field>REQUIREASSET</field><field>REQUIREGLDIMDONOR</field><field>REQUIREGLDIMDIMENSION</field><field>REQUIREGLDIMORDER_NUMBER</field><field>REQUIREGLDIMSALES_CHANNEL</field><field>REQUIREGLDIMCUSTOM_EVENT</field><field>REQUIREGLDIMSECTOR</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2272'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-07-20
+        05:32:49</controlid><uniqueid>false</uniqueid><dtdversion>-23648605268.832</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2006-10-17T09:13:39+00:00</sessiontimestamp><sessiontimeout>2015-02-15T14:19:35+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xopIu</function><controlid>-Fallback-scrubbed-UoSQCetSUlpyifJJrNxsxoYlYVfmJIPJUKzj</controlid><data
+        listtype="-Fallback-scrubbed-erpKThSCZ" totalcount="4" offset="6954" count="7913"
+        numremaining="6954"><GLACCOUNT><RECORDNO>1</RECORDNO><ACCOUNTNO>8348</ACCOUNTNO><TITLE>-Fallback-scrubbed-hzQoZkNUYjSccbziF</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-wpKkGv</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-DNxzcddeXjVNuQwTb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY>6706</CATEGORYKEY><CATEGORY>-Fallback-scrubbed-hzQoZkNUYjSccbziF</CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>03/03/2004
+        18:31:31</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:36</WHENMODIFIED><CREATEDBY>1678</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-wgnfGHwa</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>false</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-RTwFYkzyMAaJwvxMgNIUfMDZIwdSjOcbFmpHDxngdUqeedfKPJrpaovfpatwHjThZfuQSQJwBXSuNjWsrVBTDYr</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>249</RECORDNO><ACCOUNTNO>1377</ACCOUNTNO><TITLE>-Fallback-scrubbed-hMtkIdJSEeeahMjjnAvNhelhzqs</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-NSfrH</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-ajIUAEuKSVrZsDBekVb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>09/13/1981
+        12:06:28</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:37</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-yaUkQQueakWZjIRiUyxTrTjQAQBNFOscbRRMFrIUXFJdDLOabfeLEGuWFSDCeQMHFfoAZUlNIniMhlQTDhfYncl</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>246</RECORDNO><ACCOUNTNO>7529</ACCOUNTNO><TITLE>-Fallback-scrubbed-wqrtpSNXftfhgOBeXLzsToAwdOQ</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-NSfrH</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-ajIUAEuKSVrZsDBekVb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>05/08/2010
+        18:54:42</WHENCREATED><WHENMODIFIED>08/10/2026 18:14:04</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-yaKMjpVIcXLKfHgqjRElfRxtRnrZoSTTJzAtqICsBArwEVEoWpZnbpkMpqvIsZiRXSeKFyfESrsZceUqyoOGTfp</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>248</RECORDNO><ACCOUNTNO>2325</ACCOUNTNO><TITLE>-Fallback-scrubbed-yjlGyptgfEqmLvWJIqUHDEkyLPYiK</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-owSecfMaxxXPDQg</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-wpKkGv</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-qYejUneUjiCEfSv</CLOSINGTYPE><CLOSINGACCOUNTNO>8348</CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE>-Fallback-scrubbed-hzQoZkNUYjSccbziF</CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY>1678</CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>05/02/1982
+        00:16:17</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:36</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-fgVViEqyMnfZlqGEWCrqOfdeLQnucJVZKAMDmxOFKLPGfsUAWKEtlRtLYacxjPXUIlKnQAqqSwJCWJPMfnPkSic</RECORD_URL></GLACCOUNT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef1ed6f40f1d3-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:58:01 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '568'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '9249'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="ca3a7b3e-ae8b-4c9c-97e7-03342a42122d"><query><object>GLACCOUNT</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '832'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-07-20
+        05:32:49</controlid><uniqueid>false</uniqueid><dtdversion>-23648605268.832</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2006-10-17T09:13:39+00:00</sessiontimestamp><sessiontimeout>2015-02-15T14:19:35+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xopIu</function><controlid>-Fallback-scrubbed-jynLXTbDddAXeLAgwqCVqIoEPsFrQRSGOsWj</controlid><data
+        listtype="-Fallback-scrubbed-erpKThSCZ" totalcount="4" offset="6954" count="1678"
+        numremaining="5276"><GLACCOUNT><RECORDNO>1</RECORDNO></GLACCOUNT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef1f28ead5f4a-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:58:02 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '618'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '840'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="9426864a-a7ae-4c0f-b817-34443cfa9fb3"><query><object>GLACCOUNT</object><select><field>RECORDNO</field><field>ACCOUNTNO</field><field>TITLE</field><field>ACCOUNTTYPE</field><field>NORMALBALANCE</field><field>CLOSINGTYPE</field><field>CLOSINGACCOUNTNO</field><field>CLOSINGACCOUNTTITLE</field><field>STATUS</field><field>REQUIREDEPT</field><field>REQUIRELOC</field><field>TAXABLE</field><field>CATEGORYKEY</field><field>CATEGORY</field><field>TAXCODE</field><field>MRCCODE</field><field>CLOSETOACCTKEY</field><field>ALTERNATIVEACCOUNT</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>SUBLEDGERCONTROLON</field><field>AUTOMATICACCOUNT</field><field>WIPSETUPACCTTYPE</field><field>ENABLE_GLMATCHING</field><field>RECLASSIFICATIONACCOUNTNO</field><field>RECLASSIFICATIONACCTKEY</field><field>LETTRAGESEQUENCEID</field><field>SI_UUID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>REQUIREPROJECT</field><field>REQUIRECUSTOMER</field><field>REQUIREVENDOR</field><field>REQUIREEMPLOYEE</field><field>REQUIREITEM</field><field>REQUIRECLASS</field><field>REQUIREWAREHOUSE</field><field>REQUIREASSET</field><field>REQUIREGLDIMDONOR</field><field>REQUIREGLDIMDIMENSION</field><field>REQUIREGLDIMORDER_NUMBER</field><field>REQUIREGLDIMSALES_CHANNEL</field><field>REQUIREGLDIMCUSTOM_EVENT</field><field>REQUIREGLDIMSECTOR</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2272'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1979-07-20
+        05:32:49</controlid><uniqueid>false</uniqueid><dtdversion>-23648605268.832</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2019-01-18T17:58:24+00:00</sessiontimestamp><sessiontimeout>1988-10-16T14:51:14+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-xopIu</function><controlid>-Fallback-scrubbed-hzmAAgpfSiRPeAWBcKQXVBGuWvWCNFxFdQXJ</controlid><data
+        listtype="-Fallback-scrubbed-erpKThSCZ" totalcount="4" offset="6954" count="7913"
+        numremaining="6954"><GLACCOUNT><RECORDNO>1</RECORDNO><ACCOUNTNO>8348</ACCOUNTNO><TITLE>-Fallback-scrubbed-hzQoZkNUYjSccbziF</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-wpKkGv</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-DNxzcddeXjVNuQwTb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY>6706</CATEGORYKEY><CATEGORY>-Fallback-scrubbed-hzQoZkNUYjSccbziF</CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>03/03/2004
+        18:31:31</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:36</WHENMODIFIED><CREATEDBY>1678</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-wgnfGHwa</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>false</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-RTwFYkzyMAaJwvxMgNIUfMDZIwdSjOcbFmpHDxngdUqeedfKPJrpaovfpatwHjThZfuQSQJwBXSuNjWsrVBTDYr</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>249</RECORDNO><ACCOUNTNO>1377</ACCOUNTNO><TITLE>-Fallback-scrubbed-hMtkIdJSEeeahMjjnAvNhelhzqs</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-NSfrH</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-ajIUAEuKSVrZsDBekVb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>09/13/1981
+        12:06:28</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:37</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-yaUkQQueakWZjIRiUyxTrTjQAQBNFOscbRRMFrIUXFJdDLOabfeLEGuWFSDCeQMHFfoAZUlNIniMhlQTDhfYncl</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>246</RECORDNO><ACCOUNTNO>7529</ACCOUNTNO><TITLE>-Fallback-scrubbed-wqrtpSNXftfhgOBeXLzsToAwdOQ</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-HCCgmwTRsaqU</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-NSfrH</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-ajIUAEuKSVrZsDBekVb</CLOSINGTYPE><CLOSINGACCOUNTNO></CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE></CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY></CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>05/08/2010
+        18:54:42</WHENCREATED><WHENMODIFIED>08/10/2026 18:14:04</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-yaKMjpVIcXLKfHgqjRElfRxtRnrZoSTTJzAtqICsBArwEVEoWpZnbpkMpqvIsZiRXSeKFyfESrsZceUqyoOGTfp</RECORD_URL></GLACCOUNT><GLACCOUNT><RECORDNO>248</RECORDNO><ACCOUNTNO>2325</ACCOUNTNO><TITLE>-Fallback-scrubbed-yjlGyptgfEqmLvWJIqUHDEkyLPYiK</TITLE><ACCOUNTTYPE>-Fallback-scrubbed-owSecfMaxxXPDQg</ACCOUNTTYPE><NORMALBALANCE>-Fallback-scrubbed-wpKkGv</NORMALBALANCE><CLOSINGTYPE>-Fallback-scrubbed-qYejUneUjiCEfSv</CLOSINGTYPE><CLOSINGACCOUNTNO>8348</CLOSINGACCOUNTNO><CLOSINGACCOUNTTITLE>-Fallback-scrubbed-hzQoZkNUYjSccbziF</CLOSINGACCOUNTTITLE><STATUS>active</STATUS><REQUIREDEPT>false</REQUIREDEPT><REQUIRELOC>false</REQUIRELOC><TAXABLE>false</TAXABLE><CATEGORYKEY></CATEGORYKEY><CATEGORY></CATEGORY><TAXCODE></TAXCODE><MRCCODE></MRCCODE><CLOSETOACCTKEY>1678</CLOSETOACCTKEY><ALTERNATIVEACCOUNT>-Fallback-scrubbed-oVOF</ALTERNATIVEACCOUNT><WHENCREATED>05/02/1982
+        00:16:17</WHENCREATED><WHENMODIFIED>08/10/2026 18:17:36</WHENMODIFIED><CREATEDBY>9656</CREATEDBY><MODIFIEDBY>9656</MODIFIEDBY><SUBLEDGERCONTROLON>false</SUBLEDGERCONTROLON><AUTOMATICACCOUNT>false</AUTOMATICACCOUNT><WIPSETUPACCTTYPE></WIPSETUPACCTTYPE><ENABLE_GLMATCHING></ENABLE_GLMATCHING><RECLASSIFICATIONACCOUNTNO></RECLASSIFICATIONACCOUNTNO><RECLASSIFICATIONACCTKEY></RECLASSIFICATIONACCTKEY><LETTRAGESEQUENCEID></LETTRAGESEQUENCEID><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZHXn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-ZHXn</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><REQUIREPROJECT>false</REQUIREPROJECT><REQUIRECUSTOMER>false</REQUIRECUSTOMER><REQUIREVENDOR>false</REQUIREVENDOR><REQUIREEMPLOYEE>false</REQUIREEMPLOYEE><REQUIREITEM>false</REQUIREITEM><REQUIRECLASS>true</REQUIRECLASS><REQUIREWAREHOUSE>false</REQUIREWAREHOUSE><REQUIREASSET>false</REQUIREASSET><REQUIREGLDIMDONOR></REQUIREGLDIMDONOR><REQUIREGLDIMDIMENSION></REQUIREGLDIMDIMENSION><REQUIREGLDIMORDER_NUMBER></REQUIREGLDIMORDER_NUMBER><REQUIREGLDIMSALES_CHANNEL></REQUIREGLDIMSALES_CHANNEL><REQUIREGLDIMCUSTOM_EVENT></REQUIREGLDIMCUSTOM_EVENT><REQUIREGLDIMSECTOR></REQUIREGLDIMSECTOR><RECORD_URL>-Fallback-scrubbed-fgVViEqyMnfZlqGEWCrqOfdeLQnucJVZKAMDmxOFKLPGfsUAWKEtlRtLYacxjPXUIlKnQAqqSwJCWJPMfnPkSic</RECORD_URL></GLACCOUNT></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef1f7ed2e79d1-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:58:02 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '588'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '9249'
+    status:
+      code: 200
+      message: OK
+version: 1

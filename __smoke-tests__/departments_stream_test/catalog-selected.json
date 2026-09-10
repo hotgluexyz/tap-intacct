@@ -1,0 +1,546 @@
+{
+  "streams": [
+    {
+      "stream": "departments",
+      "tap_stream_id": "departments",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "DEPARTMENTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DEPARTMENTID",
+              "LABEL": "ID",
+              "DESCRIPTION": "Unique identifier",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TITLE",
+              "LABEL": "Name",
+              "DESCRIPTION": "Free-form name for this department.",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTKEY",
+              "LABEL": "Parent department record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTID",
+              "LABEL": "Parent",
+              "DESCRIPTION": "Parent department",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PARENTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PARENTNAME",
+              "LABEL": "Parent - Name",
+              "DESCRIPTION": "Parent department name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORKEY",
+              "LABEL": "Manager record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORID",
+              "LABEL": "Manager",
+              "DESCRIPTION": "Manager",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPERVISORNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPERVISORNAME",
+              "LABEL": "Manager name",
+              "DESCRIPTION": "Department manager name",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATUS",
+              "LABEL": "Status",
+              "DESCRIPTION": "Active/active-non-posting/inactive",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "active",
+                  "active non-posting",
+                  "inactive"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUSTTITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CUSTTITLE",
+              "LABEL": "Department title",
+              "DESCRIPTION": "Department title",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SI_UUID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SI_UUID",
+              "LABEL": "Universal unique identifier",
+              "DESCRIPTION": "Universal unique identifier",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "DEPARTMENTID"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DEPARTMENTID"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PARENTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPERVISORNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUSTTITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SI_UUID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "DEPARTMENTID"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "PARENT",
+            "OBJECTNAME": "DEPARTMENT",
+            "LABEL": "Parent department",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "PARENTID"
+          },
+          {
+            "OBJECTPATH": "MANAGER",
+            "OBJECTNAME": "EMPLOYEE",
+            "LABEL": "Manager",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SUPERVISORID"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          }
+        ]
+      }
+    }
+  ]
+}

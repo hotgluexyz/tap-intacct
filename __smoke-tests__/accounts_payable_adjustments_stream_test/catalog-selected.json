@@ -1,0 +1,1678 @@
+{
+  "streams": [
+    {
+      "stream": "accounts_payable_adjustments",
+      "tap_stream_id": "accounts_payable_adjustments",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORDTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDTYPE",
+              "LABEL": "Record type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORDID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDID",
+              "LABEL": "Adjustment number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CONTACTTAXGROUP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CONTACTTAXGROUP",
+              "LABEL": "Contact tax group",
+              "DESCRIPTION": "The vendor pay-to contact tax group",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATE",
+              "LABEL": "State",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Reversed",
+                  "Reversal",
+                  "Draft",
+                  "No Value",
+                  "Posted",
+                  "Paid",
+                  "Partially Paid",
+                  "Selected"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "RAWSTATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RAWSTATE",
+              "LABEL": "Raw state",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORID",
+              "LABEL": "Vendor ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORNAME",
+              "LABEL": "Vendor name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FORM1099TYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FORM1099TYPE",
+              "LABEL": "Form 1099 type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FORM1099BOX": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FORM1099BOX",
+              "LABEL": "Form 1099 box",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDTYPE1099TYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDTYPE1099TYPE",
+              "LABEL": "Vendor type form 1099 type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_ENTITYDUE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TRX_ENTITYDUE",
+              "LABEL": "Vendor due",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DOCNUMBER": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DOCNUMBER",
+              "LABEL": "Reference bill number",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DESCRIPTION": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DESCRIPTION",
+              "LABEL": "Description",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "Date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENPOSTED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENPOSTED",
+              "LABEL": "GL posting date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENPAID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENPAID",
+              "LABEL": "Date fully paid",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BASECURR": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BASECURR",
+              "LABEL": "Base currency",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCY",
+              "LABEL": "Transaction currency",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXCH_RATE_DATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "EXCH_RATE_DATE",
+              "LABEL": "Exchange rate date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXCH_RATE_TYPE_ID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EXCH_RATE_TYPE_ID",
+              "LABEL": "Exchange rate type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXCHANGE_RATE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "EXCHANGE_RATE",
+              "LABEL": "Exchange rate",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TOTALENTERED": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TOTALENTERED",
+              "LABEL": "Total amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TOTALSELECTED": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TOTALSELECTED",
+              "LABEL": "Total selected",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TOTALPAID": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TOTALPAID",
+              "LABEL": "Total paid",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TOTALDUE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TOTALDUE",
+              "LABEL": "Total due",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_TOTALENTERED": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TRX_TOTALENTERED",
+              "LABEL": "Total transaction amount",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_TOTALSELECTED": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TRX_TOTALSELECTED",
+              "LABEL": "Total transaction amount selected",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_TOTALPAID": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TRX_TOTALPAID",
+              "LABEL": "Total transaction amount paid",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRX_TOTALDUE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "TRX_TOTALDUE",
+              "LABEL": "Total transaction amount due",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTOPAYTOCONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTOPAYTOCONTACTNAME",
+              "LABEL": "Pay to",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTORETURNTOCONTACTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTORETURNTOCONTACTNAME",
+              "LABEL": "Return to",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BILLTOPAYTOKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BILLTOPAYTOKEY",
+              "LABEL": "Pay-to contact key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SHIPTORETURNTOKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SHIPTORETURNTOKEY",
+              "LABEL": "Return-to contact key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRBATCH": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRBATCH",
+              "LABEL": "Summary",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRBATCHKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRBATCHKEY",
+              "LABEL": "Summary key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODULEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODULEKEY",
+              "LABEL": "Module key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "AUWHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "AUWHENCREATED",
+              "LABEL": "Audit when created",
+              "DESCRIPTION": "Audit timestamp when record was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "INCLUSIVETAX": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "INCLUSIVETAX",
+              "LABEL": "Inclusive taxes",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPDOCID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPDOCID",
+              "LABEL": "Attachment",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYTO.TAXGROUP.NAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYTO.TAXGROUP.NAME",
+              "LABEL": "Name",
+              "DESCRIPTION": "Name",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYTO.TAXGROUP.RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYTO.TAXGROUP.RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PAYTO.TAXID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PAYTO.TAXID",
+              "LABEL": "Tax ID",
+              "DESCRIPTION": "Tax identification number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORKEY",
+              "LABEL": "Vendor key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "INVOICETYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INVOICETYPE",
+              "LABEL": "Invoice type",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Invoice",
+                  "E-Invoice"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "INVOICEMODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INVOICEMODE",
+              "LABEL": "Invoice mode",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "B1",
+                  "S1"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EINVOICESTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EINVOICESTATUS",
+              "LABEL": "E-Invoice status",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Submitted",
+                  "File uploaded",
+                  "Issued by the platform",
+                  "Made available",
+                  "In hand",
+                  "Refused",
+                  "Payment sent",
+                  "Payment received",
+                  "Disputed",
+                  "Received by the platform",
+                  "Rejected by the platform",
+                  "Approved",
+                  "Not sent",
+                  "In transit",
+                  "Suspended",
+                  "Partially approved",
+                  "Completed"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYKEY",
+              "LABEL": "Created at - Entity key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYID",
+              "LABEL": "Created at - Entity ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYNAME",
+              "LABEL": "Created at - Entity name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "HG_TEST_CF_TEXT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "HG_TEST_CF_TEXT",
+              "LABEL": "hg_test_cf_text_label",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "true"
+            }
+          },
+          "VC_CF_NUMBER": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "VC_CF_NUMBER",
+              "LABEL": "VC_CF_NUMBER",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "true"
+            }
+          },
+          "VC_CF_TEXT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VC_CF_TEXT",
+              "LABEL": "VC_CF_TEXT",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "true"
+            }
+          },
+          "VC_CF_BOOL": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "VC_CF_BOOL",
+              "LABEL": "VC_CF_BOOL",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "true"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CONTACTTAXGROUP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RAWSTATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FORM1099TYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FORM1099BOX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDTYPE1099TYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_ENTITYDUE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DOCNUMBER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DESCRIPTION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENPOSTED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENPAID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BASECURR"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXCH_RATE_DATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXCH_RATE_TYPE_ID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXCHANGE_RATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TOTALENTERED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TOTALSELECTED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TOTALPAID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TOTALDUE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_TOTALENTERED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_TOTALSELECTED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_TOTALPAID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRX_TOTALDUE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTOPAYTOCONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTORETURNTOCONTACTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BILLTOPAYTOKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SHIPTORETURNTOKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRBATCH"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRBATCHKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODULEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "AUWHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INCLUSIVETAX"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPDOCID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYTO.TAXGROUP.NAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYTO.TAXGROUP.RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PAYTO.TAXID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INVOICETYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INVOICEMODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EINVOICESTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "HG_TEST_CF_TEXT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VC_CF_NUMBER"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VC_CF_TEXT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VC_CF_BOOL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "VENDOR",
+            "OBJECTNAME": "VENDOR",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "VENDORID"
+          },
+          {
+            "OBJECTPATH": "PAYTO",
+            "OBJECTNAME": "CONTACTVERSION",
+            "LABEL": "Pay-to contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "BILLTOPAYTOKEY"
+          },
+          {
+            "OBJECTPATH": "RETURNTO",
+            "OBJECTNAME": "CONTACTVERSION",
+            "LABEL": "Return-to contact",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "SHIPTORETURNTOKEY"
+          },
+          {
+            "OBJECTPATH": "EXCHANGERATEINFO",
+            "OBJECTNAME": "EXCHANGERATEINFO",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "RECORDNO"
+          },
+          {
+            "OBJECTPATH": "TAXSOLUTION",
+            "OBJECTNAME": "TAXSOLUTION",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "TAXSOLUTIONKEY"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          },
+          {
+            "OBJECTPATH": "MELOCATION",
+            "OBJECTNAME": "LOCATION",
+            "LABEL": "Created at entity information",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MEGAENTITYID"
+          }
+        ]
+      }
+    }
+  ]
+}

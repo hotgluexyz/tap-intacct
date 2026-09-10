@@ -1,0 +1,1289 @@
+{
+  "streams": [
+    {
+      "stream": "general_ledger_journal_entries",
+      "tap_stream_id": "general_ledger_journal_entries",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BATCHNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BATCHNO",
+              "LABEL": "Transaction number",
+              "DESCRIPTION": "Transaction no.",
+              "REQUIRED": "true",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BATCH_TITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BATCH_TITLE",
+              "LABEL": "Description",
+              "DESCRIPTION": "Description",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BALANCE": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "BALANCE",
+              "LABEL": "Balance",
+              "DESCRIPTION": "Balance",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "JOURNAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "JOURNAL",
+              "LABEL": "Journal",
+              "DESCRIPTION": "Journal",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "JOURNAL_ENABLEEREPORTING": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "JOURNAL_ENABLEEREPORTING",
+              "LABEL": "Enable e-reporting",
+              "DESCRIPTION": "Enable e-reporting",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATISTICAL": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "STATISTICAL",
+              "LABEL": "Statistical",
+              "DESCRIPTION": "Statistical",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "BATCH_DATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "BATCH_DATE",
+              "LABEL": "Posting date",
+              "DESCRIPTION": "Posting date",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODULE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODULE",
+              "LABEL": "Module",
+              "DESCRIPTION": "Module",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "USERKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "USERKEY",
+              "LABEL": "User",
+              "DESCRIPTION": "User key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REFERENCENO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "REFERENCENO",
+              "LABEL": "Reference number",
+              "DESCRIPTION": "Reference number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REVERSED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "REVERSED",
+              "LABEL": "Automatic reversal date",
+              "DESCRIPTION": "Automatic reversal date",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REVERSEDKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "REVERSEDKEY",
+              "LABEL": "Reversed key",
+              "DESCRIPTION": "Reversed key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "REVERSEDFROM": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "REVERSEDFROM",
+              "LABEL": "Reversed from",
+              "DESCRIPTION": "Reversed from",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TEMPLATEKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TEMPLATEKEY",
+              "LABEL": "Template key",
+              "DESCRIPTION": "Template key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TEMPLATEID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TEMPLATEID",
+              "LABEL": "Template ID",
+              "DESCRIPTION": "Template ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "PRBATCHKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "PRBATCHKEY",
+              "LABEL": "PRBatch key",
+              "DESCRIPTION": "PRBatch key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "MODIFIED",
+              "LABEL": "Last modified date and time",
+              "DESCRIPTION": "Last modified date and time",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYID",
+              "LABEL": "Last modified by",
+              "DESCRIPTION": "Last modified by",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SCHOPKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SCHOPKEY",
+              "LABEL": "Scheduled operation key",
+              "DESCRIPTION": "Scheduled operation key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "GLACCTALLOCATIONRUNKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "GLACCTALLOCATIONRUNKEY",
+              "LABEL": "GL account allocation run key",
+              "DESCRIPTION": "GL account allocation run key",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "GLACCTALLOCATIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "GLACCTALLOCATIONID",
+              "LABEL": "GL account allocation ID",
+              "DESCRIPTION": "GL account allocation ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BASELOCATION": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BASELOCATION",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "BASELOCATION_NO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "BASELOCATION_NO",
+              "LABEL": "Source entity",
+              "DESCRIPTION": "Source entity",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "USERINFO.LOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "USERINFO.LOGINID",
+              "LABEL": "User ID",
+              "DESCRIPTION": "User ID",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATE",
+              "LABEL": "State",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Draft",
+                  "Submitted",
+                  "Partially Approved",
+                  "Approved",
+                  "Posted",
+                  "Declined",
+                  "Reversal pending",
+                  "Reversed"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "JOURNALSEQNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "JOURNALSEQNO",
+              "LABEL": "Accounting sequence number",
+              "DESCRIPTION": "Accounting sequence number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXIMPLICATIONS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXIMPLICATIONS",
+              "LABEL": "Tax implications",
+              "DESCRIPTION": "Indicate whether you want to add taxes to the journal entries. Valid values are none, inbound, or outbound",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "None",
+                  "Inbound",
+                  "Outbound"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "VATVENDORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VATVENDORID",
+              "LABEL": "Vendor",
+              "DESCRIPTION": "Vendor ID when tax implication is inbound taxes for purchases",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VATCUSTOMERID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VATCUSTOMERID",
+              "LABEL": "Customer",
+              "DESCRIPTION": "Customer ID when tax implication is outbound taxes for sales",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VATCONTACTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VATCONTACTID",
+              "LABEL": "Contact",
+              "DESCRIPTION": "Customer ship-to contact ID for sales journals, or the vendor pay-to contact ID for purchase journals",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TAXSOLUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TAXSOLUTIONID",
+              "LABEL": "Tax solution",
+              "DESCRIPTION": "Tax solution",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "TRANSACTIONSOURCE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "TRANSACTIONSOURCE",
+              "LABEL": "Transaction source",
+              "DESCRIPTION": "Transaction source",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": "BANK"
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "INVOICEMODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "INVOICEMODE",
+              "LABEL": "Invoice mode",
+              "DESCRIPTION": "Invoice mode",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "TLB1",
+                  "TPS1"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EREPORTINGTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EREPORTINGTYPE",
+              "LABEL": "Type of e-reporting",
+              "DESCRIPTION": "Type of e-reporting",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "None",
+                  "Sales",
+                  "Payment"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPDOCID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPDOCID",
+              "LABEL": "Attachment",
+              "DESCRIPTION": "Attachment",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "SUPDOCKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "SUPDOCKEY",
+              "LABEL": "Attachment key",
+              "DESCRIPTION": "Attachment key",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYKEY",
+              "LABEL": "Created at - Entity key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYID",
+              "LABEL": "Created at - Entity ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYNAME",
+              "LABEL": "Created at - Entity name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BATCHNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BATCH_TITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BALANCE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "JOURNAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "JOURNAL_ENABLEEREPORTING"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATISTICAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BATCH_DATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODULE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "USERKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REFERENCENO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REVERSED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REVERSEDKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "REVERSEDFROM"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TEMPLATEKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TEMPLATEID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "PRBATCHKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SCHOPKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "GLACCTALLOCATIONRUNKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "GLACCTALLOCATIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BASELOCATION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "BASELOCATION_NO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "USERINFO.LOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "JOURNALSEQNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXIMPLICATIONS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VATVENDORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VATCUSTOMERID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VATCONTACTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TAXSOLUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "TRANSACTIONSOURCE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "INVOICEMODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EREPORTINGTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPDOCID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "SUPDOCKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "JOURNAL",
+            "OBJECTNAME": "JOURNAL",
+            "LABEL": null,
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "JOURNAL"
+          },
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          },
+          {
+            "OBJECTPATH": "MELOCATION",
+            "OBJECTNAME": "LOCATION",
+            "LABEL": "Created at entity information",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MEGAENTITYID"
+          }
+        ]
+      }
+    }
+  ]
+}
