@@ -4,7 +4,7 @@ interactions:
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
       19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
-      controlid="cbfb2ffd-dd0e-46c0-b813-942422f42a7d"><getAPISession></getAPISession></function></content></operation></request>'
+      controlid="1f2cb396-b922-408b-a4b9-4b2a2551f2e3"><getAPISession></getAPISession></function></content></operation></request>'
     headers:
       Accept:
       - '*/*'
@@ -24,13 +24,13 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-06-09
-        14:43:46</controlid><uniqueid>true</uniqueid><dtdversion>75010739493899.0</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1979-12-16T13:06:12+00:00</sessiontimestamp><sessiontimeout>2020-07-05T03:46:40+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-LjNrvypdJsGkW</function><controlid>-Fallback-scrubbed-DRpWxTnupRCONyINRuUiIvRaaMqgPfWNuQki</controlid><data><api><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-07-26
+        03:42:11</controlid><uniqueid>true</uniqueid><dtdversion>41895040138890.3</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1985-11-15T11:56:59+00:00</sessiontimestamp><sessiontimeout>2013-02-20T21:33:52+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-comrpMVaEWCIG</function><controlid>-Fallback-scrubbed-VwImeKPTnmBiDKTtMGHozrWThsjRybMCmeXD</controlid><data><api><sessionid>f6j***</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138c24a96f58e3-GRU
+      - a38eeef02cd4f17b-GRU
       Cache-Control:
       - private
       Connection:
@@ -53,7 +53,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:43 GMT
+      - Thu, 10 Sep 2026 13:55:58 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -67,17 +67,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '599'
+      - '578'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.03'
+      - '0.01'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '878'
+      - '828'
     status:
       code: 200
       message: OK
@@ -85,8 +85,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="ca9bed08-ad89-43ab-9ba6-5b5c9e3bfdbd"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="2d0bbda2-e1ec-4a53-8379-21b93c26eee6"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -97,7 +97,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '888'
+      - '838'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -108,15 +108,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-06-09
-        14:43:46</controlid><uniqueid>true</uniqueid><dtdversion>75010739493899.0</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2005-10-24T21:18:00+00:00</sessiontimestamp><sessiontimeout>2000-01-03T04:26:30+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-abiDE</function><controlid>-Fallback-scrubbed-GMFpvQneWfyOQnUyAzRdlrzawRsgzSEaKxGh</controlid><data
-        listtype="-Fallback-scrubbed-frktVXPuFatfgax" totalcount="2" offset="6935"
-        count="9614" numremaining="9614"><AFFILIATEENTITY><RECORDNO>17</RECORDNO></AFFILIATEENTITY></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-07-26
+        03:42:11</controlid><uniqueid>true</uniqueid><dtdversion>41895040138890.3</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1991-03-21T22:16:49+00:00</sessiontimestamp><sessiontimeout>1991-01-21T23:00:59+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-KgqqJ</function><controlid>-Fallback-scrubbed-thzMuoWbxEGuUnQkUHeUAsnZSiUXKmlUDAPc</controlid><data
+        listtype="-Fallback-scrubbed-VLyfhzpsdbfHvfY" totalcount="0" offset="2339"
+        count="2339" numremaining="2339"></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138c2a0e90d7eb-GRU
+      - a38eeef58a755b62-GRU
       Cache-Control:
       - private
       Connection:
@@ -139,7 +139,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:44 GMT
+      - Thu, 10 Sep 2026 13:55:59 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -153,17 +153,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '653'
+      - '649'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.1'
+      - '0.01'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '858'
+      - '800'
     status:
       code: 200
       message: OK
@@ -171,8 +171,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="4665b6c6-30ed-4355-871c-f50bec498d43"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field><field>AFFILIATEENTITYID</field><field>NAME</field><field>STATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="8a842d83-d9a4-4736-95bc-e138b642add1"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -183,7 +183,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1146'
+      - '838'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -194,17 +194,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-06-09
-        14:43:46</controlid><uniqueid>true</uniqueid><dtdversion>75010739493899.0</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2017-12-31T20:18:52+00:00</sessiontimestamp><sessiontimeout>1996-09-05T14:28:09+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-abiDE</function><controlid>-Fallback-scrubbed-gPcpNzvzArYxfQXqJQPQKVdKOiktaudtNjvJ</controlid><data
-        listtype="-Fallback-scrubbed-frktVXPuFatfgax" totalcount="2" offset="6935"
-        count="3184" numremaining="6935"><AFFILIATEENTITY><RECORDNO>17</RECORDNO><AFFILIATEENTITYID>-Fallback-scrubbed-LI</AFFILIATEENTITYID><NAME>Fake-Natasha
-        Sandoval</NAME><STATUS>active</STATUS><WHENCREATED>10/17/2024</WHENCREATED><WHENMODIFIED>02/27/2026</WHENMODIFIED><CREATEDBY>61</CREATEDBY><MODIFIEDBY>61</MODIFIEDBY><CREATEDBYLOGINID>-Fallback-scrubbed-jSOn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-jSOn</MODIFIEDBYLOGINID></AFFILIATEENTITY><AFFILIATEENTITY><RECORDNO>16</RECORDNO><AFFILIATEENTITYID>5081</AFFILIATEENTITYID><NAME>Fake-Joshua
-        Hobbs</NAME><STATUS>active</STATUS><WHENCREATED>08/26/1976</WHENCREATED><WHENMODIFIED>02/27/2026</WHENMODIFIED><CREATEDBY>61</CREATEDBY><MODIFIEDBY>61</MODIFIEDBY><CREATEDBYLOGINID>-Fallback-scrubbed-jSOn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-jSOn</MODIFIEDBYLOGINID></AFFILIATEENTITY></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-07-26
+        03:42:11</controlid><uniqueid>true</uniqueid><dtdversion>41895040138890.3</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2013-01-22T18:10:14+00:00</sessiontimestamp><sessiontimeout>2005-01-10T10:38:04+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-KgqqJ</function><controlid>-Fallback-scrubbed-JMKjnoaJBntfQiQNPzgKjKzVgycSSRSmIYOG</controlid><data
+        listtype="-Fallback-scrubbed-VLyfhzpsdbfHvfY" totalcount="0" offset="2339"
+        count="2339" numremaining="2339"></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138c2ffc830b1b-GRU
+      - a38eeefc7cf1402c-GRU
       Cache-Control:
       - private
       Connection:
@@ -227,7 +225,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:45 GMT
+      - Thu, 10 Sep 2026 13:56:00 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -241,191 +239,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '490'
+      - '573'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.02'
+      - '0.01'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '1629'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="fc3345d4-996d-48c5-b656-404335f0c8d5"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '888'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-06-09
-        14:43:46</controlid><uniqueid>true</uniqueid><dtdversion>75010739493899.0</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1996-04-09T18:37:24+00:00</sessiontimestamp><sessiontimeout>2007-10-06T20:27:00+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-abiDE</function><controlid>-Fallback-scrubbed-sWKItBbIkoBNyAALBPtTssJecrasXEzwPTAI</controlid><data
-        listtype="-Fallback-scrubbed-frktVXPuFatfgax" totalcount="2" offset="6935"
-        count="9614" numremaining="9614"><AFFILIATEENTITY><RECORDNO>17</RECORDNO></AFFILIATEENTITY></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a3138c3498e49f3d-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Wed, 26 Aug 2026 14:32:46 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '503'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.03'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '858'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="84b08420-e6f0-4dfb-8a98-1c2a623049bd"><query><object>AFFILIATEENTITY</object><select><field>RECORDNO</field><field>AFFILIATEENTITYID</field><field>NAME</field><field>STATUS</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '1146'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>2014-06-09
-        14:43:46</controlid><uniqueid>true</uniqueid><dtdversion>75010739493899.0</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1996-04-09T18:37:24+00:00</sessiontimestamp><sessiontimeout>2007-10-06T20:27:00+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-abiDE</function><controlid>-Fallback-scrubbed-vnIHoEmRZWyUFBCSYqDLHojPZtBGEVjjWMKx</controlid><data
-        listtype="-Fallback-scrubbed-frktVXPuFatfgax" totalcount="2" offset="6935"
-        count="3184" numremaining="6935"><AFFILIATEENTITY><RECORDNO>17</RECORDNO><AFFILIATEENTITYID>-Fallback-scrubbed-LI</AFFILIATEENTITYID><NAME>Fake-Natasha
-        Sandoval</NAME><STATUS>active</STATUS><WHENCREATED>10/17/2024</WHENCREATED><WHENMODIFIED>02/27/2026</WHENMODIFIED><CREATEDBY>61</CREATEDBY><MODIFIEDBY>61</MODIFIEDBY><CREATEDBYLOGINID>-Fallback-scrubbed-jSOn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-jSOn</MODIFIEDBYLOGINID></AFFILIATEENTITY><AFFILIATEENTITY><RECORDNO>16</RECORDNO><AFFILIATEENTITYID>5081</AFFILIATEENTITYID><NAME>Fake-Joshua
-        Hobbs</NAME><STATUS>active</STATUS><WHENCREATED>08/26/1976</WHENCREATED><WHENMODIFIED>02/27/2026</WHENMODIFIED><CREATEDBY>61</CREATEDBY><MODIFIEDBY>61</MODIFIEDBY><CREATEDBYLOGINID>-Fallback-scrubbed-jSOn</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-jSOn</MODIFIEDBYLOGINID></AFFILIATEENTITY></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a3138c394e7df254-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Wed, 26 Aug 2026 14:32:47 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '612'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.09'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '1629'
+      - '800'
     status:
       code: 200
       message: OK

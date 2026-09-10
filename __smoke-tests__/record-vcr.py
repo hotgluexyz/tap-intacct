@@ -11,9 +11,11 @@ class ConnectorTapTestRunner(VCRTapTestRunner):
         "companyid",
         "senderid",
         "userid",
+        # Echoed in later request bodies; TOKEN_KEYS → same prefix*** in req+resp.
+        "sessionid",
     ]
 
-    # Control / session / pagination (client._post_request, _set_session_id, get_by_date).
+    # Control / pagination (client._post_request, get_by_date).
     # Date-time property names: singer Transformer rejects scrubbed values when format is
     # date/date-time (union of selected fields across migrated catalogs).
     # objectName / userDefinedDimension: get_dimension_values reads dimensions then queries.
@@ -21,7 +23,6 @@ class ConnectorTapTestRunner(VCRTapTestRunner):
     # Date-time fields that are only schema/Transformer concerns are left to the scrubber.
     PRESERVE_KEYS = {
         "status",
-        "sessionid",
         "endpoint",
         "@totalcount",
         "objectName",

@@ -4,7 +4,7 @@ interactions:
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
       19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
-      controlid="c5b90134-a908-4b4a-9ffe-4c21ef535084"><getAPISession></getAPISession></function></content></operation></request>'
+      controlid="85a201ee-2ebc-40f9-ba8e-3438407b5319"><getAPISession></getAPISession></function></content></operation></request>'
     headers:
       Accept:
       - '*/*'
@@ -24,13 +24,13 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1997-11-05
-        05:22:26</controlid><uniqueid>true</uniqueid><dtdversion>6420657741.46445</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1993-02-03T16:24:05+00:00</sessiontimestamp><sessiontimeout>1999-10-21T01:29:52+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-sGmaGwuDawENA</function><controlid>-Fallback-scrubbed-dtQPuAARqimHbOurwCEbvvIzxFjOGKRHiuPQ</controlid><data><api><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2012-04-24
+        11:56:00</controlid><uniqueid>false</uniqueid><dtdversion>-22702913.6273967</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1991-04-08T05:28:51+00:00</sessiontimestamp><sessiontimeout>1971-11-04T04:03:16+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-AEusBAtKHMQpJ</function><controlid>-Fallback-scrubbed-YpcGcUxlvoeWUjTeUwqZOqfWJJszqEOTTrQK</controlid><data><api><sessionid>f6j***</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b52dff100ee-GRU
+      - a38eede22e27a593-GRU
       Cache-Control:
       - private
       Connection:
@@ -53,7 +53,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:10 GMT
+      - Thu, 10 Sep 2026 13:55:15 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -67,93 +67,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '587'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.03'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '878'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="7dfa5f3d-8021-4a39-85b8-1aa8b4e31caa"><query><object>APBILL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '879'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1997-11-05
-        05:22:26</controlid><uniqueid>true</uniqueid><dtdversion>6420657741.46445</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1992-08-03T23:11:37+00:00</sessiontimestamp><sessiontimeout>1988-08-05T19:28:59+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-zReKK</function><controlid>-Fallback-scrubbed-oyUFDLoODdladwTNFpvuRrDCbGrOmYFqREex</controlid><data
-        listtype="-Fallback-scrubbed-WwjFDj" totalcount="2" offset="6324" count="8984"
-        numremaining="8984"><APBILL><RECORDNO>1911</RECORDNO></APBILL></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a3138b582d7e031a-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Wed, 26 Aug 2026 14:32:10 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '544'
+      - '735'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -163,7 +77,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '833'
+      - '830'
     status:
       code: 200
       message: OK
@@ -171,8 +85,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="a6204664-2173-4566-9197-27986d11834a"><query><object>APBILL</object><select><field>RECORDNO</field><field>RECORDTYPE</field><field>RECORDID</field><field>CONTACTTAXGROUP</field><field>FINANCIALENTITY</field><field>STATE</field><field>RAWSTATE</field><field>VENDORID</field><field>VENDORNAME</field><field>VENDORKEY</field><field>FORM1099TYPE</field><field>FORM1099BOX</field><field>VENDTYPE1099TYPE</field><field>TRX_ENTITYDUE</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>TERMNAME</field><field>TERMKEY</field><field>TERMVALUE</field><field>WHENCREATED</field><field>WHENPOSTED</field><field>WHENDISCOUNT</field><field>WHENDUE</field><field>WHENPAID</field><field>RECPAYMENTDATE</field><field>PAYMENTPRIORITY</field><field>ONHOLD</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>SHIPTORETURNTOCONTACTNAME</field><field>BILLTOPAYTOKEY</field><field>SHIPTORETURNTOKEY</field><field>PRBATCH</field><field>PRBATCHKEY</field><field>MODULEKEY</field><field>SCHOPKEY</field><field>SYSTEMGENERATED</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>DUE_IN_DAYS</field><field>PAYTO.TAXGROUP.NAME</field><field>PAYTO.TAXGROUP.RECORDNO</field><field>PAYTO.TAXID</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>RETAINAGEPERCENTAGE</field><field>TRX_TOTALRETAINED</field><field>TRX_TOTALRELEASED</field><field>TOTALRETAINED</field><field>SUPDOCID</field><field>BILLBACKTEMPLATE</field><field>USERID</field><field>CREATEDUSERID</field><field>DOCSOURCE</field><field>UPLOADSTATUS</field><field>RECIPIENTEMAIL</field><field>SENDEREMAIL</field><field>RETAINAGERELEASED</field><field>INVOICETYPE</field><field>INVOICEMODE</field><field>EINVOICESTATUS</field><field>DOCHDRKEY</field><field>DISPUTEREASON</field><field>REFUSEREASON</field><field>DISPUTENOTE</field><field>REFUSENOTE</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>BILL_CF_BOOL</field><field>BILL_CF_TEXT</field><field>BILL_CF_NUMBER</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="abadde70-022d-401c-86bb-e8afd412da4c"><query><object>APBILL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -183,7 +97,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3317'
+      - '829'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -194,17 +108,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1997-11-05
-        05:22:26</controlid><uniqueid>true</uniqueid><dtdversion>6420657741.46445</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1971-08-29T22:54:57+00:00</sessiontimestamp><sessiontimeout>2001-01-27T22:42:11+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-zReKK</function><controlid>-Fallback-scrubbed-UuTlVIXWFNPmrTSizoiMXUNXNQRmCjVjaCwf</controlid><data
-        listtype="-Fallback-scrubbed-WwjFDj" totalcount="2" offset="6324" count="2767"
-        numremaining="6324"><APBILL><RECORDNO>1911</RECORDNO><RECORDTYPE>-Fallback-scrubbed-iP</RECORDTYPE><RECORDID>-Fallback-scrubbed-CnxpIwXeHqDiocfZQyKXfYzsMDGTTuXKF</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-FwcTAL</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><VENDORID>20030</VENDORID><VENDORNAME>-Fallback-scrubbed-CkWVlvcRBEIrT</VENDORNAME><VENDORKEY>7681</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>5666</TRX_ENTITYDUE><DOCNUMBER>-Fallback-scrubbed-RAigrzPnHkBykoOqLuuiNrJLwvCyvESm</DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME></TERMNAME><TERMKEY></TERMKEY><TERMVALUE></TERMVALUE><WHENCREATED>02/18/1972</WHENCREATED><WHENPOSTED>02/18/1972</WHENPOSTED><WHENDISCOUNT></WHENDISCOUNT><WHENDUE>04/11/1978</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-tzdXuU</PAYMENTPRIORITY><ONHOLD>true</ONHOLD><BASECURR>-Fallback-scrubbed-ABa</BASECURR><CURRENCY>-Fallback-scrubbed-ABa</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>8984</TOTALENTERED><TOTALSELECTED>6324</TOTALSELECTED><TOTALPAID>6324</TOTALPAID><TOTALDUE>8984</TOTALDUE><TRX_TOTALENTERED>8984</TRX_TOTALENTERED><TRX_TOTALSELECTED>6324</TRX_TOTALSELECTED><TRX_TOTALPAID>6324</TRX_TOTALPAID><TRX_TOTALDUE>8984</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-MkMntpwNyJVhVfCarP</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-MkMntpwNyJVhVfCarP</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>5097</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>5097</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-LpuXmMvoQGGNztIiFUTZLLTBnDimIYquyHfSgrhxUok</PRBATCH><PRBATCHKEY>7221</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-PRRz</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-J</SYSTEMGENERATED><AUWHENCREATED>06/30/2008
-        14:39:04</AUWHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>4328</CREATEDBY><MODIFIEDBY>4328</MODIFIEDBY><DUE_IN_DAYS>4398</DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>6324</TRX_TOTALRETAINED><TRX_TOTALRELEASED>6324</TRX_TOTALRELEASED><TOTALRETAINED>6324</TOTALRETAINED><SUPDOCID>-Fallback-scrubbed-xCPlFjAeVIObNPXZibE</SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>emm***</USERID><CREATEDUSERID>-Fallback-scrubbed-CGoe</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>true</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-CGoe</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-CGoe</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>true</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-tMhtqPxAqgRVSsTSyUOMQssDEYosVPBmWJJJpbILLACFAoPUcdvpbFIwLEXNFlAhSuiAsvMFUKZChaHnShwGRTE</RECORD_URL></APBILL><APBILL><RECORDNO>1912</RECORDNO><RECORDTYPE>-Fallback-scrubbed-iP</RECORDTYPE><RECORDID>-Fallback-scrubbed-YoJGuDJVgIaq</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-fDuDVdDyq</STATE><RAWSTATE>-Fallback-scrubbed-y</RAWSTATE><VENDORID>20002</VENDORID><VENDORNAME>-Fallback-scrubbed-aPeFCtDfuCwZGPQBN</VENDORNAME><VENDORKEY>6004</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>-74428823021669.4</TRX_ENTITYDUE><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-nwjyGVlloERGvgtPcfUsrGzokEcYEiNN</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME>-Fallback-scrubbed-jbRazQ</TERMNAME><TERMKEY>8770</TERMKEY><TERMVALUE>-Fallback-scrubbed-CECHlfLSv</TERMVALUE><WHENCREATED>08/25/1977</WHENCREATED><WHENPOSTED>08/25/1977</WHENPOSTED><WHENDISCOUNT>08/25/1977</WHENDISCOUNT><WHENDUE>06/03/2016</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-tzdXuU</PAYMENTPRIORITY><ONHOLD>true</ONHOLD><BASECURR>-Fallback-scrubbed-ABa</BASECURR><CURRENCY>-Fallback-scrubbed-ABa</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>3779</TOTALENTERED><TOTALSELECTED>6324</TOTALSELECTED><TOTALPAID>6324</TOTALPAID><TOTALDUE>3779</TOTALDUE><TRX_TOTALENTERED>3779</TRX_TOTALENTERED><TRX_TOTALSELECTED>6324</TRX_TOTALSELECTED><TRX_TOTALPAID>6324</TRX_TOTALPAID><TRX_TOTALDUE>3779</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-RHupMkpreu</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-RHupMkpreu</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>9949</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>9949</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-yGVazzQYaaZGOayjuYaAWWZrQjBcezudznDmMpHwuRT</PRBATCH><PRBATCHKEY>2436</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-PRRz</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-J</SYSTEMGENERATED><AUWHENCREATED>07/05/2019
-        11:24:48</AUWHENCREATED><WHENMODIFIED>07/10/2026 18:20:14</WHENMODIFIED><CREATEDBY>7646</CREATEDBY><MODIFIEDBY>7646</MODIFIEDBY><DUE_IN_DAYS></DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>6324</TRX_TOTALRETAINED><TRX_TOTALRELEASED>6324</TRX_TOTALRELEASED><TOTALRETAINED>6324</TOTALRETAINED><SUPDOCID></SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>hot***</USERID><CREATEDUSERID>-Fallback-scrubbed-bfpSBMw</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>true</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-bfpSBMw</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-bfpSBMw</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>true</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-sMbXSDPPPwkraDWMfYVkAVZwiAneEYPVuCbwcQtJJJilinNcIxFCwugdYopwdXtmGPyFAKlvJHskRPkuyZMtRsd</RECORD_URL></APBILL></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2012-04-24
+        11:56:00</controlid><uniqueid>false</uniqueid><dtdversion>-22702913.6273967</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1999-09-23T13:16:09+00:00</sessiontimestamp><sessiontimeout>2018-09-19T11:26:39+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mETII</function><controlid>-Fallback-scrubbed-foPwlxTEUBvHTKfQWTWUhIqbANAlzhGQJMvq</controlid><data
+        listtype="-Fallback-scrubbed-zUScFA" totalcount="2" offset="5459" count="4994"
+        numremaining="4994"><APBILL><RECORDNO>1911</RECORDNO></APBILL></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b5d4f48df22-GRU
+      - a38eede86e3aa477-GRU
       Cache-Control:
       - private
       Connection:
@@ -227,7 +139,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:11 GMT
+      - Thu, 10 Sep 2026 13:55:16 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -241,7 +153,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '720'
+      - '659'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -251,7 +163,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '7776'
+      - '835'
     status:
       code: 200
       message: OK
@@ -259,8 +171,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="c243ba23-655e-49b0-b17d-5d18d57e1343"><query><object>APBILL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="491b8eb1-dd53-443f-85bc-2bd5763a1bc5"><query><object>APBILL</object><select><field>RECORDNO</field><field>RECORDTYPE</field><field>RECORDID</field><field>CONTACTTAXGROUP</field><field>FINANCIALENTITY</field><field>STATE</field><field>RAWSTATE</field><field>VENDORID</field><field>VENDORNAME</field><field>VENDORKEY</field><field>FORM1099TYPE</field><field>FORM1099BOX</field><field>VENDTYPE1099TYPE</field><field>TRX_ENTITYDUE</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>TERMNAME</field><field>TERMKEY</field><field>TERMVALUE</field><field>WHENCREATED</field><field>WHENPOSTED</field><field>WHENDISCOUNT</field><field>WHENDUE</field><field>WHENPAID</field><field>RECPAYMENTDATE</field><field>PAYMENTPRIORITY</field><field>ONHOLD</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>SHIPTORETURNTOCONTACTNAME</field><field>BILLTOPAYTOKEY</field><field>SHIPTORETURNTOKEY</field><field>PRBATCH</field><field>PRBATCHKEY</field><field>MODULEKEY</field><field>SCHOPKEY</field><field>SYSTEMGENERATED</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>DUE_IN_DAYS</field><field>PAYTO.TAXGROUP.NAME</field><field>PAYTO.TAXGROUP.RECORDNO</field><field>PAYTO.TAXID</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>RETAINAGEPERCENTAGE</field><field>TRX_TOTALRETAINED</field><field>TRX_TOTALRELEASED</field><field>TOTALRETAINED</field><field>SUPDOCID</field><field>BILLBACKTEMPLATE</field><field>USERID</field><field>CREATEDUSERID</field><field>DOCSOURCE</field><field>UPLOADSTATUS</field><field>RECIPIENTEMAIL</field><field>SENDEREMAIL</field><field>RETAINAGERELEASED</field><field>INVOICETYPE</field><field>INVOICEMODE</field><field>EINVOICESTATUS</field><field>DOCHDRKEY</field><field>DISPUTEREASON</field><field>REFUSEREASON</field><field>DISPUTENOTE</field><field>REFUSENOTE</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>BILL_CF_BOOL</field><field>BILL_CF_TEXT</field><field>BILL_CF_NUMBER</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -271,7 +183,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '879'
+      - '3267'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -282,15 +194,17 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1997-11-05
-        05:22:26</controlid><uniqueid>true</uniqueid><dtdversion>6420657741.46445</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1977-10-23T20:59:17+00:00</sessiontimestamp><sessiontimeout>1979-11-26T17:01:13+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-zReKK</function><controlid>-Fallback-scrubbed-kkTAijEImjJUpaepksSnPXFaeOuyQQgxGHEb</controlid><data
-        listtype="-Fallback-scrubbed-WwjFDj" totalcount="2" offset="6324" count="8984"
-        numremaining="8984"><APBILL><RECORDNO>1911</RECORDNO></APBILL></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2012-04-24
+        11:56:00</controlid><uniqueid>false</uniqueid><dtdversion>-22702913.6273967</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1997-06-24T10:54:01+00:00</sessiontimestamp><sessiontimeout>2003-10-11T09:36:46+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mETII</function><controlid>-Fallback-scrubbed-WpSsrZroIKIvjbgmUKWPCBxWYyHuOyvMNpDA</controlid><data
+        listtype="-Fallback-scrubbed-zUScFA" totalcount="2" offset="5459" count="1403"
+        numremaining="5459"><APBILL><RECORDNO>1911</RECORDNO><RECORDTYPE>-Fallback-scrubbed-Hr</RECORDTYPE><RECORDID>-Fallback-scrubbed-hBZPIecNQBRAPfUhCDobnoVPOUYBBZzIj</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-RhAStD</STATE><RAWSTATE>-Fallback-scrubbed-s</RAWSTATE><VENDORID>20030</VENDORID><VENDORNAME>-Fallback-scrubbed-tnACxTapopZSC</VENDORNAME><VENDORKEY>8376</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>6847</TRX_ENTITYDUE><DOCNUMBER>-Fallback-scrubbed-WaByHpCTKyKKBclzNtwqketQeBcVlKAL</DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME></TERMNAME><TERMKEY></TERMKEY><TERMVALUE></TERMVALUE><WHENCREATED>09/29/1988</WHENCREATED><WHENPOSTED>09/29/1988</WHENPOSTED><WHENDISCOUNT></WHENDISCOUNT><WHENDUE>10/01/1994</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-FHILfY</PAYMENTPRIORITY><ONHOLD>false</ONHOLD><BASECURR>-Fallback-scrubbed-xqC</BASECURR><CURRENCY>-Fallback-scrubbed-xqC</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>4994</TOTALENTERED><TOTALSELECTED>5459</TOTALSELECTED><TOTALPAID>5459</TOTALPAID><TOTALDUE>4994</TOTALDUE><TRX_TOTALENTERED>4994</TRX_TOTALENTERED><TRX_TOTALSELECTED>5459</TRX_TOTALSELECTED><TRX_TOTALPAID>5459</TRX_TOTALPAID><TRX_TOTALDUE>4994</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-dTgomCuqRLuKzHvUws</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-dTgomCuqRLuKzHvUws</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>5525</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>5525</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-HulnERuNnZZDNOCSMwEXBhRozmrMoqdVuifIapKIUkl</PRBATCH><PRBATCHKEY>2519</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-MYbw</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-L</SYSTEMGENERATED><AUWHENCREATED>06/11/1989
+        09:10:26</AUWHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>5172</CREATEDBY><MODIFIEDBY>5172</MODIFIEDBY><DUE_IN_DAYS>6692</DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>false</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>5459</TRX_TOTALRETAINED><TRX_TOTALRELEASED>5459</TRX_TOTALRELEASED><TOTALRETAINED>5459</TOTALRETAINED><SUPDOCID>-Fallback-scrubbed-YayQBEukHRELBiqCicT</SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>emm***</USERID><CREATEDUSERID>-Fallback-scrubbed-avJg</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>false</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-avJg</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-avJg</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>false</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-ulokoWrfGpNKjshXLPKikJBbEMHMplZTWdmLmDvXIbwnFOEjomWCuoWYfCziJQvijbscNOTcTjMWuZOwpYapXSN</RECORD_URL></APBILL><APBILL><RECORDNO>1912</RECORDNO><RECORDTYPE>-Fallback-scrubbed-Hr</RECORDTYPE><RECORDID>-Fallback-scrubbed-xjzyuPFHXAcF</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-GsECJQKdi</STATE><RAWSTATE>-Fallback-scrubbed-O</RAWSTATE><VENDORID>20002</VENDORID><VENDORNAME>-Fallback-scrubbed-BoPAunDJFQwTZeJkf</VENDORNAME><VENDORKEY>2772</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>-6402726683870.86</TRX_ENTITYDUE><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-pRcjxyKpkBvHEYdtbaDLphUOHsPQKmrC</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME>-Fallback-scrubbed-waMTpl</TERMNAME><TERMKEY>9881</TERMKEY><TERMVALUE>-Fallback-scrubbed-UmKYLHigh</TERMVALUE><WHENCREATED>06/20/2004</WHENCREATED><WHENPOSTED>06/20/2004</WHENPOSTED><WHENDISCOUNT>06/20/2004</WHENDISCOUNT><WHENDUE>01/17/2011</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-FHILfY</PAYMENTPRIORITY><ONHOLD>false</ONHOLD><BASECURR>-Fallback-scrubbed-xqC</BASECURR><CURRENCY>-Fallback-scrubbed-xqC</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>4329</TOTALENTERED><TOTALSELECTED>5459</TOTALSELECTED><TOTALPAID>5459</TOTALPAID><TOTALDUE>4329</TOTALDUE><TRX_TOTALENTERED>4329</TRX_TOTALENTERED><TRX_TOTALSELECTED>5459</TRX_TOTALSELECTED><TRX_TOTALPAID>5459</TRX_TOTALPAID><TRX_TOTALDUE>4329</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-bkzVTIwYjI</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-bkzVTIwYjI</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>1760</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>1760</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-KgImnlILhaKuhdiMYLLYiUomoDjFrbYtHlvNYKNbzWt</PRBATCH><PRBATCHKEY>4587</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-MYbw</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-L</SYSTEMGENERATED><AUWHENCREATED>10/05/2012
+        21:26:28</AUWHENCREATED><WHENMODIFIED>07/10/2026 18:20:14</WHENMODIFIED><CREATEDBY>6942</CREATEDBY><MODIFIEDBY>6942</MODIFIEDBY><DUE_IN_DAYS></DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>false</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>5459</TRX_TOTALRETAINED><TRX_TOTALRELEASED>5459</TRX_TOTALRELEASED><TOTALRETAINED>5459</TOTALRETAINED><SUPDOCID></SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>hot***</USERID><CREATEDUSERID>-Fallback-scrubbed-cIRDOvT</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>false</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-cIRDOvT</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-cIRDOvT</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>false</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-yPhinlHLhXhMCYwasMaOyHcCiCKJYCDaLxmbUYUqDPBDReMDYlulCFlgRjSxwqZprYnAzBxAegMyEgmUwqbNqrF</RECORD_URL></APBILL></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b636fdb565d-GRU
+      - a38eedee4df61da1-GRU
       Cache-Control:
       - private
       Connection:
@@ -313,7 +227,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:12 GMT
+      - Thu, 10 Sep 2026 13:55:17 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -327,17 +241,17 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '581'
+      - '769'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.03'
+      - '0.01'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '833'
+      - '7786'
     status:
       code: 200
       message: OK
@@ -345,8 +259,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="f7ace993-e47d-44ff-9811-24b39b94f218"><query><object>APBILL</object><select><field>RECORDNO</field><field>RECORDTYPE</field><field>RECORDID</field><field>CONTACTTAXGROUP</field><field>FINANCIALENTITY</field><field>STATE</field><field>RAWSTATE</field><field>VENDORID</field><field>VENDORNAME</field><field>VENDORKEY</field><field>FORM1099TYPE</field><field>FORM1099BOX</field><field>VENDTYPE1099TYPE</field><field>TRX_ENTITYDUE</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>TERMNAME</field><field>TERMKEY</field><field>TERMVALUE</field><field>WHENCREATED</field><field>WHENPOSTED</field><field>WHENDISCOUNT</field><field>WHENDUE</field><field>WHENPAID</field><field>RECPAYMENTDATE</field><field>PAYMENTPRIORITY</field><field>ONHOLD</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>SHIPTORETURNTOCONTACTNAME</field><field>BILLTOPAYTOKEY</field><field>SHIPTORETURNTOKEY</field><field>PRBATCH</field><field>PRBATCHKEY</field><field>MODULEKEY</field><field>SCHOPKEY</field><field>SYSTEMGENERATED</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>DUE_IN_DAYS</field><field>PAYTO.TAXGROUP.NAME</field><field>PAYTO.TAXGROUP.RECORDNO</field><field>PAYTO.TAXID</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>RETAINAGEPERCENTAGE</field><field>TRX_TOTALRETAINED</field><field>TRX_TOTALRELEASED</field><field>TOTALRETAINED</field><field>SUPDOCID</field><field>BILLBACKTEMPLATE</field><field>USERID</field><field>CREATEDUSERID</field><field>DOCSOURCE</field><field>UPLOADSTATUS</field><field>RECIPIENTEMAIL</field><field>SENDEREMAIL</field><field>RETAINAGERELEASED</field><field>INVOICETYPE</field><field>INVOICEMODE</field><field>EINVOICESTATUS</field><field>DOCHDRKEY</field><field>DISPUTEREASON</field><field>REFUSEREASON</field><field>DISPUTENOTE</field><field>REFUSENOTE</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>BILL_CF_BOOL</field><field>BILL_CF_TEXT</field><field>BILL_CF_NUMBER</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="a6e0f6b8-cc2b-49a5-a35e-31553e2eaa29"><query><object>APBILL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -357,7 +271,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3317'
+      - '829'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -368,17 +282,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1997-11-05
-        05:22:26</controlid><uniqueid>true</uniqueid><dtdversion>6420657741.46445</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1990-05-01T03:44:07+00:00</sessiontimestamp><sessiontimeout>2021-02-08T04:12:40+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-zReKK</function><controlid>-Fallback-scrubbed-UFpcuKihSrXFoqOcfzYBpmzCrppKAzcTCfur</controlid><data
-        listtype="-Fallback-scrubbed-WwjFDj" totalcount="2" offset="6324" count="2767"
-        numremaining="6324"><APBILL><RECORDNO>1911</RECORDNO><RECORDTYPE>-Fallback-scrubbed-iP</RECORDTYPE><RECORDID>-Fallback-scrubbed-CnxpIwXeHqDiocfZQyKXfYzsMDGTTuXKF</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-FwcTAL</STATE><RAWSTATE>-Fallback-scrubbed-x</RAWSTATE><VENDORID>20030</VENDORID><VENDORNAME>-Fallback-scrubbed-CkWVlvcRBEIrT</VENDORNAME><VENDORKEY>7681</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>5666</TRX_ENTITYDUE><DOCNUMBER>-Fallback-scrubbed-RAigrzPnHkBykoOqLuuiNrJLwvCyvESm</DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME></TERMNAME><TERMKEY></TERMKEY><TERMVALUE></TERMVALUE><WHENCREATED>02/18/1972</WHENCREATED><WHENPOSTED>02/18/1972</WHENPOSTED><WHENDISCOUNT></WHENDISCOUNT><WHENDUE>04/11/1978</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-tzdXuU</PAYMENTPRIORITY><ONHOLD>true</ONHOLD><BASECURR>-Fallback-scrubbed-ABa</BASECURR><CURRENCY>-Fallback-scrubbed-ABa</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>8984</TOTALENTERED><TOTALSELECTED>6324</TOTALSELECTED><TOTALPAID>6324</TOTALPAID><TOTALDUE>8984</TOTALDUE><TRX_TOTALENTERED>8984</TRX_TOTALENTERED><TRX_TOTALSELECTED>6324</TRX_TOTALSELECTED><TRX_TOTALPAID>6324</TRX_TOTALPAID><TRX_TOTALDUE>8984</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-MkMntpwNyJVhVfCarP</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-MkMntpwNyJVhVfCarP</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>5097</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>5097</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-LpuXmMvoQGGNztIiFUTZLLTBnDimIYquyHfSgrhxUok</PRBATCH><PRBATCHKEY>7221</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-PRRz</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-J</SYSTEMGENERATED><AUWHENCREATED>06/30/2008
-        14:39:04</AUWHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>4328</CREATEDBY><MODIFIEDBY>4328</MODIFIEDBY><DUE_IN_DAYS>4398</DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>6324</TRX_TOTALRETAINED><TRX_TOTALRELEASED>6324</TRX_TOTALRELEASED><TOTALRETAINED>6324</TOTALRETAINED><SUPDOCID>-Fallback-scrubbed-xCPlFjAeVIObNPXZibE</SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>emm***</USERID><CREATEDUSERID>-Fallback-scrubbed-CGoe</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>true</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-CGoe</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-CGoe</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>true</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-tMhtqPxAqgRVSsTSyUOMQssDEYosVPBmWJJJpbILLACFAoPUcdvpbFIwLEXNFlAhSuiAsvMFUKZChaHnShwGRTE</RECORD_URL></APBILL><APBILL><RECORDNO>1912</RECORDNO><RECORDTYPE>-Fallback-scrubbed-iP</RECORDTYPE><RECORDID>-Fallback-scrubbed-YoJGuDJVgIaq</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-fDuDVdDyq</STATE><RAWSTATE>-Fallback-scrubbed-y</RAWSTATE><VENDORID>20002</VENDORID><VENDORNAME>-Fallback-scrubbed-aPeFCtDfuCwZGPQBN</VENDORNAME><VENDORKEY>6004</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>-74428823021669.4</TRX_ENTITYDUE><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-nwjyGVlloERGvgtPcfUsrGzokEcYEiNN</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME>-Fallback-scrubbed-jbRazQ</TERMNAME><TERMKEY>8770</TERMKEY><TERMVALUE>-Fallback-scrubbed-CECHlfLSv</TERMVALUE><WHENCREATED>08/25/1977</WHENCREATED><WHENPOSTED>08/25/1977</WHENPOSTED><WHENDISCOUNT>08/25/1977</WHENDISCOUNT><WHENDUE>06/03/2016</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-tzdXuU</PAYMENTPRIORITY><ONHOLD>true</ONHOLD><BASECURR>-Fallback-scrubbed-ABa</BASECURR><CURRENCY>-Fallback-scrubbed-ABa</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>3779</TOTALENTERED><TOTALSELECTED>6324</TOTALSELECTED><TOTALPAID>6324</TOTALPAID><TOTALDUE>3779</TOTALDUE><TRX_TOTALENTERED>3779</TRX_TOTALENTERED><TRX_TOTALSELECTED>6324</TRX_TOTALSELECTED><TRX_TOTALPAID>6324</TRX_TOTALPAID><TRX_TOTALDUE>3779</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-RHupMkpreu</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-RHupMkpreu</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>9949</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>9949</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-yGVazzQYaaZGOayjuYaAWWZrQjBcezudznDmMpHwuRT</PRBATCH><PRBATCHKEY>2436</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-PRRz</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-J</SYSTEMGENERATED><AUWHENCREATED>07/05/2019
-        11:24:48</AUWHENCREATED><WHENMODIFIED>07/10/2026 18:20:14</WHENMODIFIED><CREATEDBY>7646</CREATEDBY><MODIFIEDBY>7646</MODIFIEDBY><DUE_IN_DAYS></DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>true</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>6324</TRX_TOTALRETAINED><TRX_TOTALRELEASED>6324</TRX_TOTALRELEASED><TOTALRETAINED>6324</TOTALRETAINED><SUPDOCID></SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>hot***</USERID><CREATEDUSERID>-Fallback-scrubbed-bfpSBMw</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>true</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-bfpSBMw</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-bfpSBMw</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>true</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-sMbXSDPPPwkraDWMfYVkAVZwiAneEYPVuCbwcQtJJJilinNcIxFCwugdYopwdXtmGPyFAKlvJHskRPkuyZMtRsd</RECORD_URL></APBILL></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2012-04-24
+        11:56:00</controlid><uniqueid>false</uniqueid><dtdversion>-22702913.6273967</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2009-11-03T13:34:07+00:00</sessiontimestamp><sessiontimeout>1993-10-08T12:42:32+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mETII</function><controlid>-Fallback-scrubbed-khFPPNecAGLesyTcoFAGSIUFPVPryFgnfYCN</controlid><data
+        listtype="-Fallback-scrubbed-zUScFA" totalcount="2" offset="5459" count="4994"
+        numremaining="4994"><APBILL><RECORDNO>1911</RECORDNO></APBILL></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b6898f4d7b2-GRU
+      - a38eedf4aa29e8d6-GRU
       Cache-Control:
       - private
       Connection:
@@ -401,7 +313,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:13 GMT
+      - Thu, 10 Sep 2026 13:55:18 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -415,17 +327,105 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '654'
+      - '580'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.08'
+      - '0.02'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '7776'
+      - '835'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="ce759eea-473d-4073-afc8-c0e73113846c"><query><object>APBILL</object><select><field>RECORDNO</field><field>RECORDTYPE</field><field>RECORDID</field><field>CONTACTTAXGROUP</field><field>FINANCIALENTITY</field><field>STATE</field><field>RAWSTATE</field><field>VENDORID</field><field>VENDORNAME</field><field>VENDORKEY</field><field>FORM1099TYPE</field><field>FORM1099BOX</field><field>VENDTYPE1099TYPE</field><field>TRX_ENTITYDUE</field><field>DOCNUMBER</field><field>DESCRIPTION</field><field>DESCRIPTION2</field><field>TERMNAME</field><field>TERMKEY</field><field>TERMVALUE</field><field>WHENCREATED</field><field>WHENPOSTED</field><field>WHENDISCOUNT</field><field>WHENDUE</field><field>WHENPAID</field><field>RECPAYMENTDATE</field><field>PAYMENTPRIORITY</field><field>ONHOLD</field><field>BASECURR</field><field>CURRENCY</field><field>EXCH_RATE_DATE</field><field>EXCH_RATE_TYPE_ID</field><field>EXCHANGE_RATE</field><field>TOTALENTERED</field><field>TOTALSELECTED</field><field>TOTALPAID</field><field>TOTALDUE</field><field>TRX_TOTALENTERED</field><field>TRX_TOTALSELECTED</field><field>TRX_TOTALPAID</field><field>TRX_TOTALDUE</field><field>BILLTOPAYTOCONTACTNAME</field><field>SHIPTORETURNTOCONTACTNAME</field><field>BILLTOPAYTOKEY</field><field>SHIPTORETURNTOKEY</field><field>PRBATCH</field><field>PRBATCHKEY</field><field>MODULEKEY</field><field>SCHOPKEY</field><field>SYSTEMGENERATED</field><field>AUWHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>DUE_IN_DAYS</field><field>PAYTO.TAXGROUP.NAME</field><field>PAYTO.TAXGROUP.RECORDNO</field><field>PAYTO.TAXID</field><field>INCLUSIVETAX</field><field>TAXSOLUTIONID</field><field>RETAINAGEPERCENTAGE</field><field>TRX_TOTALRETAINED</field><field>TRX_TOTALRELEASED</field><field>TOTALRETAINED</field><field>SUPDOCID</field><field>BILLBACKTEMPLATE</field><field>USERID</field><field>CREATEDUSERID</field><field>DOCSOURCE</field><field>UPLOADSTATUS</field><field>RECIPIENTEMAIL</field><field>SENDEREMAIL</field><field>RETAINAGERELEASED</field><field>INVOICETYPE</field><field>INVOICEMODE</field><field>EINVOICESTATUS</field><field>DOCHDRKEY</field><field>DISPUTEREASON</field><field>REFUSEREASON</field><field>DISPUTENOTE</field><field>REFUSENOTE</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>BILL_CF_BOOL</field><field>BILL_CF_TEXT</field><field>BILL_CF_NUMBER</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>06/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3267'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2012-04-24
+        11:56:00</controlid><uniqueid>false</uniqueid><dtdversion>-22702913.6273967</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1991-08-16T07:26:10+00:00</sessiontimestamp><sessiontimeout>2009-06-09T08:33:55+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-mETII</function><controlid>-Fallback-scrubbed-bWLGIHmVWFQhrNSthjniyTQOLBaaykjUtfft</controlid><data
+        listtype="-Fallback-scrubbed-zUScFA" totalcount="2" offset="5459" count="1403"
+        numremaining="5459"><APBILL><RECORDNO>1911</RECORDNO><RECORDTYPE>-Fallback-scrubbed-Hr</RECORDTYPE><RECORDID>-Fallback-scrubbed-hBZPIecNQBRAPfUhCDobnoVPOUYBBZzIj</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-RhAStD</STATE><RAWSTATE>-Fallback-scrubbed-s</RAWSTATE><VENDORID>20030</VENDORID><VENDORNAME>-Fallback-scrubbed-tnACxTapopZSC</VENDORNAME><VENDORKEY>8376</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>6847</TRX_ENTITYDUE><DOCNUMBER>-Fallback-scrubbed-WaByHpCTKyKKBclzNtwqketQeBcVlKAL</DOCNUMBER><DESCRIPTION></DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME></TERMNAME><TERMKEY></TERMKEY><TERMVALUE></TERMVALUE><WHENCREATED>09/29/1988</WHENCREATED><WHENPOSTED>09/29/1988</WHENPOSTED><WHENDISCOUNT></WHENDISCOUNT><WHENDUE>10/01/1994</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-FHILfY</PAYMENTPRIORITY><ONHOLD>false</ONHOLD><BASECURR>-Fallback-scrubbed-xqC</BASECURR><CURRENCY>-Fallback-scrubbed-xqC</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>4994</TOTALENTERED><TOTALSELECTED>5459</TOTALSELECTED><TOTALPAID>5459</TOTALPAID><TOTALDUE>4994</TOTALDUE><TRX_TOTALENTERED>4994</TRX_TOTALENTERED><TRX_TOTALSELECTED>5459</TRX_TOTALSELECTED><TRX_TOTALPAID>5459</TRX_TOTALPAID><TRX_TOTALDUE>4994</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-dTgomCuqRLuKzHvUws</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-dTgomCuqRLuKzHvUws</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>5525</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>5525</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-HulnERuNnZZDNOCSMwEXBhRozmrMoqdVuifIapKIUkl</PRBATCH><PRBATCHKEY>2519</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-MYbw</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-L</SYSTEMGENERATED><AUWHENCREATED>06/11/1989
+        09:10:26</AUWHENCREATED><WHENMODIFIED>06/24/2026 14:57:37</WHENMODIFIED><CREATEDBY>5172</CREATEDBY><MODIFIEDBY>5172</MODIFIEDBY><DUE_IN_DAYS>6692</DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>false</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>5459</TRX_TOTALRETAINED><TRX_TOTALRELEASED>5459</TRX_TOTALRELEASED><TOTALRETAINED>5459</TOTALRETAINED><SUPDOCID>-Fallback-scrubbed-YayQBEukHRELBiqCicT</SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>emm***</USERID><CREATEDUSERID>-Fallback-scrubbed-avJg</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>false</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-avJg</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-avJg</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>false</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-ulokoWrfGpNKjshXLPKikJBbEMHMplZTWdmLmDvXIbwnFOEjomWCuoWYfCziJQvijbscNOTcTjMWuZOwpYapXSN</RECORD_URL></APBILL><APBILL><RECORDNO>1912</RECORDNO><RECORDTYPE>-Fallback-scrubbed-Hr</RECORDTYPE><RECORDID>-Fallback-scrubbed-xjzyuPFHXAcF</RECORDID><CONTACTTAXGROUP></CONTACTTAXGROUP><FINANCIALENTITY></FINANCIALENTITY><STATE>-Fallback-scrubbed-GsECJQKdi</STATE><RAWSTATE>-Fallback-scrubbed-O</RAWSTATE><VENDORID>20002</VENDORID><VENDORNAME>-Fallback-scrubbed-BoPAunDJFQwTZeJkf</VENDORNAME><VENDORKEY>2772</VENDORKEY><FORM1099TYPE></FORM1099TYPE><FORM1099BOX></FORM1099BOX><VENDTYPE1099TYPE></VENDTYPE1099TYPE><TRX_ENTITYDUE>-6402726683870.86</TRX_ENTITYDUE><DOCNUMBER></DOCNUMBER><DESCRIPTION>-Fallback-scrubbed-pRcjxyKpkBvHEYdtbaDLphUOHsPQKmrC</DESCRIPTION><DESCRIPTION2></DESCRIPTION2><TERMNAME>-Fallback-scrubbed-waMTpl</TERMNAME><TERMKEY>9881</TERMKEY><TERMVALUE>-Fallback-scrubbed-UmKYLHigh</TERMVALUE><WHENCREATED>06/20/2004</WHENCREATED><WHENPOSTED>06/20/2004</WHENPOSTED><WHENDISCOUNT>06/20/2004</WHENDISCOUNT><WHENDUE>01/17/2011</WHENDUE><WHENPAID></WHENPAID><RECPAYMENTDATE></RECPAYMENTDATE><PAYMENTPRIORITY>-Fallback-scrubbed-FHILfY</PAYMENTPRIORITY><ONHOLD>false</ONHOLD><BASECURR>-Fallback-scrubbed-xqC</BASECURR><CURRENCY>-Fallback-scrubbed-xqC</CURRENCY><EXCH_RATE_DATE></EXCH_RATE_DATE><EXCH_RATE_TYPE_ID></EXCH_RATE_TYPE_ID><EXCHANGE_RATE></EXCHANGE_RATE><TOTALENTERED>4329</TOTALENTERED><TOTALSELECTED>5459</TOTALSELECTED><TOTALPAID>5459</TOTALPAID><TOTALDUE>4329</TOTALDUE><TRX_TOTALENTERED>4329</TRX_TOTALENTERED><TRX_TOTALSELECTED>5459</TRX_TOTALSELECTED><TRX_TOTALPAID>5459</TRX_TOTALPAID><TRX_TOTALDUE>4329</TRX_TOTALDUE><BILLTOPAYTOCONTACTNAME>-Fallback-scrubbed-bkzVTIwYjI</BILLTOPAYTOCONTACTNAME><SHIPTORETURNTOCONTACTNAME>-Fallback-scrubbed-bkzVTIwYjI</SHIPTORETURNTOCONTACTNAME><BILLTOPAYTOKEY>1760</BILLTOPAYTOKEY><SHIPTORETURNTOKEY>1760</SHIPTORETURNTOKEY><PRBATCH>-Fallback-scrubbed-KgImnlILhaKuhdiMYLLYiUomoDjFrbYtHlvNYKNbzWt</PRBATCH><PRBATCHKEY>4587</PRBATCHKEY><MODULEKEY>-Fallback-scrubbed-MYbw</MODULEKEY><SCHOPKEY></SCHOPKEY><SYSTEMGENERATED>-Fallback-scrubbed-L</SYSTEMGENERATED><AUWHENCREATED>10/05/2012
+        21:26:28</AUWHENCREATED><WHENMODIFIED>07/10/2026 18:20:14</WHENMODIFIED><CREATEDBY>6942</CREATEDBY><MODIFIEDBY>6942</MODIFIEDBY><DUE_IN_DAYS></DUE_IN_DAYS><PAYTO.TAXGROUP.NAME></PAYTO.TAXGROUP.NAME><PAYTO.TAXGROUP.RECORDNO></PAYTO.TAXGROUP.RECORDNO><PAYTO.TAXID></PAYTO.TAXID><INCLUSIVETAX>false</INCLUSIVETAX><TAXSOLUTIONID></TAXSOLUTIONID><RETAINAGEPERCENTAGE></RETAINAGEPERCENTAGE><TRX_TOTALRETAINED>5459</TRX_TOTALRETAINED><TRX_TOTALRELEASED>5459</TRX_TOTALRELEASED><TOTALRETAINED>5459</TOTALRETAINED><SUPDOCID></SUPDOCID><BILLBACKTEMPLATE></BILLBACKTEMPLATE><USERID>hot***</USERID><CREATEDUSERID>-Fallback-scrubbed-cIRDOvT</CREATEDUSERID><DOCSOURCE></DOCSOURCE><UPLOADSTATUS></UPLOADSTATUS><RECIPIENTEMAIL></RECIPIENTEMAIL><SENDEREMAIL></SENDEREMAIL><RETAINAGERELEASED>false</RETAINAGERELEASED><INVOICETYPE></INVOICETYPE><INVOICEMODE></INVOICEMODE><EINVOICESTATUS></EINVOICESTATUS><DOCHDRKEY></DOCHDRKEY><DISPUTEREASON></DISPUTEREASON><REFUSEREASON></REFUSEREASON><DISPUTENOTE></DISPUTENOTE><REFUSENOTE></REFUSENOTE><CREATEDBYLOGINID>-Fallback-scrubbed-cIRDOvT</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-cIRDOvT</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><BILL_CF_BOOL>false</BILL_CF_BOOL><BILL_CF_TEXT></BILL_CF_TEXT><BILL_CF_NUMBER></BILL_CF_NUMBER><RECORD_URL>-Fallback-scrubbed-yPhinlHLhXhMCYwasMaOyHcCiCKJYCDaLxmbUYUqDPBDReMDYlulCFlgRjSxwqZprYnAzBxAegMyEgmUwqbNqrF</RECORD_URL></APBILL></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38eedfb4852068d-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:55:19 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '523'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.02'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '7786'
     status:
       code: 200
       message: OK

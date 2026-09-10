@@ -4,7 +4,7 @@ interactions:
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
       19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
-      controlid="99f9c88e-1041-4c7c-8fd6-92bb48d0a75a"><getAPISession></getAPISession></function></content></operation></request>'
+      controlid="95d71a77-f1b6-4959-890b-77a9be9d6635"><getAPISession></getAPISession></function></content></operation></request>'
     headers:
       Accept:
       - '*/*'
@@ -24,13 +24,13 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1986-10-25
-        08:55:04</controlid><uniqueid>true</uniqueid><dtdversion>-679877631152.485</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1980-09-01T21:44:28+00:00</sessiontimestamp><sessiontimeout>1972-07-29T05:38:07+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-gfaDxfajoETrG</function><controlid>-Fallback-scrubbed-FFATnEcogevUlSrcACmHkPmQcQVWtrBJYMtZ</controlid><data><api><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-08-11
+        20:03:56</controlid><uniqueid>true</uniqueid><dtdversion>67581130.2102856</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2018-05-12T07:17:21+00:00</sessiontimestamp><sessiontimeout>2002-01-11T00:48:25+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-uZHjpXzsRpsmE</function><controlid>-Fallback-scrubbed-wZpiMtoCrYXGFWIjFhZHnjXSjjNnBJKpGMsq</controlid><data><api><sessionid>f6j***</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b83ebedb898-GRU
+      - a38eee2499558b2a-GRU
       Cache-Control:
       - private
       Connection:
@@ -53,7 +53,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:18 GMT
+      - Thu, 10 Sep 2026 13:55:26 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -67,93 +67,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '642'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.04'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '879'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="d408818b-2c6b-4c78-8af5-f8676123905f"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '885'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1986-10-25
-        08:55:04</controlid><uniqueid>true</uniqueid><dtdversion>-679877631152.485</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1979-04-20T17:42:00+00:00</sessiontimestamp><sessiontimeout>2018-12-26T02:21:32+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-emuoJ</function><controlid>-Fallback-scrubbed-cgxeayYOYEJvFsVCxMlAukoKbwNOiniwCbAc</controlid><data
-        listtype="-Fallback-scrubbed-rGEjOXxZnCLY" totalcount="8" offset="4666" count="9982"
-        numremaining="5419"><APPYMTDETAIL><RECORDNO>398</RECORDNO></APPYMTDETAIL></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a3138b898f2e8b2a-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Wed, 26 Aug 2026 14:32:18 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '574'
+      - '766'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -163,7 +77,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '851'
+      - '828'
     status:
       code: 200
       message: OK
@@ -171,8 +85,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="202f9bb9-f0e1-4c3c-9bfc-9221a4f8e6f4"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field><field>RECORDKEY</field><field>ENTRYKEY</field><field>POSADJKEY</field><field>POSADJENTRYKEY</field><field>PAYMENTKEY</field><field>PAYMENTENTRYKEY</field><field>PAYMENTDATE</field><field>PAYMENTAMOUNT</field><field>TRX_PAYMENTAMOUNT</field><field>INLINEKEY</field><field>INLINEENTRYKEY</field><field>INLINEAMOUNT</field><field>TRX_INLINEAMOUNT</field><field>DISCOUNTKEY</field><field>DISCOUNTENTRYKEY</field><field>DISCOUNTDATE</field><field>DISCOUNTAMOUNT</field><field>TRX_DISCOUNTAMOUNT</field><field>ADJUSTMENTKEY</field><field>ADJUSTMENTENTRYKEY</field><field>ADJUSTMENTAMOUNT</field><field>TRX_ADJUSTMENTAMOUNT</field><field>ADVANCEKEY</field><field>ADVANCEENTRYKEY</field><field>POSTEDADVANCEKEY</field><field>POSTEDADVANCEENTRYKEY</field><field>POSTEDADVANCEAMOUNT</field><field>TRX_POSTEDADVANCEAMOUNT</field><field>CURRENCY</field><field>STATE</field><field>MODULEKEY</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="d2ce2eb0-2741-4577-96bc-e5489a137843"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -183,7 +97,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2043'
+      - '835'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -194,23 +108,15 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1986-10-25
-        08:55:04</controlid><uniqueid>true</uniqueid><dtdversion>-679877631152.485</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1973-09-20T18:02:46+00:00</sessiontimestamp><sessiontimeout>1994-07-27T12:18:08+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-emuoJ</function><controlid>-Fallback-scrubbed-pLGeLhrBsRgAqTSZYnzPxNjvvDgbwXdMhlmI</controlid><data
-        listtype="-Fallback-scrubbed-rGEjOXxZnCLY" totalcount="8" offset="4666" count="52"
-        numremaining="4666"><APPYMTDETAIL><RECORDNO>398</RECORDNO><RECORDKEY>8956</RECORDKEY><ENTRYKEY>3347</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8421</PAYMENTKEY><PAYMENTENTRYKEY>8293</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>5124</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>5124</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/22/1985
-        16:42:06</WHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-aBIbYdwafqomnfWSnvjQtwqaUOWPcgIFkThrBezVNYGfYYAjvitIGQdMWgDJyIsGHoodyZUbawSTIigrYqBrGph</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>393</RECORDNO><RECORDKEY>2329</RECORDKEY><ENTRYKEY>125</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>4293</PAYMENTKEY><PAYMENTENTRYKEY>8071</PAYMENTENTRYKEY><PAYMENTDATE>11/21/1997</PAYMENTDATE><PAYMENTAMOUNT>1172</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>1172</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>09/11/2022
-        03:58:08</WHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-kKFBrKrABYdIktAxdahtTAJWQNKkwbaecQkhoEtBbGNFZWboRAFXikGknjMxdqRKAVNgWSLqHSFmhfAHePzSZwS</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>394</RECORDNO><RECORDKEY>2329</RECORDKEY><ENTRYKEY>125</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2966</PAYMENTKEY><PAYMENTENTRYKEY>6090</PAYMENTENTRYKEY><PAYMENTDATE>11/21/1997</PAYMENTDATE><PAYMENTAMOUNT>1172</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>1172</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>01/04/2010
-        11:21:56</WHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-VutwCitOfvDOYwAAJNnESAsoDZJTirmSWyJDKZapzwrKEiyImuYEseTfbSiLTueNTFFXMRKbHvjjLNYGMSjFulT</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>399</RECORDNO><RECORDKEY>9118</RECORDKEY><ENTRYKEY>6961</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8959</PAYMENTKEY><PAYMENTENTRYKEY>2895</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>4836</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>4836</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/18/2007
-        07:20:57</WHENCREATED><WHENMODIFIED>02/27/2026 00:12:39</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-qPHWJczkpnjJdAEjRHNJwbWwXrLUmhkiPiTeQZtftWCFucNLyMLCylIvWStezYYAloFiujaZHRtbQMndnfAxsEh</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>395</RECORDNO><RECORDKEY>5416</RECORDKEY><ENTRYKEY>2248</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3770</PAYMENTKEY><PAYMENTENTRYKEY>1968</PAYMENTENTRYKEY><PAYMENTDATE>12/31/2012</PAYMENTDATE><PAYMENTAMOUNT>2732</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2732</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>08/17/2000
-        06:02:39</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-SPrvDpWmTDQQPCQMMLjwVMvQBGDsmSpuDGMHrfhllbWvgedhOSuEhPKvhIklknRrVUEPedtVGboEAMCqjoSttBC</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>396</RECORDNO><RECORDKEY>5416</RECORDKEY><ENTRYKEY>6536</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3770</PAYMENTKEY><PAYMENTENTRYKEY>4580</PAYMENTENTRYKEY><PAYMENTDATE>12/31/2012</PAYMENTDATE><PAYMENTAMOUNT>42</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>42</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>08/17/2000
-        06:02:39</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-TiOfDiqTyazdjRngCnQzMSHcnyBeqKKxvTIJKwzqwHCIJLbonpCASOGxUSObWTxoBuvuHVbFeksWjiCGuvrukyZ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>401</RECORDNO><RECORDKEY>8009</RECORDKEY><ENTRYKEY>4283</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>6070</PAYMENTKEY><PAYMENTENTRYKEY>4830</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>2032</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2032</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>10/02/1982
-        20:53:20</WHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-OJkJRPTnyrMiKyMfHugsyOGrFcAnSvlrEmszHHkNQONadKQrtqxiFwvDJZAQNvmjMSNwSxruaEFfcqCEJpoZTUS</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>400</RECORDNO><RECORDKEY>4194</RECORDKEY><ENTRYKEY>7806</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>1378</PAYMENTKEY><PAYMENTENTRYKEY>6516</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>7770</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7770</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/25/1971
-        10:01:19</WHENCREATED><WHENMODIFIED>02/27/2026 00:19:48</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-nKsdZVrBhFJLFavwqhUkUodBMqFRoutOGVsAedVPTwytSoYGItQxjVzRBDlaOUlWNJpABDcSpMzjHEwYIBsUmAR</RECORD_URL></APPYMTDETAIL></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-08-11
+        20:03:56</controlid><uniqueid>true</uniqueid><dtdversion>67581130.2102856</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1977-10-27T08:13:24+00:00</sessiontimestamp><sessiontimeout>1990-10-20T02:20:24+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-SDNyX</function><controlid>-Fallback-scrubbed-RtaPXShqxmXlBwThBqXQkDgaicKZtDmwehDL</controlid><data
+        listtype="-Fallback-scrubbed-ugMshOYQFpak" totalcount="8" offset="8861" count="2267"
+        numremaining="6302"><APPYMTDETAIL><RECORDNO>398</RECORDNO></APPYMTDETAIL></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b8ea9b8fc31-GRU
+      - a38eee2b488a1ce9-GRU
       Cache-Control:
       - private
       Connection:
@@ -233,7 +139,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:19 GMT
+      - Thu, 10 Sep 2026 13:55:27 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -247,93 +153,7 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '554'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Ia-Th:
-      - '0.02'
-      X-Xss-Protection:
-      - 1; mode=block
-      cf-cache-status:
-      - DYNAMIC
-      content-length:
-      - '13782'
-    status:
-      code: 200
-      message: OK
-- request:
-    body: '<?xml version="1.0" encoding="utf-8"?>
-
-      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="87bcd696-4a0e-439f-b6a9-4ce35ca7a070"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
-      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
-      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '885'
-      User-Agent:
-      - python-requests/2.34.2
-      content-type:
-      - application/xml
-    method: POST
-    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
-  response:
-    body:
-      string: '<?xml version="1.0" encoding="utf-8"?>
-
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1986-10-25
-        08:55:04</controlid><uniqueid>true</uniqueid><dtdversion>-679877631152.485</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1975-05-11T15:28:31+00:00</sessiontimestamp><sessiontimeout>2005-06-05T05:41:14+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-emuoJ</function><controlid>-Fallback-scrubbed-jzleaTquaLVRaJCCjwhbnaKHSywEPUbEAJDj</controlid><data
-        listtype="-Fallback-scrubbed-rGEjOXxZnCLY" totalcount="8" offset="4666" count="9982"
-        numremaining="5419"><APPYMTDETAIL><RECORDNO>398</RECORDNO></APPYMTDETAIL></data></result></operation></response>'
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'true'
-      CF-RAY:
-      - a3138b93dd02a40f-GRU
-      Cache-Control:
-      - private
-      Connection:
-      - keep-alive
-      Content-Language:
-      - en-US
-      Content-Security-Policy-Report-Only:
-      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
-        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
-        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
-        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
-        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
-        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
-        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
-        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
-        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
-        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
-        ;'
-      Content-Type:
-      - text/xml; encoding="UTF-8";charset=UTF-8
-      Date:
-      - Wed, 26 Aug 2026 14:32:20 GMT
-      P3p:
-      - CP="Not a P3P policy.
-      Server:
-      - cloudflare
-      Strict-Transport-Security:
-      - max-age=31536000
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Origin,Origin
-      X-Content-Type-Options:
-      - nosniff
-      X-Envoy-Upstream-Service-Time:
-      - '536'
+      - '583'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
@@ -343,7 +163,7 @@ interactions:
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '851'
+      - '850'
     status:
       code: 200
       message: OK
@@ -351,8 +171,8 @@ interactions:
     body: '<?xml version="1.0" encoding="utf-8"?>
 
       <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
-      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>afntE0rlsr2a7knmElgirA0fvZsqqGn5wMWvUg_Ymu5J5hJYIrxIWvGa</sessionid></authentication><content><function
-      controlid="3b16df2d-eb52-403f-bf24-7adca6e19f52"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field><field>RECORDKEY</field><field>ENTRYKEY</field><field>POSADJKEY</field><field>POSADJENTRYKEY</field><field>PAYMENTKEY</field><field>PAYMENTENTRYKEY</field><field>PAYMENTDATE</field><field>PAYMENTAMOUNT</field><field>TRX_PAYMENTAMOUNT</field><field>INLINEKEY</field><field>INLINEENTRYKEY</field><field>INLINEAMOUNT</field><field>TRX_INLINEAMOUNT</field><field>DISCOUNTKEY</field><field>DISCOUNTENTRYKEY</field><field>DISCOUNTDATE</field><field>DISCOUNTAMOUNT</field><field>TRX_DISCOUNTAMOUNT</field><field>ADJUSTMENTKEY</field><field>ADJUSTMENTENTRYKEY</field><field>ADJUSTMENTAMOUNT</field><field>TRX_ADJUSTMENTAMOUNT</field><field>ADVANCEKEY</field><field>ADVANCEENTRYKEY</field><field>POSTEDADVANCEKEY</field><field>POSTEDADVANCEENTRYKEY</field><field>POSTEDADVANCEAMOUNT</field><field>TRX_POSTEDADVANCEAMOUNT</field><field>CURRENCY</field><field>STATE</field><field>MODULEKEY</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="87605216-b204-4e60-ae89-84bca2fdae92"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field><field>RECORDKEY</field><field>ENTRYKEY</field><field>POSADJKEY</field><field>POSADJENTRYKEY</field><field>PAYMENTKEY</field><field>PAYMENTENTRYKEY</field><field>PAYMENTDATE</field><field>PAYMENTAMOUNT</field><field>TRX_PAYMENTAMOUNT</field><field>INLINEKEY</field><field>INLINEENTRYKEY</field><field>INLINEAMOUNT</field><field>TRX_INLINEAMOUNT</field><field>DISCOUNTKEY</field><field>DISCOUNTENTRYKEY</field><field>DISCOUNTDATE</field><field>DISCOUNTAMOUNT</field><field>TRX_DISCOUNTAMOUNT</field><field>ADJUSTMENTKEY</field><field>ADJUSTMENTENTRYKEY</field><field>ADJUSTMENTAMOUNT</field><field>TRX_ADJUSTMENTAMOUNT</field><field>ADVANCEKEY</field><field>ADVANCEENTRYKEY</field><field>POSTEDADVANCEKEY</field><field>POSTEDADVANCEENTRYKEY</field><field>POSTEDADVANCEAMOUNT</field><field>TRX_POSTEDADVANCEAMOUNT</field><field>CURRENCY</field><field>STATE</field><field>MODULEKEY</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
       00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
       19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
     headers:
@@ -363,7 +183,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2043'
+      - '1993'
       User-Agent:
       - python-requests/2.34.2
       content-type:
@@ -374,23 +194,23 @@ interactions:
     body:
       string: '<?xml version="1.0" encoding="utf-8"?>
 
-        <response><control><status>success</status><senderid>hot***</senderid><controlid>1986-10-25
-        08:55:04</controlid><uniqueid>true</uniqueid><dtdversion>-679877631152.485</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2026-04-22T21:49:49+00:00</sessiontimestamp><sessiontimeout>2015-06-20T14:24:24+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-emuoJ</function><controlid>-Fallback-scrubbed-QwDeduXgMWMcPJyesKXBHmqFyPjXtrIZMUbI</controlid><data
-        listtype="-Fallback-scrubbed-rGEjOXxZnCLY" totalcount="8" offset="4666" count="52"
-        numremaining="4666"><APPYMTDETAIL><RECORDNO>398</RECORDNO><RECORDKEY>8956</RECORDKEY><ENTRYKEY>3347</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8421</PAYMENTKEY><PAYMENTENTRYKEY>8293</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>5124</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>5124</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/22/1985
-        16:42:06</WHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-aBIbYdwafqomnfWSnvjQtwqaUOWPcgIFkThrBezVNYGfYYAjvitIGQdMWgDJyIsGHoodyZUbawSTIigrYqBrGph</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>393</RECORDNO><RECORDKEY>2329</RECORDKEY><ENTRYKEY>125</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>4293</PAYMENTKEY><PAYMENTENTRYKEY>8071</PAYMENTENTRYKEY><PAYMENTDATE>11/21/1997</PAYMENTDATE><PAYMENTAMOUNT>1172</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>1172</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>09/11/2022
-        03:58:08</WHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-kKFBrKrABYdIktAxdahtTAJWQNKkwbaecQkhoEtBbGNFZWboRAFXikGknjMxdqRKAVNgWSLqHSFmhfAHePzSZwS</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>394</RECORDNO><RECORDKEY>2329</RECORDKEY><ENTRYKEY>125</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2966</PAYMENTKEY><PAYMENTENTRYKEY>6090</PAYMENTENTRYKEY><PAYMENTDATE>11/21/1997</PAYMENTDATE><PAYMENTAMOUNT>1172</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>1172</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>01/04/2010
-        11:21:56</WHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-VutwCitOfvDOYwAAJNnESAsoDZJTirmSWyJDKZapzwrKEiyImuYEseTfbSiLTueNTFFXMRKbHvjjLNYGMSjFulT</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>399</RECORDNO><RECORDKEY>9118</RECORDKEY><ENTRYKEY>6961</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8959</PAYMENTKEY><PAYMENTENTRYKEY>2895</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>4836</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>4836</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/18/2007
-        07:20:57</WHENCREATED><WHENMODIFIED>02/27/2026 00:12:39</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-qPHWJczkpnjJdAEjRHNJwbWwXrLUmhkiPiTeQZtftWCFucNLyMLCylIvWStezYYAloFiujaZHRtbQMndnfAxsEh</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>395</RECORDNO><RECORDKEY>5416</RECORDKEY><ENTRYKEY>2248</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3770</PAYMENTKEY><PAYMENTENTRYKEY>1968</PAYMENTENTRYKEY><PAYMENTDATE>12/31/2012</PAYMENTDATE><PAYMENTAMOUNT>2732</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2732</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>08/17/2000
-        06:02:39</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-SPrvDpWmTDQQPCQMMLjwVMvQBGDsmSpuDGMHrfhllbWvgedhOSuEhPKvhIklknRrVUEPedtVGboEAMCqjoSttBC</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>396</RECORDNO><RECORDKEY>5416</RECORDKEY><ENTRYKEY>6536</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3770</PAYMENTKEY><PAYMENTENTRYKEY>4580</PAYMENTENTRYKEY><PAYMENTDATE>12/31/2012</PAYMENTDATE><PAYMENTAMOUNT>42</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>42</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-H</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>08/17/2000
-        06:02:39</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-TiOfDiqTyazdjRngCnQzMSHcnyBeqKKxvTIJKwzqwHCIJLbonpCASOGxUSObWTxoBuvuHVbFeksWjiCGuvrukyZ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>401</RECORDNO><RECORDKEY>8009</RECORDKEY><ENTRYKEY>4283</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>6070</PAYMENTKEY><PAYMENTENTRYKEY>4830</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>2032</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2032</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>10/02/1982
-        20:53:20</WHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-OJkJRPTnyrMiKyMfHugsyOGrFcAnSvlrEmszHHkNQONadKQrtqxiFwvDJZAQNvmjMSNwSxruaEFfcqCEJpoZTUS</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>400</RECORDNO><RECORDKEY>4194</RECORDKEY><ENTRYKEY>7806</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>1378</PAYMENTKEY><PAYMENTENTRYKEY>6516</PAYMENTENTRYKEY><PAYMENTDATE>02/24/1987</PAYMENTDATE><PAYMENTAMOUNT>7770</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7770</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-kDr</CURRENCY><STATE>-Fallback-scrubbed-w</STATE><MODULEKEY>-Fallback-scrubbed-rlFw</MODULEKEY><WHENCREATED>05/25/1971
-        10:01:19</WHENCREATED><WHENMODIFIED>02/27/2026 00:19:48</WHENMODIFIED><CREATEDBY>3020</CREATEDBY><MODIFIEDBY>3020</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-Tovu</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-Tovu</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-nKsdZVrBhFJLFavwqhUkUodBMqFRoutOGVsAedVPTwytSoYGItQxjVzRBDlaOUlWNJpABDcSpMzjHEwYIBsUmAR</RECORD_URL></APPYMTDETAIL></data></result></operation></response>'
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-08-11
+        20:03:56</controlid><uniqueid>true</uniqueid><dtdversion>67581130.2102856</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2008-03-25T11:10:51+00:00</sessiontimestamp><sessiontimeout>1988-05-09T19:53:15+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-SDNyX</function><controlid>-Fallback-scrubbed-vIHtseLaRJilLNURqpXdmueJNDkCkSSalnoR</controlid><data
+        listtype="-Fallback-scrubbed-ugMshOYQFpak" totalcount="8" offset="8861" count="7387"
+        numremaining="8861"><APPYMTDETAIL><RECORDNO>398</RECORDNO><RECORDKEY>9565</RECORDKEY><ENTRYKEY>4518</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>1441</PAYMENTKEY><PAYMENTENTRYKEY>5379</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>6587</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>6587</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>10/31/2007
+        15:54:41</WHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-oRHtrxLOqkQWYJlgPuvzkknEyUEbEAsoYoPOIuApxvHllEIUVwbzqUtAGASLecXmUiWhUooEPqtHtvRaVPioTBB</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>393</RECORDNO><RECORDKEY>5334</RECORDKEY><ENTRYKEY>1241</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2024</PAYMENTKEY><PAYMENTENTRYKEY>3708</PAYMENTENTRYKEY><PAYMENTDATE>04/10/2014</PAYMENTDATE><PAYMENTAMOUNT>7469</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7469</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>11/13/1987
+        12:13:11</WHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-LfCHHBHXEYcRLcfmdaimPplsDgmBVOcjkNpfPlJqqMQUDPitjjCdyRgCMcNuuyvoSjEjKiYBsFnbEJGMGLQnVlJ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>394</RECORDNO><RECORDKEY>5334</RECORDKEY><ENTRYKEY>1241</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>9574</PAYMENTKEY><PAYMENTENTRYKEY>3522</PAYMENTENTRYKEY><PAYMENTDATE>04/10/2014</PAYMENTDATE><PAYMENTAMOUNT>7469</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7469</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>11/05/1971
+        00:19:32</WHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-TUdNwkBrGnNNnQpGVezpLCOXEnEHcHWGmGcKGpBuECSYgpLeUTzUXMZuLHxJUFnGIvCXPOmBIGclXyZCphUmEHU</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>399</RECORDNO><RECORDKEY>4115</RECORDKEY><ENTRYKEY>8464</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3168</PAYMENTKEY><PAYMENTENTRYKEY>518</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>9338</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>9338</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>09/12/2020
+        03:20:40</WHENCREATED><WHENMODIFIED>02/27/2026 00:12:39</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-HnvnGvrIxHeEWFnOPaMoOOCEiAbDuMQjfXJBEcbZazffsVUlqrpseXDwesEOIkhEguAAjxuJAAtUXXLgPfibWNu</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>395</RECORDNO><RECORDKEY>614</RECORDKEY><ENTRYKEY>4862</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>5715</PAYMENTKEY><PAYMENTENTRYKEY>3236</PAYMENTENTRYKEY><PAYMENTDATE>05/02/2024</PAYMENTDATE><PAYMENTAMOUNT>8981</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>8981</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>07/10/2020
+        20:50:20</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-UarPgcoQQGiIEagwnCJrRhCryRMYijOyWMIaTcYnIlsrJKwRYFyKaAepvpnPBHyazksfJmKeOQEVxDODaTgSFPu</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>396</RECORDNO><RECORDKEY>614</RECORDKEY><ENTRYKEY>1798</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>5715</PAYMENTKEY><PAYMENTENTRYKEY>1683</PAYMENTENTRYKEY><PAYMENTDATE>05/02/2024</PAYMENTDATE><PAYMENTAMOUNT>2954</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2954</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>07/10/2020
+        20:50:20</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-jWJbpmBoVnWMLjYUEMMCLxfOmIRQqeuoseoVSBnUVDVIWcoaNBtRZNukTwKmpHYnlGkSOuZuejhzAgMftcnfVyZ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>401</RECORDNO><RECORDKEY>1888</RECORDKEY><ENTRYKEY>3110</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2341</PAYMENTKEY><PAYMENTENTRYKEY>4347</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>5999</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>5999</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>06/10/2023
+        08:13:58</WHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-NXhnsUWRBnktNiYlLWOPhEvqooTQHDKZmzGSNPBvxJQfTnfzBMIAUHimsMZkPtiJafdxkBQMHgIpBswHWgCgfFG</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>400</RECORDNO><RECORDKEY>1210</RECORDKEY><ENTRYKEY>1073</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8921</PAYMENTKEY><PAYMENTENTRYKEY>2048</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>8229</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>8229</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>02/27/1970
+        12:01:39</WHENCREATED><WHENMODIFIED>02/27/2026 00:19:48</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-YSVZvgIeIcjVSPhHYxRYrvwglkZeQfZzyDyHNLUQIOrUpynCHqGBMivItlkjjdjxOQFzFXDOjNjyNDvWzdriuZC</RECORD_URL></APPYMTDETAIL></data></result></operation></response>'
     headers:
       Access-Control-Allow-Credentials:
       - 'true'
       CF-RAY:
-      - a3138b98bd6552c4-GRU
+      - a38eee30ab4f2535-GRU
       Cache-Control:
       - private
       Connection:
@@ -413,7 +233,7 @@ interactions:
       Content-Type:
       - text/xml; encoding="UTF-8";charset=UTF-8
       Date:
-      - Wed, 26 Aug 2026 14:32:21 GMT
+      - Thu, 10 Sep 2026 13:55:28 GMT
       P3p:
       - CP="Not a P3P policy.
       Server:
@@ -427,17 +247,197 @@ interactions:
       X-Content-Type-Options:
       - nosniff
       X-Envoy-Upstream-Service-Time:
-      - '642'
+      - '636'
       X-Frame-Options:
       - SAMEORIGIN
       X-Ia-Th:
-      - '0.07'
+      - '0.01'
       X-Xss-Protection:
       - 1; mode=block
       cf-cache-status:
       - DYNAMIC
       content-length:
-      - '13782'
+      - '13786'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="ac357c0c-aca1-43e5-9688-3c4b3972b559"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '835'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-08-11
+        20:03:56</controlid><uniqueid>true</uniqueid><dtdversion>67581130.2102856</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2008-03-25T11:10:51+00:00</sessiontimestamp><sessiontimeout>1988-05-09T19:53:15+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-SDNyX</function><controlid>-Fallback-scrubbed-zJpQHwtYRPmOeIhkGWMqazrxdFBpAxoaJfwA</controlid><data
+        listtype="-Fallback-scrubbed-ugMshOYQFpak" totalcount="8" offset="8861" count="2267"
+        numremaining="6302"><APPYMTDETAIL><RECORDNO>398</RECORDNO></APPYMTDETAIL></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38eee367eec9ddf-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:55:29 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '508'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '850'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="0871a3a9-d261-4b1c-ba41-167deec64f8a"><query><object>APPYMTDETAIL</object><select><field>RECORDNO</field><field>RECORDKEY</field><field>ENTRYKEY</field><field>POSADJKEY</field><field>POSADJENTRYKEY</field><field>PAYMENTKEY</field><field>PAYMENTENTRYKEY</field><field>PAYMENTDATE</field><field>PAYMENTAMOUNT</field><field>TRX_PAYMENTAMOUNT</field><field>INLINEKEY</field><field>INLINEENTRYKEY</field><field>INLINEAMOUNT</field><field>TRX_INLINEAMOUNT</field><field>DISCOUNTKEY</field><field>DISCOUNTENTRYKEY</field><field>DISCOUNTDATE</field><field>DISCOUNTAMOUNT</field><field>TRX_DISCOUNTAMOUNT</field><field>ADJUSTMENTKEY</field><field>ADJUSTMENTENTRYKEY</field><field>ADJUSTMENTAMOUNT</field><field>TRX_ADJUSTMENTAMOUNT</field><field>ADVANCEKEY</field><field>ADVANCEENTRYKEY</field><field>POSTEDADVANCEKEY</field><field>POSTEDADVANCEENTRYKEY</field><field>POSTEDADVANCEAMOUNT</field><field>TRX_POSTEDADVANCEAMOUNT</field><field>CURRENCY</field><field>STATE</field><field>MODULEKEY</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>JOINTPAYEENAME</field><field>JOINTPAYEEPRINTAS</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2026
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1993'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>2007-08-11
+        20:03:56</controlid><uniqueid>true</uniqueid><dtdversion>67581130.2102856</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>1986-05-17T14:08:57+00:00</sessiontimestamp><sessiontimeout>1975-02-16T21:14:54+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-SDNyX</function><controlid>-Fallback-scrubbed-niEkcynfuzoZHiKdtxHNrEwKSuvTQfiFQbCo</controlid><data
+        listtype="-Fallback-scrubbed-ugMshOYQFpak" totalcount="8" offset="8861" count="7387"
+        numremaining="8861"><APPYMTDETAIL><RECORDNO>398</RECORDNO><RECORDKEY>9565</RECORDKEY><ENTRYKEY>4518</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>1441</PAYMENTKEY><PAYMENTENTRYKEY>5379</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>6587</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>6587</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>10/31/2007
+        15:54:41</WHENCREATED><WHENMODIFIED>02/27/2026 00:02:51</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-oRHtrxLOqkQWYJlgPuvzkknEyUEbEAsoYoPOIuApxvHllEIUVwbzqUtAGASLecXmUiWhUooEPqtHtvRaVPioTBB</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>393</RECORDNO><RECORDKEY>5334</RECORDKEY><ENTRYKEY>1241</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2024</PAYMENTKEY><PAYMENTENTRYKEY>3708</PAYMENTENTRYKEY><PAYMENTDATE>04/10/2014</PAYMENTDATE><PAYMENTAMOUNT>7469</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7469</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>11/13/1987
+        12:13:11</WHENCREATED><WHENMODIFIED>01/26/2026 04:30:38</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-LfCHHBHXEYcRLcfmdaimPplsDgmBVOcjkNpfPlJqqMQUDPitjjCdyRgCMcNuuyvoSjEjKiYBsFnbEJGMGLQnVlJ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>394</RECORDNO><RECORDKEY>5334</RECORDKEY><ENTRYKEY>1241</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>9574</PAYMENTKEY><PAYMENTENTRYKEY>3522</PAYMENTENTRYKEY><PAYMENTDATE>04/10/2014</PAYMENTDATE><PAYMENTAMOUNT>7469</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>7469</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>11/05/1971
+        00:19:32</WHENCREATED><WHENMODIFIED>01/26/2026 04:32:41</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-TUdNwkBrGnNNnQpGVezpLCOXEnEHcHWGmGcKGpBuECSYgpLeUTzUXMZuLHxJUFnGIvCXPOmBIGclXyZCphUmEHU</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>399</RECORDNO><RECORDKEY>4115</RECORDKEY><ENTRYKEY>8464</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>3168</PAYMENTKEY><PAYMENTENTRYKEY>518</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>9338</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>9338</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>09/12/2020
+        03:20:40</WHENCREATED><WHENMODIFIED>02/27/2026 00:12:39</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-HnvnGvrIxHeEWFnOPaMoOOCEiAbDuMQjfXJBEcbZazffsVUlqrpseXDwesEOIkhEguAAjxuJAAtUXXLgPfibWNu</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>395</RECORDNO><RECORDKEY>614</RECORDKEY><ENTRYKEY>4862</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>5715</PAYMENTKEY><PAYMENTENTRYKEY>3236</PAYMENTENTRYKEY><PAYMENTDATE>05/02/2024</PAYMENTDATE><PAYMENTAMOUNT>8981</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>8981</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>07/10/2020
+        20:50:20</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-UarPgcoQQGiIEagwnCJrRhCryRMYijOyWMIaTcYnIlsrJKwRYFyKaAepvpnPBHyazksfJmKeOQEVxDODaTgSFPu</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>396</RECORDNO><RECORDKEY>614</RECORDKEY><ENTRYKEY>1798</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>5715</PAYMENTKEY><PAYMENTENTRYKEY>1683</PAYMENTENTRYKEY><PAYMENTDATE>05/02/2024</PAYMENTDATE><PAYMENTAMOUNT>2954</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>2954</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-I</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>07/10/2020
+        20:50:20</WHENCREATED><WHENMODIFIED>02/19/2026 15:06:21</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-jWJbpmBoVnWMLjYUEMMCLxfOmIRQqeuoseoVSBnUVDVIWcoaNBtRZNukTwKmpHYnlGkSOuZuejhzAgMftcnfVyZ</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>401</RECORDNO><RECORDKEY>1888</RECORDKEY><ENTRYKEY>3110</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>2341</PAYMENTKEY><PAYMENTENTRYKEY>4347</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>5999</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>5999</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>06/10/2023
+        08:13:58</WHENCREATED><WHENMODIFIED>02/27/2026 00:50:08</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-NXhnsUWRBnktNiYlLWOPhEvqooTQHDKZmzGSNPBvxJQfTnfzBMIAUHimsMZkPtiJafdxkBQMHgIpBswHWgCgfFG</RECORD_URL></APPYMTDETAIL><APPYMTDETAIL><RECORDNO>400</RECORDNO><RECORDKEY>1210</RECORDKEY><ENTRYKEY>1073</ENTRYKEY><POSADJKEY></POSADJKEY><POSADJENTRYKEY></POSADJENTRYKEY><PAYMENTKEY>8921</PAYMENTKEY><PAYMENTENTRYKEY>2048</PAYMENTENTRYKEY><PAYMENTDATE>09/19/2007</PAYMENTDATE><PAYMENTAMOUNT>8229</PAYMENTAMOUNT><TRX_PAYMENTAMOUNT>8229</TRX_PAYMENTAMOUNT><INLINEKEY></INLINEKEY><INLINEENTRYKEY></INLINEENTRYKEY><INLINEAMOUNT></INLINEAMOUNT><TRX_INLINEAMOUNT></TRX_INLINEAMOUNT><DISCOUNTKEY></DISCOUNTKEY><DISCOUNTENTRYKEY></DISCOUNTENTRYKEY><DISCOUNTDATE></DISCOUNTDATE><DISCOUNTAMOUNT></DISCOUNTAMOUNT><TRX_DISCOUNTAMOUNT></TRX_DISCOUNTAMOUNT><ADJUSTMENTKEY></ADJUSTMENTKEY><ADJUSTMENTENTRYKEY></ADJUSTMENTENTRYKEY><ADJUSTMENTAMOUNT></ADJUSTMENTAMOUNT><TRX_ADJUSTMENTAMOUNT></TRX_ADJUSTMENTAMOUNT><ADVANCEKEY></ADVANCEKEY><ADVANCEENTRYKEY></ADVANCEENTRYKEY><POSTEDADVANCEKEY></POSTEDADVANCEKEY><POSTEDADVANCEENTRYKEY></POSTEDADVANCEENTRYKEY><POSTEDADVANCEAMOUNT></POSTEDADVANCEAMOUNT><TRX_POSTEDADVANCEAMOUNT></TRX_POSTEDADVANCEAMOUNT><CURRENCY>-Fallback-scrubbed-Hwz</CURRENCY><STATE>-Fallback-scrubbed-R</STATE><MODULEKEY>-Fallback-scrubbed-XaVY</MODULEKEY><WHENCREATED>02/27/1970
+        12:01:39</WHENCREATED><WHENMODIFIED>02/27/2026 00:19:48</WHENMODIFIED><CREATEDBY>2756</CREATEDBY><MODIFIEDBY>2756</MODIFIEDBY><JOINTPAYEENAME></JOINTPAYEENAME><JOINTPAYEEPRINTAS></JOINTPAYEEPRINTAS><CREATEDBYLOGINID>-Fallback-scrubbed-EEEb</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-EEEb</MODIFIEDBYLOGINID><RECORD_URL>-Fallback-scrubbed-YSVZvgIeIcjVSPhHYxRYrvwglkZeQfZzyDyHNLUQIOrUpynCHqGBMivItlkjjdjxOQFzFXDOjNjyNDvWzdriuZC</RECORD_URL></APPYMTDETAIL></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38eee3b3c46d985-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 13:55:29 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '473'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '13786'
     status:
       code: 200
       message: OK
