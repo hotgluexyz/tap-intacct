@@ -257,6 +257,54 @@ def test_do_discover(mocker, mock_schema, mock_catalog, capfd):
         assert metadata_entry['metadata'].get('selected') is not True
 
 
+def test_sync_stream_passes_extra_filter(mocker, mock_schema, mock_context):
+    """Ensure selected filters are passed to get_by_date as extra_filter."""
+    mock_context.is_selected.return_value = True
+    mock_context.get_schema.return_value = mock_schema
+    mock_context.selected_filters = {
+        "filters_version": "1.0.0",
+        "streams": {
+            "test_stream": {
+                "clause_1": {
+                    "field": "LOCATIONKEY",
+                    "operator": "IN",
+                    "value": ["USA1 (1)"],
+                }
+            }
+        },
+    }
+    records = [
+        {
+            'RECORDNO': '885',
+            'LOCATIONKEY': '1',
+            'WHENMODIFIED': '02/20/2018 12:11:43',
+        },
+    ]
+    mock_context.intacct_client.get_by_date.side_effect = (
+        lambda **kwargs: iter(records)
+    )
+
+    mocker.patch(
+        'tap_intacct._get_start',
+        return_value=dt.datetime(2019, 12, 31, 23, 0, tzinfo=dt.timezone.utc),
+    )
+    mocker.patch(
+        'tap_intacct.singer.utils.now',
+        return_value=dt.datetime(2020, 8, 12, 17, 43, tzinfo=dt.timezone.utc),
+    )
+    mocker.patch('tap_intacct._transform_and_write_record', autospec=True)
+    mocker.patch('tap_intacct.singer.utils.update_state', autospec=True)
+
+    tap_intacct.sync_stream('test_stream')
+
+    calls = mock_context.intacct_client.get_by_date.call_args_list
+    assert len(calls) == 2
+    for call in calls:
+        assert call.kwargs['extra_filter'] == {
+            'in': {'field': 'LOCATIONKEY', 'value': ['1']},
+        }
+
+
 def test_main_calls_tap_cli(mocker):
     """Ensure main delegates to the SDK Tap CLI entrypoint."""
     mock_cli = mocker.patch('tap_intacct.TapIntacct.cli')
