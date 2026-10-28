@@ -559,6 +559,7 @@ class SageIntacctSDK:
                     'object': intacct_object_type,
                     'select': {'field': fields},
                     'options': {'showprivate': 'true'},
+                    'orderby': {'order': {'field': pk, 'ascending': None}},
                     'pagesize': pagesize,
                     'offset': offset,
                 }
