@@ -1,0 +1,2748 @@
+{
+  "streams": [
+    {
+      "stream": "card_accounts",
+      "tap_stream_id": "card_accounts",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORDNO",
+              "LABEL": "Record number",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CARDID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CARDID",
+              "LABEL": "ID",
+              "DESCRIPTION": "ID",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DESCRIPTION": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DESCRIPTION",
+              "LABEL": "Description",
+              "DESCRIPTION": "Description",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CARDNUM": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CARDNUM",
+              "LABEL": "Number",
+              "DESCRIPTION": "Number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CARDTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CARDTYPE",
+              "LABEL": "Type",
+              "DESCRIPTION": "Type",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Visa",
+                  "Mastercard",
+                  "Discover",
+                  "American Express",
+                  "Diners Club",
+                  "Other Charge Card"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXP_MONTH": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EXP_MONTH",
+              "LABEL": "Expiration month",
+              "DESCRIPTION": "Expiration month",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "January",
+                  "February",
+                  "March",
+                  "April",
+                  "May",
+                  "June",
+                  "July",
+                  "August",
+                  "September",
+                  "October",
+                  "November",
+                  "December"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXP_YEAR": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EXP_YEAR",
+              "LABEL": "Expiration year",
+              "DESCRIPTION": "Expiration year",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "2024",
+                  "2025",
+                  "2026",
+                  "2027",
+                  "2028",
+                  "2029",
+                  "2030",
+                  "2031",
+                  "2032",
+                  "2033",
+                  "2034",
+                  "2035",
+                  "2036"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.ADDRESS1": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.ADDRESS1",
+              "LABEL": "Address line 1",
+              "DESCRIPTION": "Address line 1",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.ADDRESS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.ADDRESS2",
+              "LABEL": "Address line 2",
+              "DESCRIPTION": "Address line 2",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.ADDRESS3": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.ADDRESS3",
+              "LABEL": "Address line 3",
+              "DESCRIPTION": "Address line 3",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.CITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.CITY",
+              "LABEL": "City",
+              "DESCRIPTION": "City",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.STATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.STATE",
+              "LABEL": "State or territory",
+              "DESCRIPTION": "State",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.ZIP": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.ZIP",
+              "LABEL": "ZIP or postal code",
+              "DESCRIPTION": "ZIP or postal code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.COUNTRY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.COUNTRY",
+              "LABEL": "Country",
+              "DESCRIPTION": "Country",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MAILADDRESS.COUNTRYCODE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MAILADDRESS.COUNTRYCODE",
+              "LABEL": "Country code",
+              "DESCRIPTION": "Country code",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "US",
+                  "AF",
+                  "AX",
+                  "AL",
+                  "DZ",
+                  "AS",
+                  "AD",
+                  "AO",
+                  "AI",
+                  "AQ",
+                  "AG",
+                  "AR",
+                  "AM",
+                  "AW",
+                  "AU",
+                  "AT",
+                  "AZ",
+                  "BS",
+                  "BH",
+                  "BD",
+                  "BB",
+                  "BY",
+                  "BE",
+                  "BZ",
+                  "BJ",
+                  "BM",
+                  "BT",
+                  "BO",
+                  "BQ",
+                  "BA",
+                  "BW",
+                  "BV",
+                  "BR",
+                  "IO",
+                  "BN",
+                  "BG",
+                  "BF",
+                  "BI",
+                  "KH",
+                  "CM",
+                  "CA",
+                  "IC",
+                  "CV",
+                  "KY",
+                  "CF",
+                  "TD",
+                  "CL",
+                  "CN",
+                  "CX",
+                  "CC",
+                  "CO",
+                  "KM",
+                  "CG",
+                  "CD",
+                  "CK",
+                  "CR",
+                  "CI",
+                  "HR",
+                  "CU",
+                  "CW",
+                  "CY",
+                  "CZ",
+                  "DK",
+                  "DJ",
+                  "DM",
+                  "DO",
+                  "EC",
+                  "EG",
+                  "SV",
+                  "GQ",
+                  "ER",
+                  "EE",
+                  "SZ",
+                  "ET",
+                  "FK",
+                  "FO",
+                  "FJ",
+                  "FI",
+                  "FR",
+                  "GF",
+                  "PF",
+                  "TF",
+                  "GA",
+                  "GM",
+                  "GE",
+                  "DE",
+                  "GH",
+                  "GI",
+                  "GR",
+                  "GL",
+                  "GD",
+                  "GP",
+                  "GU",
+                  "GT",
+                  "GG",
+                  "GN",
+                  "GW",
+                  "GY",
+                  "HT",
+                  "HM",
+                  "HN",
+                  "HK",
+                  "HU",
+                  "IS",
+                  "IN",
+                  "ID",
+                  "IR",
+                  "IQ",
+                  "IE",
+                  "IM",
+                  "IL",
+                  "IT",
+                  "JM",
+                  "JP",
+                  "JE",
+                  "JO",
+                  "KZ",
+                  "KE",
+                  "KI",
+                  "KR",
+                  "KP",
+                  "XK",
+                  "KW",
+                  "KG",
+                  "LA",
+                  "LV",
+                  "LB",
+                  "LS",
+                  "LR",
+                  "LY",
+                  "LI",
+                  "LT",
+                  "LU",
+                  "MO",
+                  "MK",
+                  "MG",
+                  "MW",
+                  "MY",
+                  "MV",
+                  "ML",
+                  "MT",
+                  "MH",
+                  "MQ",
+                  "MR",
+                  "MU",
+                  "YT",
+                  "MX",
+                  "FM",
+                  "MD",
+                  "MC",
+                  "MN",
+                  "ME",
+                  "MS",
+                  "MA",
+                  "MZ",
+                  "MM",
+                  "NA",
+                  "NR",
+                  "NP",
+                  "NL",
+                  "AN",
+                  "NC",
+                  "NZ",
+                  "NI",
+                  "NE",
+                  "NG",
+                  "NU",
+                  "NF",
+                  "MP",
+                  "NO",
+                  "OM",
+                  "PK",
+                  "PW",
+                  "PS",
+                  "PA",
+                  "PG",
+                  "PY",
+                  "PE",
+                  "PH",
+                  "PN",
+                  "PL",
+                  "PT",
+                  "PR",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RU",
+                  "RW",
+                  "BL",
+                  "SH",
+                  "KN",
+                  "LC",
+                  "MF",
+                  "PM",
+                  "VC",
+                  "WS",
+                  "SM",
+                  "ST",
+                  "SA",
+                  "SN",
+                  "RS",
+                  "SC",
+                  "SL",
+                  "SG",
+                  "SX",
+                  "SK",
+                  "SI",
+                  "SB",
+                  "SO",
+                  "ZA",
+                  "GS",
+                  "ES",
+                  "LK",
+                  "SD",
+                  "SS",
+                  "SR",
+                  "SJ",
+                  "SE",
+                  "CH",
+                  "SY",
+                  "TW",
+                  "TJ",
+                  "TZ",
+                  "TH",
+                  "TL",
+                  "TG",
+                  "TK",
+                  "TO",
+                  "TT",
+                  "TN",
+                  "TR",
+                  "TM",
+                  "TC",
+                  "TV",
+                  "UG",
+                  "UA",
+                  "AE",
+                  "GB",
+                  "UM",
+                  "UY",
+                  "UZ",
+                  "VU",
+                  "VA",
+                  "VE",
+                  "VN",
+                  "VG",
+                  "VI",
+                  "WF",
+                  "EH",
+                  "YE",
+                  "ZM",
+                  "ZW"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "STATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "STATUS",
+              "LABEL": "Status",
+              "DESCRIPTION": "Active or inactive",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "active",
+                  "inactive"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "LIABACCTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LIABACCTKEY",
+              "LABEL": "Credit card offset account",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LIABACCT#": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LIABACCT#",
+              "LABEL": "Credit card offset account record number",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FEESACCTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FEESACCTKEY",
+              "LABEL": "Other fees account",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FEESACCTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FEESACCTID",
+              "LABEL": "Other fees account record number",
+              "DESCRIPTION": "Other fees account record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORID",
+              "LABEL": "Vendor ID",
+              "DESCRIPTION": "Unique ID of vendor",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "VENDORKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "VENDORKEY",
+              "LABEL": "Vendor record number",
+              "DESCRIPTION": "Vendor record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DEPT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DEPT",
+              "LABEL": "Default department",
+              "DESCRIPTION": "Department",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "DEPT#": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "DEPT#",
+              "LABEL": "Department record number",
+              "DESCRIPTION": "Department record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LOCATION": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LOCATION",
+              "LABEL": "Default location",
+              "DESCRIPTION": "Location",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LOCATION#": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LOCATION#",
+              "LABEL": "Location record number",
+              "DESCRIPTION": "Location record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LOCATIONNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LOCATIONNAME",
+              "LABEL": "Default location name",
+              "DESCRIPTION": "Location name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "LIABILITYTYPE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "LIABILITYTYPE",
+              "LABEL": "Account type",
+              "DESCRIPTION": "Card account type",
+              "REQUIRED": "true",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "Credit",
+                  "Debit"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "RECDATE",
+              "LABEL": "Last reconciled date",
+              "DESCRIPTION": "Last reconciled date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECBAL": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "field_meta": {
+              "ID": "RECBAL",
+              "LABEL": "Last reconciled balance",
+              "DESCRIPTION": "Last reconciled balance",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DECIMAL",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.JOURNAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.JOURNAL",
+              "LABEL": "Default GL journal",
+              "DESCRIPTION": "Default GL journal",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.JOURNALTITLE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.JOURNALTITLE",
+              "LABEL": "Default GL journal title",
+              "DESCRIPTION": "Default GL journal",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.JRNLKEY2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.JRNLKEY2",
+              "LABEL": "Default GL journal",
+              "DESCRIPTION": "Default GL journal",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.JOURNALTITLE2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.JOURNALTITLE2",
+              "LABEL": "Default GL journal title",
+              "DESCRIPTION": "Default GL journal",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.PARENTENTITY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.PARENTENTITY",
+              "LABEL": "Debit card checking account",
+              "DESCRIPTION": "Checking account",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.PARENTENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.PARENTENTITYNAME",
+              "LABEL": "Debit card checking account name",
+              "DESCRIPTION": "Debit card checking account name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.CHECKINGACCOUNTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.CHECKINGACCOUNTID",
+              "LABEL": "Debit card checking account ID",
+              "DESCRIPTION": "Debit card checking account ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.CHECKINGACCOUNTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.CHECKINGACCOUNTKEY",
+              "LABEL": "Debit card checking account record number",
+              "DESCRIPTION": "Debit card checking account record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.RECORDNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.RECORDNO",
+              "LABEL": "Financial record no.",
+              "DESCRIPTION": "Record number",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "USEFORINTACCT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "USEFORINTACCT",
+              "LABEL": "No label specified",
+              "DESCRIPTION": "USEFORINTACCT",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "FEESACCTLABELKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FEESACCTLABELKEY",
+              "LABEL": "Other fees account label",
+              "DESCRIPTION": "Account label option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FEESACCTLABELID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FEESACCTLABELID",
+              "LABEL": "Other fees account label record number",
+              "DESCRIPTION": "Other fees account label record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINCHRGACCT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINCHRGACCT",
+              "LABEL": "Finance charges account",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINCHRGACCTKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINCHRGACCTKEY",
+              "LABEL": "Finance charges account record number",
+              "DESCRIPTION": "Account option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINCHRGACCTLABEL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINCHRGACCTLABEL",
+              "LABEL": "Finance charges account label",
+              "DESCRIPTION": "Account label option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINCHRGACCTLABELKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINCHRGACCTLABELKEY",
+              "LABEL": "Finance charges account label record number",
+              "DESCRIPTION": "Finance charges account label record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CUTOFFDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "CUTOFFDATE",
+              "LABEL": "Cut-off date",
+              "DESCRIPTION": "Cut-off date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.DISABLEIET": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.DISABLEIET",
+              "LABEL": "Disable inter-entity",
+              "DESCRIPTION": "Disable inter-entity transfers",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENMODIFIED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENMODIFIED",
+              "LABEL": "When modified",
+              "DESCRIPTION": "Timestamp marking last time this was changed.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WHENCREATED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WHENCREATED",
+              "LABEL": "When created",
+              "DESCRIPTION": "Timestamp marking last time this was created.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TIMESTAMP",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBY",
+              "LABEL": "Modified by",
+              "DESCRIPTION": "User who modified this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBY",
+              "LABEL": "Created by",
+              "DESCRIPTION": "User who created this.",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OUTSOURCECARD": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "OUTSOURCECARD",
+              "LABEL": "Enable Amex outsource card",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "false",
+                  "true",
+                  "Pending Activation",
+                  "Subscribed",
+                  "Inactive",
+                  "Inactive (Suspended)",
+                  "Inactive (Canceled)",
+                  "Inactive (Card Expired)",
+                  "Inactive (RSVP Code Expired)"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "AUTOMATECARDPYMTSEND": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "AUTOMATECARDPYMTSEND",
+              "LABEL": "Auto-send when approved",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "AUTOMATECARDPYMTCONF": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "AUTOMATECARDPYMTCONF",
+              "LABEL": "Post to GL",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "AMEX_PAYVE_ACCOUNTID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "AMEX_PAYVE_ACCOUNTID",
+              "LABEL": "Subscription account ID",
+              "DESCRIPTION": "Amex account ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "OUTSOURCECARDOVERRIDE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "OUTSOURCECARDOVERRIDE",
+              "LABEL": "Outsource card override",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "AMEX_CARD_ACCOUNT_ID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "AMEX_CARD_ACCOUNT_ID",
+              "LABEL": "Amex card account ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBSTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBSTATUS",
+              "LABEL": "Bank feed status",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "NOT_CONNECTED",
+                  "CONNECTION_REQUESTED",
+                  "IN_PROGRESS",
+                  "PENDING",
+                  "PENDING_CONFIRMATION",
+                  "CONNECTED",
+                  "AUTH_REQUIRED",
+                  "VERIFYING_AUTH",
+                  "INACTIVE_FEED",
+                  "INACTIVE_CLIENT",
+                  "CANCELLED",
+                  "INVALID",
+                  "CANCELING",
+                  "DISCONNECTING"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBBANK": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBBANK",
+              "LABEL": "WPB bank",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBACCOUNTNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBACCOUNTNAME",
+              "LABEL": "WPB bank account name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBAVAILABLEBALANCEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBAVAILABLEBALANCEAMOUNT",
+              "LABEL": "Available balance amount",
+              "DESCRIPTION": "Available balance amount",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBAVAILABLEBALANCEDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WPBAVAILABLEBALANCEDATE",
+              "LABEL": "Available balance date",
+              "DESCRIPTION": "Available balance date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBLEDGERBALANCEAMOUNT": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBLEDGERBALANCEAMOUNT",
+              "LABEL": "Ledger balance amount",
+              "DESCRIPTION": "Ledger balance amount",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "CURRENCY",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBLEDGERBALANCEDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WPBLEDGERBALANCEDATE",
+              "LABEL": "Ledger balance date",
+              "DESCRIPTION": "Ledger balance date",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBLASTTRANSACTIONSRECEIVED": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WPBLASTTRANSACTIONSRECEIVED",
+              "LABEL": "Last transactions received",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBLASTBANKFEEDDATE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time",
+            "field_meta": {
+              "ID": "WPBLASTBANKFEEDDATE",
+              "LABEL": "Last bank feed date",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "DATE",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBREFRESHSTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBREFRESHSTATUS",
+              "LABEL": "WPB bank account refresh status",
+              "DESCRIPTION": "Status",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "QUEUED",
+                  "TRANSIT",
+                  "SUCCESS",
+                  "FAILURE",
+                  "PARTIAL_SUCCESS"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBREFRESHSTATUS2": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBREFRESHSTATUS2",
+              "LABEL": "Bank feed refresh status",
+              "DESCRIPTION": "Status",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "QUEUED",
+                  "REFRESHING",
+                  "SUCCESS",
+                  "FAILURE",
+                  "PARTIAL_SUCCESS"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALINSTITUTIONID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALINSTITUTIONID",
+              "LABEL": "Financial institution ID",
+              "DESCRIPTION": "Financial institution ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBSUPPORTMAL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBSUPPORTMAL",
+              "LABEL": "MAL support",
+              "DESCRIPTION": "Multi-account linking support",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "T",
+                  "F"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "RULESETKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RULESETKEY",
+              "LABEL": "Applied rule set",
+              "DESCRIPTION": "Applied rule set",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RULESETID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RULESETID",
+              "LABEL": "Applied rule set ID",
+              "DESCRIPTION": "Applied rule set ID",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RULESETNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RULESETNAME",
+              "LABEL": "Applied rule set name",
+              "DESCRIPTION": "Applied rule set name",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "CURRENCY_R": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CURRENCY_R",
+              "LABEL": "Card currency",
+              "DESCRIPTION": "Card currency",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "USEDINEMPEXPENSE": {
+            "type": [
+              "null",
+              "boolean"
+            ],
+            "field_meta": {
+              "ID": "USEDINEMPEXPENSE",
+              "LABEL": "Use with employee expenses",
+              "DESCRIPTION": "To enable, use card account with employee expenses",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "BOOLEAN",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "true",
+                  "false"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "EXPENSEACCTNO": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EXPENSEACCTNO",
+              "LABEL": "Employee expenses clearing account",
+              "DESCRIPTION": "Clearing account for expenses",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EECLEARINGACCTLABEL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EECLEARINGACCTLABEL",
+              "LABEL": "Employee expenses clearing account label",
+              "DESCRIPTION": "Employee expenses clearing account label option",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "EECLEARINGACCTLABELKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "EECLEARINGACCTLABELKEY",
+              "LABEL": "Employee expenses clearing account label record number",
+              "DESCRIPTION": "Employee expenses clearing account label record number",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.TIMEZONE": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.TIMEZONE",
+              "LABEL": "Banking cloud time zone",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "ENUM",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  null,
+                  "0.00#GMT (Greenwich Mean Time) Dublin, Edinburgh, London",
+                  "00.00#GMT+00:00 Western Europe Time",
+                  "01.00#GMT+01:00 Western Europe Summer Time",
+                  "01.00#GMT+01:00 British Summer Time",
+                  "01.00#GMT+01:00 Irish Summer Time",
+                  "01.00#GMT+01:00 Central Europe Time",
+                  "01.00#GMT+01:00 Berlin, Stockholm, Rome, Bern, Brussels",
+                  "01.00#GMT+01:00 Lisbon, Warsaw",
+                  "01.00#GMT+01:00 Paris, Madrid",
+                  "01.00#GMT+01:00 Prague",
+                  "02.00#GMT+02:00 Central Europe Summer Time",
+                  "02.00#GMT+02:00 Eastern Europe Time",
+                  "02.00#GMT+02:00 Athens, Helsinki, Istanbul",
+                  "02.00#GMT+02:00 Cairo",
+                  "02.00#GMT+02:00 Harare, Pretoria",
+                  "02.00#GMT+02:00 Israel",
+                  "03.00#GMT+03:00 Eastern Europe Summer Time",
+                  "03.00#GMT+03:00 Baghdad, Kuwait, Nairobi, Riyadh",
+                  "03.00#GMT+03:00 Moscow, St. Petersburg, Volgograd",
+                  "03.30#GMT+03:30 Tehran",
+                  "04.00#GMT+04:00 Moscow Summer Time",
+                  "04.00#GMT+04:00 Abu Dhabi, Muscat, Tbilisi, Kazan",
+                  "04.30#GMT+04:30 Kabul",
+                  "05.00#GMT+05:00 Islamabad, Karachi, Sverdlovsk, Tashkent",
+                  "05.30#GMT+05:30 Bombay, Calcutta, Madras, New Delhi",
+                  "06.00#GMT+06:00 Almaty, Dhaka",
+                  "07.00#GMT+07:00 Bangkok, Jakarta, Hanoi",
+                  "08.00#GMT+08:00 Beijing, Chongqing, Urumqi",
+                  "08.00#GMT+08:00 Hong Kong SAR, Perth, Singapore, Taipei",
+                  "08.00#GMT+08:00 (Australian) Western Standard Time",
+                  "09.00#GMT+09:00 Tokyo, Osaka, Sapporo, Seoul, Yakutsk",
+                  "09.30#GMT+09:30 (Australian) Central Standard Time",
+                  "10.30#GMT+10:30 (Australian) Central Daylight Time",
+                  "09.30#GMT+09:30 Adelaide",
+                  "09.30#GMT+09:30 Darwin",
+                  "10.00#GMT+10:00 Brisbane, Melbourne, Sydney",
+                  "10.00#GMT+10:00 Guam, Port Moresby",
+                  "10.00#GMT+10:00 Vladivostok",
+                  "10.00#GMT+10:00 (Australian) Eastern Standard Time",
+                  "11.00#GMT+11:00  (Australian) Eastern Daylight Time",
+                  "12.00#GMT+12:00 Fiji Islands, Marshall Islands",
+                  "12.00#GMT+12:00 Kamchatka",
+                  "12.00#GMT+12:00 Magadan, Solomon Islands, New Caledonia",
+                  "12.00#GMT+12:00 Wellington, Auckland",
+                  "13.00#GMT+13:00 Nuku'alofa",
+                  "13.00#GMT+13:00 Samoa",
+                  "-01.00#GMT-01:00 Azores, Cape Verde Island",
+                  "-03.00#GMT-03:00 Brasilia",
+                  "-03.00#GMT-03:00 Buenos Aires, Georgetown",
+                  "-03.30#GMT-03:30 Newfoundland Standard Time",
+                  "-02.30#GMT-02:30 Newfoundland Daylight Time",
+                  "-04.00#GMT-04:00 Atlantic Standard Time",
+                  "-03.00#GMT-03:00 Atlantic Daylight Time",
+                  "-04.00#GMT-04:00 Caracas, La Paz",
+                  "-05.00#GMT-05:00 Bogota, Lima",
+                  "-05.00#GMT-05:00 Eastern Standard Time",
+                  "-04.00#GMT-04:00 Eastern Daylight Saving Time",
+                  "-05.00#GMT-05:00 Indiana (East)",
+                  "-06.00#GMT-06:00 Central Standard Time",
+                  "-05.00#GMT-05:00 Central Daylight Saving Time",
+                  "-06.00#GMT-06:00 Mexico City, Tegucigalpa",
+                  "-06.00#GMT-06:00 Saskatchewan",
+                  "-07.00#GMT-07:00 Arizona",
+                  "-07.00#GMT-07:00 Mountain Standard Time",
+                  "-06.00#GMT-06:00 Mountain Daylight Saving Time",
+                  "-08.00#GMT-08:00 Pacific Standard Time",
+                  "-07.00#GMT-07:00 Pacific Daylight Saving Time",
+                  "-09.00#GMT-09:00 Alaska Standard Time",
+                  "-08.00#GMT-08:00 Alaska Standard Daylight Saving Time",
+                  "-10.00#GMT-10:00 Hawaii",
+                  "-11.00#GMT-11:00 Midway Island, Samoa",
+                  "-12.00#GMT-12:00 Eniwetok, Kwajalein"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "FINANCIALDATA.SEQNUMKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "FINANCIALDATA.SEQNUMKEY",
+              "LABEL": "Sequence record no.",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "false",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "WPBIMPORTSTATUS": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "WPBIMPORTSTATUS",
+              "LABEL": "Import connection status",
+              "DESCRIPTION": "Import connection status",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "VALIDVALUES": {
+                "VALIDVALUE": [
+                  "INITIATED",
+                  "CONNECTED"
+                ]
+              },
+              "ISCUSTOM": "false"
+            }
+          },
+          "CREATEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "CREATEDBYLOGINID",
+              "LABEL": "Created by user ID",
+              "DESCRIPTION": "Created by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MODIFIEDBYLOGINID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MODIFIEDBYLOGINID",
+              "LABEL": "Modified by user ID",
+              "DESCRIPTION": "Modified by user ID",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYKEY": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYKEY",
+              "LABEL": "Created at - Entity key",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "INTEGER",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYID": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYID",
+              "LABEL": "Created at - Entity ID",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "MEGAENTITYNAME": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "MEGAENTITYNAME",
+              "LABEL": "Created at - Entity name",
+              "DESCRIPTION": "No description specified",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          },
+          "RECORD_URL": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "field_meta": {
+              "ID": "RECORD_URL",
+              "LABEL": "Record URL",
+              "DESCRIPTION": "A portable, user-independent, deep-link URL for viewing this record",
+              "REQUIRED": "false",
+              "READONLY": "true",
+              "DATATYPE": "TEXT",
+              "ISCUSTOM": "false"
+            }
+          }
+        },
+        "required": [
+          "RECORDNO",
+          "WHENMODIFIED"
+        ]
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "RECORDNO"
+            ],
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CARDID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DESCRIPTION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CARDNUM"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CARDTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXP_MONTH"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXP_YEAR"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.ADDRESS1"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.ADDRESS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.ADDRESS3"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.CITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.STATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.ZIP"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.COUNTRY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MAILADDRESS.COUNTRYCODE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "STATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LIABACCTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LIABACCT#"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FEESACCTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FEESACCTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "VENDORKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DEPT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "DEPT#"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LOCATION"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LOCATION#"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LOCATIONNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "LIABILITYTYPE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECBAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.JOURNAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.JOURNALTITLE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.JRNLKEY2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.JOURNALTITLE2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.PARENTENTITY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.PARENTENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.CHECKINGACCOUNTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.CHECKINGACCOUNTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.RECORDNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "USEFORINTACCT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FEESACCTLABELKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FEESACCTLABELID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINCHRGACCT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINCHRGACCTKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINCHRGACCTLABEL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINCHRGACCTLABELKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CUTOFFDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.DISABLEIET"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENMODIFIED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WHENCREATED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OUTSOURCECARD"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "AUTOMATECARDPYMTSEND"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "AUTOMATECARDPYMTCONF"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "AMEX_PAYVE_ACCOUNTID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "OUTSOURCECARDOVERRIDE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "AMEX_CARD_ACCOUNT_ID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBSTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBBANK"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBACCOUNTNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBAVAILABLEBALANCEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBAVAILABLEBALANCEDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBLEDGERBALANCEAMOUNT"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBLEDGERBALANCEDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBLASTTRANSACTIONSRECEIVED"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBLASTBANKFEEDDATE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBREFRESHSTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBREFRESHSTATUS2"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALINSTITUTIONID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBSUPPORTMAL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RULESETKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RULESETID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RULESETNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CURRENCY_R"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "USEDINEMPEXPENSE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EXPENSEACCTNO"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EECLEARINGACCTLABEL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "EECLEARINGACCTLABELKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.TIMEZONE"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "FINANCIALDATA.SEQNUMKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "WPBIMPORTSTATUS"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "CREATEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MODIFIEDBYLOGINID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYKEY"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "MEGAENTITYNAME"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "RECORD_URL"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ],
+      "key_properties": [
+        "RECORDNO"
+      ],
+      "stream_meta": {
+        "Relationship": [
+          {
+            "OBJECTPATH": "USERINFOCREATEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Created by",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "CREATEDBY"
+          },
+          {
+            "OBJECTPATH": "USERINFOMODIFIEDBY",
+            "OBJECTNAME": "USERINFO",
+            "LABEL": "Last modified user",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MODIFIEDBY"
+          },
+          {
+            "OBJECTPATH": "MELOCATION",
+            "OBJECTNAME": "LOCATION",
+            "LABEL": "Created at entity information",
+            "RELATIONSHIPTYPE": "MANY2ONE",
+            "RELATEDBY": "MEGAENTITYID"
+          }
+        ]
+      }
+    }
+  ]
+}

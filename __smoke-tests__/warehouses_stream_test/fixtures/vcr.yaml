@@ -1,0 +1,452 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><login><userid>emm***</userid><companyid>hot***</companyid><password>fbq***</password></login></authentication><content><function
+      controlid="9ce042bb-675a-4073-8d9d-ea7b75873a6a"><getAPISession></getAPISession></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '541'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1987-10-01
+        09:04:52</controlid><uniqueid>false</uniqueid><dtdversion>-2.8600028611632</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2006-11-30T03:43:21+00:00</sessiontimestamp><sessiontimeout>2014-05-14T12:58:51+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-UvtoIjwYKBMgV</function><controlid>-Fallback-scrubbed-ICanhpDdWBojOTBysZPENuOdaaQUqWmQkVzs</controlid><data><api><sessionid>f6j***</sessionid><endpoint>https://api.intacct.com/ia/xml/xmlgw.phtml</endpoint><locationid></locationid></api></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef4eb6836f250-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 14:00:04 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '795'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.05'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '829'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="6846d8c3-453a-4219-8b6e-0108b7da5440"><query><object>WAREHOUSE</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '832'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1987-10-01
+        09:04:52</controlid><uniqueid>false</uniqueid><dtdversion>-2.8600028611632</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2012-01-22T08:35:05+00:00</sessiontimestamp><sessiontimeout>2022-02-13T02:34:33+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-ylfLI</function><controlid>-Fallback-scrubbed-JAPSRtQuHWXNPADiOwRNOWchnFDxFkAySEoJ</controlid><data
+        listtype="-Fallback-scrubbed-YMochGlPT" totalcount="4" offset="5759" count="3049"
+        numremaining="9757"><WAREHOUSE><RECORDNO>1</RECORDNO></WAREHOUSE></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef4f1fe190b84-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 14:00:05 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '718'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '840'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="720421f5-df27-40c7-b0a8-d4d947ac6724"><query><object>WAREHOUSE</object><select><field>RECORDNO</field><field>LOCATIONID</field><field>NAME</field><field>PARENTID</field><field>WAREHOUSEID</field><field>LOC.LOCATIONID</field><field>MANAGER.NAME</field><field>MANAGERID</field><field>CONTACTINFO.CONTACTNAME</field><field>SHIPTO.CONTACTNAME</field><field>USEDINGL</field><field>STATUS</field><field>ENABLE_REPLENISHMENT</field><field>ENABLENEGATIVEINV</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>SI_UUID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1504'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1987-10-01
+        09:04:52</controlid><uniqueid>false</uniqueid><dtdversion>-2.8600028611632</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2005-07-07T20:57:12+00:00</sessiontimestamp><sessiontimeout>2000-07-03T14:37:04+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-ylfLI</function><controlid>-Fallback-scrubbed-FStDjSildnTrKMzrDjrJZXMKEtVogOAZjgYU</controlid><data
+        listtype="-Fallback-scrubbed-YMochGlPT" totalcount="4" offset="5759" count="9911"
+        numremaining="5759"><WAREHOUSE><RECORDNO>1</RECORDNO><LOCATIONID>-Fallback-scrubbed-Zqz</LOCATIONID><NAME>Fake-Michael
+        Nielsen</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-Zqz</WAREHOUSEID><LOC.LOCATIONID>8213</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-OOtKOyfbodE</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>05/12/1973
+        04:35:28</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:21</WHENMODIFIED><CREATEDBY>3049</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZjJcMSSi</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-VbBEBiUYHEDAPkkbwGkZQKMxSQKccRvfycYpTyKzWWpOBKJAXVbLEWplWAadpTvwwXWccyPUATowVtuukVhkepC</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>2</RECORDNO><LOCATIONID>-Fallback-scrubbed-PcV</LOCATIONID><NAME>Fake-Carol
+        Craig</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-PcV</WAREHOUSEID><LOC.LOCATIONID>700</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-MIEgYICHICb</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>12/25/1981
+        00:54:16</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:33</WHENMODIFIED><CREATEDBY>3049</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZjJcMSSi</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-XJQXByUrSpjcqsKMyGhMgXgsZkgkLvnQuwrWerTfLeyhSaYtrZYBMVDagpRibbmZdgZhIFBkBWeWKAPozPmCzWs</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>3</RECORDNO><LOCATIONID>-Fallback-scrubbed-SyD</LOCATIONID><NAME>Fake-Larry
+        Tucker</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-SyD</WAREHOUSEID><LOC.LOCATIONID>8213</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-vlvVpxUtNwM</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>08/23/1990
+        03:29:37</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:12</WHENMODIFIED><CREATEDBY>842</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-LQdQ</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-EluRCKhsLSKkgjIbDBnKIuGMBhbWsnJwMqWVzMtfPMAngqZFXjWRzsevIciybHDIOvxAypvQzSLgmLBVJbXFzJf</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>4</RECORDNO><LOCATIONID>-Fallback-scrubbed-sqz</LOCATIONID><NAME>Fake-Travis
+        Gibson</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-sqz</WAREHOUSEID><LOC.LOCATIONID>700</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-IlJDcAhmnxR</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>12/09/1977
+        17:00:17</WHENCREATED><WHENMODIFIED>09/15/2022 18:04:49</WHENMODIFIED><CREATEDBY>842</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-LQdQ</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-yAJOpYijdnzJSIaTbFmJoaiwKsDvVkoeFTIfShjkNBoMnpRDfryWgDQPJGdyElWClKFqYXjErqLDezHdiEPLOUb</RECORD_URL></WAREHOUSE></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef4f81a490c22-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 14:00:06 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '807'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5122'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="bf649d4b-e87a-4ad3-a10e-fce95518611e"><query><object>WAREHOUSE</object><select><field>RECORDNO</field></select><pagesize>1</pagesize><options><showprivate>true</showprivate></options><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '832'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1987-10-01
+        09:04:52</controlid><uniqueid>false</uniqueid><dtdversion>-2.8600028611632</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2003-12-14T14:41:48+00:00</sessiontimestamp><sessiontimeout>1987-05-01T15:03:59+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-ylfLI</function><controlid>-Fallback-scrubbed-ICVBEkoldxZkEMDjcyzglJzBYMntslPJSmzN</controlid><data
+        listtype="-Fallback-scrubbed-YMochGlPT" totalcount="4" offset="5759" count="3049"
+        numremaining="9757"><WAREHOUSE><RECORDNO>1</RECORDNO></WAREHOUSE></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef4febb31f181-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 14:00:07 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '582'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '840'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <request><control><senderid>hot***</senderid><password>yav***</password><controlid>2026-08-25
+      19:00:00</controlid><uniqueid>false</uniqueid><dtdversion>3.0</dtdversion><includewhitespace>false</includewhitespace></control><operation><authentication><sessionid>f6j***</sessionid></authentication><content><function
+      controlid="73e7143c-81fd-4bda-9cab-d276d49d4179"><query><object>WAREHOUSE</object><select><field>RECORDNO</field><field>LOCATIONID</field><field>NAME</field><field>PARENTID</field><field>WAREHOUSEID</field><field>LOC.LOCATIONID</field><field>MANAGER.NAME</field><field>MANAGERID</field><field>CONTACTINFO.CONTACTNAME</field><field>SHIPTO.CONTACTNAME</field><field>USEDINGL</field><field>STATUS</field><field>ENABLE_REPLENISHMENT</field><field>ENABLENEGATIVEINV</field><field>WHENCREATED</field><field>WHENMODIFIED</field><field>CREATEDBY</field><field>MODIFIEDBY</field><field>SI_UUID</field><field>CREATEDBYLOGINID</field><field>MODIFIEDBYLOGINID</field><field>MEGAENTITYKEY</field><field>MEGAENTITYID</field><field>MEGAENTITYNAME</field><field>RECORD_URL</field></select><options><showprivate>true</showprivate></options><pagesize>1000</pagesize><offset>0</offset><filter><and><greaterthanorequalto><field>WHENMODIFIED</field><value>01/01/2000
+      00:00:01</value></greaterthanorequalto><lessthanorequalto><field>WHENMODIFIED</field><value>08/25/2026
+      19:00:00</value></lessthanorequalto></and></filter></query></function></content></operation></request>'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1504'
+      User-Agent:
+      - python-requests/2.34.2
+      content-type:
+      - application/xml
+    method: POST
+    uri: https://api.intacct.com/ia/xml/xmlgw.phtml
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="utf-8"?>
+
+        <response><control><status>success</status><senderid>hot***</senderid><controlid>1987-10-01
+        09:04:52</controlid><uniqueid>false</uniqueid><dtdversion>-2.8600028611632</dtdversion></control><operation><authentication><status>success</status><userid>emm***</userid><companyid>hot***</companyid><locationid></locationid><sessiontimestamp>2003-12-14T14:41:48+00:00</sessiontimestamp><sessiontimeout>1987-05-01T15:03:59+00:00</sessiontimeout></authentication><result><status>success</status><function>-Fallback-scrubbed-ylfLI</function><controlid>-Fallback-scrubbed-SBytOAnOnpAvHXGukPpHgTKmmcjqOSMGgyLV</controlid><data
+        listtype="-Fallback-scrubbed-YMochGlPT" totalcount="4" offset="5759" count="9911"
+        numremaining="5759"><WAREHOUSE><RECORDNO>1</RECORDNO><LOCATIONID>-Fallback-scrubbed-Zqz</LOCATIONID><NAME>Fake-Michael
+        Nielsen</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-Zqz</WAREHOUSEID><LOC.LOCATIONID>8213</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-OOtKOyfbodE</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>05/12/1973
+        04:35:28</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:21</WHENMODIFIED><CREATEDBY>3049</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZjJcMSSi</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-VbBEBiUYHEDAPkkbwGkZQKMxSQKccRvfycYpTyKzWWpOBKJAXVbLEWplWAadpTvwwXWccyPUATowVtuukVhkepC</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>2</RECORDNO><LOCATIONID>-Fallback-scrubbed-PcV</LOCATIONID><NAME>Fake-Carol
+        Craig</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-PcV</WAREHOUSEID><LOC.LOCATIONID>700</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-MIEgYICHICb</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>12/25/1981
+        00:54:16</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:33</WHENMODIFIED><CREATEDBY>3049</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-ZjJcMSSi</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-XJQXByUrSpjcqsKMyGhMgXgsZkgkLvnQuwrWerTfLeyhSaYtrZYBMVDagpRibbmZdgZhIFBkBWeWKAPozPmCzWs</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>3</RECORDNO><LOCATIONID>-Fallback-scrubbed-SyD</LOCATIONID><NAME>Fake-Larry
+        Tucker</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-SyD</WAREHOUSEID><LOC.LOCATIONID>8213</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-vlvVpxUtNwM</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>08/23/1990
+        03:29:37</WHENCREATED><WHENMODIFIED>09/15/2022 18:03:12</WHENMODIFIED><CREATEDBY>842</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-LQdQ</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-EluRCKhsLSKkgjIbDBnKIuGMBhbWsnJwMqWVzMtfPMAngqZFXjWRzsevIciybHDIOvxAypvQzSLgmLBVJbXFzJf</RECORD_URL></WAREHOUSE><WAREHOUSE><RECORDNO>4</RECORDNO><LOCATIONID>-Fallback-scrubbed-sqz</LOCATIONID><NAME>Fake-Travis
+        Gibson</NAME><PARENTID></PARENTID><WAREHOUSEID>-Fallback-scrubbed-sqz</WAREHOUSEID><LOC.LOCATIONID>700</LOC.LOCATIONID><MANAGER.NAME>Fake-Sarah
+        Bauer</MANAGER.NAME><MANAGERID>1914</MANAGERID><CONTACTINFO.CONTACTNAME>-Fallback-scrubbed-IlJDcAhmnxR</CONTACTINFO.CONTACTNAME><SHIPTO.CONTACTNAME></SHIPTO.CONTACTNAME><USEDINGL>false</USEDINGL><STATUS>active</STATUS><ENABLE_REPLENISHMENT>false</ENABLE_REPLENISHMENT><ENABLENEGATIVEINV>false</ENABLENEGATIVEINV><WHENCREATED>12/09/1977
+        17:00:17</WHENCREATED><WHENMODIFIED>09/15/2022 18:04:49</WHENMODIFIED><CREATEDBY>842</CREATEDBY><MODIFIEDBY>842</MODIFIEDBY><SI_UUID></SI_UUID><CREATEDBYLOGINID>-Fallback-scrubbed-LQdQ</CREATEDBYLOGINID><MODIFIEDBYLOGINID>-Fallback-scrubbed-LQdQ</MODIFIEDBYLOGINID><MEGAENTITYKEY></MEGAENTITYKEY><MEGAENTITYID></MEGAENTITYID><MEGAENTITYNAME></MEGAENTITYNAME><RECORD_URL>-Fallback-scrubbed-yAJOpYijdnzJSIaTbFmJoaiwKsDvVkoeFTIfShjkNBoMnpRDfryWgDQPJGdyElWClKFqYXjErqLDezHdiEPLOUb</RECORD_URL></WAREHOUSE></data></result></operation></response>'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      CF-RAY:
+      - a38ef505989429e2-GRU
+      Cache-Control:
+      - private
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en-US
+      Content-Security-Policy-Report-Only:
+      - 'default-src ''self'' data: https://*.grammarly.com; report-uri csp_listener.phtml;
+        script-src ''self'' ''unsafe-inline'' ''unsafe-eval'' https://*.grammarly.com
+        ; style-src ''self'' ''unsafe-inline'' ; img-src ''self'' blob: data: *.amazonaws.com
+        https://*.grammarly.com ; frame-src ''self'' *.intacct.com *.intacct-adv.com
+        https://www.youtube.com *.sage.com *.onetrust.com https://app.powerbi.com/
+        https://dc.services.visualstudio.com ; connect-src ''self'' *.intacct.com
+        https://*.grammarly.com https://*.grammarly.io wss://*.grammarly.com https://api.gms.development.ca-central-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.ca-central-1.sageai.sagecloudops.com https://api.gms.ca-central-1.ai.sage.com
+        https://api.gms.development.ap-southeast-2.sageai.sagecloudops.com https://api.gms.pre-production.ap-southeast-2.sageai.sagecloudops.com
+        https://api.gms.ap-southeast-2.ai.sage.com https://api.gms.development.eu-west-1.sageai.sagecloudops.com
+        https://api.gms.pre-production.eu-west-1.sageai.sagecloudops.com https://api.gms.ai.sage.com
+        ;'
+      Content-Type:
+      - text/xml; encoding="UTF-8";charset=UTF-8
+      Date:
+      - Thu, 10 Sep 2026 14:00:08 GMT
+      P3p:
+      - CP="Not a P3P policy.
+      Server:
+      - cloudflare
+      Strict-Transport-Security:
+      - max-age=31536000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Origin,Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Envoy-Upstream-Service-Time:
+      - '641'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Ia-Th:
+      - '0.01'
+      X-Xss-Protection:
+      - 1; mode=block
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '5122'
+    status:
+      code: 200
+      message: OK
+version: 1
