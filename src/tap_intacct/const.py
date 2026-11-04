@@ -1,11 +1,3 @@
-REQUIRED_CONFIG_KEYS = [
-    'company_id',
-    'sender_id',
-    'sender_password',
-    'user_id',
-    'user_password',
-]
-
 KEY_PROPERTIES = {
     'accounts_payable_bills': ["RECORDNO"],
     'accounts_payable_bill_items': ["RECORDNO"],
