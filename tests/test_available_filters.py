@@ -136,3 +136,23 @@ class TestGetAvailableFilters:
             ]
             == "MEGAENTITYKEY"
         )
+
+    def test_includes_ap_bills_vendor_filter(self, tap, mocker, capsys):
+        fake_client = MagicMock()
+        fake_client.query_all.return_value = [
+            {"VENDORID": "V001", "NAME": "Acme Corp"},
+        ]
+        mocker.patch("tap_intacct._build_intacct_client", return_value=fake_client)
+
+        tap.get_available_filters(catalog_with("accounts_payable_bills"))
+
+        payload = json.loads(capsys.readouterr().out)
+        assert (
+            payload["streams"]["accounts_payable_bills"]["filters"]["vendor"]["target_field"]
+            == "VENDORID"
+        )
+        fake_client.query_all.assert_called_once_with(
+            object_type="VENDOR",
+            fields=["VENDORID", "NAME"],
+        )
+        assert payload["reference_data"]["vendors"][0]["name(id)"] == "Acme Corp (V001)"

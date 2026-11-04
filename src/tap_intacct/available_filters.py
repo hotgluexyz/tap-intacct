@@ -30,12 +30,28 @@ AVAILABLE_FILTERS = {
             },
         },
     },
+    "accounts_payable_bills": {
+        "supported_operators": ["AND"],
+        "supports_nesting_clauses": False,
+        "filters": {
+            "vendor": {
+                "label": "Vendor Name (ID)",
+                "supported_operators": ["IN", "EQ"],
+                "target_field": "VENDORID",
+                "options": "reference_data.vendors.name(id)",
+            },
+        },
+    },
 }
 
 REFERENCE_DATA = {
     "subsidiaries": {
         "object": "LOCATIONENTITY",
         "fields": {"id": "RECORDNO", "name": "NAME", "location_id": "LOCATIONID"},
+    },
+    "vendors": {
+        "object": "VENDOR",
+        "fields": {"id": "VENDORID", "name": "NAME"},
     },
 }
 
