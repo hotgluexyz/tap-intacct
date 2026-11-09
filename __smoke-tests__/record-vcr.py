@@ -57,7 +57,9 @@ class ConnectorTapTestRunner(VCRTapTestRunner):
                 return scrubbed
 
             safe_field_list = ", ".join(
-                re.findall(r"\b[A-Z][A-Z0-9_]+\b", fields.group(1))
+                field.strip()
+                for field in fields.group(1).split(",")
+                if re.fullmatch(r"[A-Z][A-Z0-9_.]*", field.strip())
             )
             if not safe_field_list:
                 return scrubbed
