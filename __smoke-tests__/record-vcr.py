@@ -1,3 +1,7 @@
+import re
+
+import xmltodict
+
 from hotglue_smoke_test.vcr.tap import VCRTapTestRunner
 
 
@@ -40,6 +44,33 @@ class ConnectorTapTestRunner(VCRTapTestRunner):
         "ACCESSTIME",
         "updatedAt",
     }
+
+    def scrub_response_body(self, body, faker, cache):
+        scrubbed = super().scrub_response_body(body, faker, cache)
+        try:
+            source = xmltodict.parse(body)
+            description = source["response"]["operation"]["result"]["errormessage"]["error"][
+                "description2"
+            ]
+            fields = re.search(r";\s*([^\[]+)\[", description)
+            if not fields:
+                return scrubbed
+
+            safe_field_list = ", ".join(
+                field.strip()
+                for field in fields.group(1).split(",")
+                if re.fullmatch(r"[A-Z][A-Z0-9_.]*", field.strip())
+            )
+            if not safe_field_list:
+                return scrubbed
+
+            sanitized = xmltodict.parse(scrubbed)
+            sanitized["response"]["operation"]["result"]["errormessage"]["error"][
+                "description2"
+            ] = f"Unsupported fields; {safe_field_list} [scrubbed]"
+            return xmltodict.unparse(sanitized)
+        except (KeyError, TypeError, ValueError, xmltodict.expat.ExpatError):
+            return scrubbed
 
     def module(self) -> str:
         return "tap_intacct"
